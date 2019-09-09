@@ -28,10 +28,10 @@ class RegisterPage extends Component {
       password: this.state.password
     }
     const formIsNotCompleted = !(user.first_name && user.last_name && user.email && user.username && user.password)
-    UserData.get("username", user.username)
+    UserData.getBasedOnSearch("username", user.username)
       .then((userArr) => {
         const usernameIsNotUnique = userArr.length > 0
-        UserData.get("email", user.email)
+        UserData.getBasedOnSearch("email", user.email)
           .then((users) => {
             const emailIsNotUnique = users.length > 0
             if (usernameIsNotUnique) {
