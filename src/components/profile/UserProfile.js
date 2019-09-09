@@ -6,7 +6,7 @@ import React, { Component } from "react"
 
 // import "./Kennel.css"
 
-class SearchGames extends Component {
+class UserProfile extends Component {
   render() {
     return (
       <>
@@ -15,4 +15,4 @@ class SearchGames extends Component {
   }
 }
 
-export default SearchGames
+export default UserProfile

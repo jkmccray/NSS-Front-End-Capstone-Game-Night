@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
 import UserData from '../../modules/UserManager'
 
 // import './NavBar.css'
@@ -22,14 +21,14 @@ class LoginPage extends Component {
       username: this.state.username,
       password: this.state.password
     }
-    UserData.get("username", user.username)
+    UserData.getBasedOnSearch("username", user.username)
       .then((userArr) => {
         const userExists = userArr.length > 0
         const existingUserObj = userArr[0]
         const passwordMatches = existingUserObj.password === user.password
         if (userExists && passwordMatches) {
           sessionStorage.setItem("activeUser", existingUserObj.id)
-          this.props.history.push("/home")
+          this.props.history.push("/")
         }
       })
   }

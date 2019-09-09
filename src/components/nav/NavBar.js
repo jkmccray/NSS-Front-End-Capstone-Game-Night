@@ -1,39 +1,52 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter, NavLink } from "react-router-dom"
 import './NavBar.css'
 
 class NavBar extends Component {
-  state = {loggedIn: true}
+  userIsLoggedIn = () => parseInt(sessionStorage.getItem("activeUser")) > 0
 
   logOut = (event) => {
     sessionStorage.removeItem("activeUser")
     this.props.history.push("/")
   }
 
-  render(){
+  render() {
 
     return (
       <>
-      <button onClick={this.logOut}>Logout</button>
-      <header>
-      <picture>
-            <img id="logo" src={require('../../images/image.svg')} alt="logo" />
-          </picture>
-        <h1 className="site-title">Game Night<br />
-          {/* <small>text</small> */}
-        </h1>
-        <nav>
-          <ul className="container">
-            <li><Link className="nav-link" to="/">Home</Link></li>
-            <li><Link className="nav-link" to="/explore">Explore Games</Link></li>
-            <li><Link className="nav-link" to="/game_nights">Create Game Nights</Link></li>
-            <li><Link className="nav-link" to="/user_profile">Profile</Link></li>
-          </ul>
-        </nav>
-      </header>
+        {
+          this.userIsLoggedIn()
+            ? <> <button onClick={this.logOut}>logout</button>
+              <nav>
+                <ul className="container">
+                  <li>
+                    <picture>
+                      <img className="logo" src={require('../../logo/game-night-logo_updated.jpg')} alt="logo" />
+                    </picture>
+                  </li>
+                  <li className="nav-li"><NavLink className="nav-link" activeClassName="active-page" to="/home">game nights</NavLink></li>
+                  <li className="nav-li"><NavLink className="nav-link" activeClassName="active-page" to="/explore">explore</NavLink></li>
+                  <li className="nav-li"><NavLink className="nav-link" activeClassName="active-page" to="/search">search</NavLink></li>
+                  <li className="nav-li"><NavLink className="nav-link" activeClassName="active-page" to="/profile">profile</NavLink></li>
+                </ul>
+              </nav> </>
+              : <nav>
+              <ul className="container">
+                <li>
+                  <picture>
+                    <img className="logo-welcome" src={require('../../logo/game-night-logo_updated.jpg')} alt="logo" />
+                  </picture>
+                </li>
+                {/* <li><Link className="nav-link" to="/">Register</Link></li>
+                <li><Link className="nav-link" to="/explore">explore</Link></li>
+                <li><Link className="nav-link" to="/game_nights">search</Link></li>
+                <li><Link className="nav-link" to="/user_profile">profile</Link></li> */}
+              </ul>
+            </nav>
+        }
       </>
     )
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

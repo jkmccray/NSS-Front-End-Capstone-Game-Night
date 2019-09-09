@@ -1,8 +1,9 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
-import NavBar from './nav/NavBar'
-import Home from './home/Home'
-import GameNightList from './game-nights/GameNightList';
+import GameNights from './game-nights/GameNights'
+import ExploreGames from './explore/ExploreGames'
+import SearchGames from './search-games/GameSearch'
+import UserProfile from './profile/UserProfile'
 import WelcomePage from "./welcome-and-login/WelcomePage"
 import RegisterPage from './welcome-and-login/RegisterPage'
 import LoginPage from './welcome-and-login/LoginPage'
@@ -23,33 +24,33 @@ class ApplicationViews extends Component {
         <Route path="/register" render={(props) => {
           return !this.userIsLoggedIn()
           ? <RegisterPage {...props} />
-          : <Redirect to="/home" />
+          : <Redirect to="/" />
         }} />
         <Route path="/login" render={(props) => {
           return !this.userIsLoggedIn()
           ? <LoginPage {...props} />
-          : <Redirect to="/home" />
+          : <Redirect to="/" />
         }} />
         <Route path="/home" render={(props) => {
           return this.userIsLoggedIn()
-          ?<> <NavBar {...props} /> <Home /> </>
+          ? <GameNights />
           : <Redirect to="/" />
         }} />
-        {/* <Route path="/explore" render={(props) => {
-          return this.userIsLoggedIn)
+        <Route path="/explore" render={(props) => {
+          return this.userIsLoggedIn()
           ? <ExploreGames />
           : <Redirect to="/" />
-        }} /> */}
-        <Route path="/game_nights" render={(props) => {
+        }} />
+        <Route path="/search" render={(props) => {
           return this.userIsLoggedIn()
-          ? <> <NavBar {...props} /> <GameNightList /> </>
+          ? <SearchGames />
           : <Redirect to="/" />
         }} />
-        {/* <Route path="/user_profile" render={(props) => {
-          return this.userIsLoggedIn)
+        <Route path="/profile" render={(props) => {
+          return this.userIsLoggedIn()
           ? <UserProfile />
           : <Redirect to="/" />
-        }} /> */}
+        }} />
       </React.Fragment>
     )
   }

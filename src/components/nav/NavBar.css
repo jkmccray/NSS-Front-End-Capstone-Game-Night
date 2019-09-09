@@ -1,24 +1,24 @@
-small {
-  font-size: 75%;
+@font-face {
+  font-family: 'league_spartanbold';
+  src: url('../../fonts/LeagueSpartan-Bold.otf') format('woff2'),
+       url('../../fonts/LeagueSpartan-Bold.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
-header {
-  border: black solid 1px;
-  background-color: cornsilk;
-}
-
-.site-title {
-  color: black;
-  text-align: center;
-}
-
-nav .container {
+.container {
   display: flex;
   padding: 0;
   margin-bottom: 0;
+  background-color: #1B120F;
+  align-items: center;
+  height: 2.5em;
+  margin: 4em 0;
+  padding-top: 5px;
 }
 
-nav .container li {
+.nav-li {
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -26,14 +26,30 @@ nav .container li {
   color: black;
   box-sizing: border-box;
   list-style-type: none;
+  font-family: 'league_spartanbold';
 }
 
-nav .container a {
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
-nav .container a:hover {
+.nav-link:hover {
+  color: #F89D13
 }
 
-#logo {
-  width: 100px;
+.logo {
+  width: 9em;
+  margin-left: 1em;
+}
+
+.logo-welcome {
+  width: 9em;
+  margin-left: 1em;
+}
+
+.active-page {
+  color: #F89D13;
+  border-bottom: 2px solid #F89D13
 }

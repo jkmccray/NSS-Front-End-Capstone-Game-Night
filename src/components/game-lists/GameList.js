@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import the components we will need
-import GameNightCard from './GameNightCard'
+import GameNightCard from './GameListCard'
 import GameManager from '../../modules/GameManager'
 
 class GameNightList extends Component {

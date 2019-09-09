@@ -6,13 +6,15 @@ import React, { Component } from "react"
 
 // import "./Kennel.css"
 
-class SearchGames extends Component {
+class ExploreGames extends Component {
   render() {
     return (
       <>
+        {/* <NavBar {...props} />
+        <ApplicationViews /> */}
       </>
     )
   }
 }
 
-export default SearchGames
+export default ExploreGames

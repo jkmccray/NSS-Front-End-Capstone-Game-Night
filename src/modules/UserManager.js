@@ -5,7 +5,7 @@ const UserData = {
     return fetch(`${remoteURL}/users/${id}`)
       .then(result => result.json())
     },
-    get(property, string) {
+    getBasedOnSearch(property, string) {
       return fetch(`${remoteURL}/users?${property}=${string}`)
       .then(result => result.json())
   },
