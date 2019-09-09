@@ -16,7 +16,7 @@ class NavBar extends Component {
       <>
         {
           this.userIsLoggedIn()
-            ? <> <button onClick={this.logOut}>logout</button>
+            ? <> <button className="logout-btn" onClick={this.logOut}>logout</button>
               <nav>
                 <ul className="container">
                   <li>
