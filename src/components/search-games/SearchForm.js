@@ -72,7 +72,7 @@ class SearchForm extends Component {
         icon='search'
         placeholder='Search by name...' />
         <Dropdown
-          onChange={this.props.handleOnChange}
+          onChange={(e) => this.props.handleMultiSelectChange("selectedCategories", e)}
           placeholder='Select categories'
           className="search-field"
           id="selectedCategories"
@@ -85,12 +85,15 @@ class SearchForm extends Component {
               key: category.id,
               text: category.name,
               value: category.id,
+              id: category.id,
             }))
           }
-        />
+          />
         <Dropdown
+          onChange={(e) => this.props.handleMultiSelectChange("selectedMechanics", e)}
           placeholder='Select game mechanics'
           className="search-field"
+          id="selectedMechanics"
           fluid
           multiple
           search
@@ -100,6 +103,7 @@ class SearchForm extends Component {
               key: mechanic.id,
               text: mechanic.name,
               value: mechanic.id,
+              id: mechanic.id
             }))
           }
         />
