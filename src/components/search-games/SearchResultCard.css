@@ -1,0 +1,9 @@
+.searchResultCard {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+}
+
+.addGameToList-btn {
+  align-self: right;
+}

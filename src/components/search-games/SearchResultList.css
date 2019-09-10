@@ -1,0 +1,10 @@
+#searchResultContainer {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+#searchResultList {
+  display: flex;
+  flex-direction: column;
+}

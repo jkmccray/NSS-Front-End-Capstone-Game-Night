@@ -1,10 +1,11 @@
 import React, { Component } from "react"
-import { Input, Dropdown, Button, Modal, Header } from "semantic-ui-react"
+import { Modal, Header } from "semantic-ui-react"
 import SearchForm from "./SearchForm"
+import SearchResultList from "./SearchResultList"
 import generate from "@babel/generator"
 import APIGameManager from "../../modules/APIGameManager"
 
-// import "./GameSearch.css"
+import "./GameSearch.css"
 
 class SearchGames extends Component {
   state={
@@ -95,7 +96,7 @@ class SearchGames extends Component {
 
   render() {
     return (
-      <>
+      <div id="search-container">
       <SearchForm
       searchParameters={this.state}
       handleOnChange={this.handleOnChange}
@@ -103,7 +104,8 @@ class SearchGames extends Component {
       handleSingleSelectChange={this.handleSingleSelectChange}
       handleSearchButton={this.handleSearchButton}
       />
-      </>
+      <SearchResultList />
+      </div>
     )
   }
 }
