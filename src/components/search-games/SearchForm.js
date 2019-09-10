@@ -25,10 +25,10 @@ class SearchForm extends Component {
   // get all categories from the board game api and set state
   getCategoryOptions = () => {
     APIGameManager.getAllCategories()
-    .then(categoriesArr => {
-      const categories = categoriesArr.categories
-      this.setState({ categoryOptions: categories })
-    })
+      .then(categoriesArr => {
+        const categories = categoriesArr.categories
+        this.setState({ categoryOptions: categories })
+      })
   }
 
   // get all game mechanics from the board game api and set state
@@ -72,11 +72,11 @@ class SearchForm extends Component {
     return (
       <div className="search-form">
         <Input
-        onChange={this.props.handleOnChange}
-        className="search-field"
-        id="gameNameSearch"
-        icon='search'
-        placeholder='Search by name...' />
+          onChange={this.props.handleOnChange}
+          className="search-field"
+          id="gameNameSearch"
+          icon='search'
+          placeholder='Search by name...' />
         <Dropdown
           onChange={(e) => this.props.handleMultiSelectChange("selectedCategories", e)}
           placeholder='Select categories'
@@ -94,7 +94,7 @@ class SearchForm extends Component {
               id: category.id,
             }))
           }
-          />
+        />
         <Dropdown
           onChange={(e) => this.props.handleMultiSelectChange("selectedMechanics", e)}
           placeholder='Select game mechanics'
@@ -114,8 +114,10 @@ class SearchForm extends Component {
           }
         />
         <Dropdown
+          onChange={(e) => this.props.handleSingleSelectChange("selectedMinPlayers", e)}
           placeholder='Select minimum players'
           className="search-field"
+          id="selectedMinPlayers"
           clearable
           fluid
           search
@@ -129,8 +131,10 @@ class SearchForm extends Component {
           }
         />
         <Dropdown
+          onChange={(e) => this.props.handleSingleSelectChange("selectedMaxPlaytime", e)}
           placeholder='Select maximum playtime'
           className="search-field"
+          id="selectedMaxPlaytime"
           clearable
           fluid
           search
@@ -145,8 +149,8 @@ class SearchForm extends Component {
         />
         {
           !this.state.loadingStatus
-          ? <Button primary className="search-btn">search</Button>
-          : <Button loading primary className="search-btn">Loading</Button>
+            ? <Button primary className="search-btn">search</Button>
+            : <Button loading primary className="search-btn">Loading</Button>
         }
 
       </div>

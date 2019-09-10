@@ -9,7 +9,7 @@ class SearchGames extends Component {
     selectedCategories: [],
     selectedMechanics: [],
     selectedMinPlayers: 0,
-    selectedPlaytime: ""
+    selectedMaxPlaytime: ""
   }
 
   handleOnChange = (event) => {
@@ -36,6 +36,11 @@ class SearchGames extends Component {
     }
   }
 
+  handleSingleSelectChange = (selection, event) => {
+    const num = parseFloat(event.target.textContent)
+    this.setState({[selection]: num})
+  }
+
   render() {
     return (
       <>
@@ -43,6 +48,7 @@ class SearchGames extends Component {
       searchParameters={this.state}
       handleOnChange={this.handleOnChange}
       handleMultiSelectChange={this.handleMultiSelectChange}
+      handleSingleSelectChange={this.handleSingleSelectChange}
       />
       </>
     )
