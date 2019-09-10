@@ -7,9 +7,13 @@ class SearchResultCard extends Component {
   render() {
     return (
       <li className="searchResultCard">
-        <Image src=""/>
-        <h4>Test</h4>
-        <Button className="addGameToList-btn">+</Button>
+        <Image src={this.props.searchResult.thumb_url} className="searchResult__image"/>
+        <h4>{this.props.searchResult.name}</h4>
+        <Button
+        onClick={this.props.handleAddGameToListBtnOnClick}
+        className="addGameToList__btn"
+        id={`addGameToListBtn--${this.props.searchResult.id}`}
+        >+</Button>
       </li>
     )
   }

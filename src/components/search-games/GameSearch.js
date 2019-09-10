@@ -104,7 +104,9 @@ class SearchGames extends Component {
       handleSingleSelectChange={this.handleSingleSelectChange}
       handleSearchButton={this.handleSearchButton}
       />
-      <SearchResultList />
+      <SearchResultList
+      searchResults={this.state.searchResults}
+      />
       </div>
     )
   }

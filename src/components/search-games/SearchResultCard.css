@@ -4,6 +4,10 @@
   display: flex;
 }
 
-.addGameToList-btn {
+.addGameToList__btn {
   align-self: right;
+}
+
+.searchResult__image {
+  max-height: 4em;
 }
