@@ -12,7 +12,7 @@ class SearchGames extends Component {
     selectedCategories: [],
     selectedMechanics: [],
     selectedMinPlayers: 0,
-    selectedMaxPlaytime: "",
+    selectedMaxPlaytime: 0,
     searchResults:[],
     loadingStatus: false
   }
@@ -54,14 +54,18 @@ class SearchGames extends Component {
       min_players: this.state.selectedMinPlayers,
       max_playtime: this.state.selectedMaxPlaytime
     }
-    const searchString = this.generateSearchString(searchParameters)
-    APIGameManager.getGamesFromSearch(searchString)
-    .then(searchResults => {
-      this.setState({searchResults: searchResults.games})
-    })
+    if (searchParameters.name === "" && searchParameters.categories.length === 0 && searchParameters.mechanics.length === 0 && searchParameters.min_players === 0 && searchParameters.max_playtime === 0){
+      alert("fill out at least one search field")
+    } else {
+      const searchString = this.generateGameSearchString(searchParameters)
+      APIGameManager.getGamesFromSearch(searchString)
+      .then(searchResults => {
+        this.setState({searchResults: searchResults.games})
+      })
+    }
   }
 
-  generateSearchString = (searchParameters) => {
+  generateGameSearchString = (searchParameters) => {
     let searchString = ""
     for (let param in searchParameters) {
       if (searchParameters[param] === 10 || searchParameters[param] === 120 ) {
