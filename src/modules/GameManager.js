@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/games/${id}`)
       .then(result => result.json())
   },
-  getSinglGameByGameId(gameId) {
+  getGameByGameId(gameId) {
     return fetch(`${remoteURL}/games?gameId=${gameId}`)
       .then(result => result.json())
   },
