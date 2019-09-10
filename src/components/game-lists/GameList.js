@@ -6,22 +6,22 @@ import GameManager from '../../modules/GameManager'
 class GameNightList extends Component {
   //define what this component needs to render
   state = {
-    games: [],
+    gamesInList: [],
   }
 
   componentDidMount() {
     console.log("GAME LIST: ComponentDidMount");
     //getAll from AnimalManager and hang on to that data; put it in state
-    GameManager.getAll()
+    GameManager.getAllGames()
       .then((games) => {
-        console.log(games)
+        // console.log(games)
         this.setState({
           games: games
         })
       })
   }
 
-  // deleteAnimal = id => {
+  // deleteGame = id => {
   //   GameManager.delete(id)
   //     .then(() => {
   //       AnimalManager.getAll()
@@ -38,7 +38,7 @@ class GameNightList extends Component {
 
     return (
       <div className="container-cards">
-        {this.state.games.map(game =>
+        {this.state.gamesInList.map(game =>
           <GameNightCard
           // key={animal.id}
           // animal={animal}

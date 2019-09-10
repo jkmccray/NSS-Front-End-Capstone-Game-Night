@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
-import './GameNight.css'
+// import './GameNight.css'
 
 class GameNightCard extends Component {
   render() {
