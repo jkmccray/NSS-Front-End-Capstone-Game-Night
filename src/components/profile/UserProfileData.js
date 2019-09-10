@@ -10,8 +10,8 @@ class UserProfileData extends Component {
       <>
         <Tab panes={
           [
-            { menuItem: 'game nights', render: () => <Tab.Pane></Tab.Pane> },
             { menuItem: 'lists', render: () => <Tab.Pane><UserGameLists /></Tab.Pane> },
+            { menuItem: 'game nights', render: () => <Tab.Pane></Tab.Pane> },
             { menuItem: 'friends', render: () => <Tab.Pane><UserFriends /></Tab.Pane> },
             { menuItem: 'owned games', render: () => <Tab.Pane></Tab.Pane> },
             { menuItem: 'played games', render: () => <Tab.Pane></Tab.Pane> },

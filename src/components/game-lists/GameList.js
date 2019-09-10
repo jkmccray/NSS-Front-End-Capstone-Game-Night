@@ -2,23 +2,24 @@ import React, { Component } from 'react'
 //import the components we will need
 import GameNightCard from './GameListCard'
 import GameManager from '../../modules/GameManager'
+import GamesSavedToList from '../../modules/GameSavedToListManager'
 
 class GameNightList extends Component {
-  //define what this component needs to render
   state = {
     gamesInList: [],
   }
 
+  userListId = this.props.gameList.id
+
   componentDidMount() {
-    console.log("GAME LIST: ComponentDidMount");
-    //getAll from AnimalManager and hang on to that data; put it in state
-    GameManager.getAllGames()
-      .then((games) => {
-        // console.log(games)
-        this.setState({
-          games: games
-        })
-      })
+    this.getAllGamesInList()
+  }
+
+  getAllGamesInList = () => {
+    GamesSavedToList.getAllGamesSavedToSingleList(this.userListId)
+    .then(results => {
+      this.setState({gamesInList: results})
+    })
   }
 
   // deleteGame = id => {
@@ -34,18 +35,19 @@ class GameNightList extends Component {
   // }
 
   render() {
-    console.log("GameList: Render");
-
     return (
-      <div className="container-cards">
+      <>
+      <h3>{this.props.gameList.name}</h3>
+      <div className="gameList">
         {this.state.gamesInList.map(game =>
           <GameNightCard
-          // key={animal.id}
+          key={game.id}
           // animal={animal}
           // deleteAnimal={this.deleteAnimal}
           />
         )}
       </div>
+      </>
     )
   }
 }
