@@ -1,0 +1,18 @@
+.search-form {
+  margin-top: 2em;
+  max-width: 25%;
+  min-height: 40em;
+}
+
+.search-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-btn {
+  background-color: #F89D13;
+}
+
+.search-btn:hover {
+  background-color: rgba(248, 157, 19, 0.616);
+}

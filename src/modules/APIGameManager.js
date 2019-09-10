@@ -8,9 +8,17 @@ export default {
     return fetch(`${remoteURL}/search?client_id=${clientID}&ids=${idsArr}`)
     .then(result => result.json())
   },
-  getAll() {
+  getAllGames() {
     return fetch(`${remoteURL}/search?client_id=${clientID}`)
     .then(result => result.json())
-  }
+  },
+  getAllCategories() {
+    return fetch(`${remoteURL}/game/categories?client_id=${clientID}`)
+    .then(result => result.json())
+  },
+  getAllGameMechanics() {
+    return fetch(`${remoteURL}/game/mechanics?client_id=${clientID}`)
+    .then(result => result.json())
+  },
 
 }
