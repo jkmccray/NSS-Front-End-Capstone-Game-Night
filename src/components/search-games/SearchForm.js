@@ -22,14 +22,16 @@ class SearchForm extends Component {
     this.getPlaytimes()
   }
 
+  // get all categories from the board game api and set state
   getCategoryOptions = () => {
     APIGameManager.getAllCategories()
-      .then(categoriesArr => {
-        const categories = categoriesArr.categories
-        this.setState({ categoryOptions: categories })
-      })
+    .then(categoriesArr => {
+      const categories = categoriesArr.categories
+      this.setState({ categoryOptions: categories })
+    })
   }
 
+  // get all game mechanics from the board game api and set state
   getMechanicsOptions = () => {
     APIGameManager.getAllGameMechanics()
       .then(mechanicsArr => {
@@ -38,7 +40,9 @@ class SearchForm extends Component {
       })
   }
 
+  // create array of objects for min player select options
   getMinPlayers = () => {
+    // create array of consecutive numbers from 0-9
     const values = [...Array(10).keys()]
     const minPlayers = values.map(value => {
       return {
@@ -46,10 +50,12 @@ class SearchForm extends Component {
         text: value + 1
       }
     })
+    // set text of last option to be catch-all
     minPlayers[9].text = "10+"
     this.setState({ minPlayers: minPlayers })
   }
 
+  // create array of objects for max playtime select options
   getPlaytimes = () => {
     const values = [15, 30, 45, 60, 90, 120, 121]
     const playtimes = values.map(value => {
