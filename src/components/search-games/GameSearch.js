@@ -18,7 +18,6 @@ class SearchGames extends Component {
 
   handleMultiSelectChange = (selection, event) => {
     const arr = this.state[selection]
-    console.log('arr-before: ', arr);
     if (event.target.id){
       const newObj = {
         name: event.target.textContent,
@@ -28,13 +27,10 @@ class SearchGames extends Component {
       this.setState({[selection]: arr})
     } else {
       const name = event.target.parentNode.textContent
-      console.log('name: ', name);
       const i = arr.map(element => element.name).indexOf(name)
-      console.log('i: ', i);
       arr.splice(i, 1)
       this.setState({[selection]: arr})
     }
-    console.log('arr-after: ', arr);
   }
 
   render() {
