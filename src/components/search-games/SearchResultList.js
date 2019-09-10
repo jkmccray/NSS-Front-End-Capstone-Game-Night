@@ -107,20 +107,24 @@ class SearchResultList extends Component {
   }
 
   handleSaveGameToListBtnOnClick = (event) => {
-    const saveGameToListObj = {
-      gameId: this.state.selectedGameId,
-      userListId: this.state.selectedGameList
-    }
-    GamesSavedToLists.addGametoUserList(saveGameToListObj)
-      .then(gameAndListObj => {
-        console.log('gameAndListObj: ', gameAndListObj);
+    if (this.state.selectedGameList > 0) {
+      const saveGameToListObj = {
+        gameId: this.state.selectedGameId,
+        userListId: this.state.selectedGameList
+      }
+      GamesSavedToLists.addGametoUserList(saveGameToListObj)
+        .then(gameAndListObj => {
+          console.log('gameAndListObj: ', gameAndListObj);
 
-        this.setState({
-          showModal: false,
-          hideSuccessMessage: false,
-          successMessage: `You added ${this.state.selectedGameName} to "${this.state.selectedGameListName}"!`
+          this.setState({
+            showModal: false,
+            hideSuccessMessage: false,
+            successMessage: `You added ${this.state.selectedGameName} to "${this.state.selectedGameListName}"!`
+          })
         })
-      })
+    } else {
+      alert("select list")
+    }
   }
 
   handleModalOnClose = () => {
