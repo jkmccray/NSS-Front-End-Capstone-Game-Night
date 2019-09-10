@@ -1,5 +1,8 @@
 import React, { Component } from "react"
+import { Input, Dropdown, Button, Modal, Header } from "semantic-ui-react"
 import SearchForm from "./SearchForm"
+import generate from "@babel/generator"
+import APIGameManager from "../../modules/APIGameManager"
 
 // import "./GameSearch.css"
 
@@ -9,7 +12,9 @@ class SearchGames extends Component {
     selectedCategories: [],
     selectedMechanics: [],
     selectedMinPlayers: 0,
-    selectedMaxPlaytime: ""
+    selectedMaxPlaytime: "",
+    searchResults:[],
+    loadingStatus: false
   }
 
   handleOnChange = (event) => {
@@ -22,7 +27,7 @@ class SearchGames extends Component {
     if (event.target.id){
       const newObj = {
         name: event.target.textContent,
-        value: event.target.id
+        id: event.target.id
       }
       arr.push(newObj)
       this.setState({[multiSelect]: arr})
@@ -37,8 +42,51 @@ class SearchGames extends Component {
   }
 
   handleSingleSelectChange = (selection, event) => {
-    const num = parseFloat(event.target.textContent)
+    const num = parseInt(event.target.textContent)
     this.setState({[selection]: num})
+  }
+
+  handleSearchButton = (event) => {
+    const searchParameters = {
+      name: this.state.gameNameSearch,
+      categories: this.state.selectedCategories.map(category => category.id),
+      mechanics: this.state.selectedMechanics.map(mechanic => mechanic.id),
+      min_players: this.state.selectedMinPlayers,
+      max_playtime: this.state.selectedMaxPlaytime
+    }
+    const searchString = this.generateSearchString(searchParameters)
+    APIGameManager.getGamesFromSearch(searchString)
+    .then(searchResults => {
+      this.setState({searchResults: searchResults.games})
+    })
+  }
+
+  generateSearchString = (searchParameters) => {
+    let searchString = ""
+    for (let param in searchParameters) {
+      if (searchParameters[param] === 10 || searchParameters[param] === 120 ) {
+        searchString += `&${param}=${searchParameters[param]}&gt_${param}=${searchParameters[param]}`
+      } else if (searchParameters[param].length > 0 || searchParameters[param] > 0) {
+        searchString += `&${param}=${searchParameters[param]}`
+      }
+    }
+    return searchString
+  }
+
+  showModal = () => {
+    return <Modal>
+    <Modal.Header>Enter Search Parameters</Modal.Header>
+    <Modal.Content image>
+      <Modal.Description>
+        <Header>Default Profile Image</Header>
+        <p>
+          We've found the following gravatar image associated with your e-mail
+          address.
+        </p>
+        <p>Is it okay to use this photo?</p>
+      </Modal.Description>
+    </Modal.Content>
+  </Modal>
   }
 
   render() {
@@ -49,6 +97,7 @@ class SearchGames extends Component {
       handleOnChange={this.handleOnChange}
       handleMultiSelectChange={this.handleMultiSelectChange}
       handleSingleSelectChange={this.handleSingleSelectChange}
+      handleSearchButton={this.handleSearchButton}
       />
       </>
     )

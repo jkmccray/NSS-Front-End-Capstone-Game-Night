@@ -20,5 +20,8 @@ export default {
     return fetch(`${remoteURL}/game/mechanics?client_id=${clientID}`)
     .then(result => result.json())
   },
-
+  getGamesFromSearch(searchString) {
+    return fetch(`${remoteURL}/search?client_id=${clientID}&${searchString}`)
+    .then(result => result.json())
+  }
 }

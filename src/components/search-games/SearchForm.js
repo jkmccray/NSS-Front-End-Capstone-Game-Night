@@ -12,7 +12,6 @@ class SearchForm extends Component {
     mechanicsOptions: [],
     minPlayers: [],
     playtimes: [],
-    loadingStatus: false
   }
 
   componentDidMount() {
@@ -57,14 +56,14 @@ class SearchForm extends Component {
 
   // create array of objects for max playtime select options
   getPlaytimes = () => {
-    const values = [15, 30, 45, 60, 90, 120, 121]
+    const values = [15, 30, 45, 60, 90, 120]
     const playtimes = values.map(value => {
       return {
         value: value,
         text: `${value} mintues`
       }
     })
-    playtimes[6].text = "Over 120 minutes"
+    playtimes[5].text = "120 minutes +"
     this.setState({ playtimes: playtimes })
   }
 
@@ -148,11 +147,14 @@ class SearchForm extends Component {
           }
         />
         {
-          !this.state.loadingStatus
-            ? <Button primary className="search-btn">search</Button>
+          !this.props.searchParameters.loadingStatus
+            ? <Button
+              onClick={this.props.handleSearchButton}
+              primary
+              className="search-btn"
+            >search</Button>
             : <Button loading primary className="search-btn">Loading</Button>
         }
-
       </div>
     )
   }

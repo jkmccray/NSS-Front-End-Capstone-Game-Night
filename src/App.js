@@ -2,9 +2,9 @@ import React, { Component } from "react"
 import NavBar from "./components/nav/NavBar"
 import ApplicationViews from "./components/ApplicationViews"
 
-// import "./Kennel.css"
+// import "./Games.css"
 
-class Games extends Component {
+class App extends Component {
   render() {
     return (
       <>
@@ -15,4 +15,4 @@ class Games extends Component {
   }
 }
 
-export default Games
+export default App
