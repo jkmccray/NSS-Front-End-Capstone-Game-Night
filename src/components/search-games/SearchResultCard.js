@@ -10,6 +10,8 @@ class SearchResultCard extends Component {
         <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
         <h4>{this.props.searchResult.name}</h4>
         <Modal
+          closeIcon
+          onClose={this.props.handleModalOnClose}
           open={this.props.showModal}
           trigger={<Button
             onClick={this.props.handleAddGameToListBtnOnClick}

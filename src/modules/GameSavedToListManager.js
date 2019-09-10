@@ -1,8 +1,8 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getSingleGameSavedToUserList(gameId, userId) {
-    return fetch(`${remoteURL}/gamesSavedByUsersToLists?gameId=${gameId}&userId=${userId}`)
+  getSingleGameSavedToUserList(gameId, userListId) {
+    return fetch(`${remoteURL}/gamesSavedByUsersToLists?game=${gameId}&userList=${userListId}`)
       .then(result => result.json())
   },
   getAllGamesSavedToUserLists() {
@@ -16,7 +16,7 @@ export default {
       .then(result => result.json())
   },
   addGametoUserList(gameAndUserObj) {
-    return fetch(`${remoteURL}/gamesSavedByUsersToLists`, {
+    return fetch(`${remoteURL}/gamesSavedByUsersToLists?_expand=userList&_expand=game`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

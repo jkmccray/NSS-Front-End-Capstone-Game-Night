@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import { List, Header } from "semantic-ui-react"
+import { Message } from "semantic-ui-react"
 import SearchResultCard from "./SearchResultCard"
 import APIGameManager from "../../modules/APIGameManager"
 import GameManager from "../../modules/GameManager"
@@ -12,9 +12,13 @@ import generate from "@babel/generator"
 class SearchResultList extends Component {
   state = {
     selectedGameId: 0,
+    selectedGameName: "",
     selectedGameList: 0,
+    selectedGameListName: "",
     userGameLists: [],
-    showModal: false
+    showModal: false,
+    hideSuccessMessage: true,
+    successMessage: ""
   }
 
   activeUser = sessionStorage.getItem("activeUser")
@@ -32,6 +36,7 @@ class SearchResultList extends Component {
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
   handleAddGameToListBtnOnClick = (event) => {
+    this.setState({hideSuccessMessage: true})
     const gameId = event.target.id.split("--")[1]
     APIGameManager.getGamesByIds(gameId)
       .then(resultObj => {
@@ -54,12 +59,14 @@ class SearchResultList extends Component {
             .then(gameObjInDb => {
               this.setState({
                 selectedGameId: gameObjInDb.id,
+                selectedGameName: gameObjInDb.name,
                 showModal: true
               })
             })
         } else {
           this.setState({
             selectedGameId: gameObjFromDb[0].id,
+            selectedGameName: gameObjFromDb[0].name,
             showModal: true
           })
         }
@@ -92,7 +99,11 @@ class SearchResultList extends Component {
   // ============================== Handler function for modals ==============================
   handleGameListSelectChange = (event) => {
     const userListId = parseInt(event.target.id)
-    this.setState({ selectedGameList: userListId })
+    const userListName = event.target.textContent
+    this.setState({
+      selectedGameList: userListId,
+      selectedGameListName: userListName
+    })
   }
 
   handleSaveGameToListBtnOnClick = (event) => {
@@ -101,7 +112,25 @@ class SearchResultList extends Component {
       userListId: this.state.selectedGameList
     }
     GamesSavedToLists.addGametoUserList(saveGameToListObj)
-    .then(() => this.setState({showModal: false}))
+      .then(gameAndListObj => {
+        console.log('gameAndListObj: ', gameAndListObj);
+
+        this.setState({
+          showModal: false,
+          hideSuccessMessage: false,
+          successMessage: `You added ${this.state.selectedGameName} to "${this.state.selectedGameListName}"!`
+        })
+      })
+  }
+
+  handleModalOnClose = () => {
+    this.setState({
+      showModal: false,
+      selectedGameId: 0,
+      selectedGameName: "",
+      selectedGameList: 0,
+      selectedGameListName: ""
+    })
   }
 
   // ===================================== Render ============================================
@@ -109,6 +138,11 @@ class SearchResultList extends Component {
     return (
       <div id="searchResultContainer">
         <h2>search results:</h2>
+        <Message
+        hidden={this.state.hideSuccessMessage}
+          success
+          content={this.state.successMessage}
+        />
         <ul id="searchResultList">
           {
             this.props.searchResults.map(searchResult => {
@@ -120,6 +154,7 @@ class SearchResultList extends Component {
                 handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
                 userGameLists={this.state.userGameLists}
                 showModal={this.state.showModal}
+                handleModalOnClose={this.handleModalOnClose}
               />
             })
           }
