@@ -1,5 +1,6 @@
 .gameList__div {
-  width: 28%;
+  width: 45%;
+  min-width: 30em;
   display: flex;
   flex-direction: column;
   border: 1px solid #E6DEDD;

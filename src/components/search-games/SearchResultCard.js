@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Modal, Header, Image, Button, Dropdown } from "semantic-ui-react"
+import { Modal, Image, Button, Dropdown } from "semantic-ui-react"
 
 import "./SearchResultCard.css"
 

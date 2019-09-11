@@ -7,7 +7,6 @@ import UserGameLists from "../../modules/UserGameListManager"
 import GamesSavedToLists from "../../modules/GameSavedToListManager"
 
 import "./SearchResultList.css"
-import generate from "@babel/generator"
 
 class SearchResultList extends Component {
   state = {
@@ -109,7 +108,7 @@ class SearchResultList extends Component {
   handleSaveGameToListBtnOnClick = (event) => {
     if (this.state.selectedGameList > 0) {
       const saveGameToListObj = {
-        gameId: this.state.selectedGameId,
+        apiGameId: this.state.selectedGameId,
         userListId: this.state.selectedGameList
       }
       GamesSavedToLists.addGametoUserList(saveGameToListObj)

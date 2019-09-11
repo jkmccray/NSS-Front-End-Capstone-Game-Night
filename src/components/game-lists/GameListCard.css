@@ -2,8 +2,17 @@
   list-style-type: none;
   display: flex;
   border: 1px solid black;
+  justify-content: space-between;
+}
+
+.gameListCard__info {
+  display: flex;
 }
 
 .gameListCard__img {
   height: 4em;
+}
+
+.deleteGameFromList__btn {
+  align-self: center;
 }
