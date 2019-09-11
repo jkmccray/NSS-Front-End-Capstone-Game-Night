@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, withRouter, NavLink } from "react-router-dom"
 import { Tab } from "semantic-ui-react"
 import UserFriends from "./UserFriends"
 import UserGameLists from "./UserGameLists"
@@ -22,4 +21,4 @@ class UserProfileData extends Component {
   }
 }
 
-export default withRouter(UserProfileData);
+export default UserProfileData;

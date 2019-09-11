@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
-// import './GameNight.css'
+import { Image } from "semantic-ui-react";
+import './GameListCard.css'
 
 class GameNightCard extends Component {
   render() {
     return (
-      <div className="card">
-        <div className="card-content">
-          <ul>
-            <li>
-              Board Game: Catan
-            </li>
-            <li>
-              Board Game: Dominion
-            </li>
-            <li>
-              Board Game: Pandemic
-            </li>
-          </ul>
-        </div>
-      </div>
+      <li className="gameList__card">
+        <Image className="gameListCard__img" src={this.props.game.thumb_url}/>
+        <h4>{this.props.game.name}</h4>
+      </li>
     );
   }
 }

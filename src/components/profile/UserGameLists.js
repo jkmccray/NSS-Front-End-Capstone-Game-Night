@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import GameList from "../game-lists/GameList"
 import UserGameListManager from "../../modules/UserGameListManager"
 
-// import "./Kennel.css"
+import "./UserGameLists.css"
 
 class UserGameLists extends Component {
   state={
@@ -23,7 +23,7 @@ class UserGameLists extends Component {
 
   render() {
     return (
-      <div>
+      <div id="userGameList__container">
         {this.state.gameLists.map(gameList =>
           <GameList
           key={gameList.id}

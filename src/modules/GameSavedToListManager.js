@@ -6,7 +6,7 @@ export default {
       .then(result => result.json())
   },
   getAllGamesSavedToSingleList(userListId) {
-    return fetch(`${remoteURL}/gamesSavedByUsersToLists?userListId=${userListId}`)
+    return fetch(`${remoteURL}/gamesSavedByUsersToLists?userListId=${userListId}&_expand=game`)
       .then(result => result.json())
   },
   getAllGamesSavedToUserLists() {

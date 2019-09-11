@@ -1,0 +1,8 @@
+.gameList__div {
+  width: 28%;
+}
+
+.editGameList__icon {
+  color: #F89D13;
+  cursor: pointer;
+}
