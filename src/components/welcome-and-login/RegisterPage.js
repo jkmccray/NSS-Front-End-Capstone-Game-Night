@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input, Button } from 'semantic-ui-react'
 import UserData from '../../modules/UserManager'
 
 // import './welcome-and-login.css'
@@ -65,17 +66,17 @@ class RegisterPage extends Component {
     return (
       <form>
         <h1>Register New User</h1>
-        <input required name="first_name" type="text" placeholder="First Name" value={this.state.first_name}
+        <Input required name="first_name" type="text" placeholder="First Name" value={this.state.first_name}
           onChange={this.handleChange} />
-        <input required name="last_name" type="text" placeholder="Last Name" value={this.state.last_name}
+        <Input required name="last_name" type="text" placeholder="Last Name" value={this.state.last_name}
           onChange={this.handleChange} />
-        <input required name="email" type="email" placeholder="Email" value={this.state.email}
+        <Input required name="email" type="email" placeholder="Email" value={this.state.email}
           onChange={this.handleChange} />
-        <input required name="username" type="text" placeholder="Username" value={this.state.username}
+        <Input required name="username" type="text" placeholder="Username" value={this.state.username}
           onChange={this.handleChange} />
-        <input required name="password" type="password" placeholder="Password" value={this.state.password}
+        <Input required name="password" type="password" placeholder="Password" value={this.state.password}
           onChange={this.handleChange} />
-        <input type="submit" disabled={this.state.loadingStatus} value="Register" onClick={this.handleSubmit} />
+        <Button disabled={this.state.loadingStatus} onClick={this.handleSubmit}>register</Button>
       </form>
     )
   }

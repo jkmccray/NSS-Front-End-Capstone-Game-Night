@@ -15,7 +15,7 @@ class GameList extends Component {
     showModal: false
   }
 
-  activeUser = sessionStorage.getItem("activeUser")
+  activeUser = parseInt(sessionStorage.getItem("activeUser"))
   listId = this.props.gameList.id
 
   componentDidMount() {
