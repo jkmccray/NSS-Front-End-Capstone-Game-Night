@@ -12,7 +12,10 @@ class UserProfile extends Component {
     return (
       <>
         <UserInfoCard />
-        <UserProfileData />
+        <UserProfileData
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+        />
       </>
     )
   }

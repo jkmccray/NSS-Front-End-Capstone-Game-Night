@@ -1,18 +1,21 @@
-import React, { Component } from "react"
-// import NavBar from "./components/nav/NavBar"
-// import ApplicationViews from "./components/ApplicationViews"
-// import WelcomePage from "./components/welcome-and-login/WelcomePage"
-// import NavBar from "./components/nav/NavBar"
+import React, { Component } from 'react';
+import FriendsList from '../friends/FriendList';
 
-// import "./Kennel.css"
-
-class UserFriends extends Component {
+export default class FriendsSection extends Component {
   render() {
     return (
-      <>
-      </>
+      <section>
+        <header className="userFriends__header">
+          <button onClick={() => {
+            this.props.history.push("/friends/new")
+          }}
+            className="findNewFriends__btn">Add New Friends</button>
+        </header>
+        <FriendsList
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+        />
+      </section>
     )
   }
 }
-
-export default UserFriends
