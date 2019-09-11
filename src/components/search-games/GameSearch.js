@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import { Modal, Header } from "semantic-ui-react"
 import SearchForm from "./SearchForm"
 import SearchResultList from "./SearchResultList"
-import generate from "@babel/generator"
 import APIGameManager from "../../modules/APIGameManager"
 
 import "./GameSearch.css"

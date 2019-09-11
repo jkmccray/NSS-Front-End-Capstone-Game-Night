@@ -7,7 +7,6 @@ import UserGameLists from "../../modules/UserGameListManager"
 import GamesSavedToLists from "../../modules/GameSavedToListManager"
 
 import "./SearchResultList.css"
-import generate from "@babel/generator"
 
 class SearchResultList extends Component {
   state = {
