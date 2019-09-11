@@ -9,6 +9,7 @@ import './GameList.css'
 class GameList extends Component {
   state = {
     gamesInList: [],
+    gameListName: "",
     editingStatus: false,
     editedListName: "",
     showModal: false
@@ -24,7 +25,10 @@ class GameList extends Component {
   getAllGamesInList = () => {
     GamesSavedToList.getAllGamesSavedToSingleList(this.listId)
       .then(gameAndListObjs => {
-        this.setState({ gamesInList: gameAndListObjs })
+        this.setState({
+          gamesInList: gameAndListObjs,
+          gameListName: this.props.gameList.name
+        })
       })
   }
 
@@ -61,7 +65,10 @@ class GameList extends Component {
       name: this.state.editedListName
     }
     UserGameListManager.saveEditedListName(listObj)
-      .then(() => this.setState({ editingStatus: false }))
+      .then(() => this.setState({
+        editingStatus: false,
+        gameListName: this.state.editedListName
+      }))
   }
 
   render() {
@@ -95,7 +102,7 @@ class GameList extends Component {
                   id={`deleteList--${this.props.gameList.id}`} />
               </Dropdown.Menu>
             </Dropdown>
-              <h3 className="gameList__header">{this.props.gameList.name}</h3> </>
+              <h3 className="gameList__header">{this.state.gameListName}</h3> </>
         }
         <ul className="gameList">
           {this.state.gamesInList.map(game =>
