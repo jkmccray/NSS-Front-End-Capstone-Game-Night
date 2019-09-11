@@ -1,0 +1,9 @@
+.gameList__card {
+  list-style-type: none;
+  display: flex;
+  border: 1px solid black;
+}
+
+.gameListCard__img {
+  height: 4em;
+}

@@ -9,11 +9,11 @@ export default {
     return fetch(`${remoteURL}/games?gameId=${gameId}`)
       .then(result => result.json())
   },
-  getAll() {
+  getAllGames() {
     return fetch(`${remoteURL}/games`)
       .then(result => result.json())
   },
-  delete(id) {
+  deleteGame(id) {
     return fetch(`http://localhost:5002/games/${id}`, {
       method: "DELETE"
     })

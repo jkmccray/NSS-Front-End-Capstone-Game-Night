@@ -1,4 +1,5 @@
 const remoteURL = "http://localhost:5002"
+const activeUser = sessionStorage.getItem("activeUser")
 
 export default {
   getSingleUserList(id) {
@@ -6,7 +7,7 @@ export default {
       .then(result => result.json())
   },
   getAllUserLists() {
-    return fetch(`${remoteURL}/userLists`)
+    return fetch(`${remoteURL}/userLists?userId=${activeUser}`)
       .then(result => result.json())
   },
   deleteGameFromUserList(id) {

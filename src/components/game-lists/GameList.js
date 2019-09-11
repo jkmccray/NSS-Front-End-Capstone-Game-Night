@@ -1,50 +1,58 @@
 import React, { Component } from 'react'
-//import the components we will need
+import { Icon, Button, Dropdown } from "semantic-ui-react"
 import GameNightCard from './GameListCard'
 import GameManager from '../../modules/GameManager'
+import GamesSavedToList from '../../modules/GameSavedToListManager'
+
+import './GameList.css'
 
 class GameNightList extends Component {
-  //define what this component needs to render
   state = {
-    games: [],
+    gamesInList: [],
+    editingStatus: false
   }
 
+  userListId = this.props.gameList.id
+
   componentDidMount() {
-    console.log("GAME LIST: ComponentDidMount");
-    //getAll from AnimalManager and hang on to that data; put it in state
-    GameManager.getAll()
-      .then((games) => {
-        console.log(games)
-        this.setState({
-          games: games
-        })
+    this.getAllGamesInList()
+  }
+
+  getAllGamesInList = () => {
+    GamesSavedToList.getAllGamesSavedToSingleList(this.userListId)
+      .then(results => {
+        this.setState({ gamesInList: results.map(result => result.game) })
       })
   }
 
-  // deleteAnimal = id => {
-  //   GameManager.delete(id)
-  //     .then(() => {
-  //       AnimalManager.getAll()
-  //         .then((newAnimals) => {
-  //           this.setState({
-  //             animals: newAnimals
-  //           })
-  //         })
-  //     })
-  // }
-
   render() {
-    console.log("GameList: Render");
-
     return (
-      <div className="container-cards">
-        {this.state.games.map(game =>
-          <GameNightCard
-          // key={animal.id}
-          // animal={animal}
-          // deleteAnimal={this.deleteAnimal}
-          />
-        )}
+      <div className="gameList__div">
+        <Dropdown
+        pointing="right"
+        className="editGameList__dropdown"
+        icon={<Icon
+            name="ellipsis vertical"
+            size="large"
+            className="editGameList__icon"
+          />}>
+          <Dropdown.Menu>
+            <Dropdown.Item text="edit"
+            id={`editList--${this.props.gameList.id}`}/>
+            <Dropdown.Divider />
+            <Dropdown.Item text="delete"
+            id={`deleteList--${this.props.gameList.id}`}/>
+          </Dropdown.Menu>
+        </Dropdown>
+        <h3 className="gameList__header">{this.props.gameList.name}</h3>
+        <ul className="gameList">
+          {this.state.gamesInList.map(game =>
+            <GameNightCard
+              key={game.id}
+              game={game}
+            />
+          )}
+        </ul>
       </div>
     )
   }
