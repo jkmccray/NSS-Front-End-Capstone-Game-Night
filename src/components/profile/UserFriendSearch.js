@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
+import { Input } from "semantic-ui-react"
 import FriendsManager from "../../modules/FriendshipManager";
 import FriendSearchCard from './UserFriendSearchCard';
 
@@ -10,8 +11,7 @@ class FriendsSearch extends Component {
   }
 
   componentDidMount() {
-    this.props.getAllFriendData()
-      .then(() => this.setState({ potentialFriends: this.searchPotentialFriendsToDisplay() }))
+    this.displayPotentialFriends()
   }
 
   searchPotentialFriendsToDisplay = () => {
@@ -26,6 +26,10 @@ class FriendsSearch extends Component {
     return potentialFriends;
   }
 
+  displayPotentialFriends = () => {
+    this.props.getAllFriendData()
+      .then(() => this.setState({ potentialFriends: this.searchPotentialFriendsToDisplay() }))
+  }
   handleChange = (event) => {
     const filteredPotentialFriends = this.state.potentialFriends.filter(user => {
       return user.username.toLowerCase().includes(event.target.value.toLowerCase())
@@ -42,15 +46,14 @@ class FriendsSearch extends Component {
     }
     FriendsManager.addFriendshipRequest(newFriendshipObj)
       .then(() => {
-        window.alert("Friend request sent!")
-        this.props.history.push("/friends")
+        this.displayPotentialFriends()
       })
   }
 
   render() {
     return (
       <section className="friendsSearch__section">
-        <input placeholder="Search for new friends" className="friendsSearch__input" id="friendsSearch_input" type="text"
+        <Input placeholder="Search for new friends" className="friendsSearch__input" id="friendsSearch_input" type="text"
           onKeyUp={this.handleChange} />
         {
           this.state.friendSearchMatches.map(user => {

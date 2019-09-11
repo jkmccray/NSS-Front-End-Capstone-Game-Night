@@ -21,7 +21,7 @@ class LoginPage extends Component {
       username: this.state.username,
       password: this.state.password
     }
-    UserData.getBasedOnSearch("username", user.username)
+    UserData.getUserFromSearch("username", user.username)
       .then((userArr) => {
         const userExists = userArr.length > 0
         const existingUserObj = userArr[0]

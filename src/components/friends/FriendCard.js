@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from 'semantic-ui-react'
 
 export default class FriendCard extends Component {
   state = {
@@ -19,12 +20,12 @@ export default class FriendCard extends Component {
 
                 {
                     this.props.friendship.isFriend
-                    ? <button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button btn btn-sm btn-danger card-link">Delete</button>
+                    ? <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button btn btn-sm btn-danger card-link">Delete</Button>
                     :
                     this.props.friendship.userId === this.activeUser
-                    ? <button className="pendingFriends__btn"disabled>Pending</button>
-                    : <> <button onClick={() => this.props.acceptFriendship(this.props.friendship)} className="acceptFriend__btn">Accept Request</button>
-                    <button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="denyFriend__btn">Deny Request</button> </>
+                    ? <Button className="pendingFriends__btn"disabled>Pending</Button>
+                    : <> <Button onClick={() => this.props.acceptFriendship(this.props.friendship)} className="acceptFriend__btn">Accept Request</Button>
+                    <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="denyFriend__btn">Deny Request</Button> </>
                 }
                 </div>
             </div>

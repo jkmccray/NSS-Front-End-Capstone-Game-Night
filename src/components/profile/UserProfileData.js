@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Tab, Button } from "semantic-ui-react"
+import { Tab, Button, Modal } from "semantic-ui-react"
 import UserFriends from "./UserFriends"
 import UserGameLists from "./UserGameLists"
+import UserFriendSearch from "./UserFriendSearch"
 
 class UserProfileData extends Component {
   state = {
     activeIndex: 0,
-    searchingForFriends: true
+    searchingForFriends: false
   }
 
   panes = [
@@ -34,18 +35,38 @@ class UserProfileData extends Component {
           create new list
       </Button>;
       case 2:
-        return <Button>
-        add a friend
-      </Button>
+        return <Modal size="fullscreen"
+        closeIcon
+        trigger={<Button>add a friend</Button>}
+        >
+          <Modal.Content>
+          <UserFriendSearch
+            friendData={this.props.friendData}
+            getAllFriendData={this.props.getAllFriendData}
+          />
+          </Modal.Content>
+        </Modal>
     }
   }
+
+  displayFriendSearchModal = () => {
+      return <Modal
+      >
+        <UserFriendSearch
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+        />
+      </Modal>
+    }
+
+    
 
   render() {
     return (
       <>
-      <div className="userProfileAdd__btn">
-        {this.displayButtonForAddFriendsOrCreateLists()}
-      </div>
+        <div className="userProfileAdd__btn">
+          {this.displayButtonForAddFriendsOrCreateLists()}
+        </div>
         <Tab panes={this.panes}
           onTabChange={this.handleTabChange}
         />
