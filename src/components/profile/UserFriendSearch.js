@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom'
 import FriendsManager from "../../modules/FriendshipManager";
 import FriendSearchCard from './UserFriendSearchCard';
 
-export default class FriendsSearch extends Component {
+class FriendsSearch extends Component {
   state = {
     potentialFriends: [],
     friendSearchMatches: [],
@@ -64,3 +65,5 @@ export default class FriendsSearch extends Component {
     )
   }
 }
+
+export default withRouter(FriendsSearch)

@@ -8,14 +8,14 @@ export default class FriendList extends Component {
       }
 
     deleteFriendship = friendshipId => {
-        FriendshipManager.deleteFriendShip(friendshipId)
+        FriendshipManager.deleteFriendship(friendshipId)
         .then(() => {
             this.props.getAllFriendData()
         })
     }
     acceptFriendship = friendshipObj => {
         friendshipObj.isFriend = true
-        FriendshipManager.acceptFriendShip(friendshipObj)
+        FriendshipManager.acceptFriendship(friendshipObj)
         .then(() => {
             this.props.getAllFriendData()
         })

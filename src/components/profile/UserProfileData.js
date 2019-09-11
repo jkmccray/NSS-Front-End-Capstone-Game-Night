@@ -5,7 +5,8 @@ import UserGameLists from "./UserGameLists"
 
 class UserProfileData extends Component {
   state = {
-    activeIndex: 0
+    activeIndex: 0,
+    searchingForFriends: true
   }
 
   panes = [
@@ -15,6 +16,7 @@ class UserProfileData extends Component {
       menuItem: 'friends', render: () => <Tab.Pane><UserFriends
         friendData={this.props.friendData}
         getAllFriendData={this.props.getAllFriendData}
+        searchingForFriends={this.state.searchingForFriends}
       /></Tab.Pane>
     },
     { menuItem: 'owned games', render: () => <Tab.Pane></Tab.Pane> },
@@ -25,7 +27,7 @@ class UserProfileData extends Component {
     this.setState({ activeIndex: activeIndex.activeIndex })
   }
 
-  displayButtonForFriendsOrLists = () => {
+  displayButtonForAddFriendsOrCreateLists = () => {
     switch (this.state.activeIndex) {
       case 0:
         return <Button>
@@ -42,7 +44,7 @@ class UserProfileData extends Component {
     return (
       <>
       <div className="userProfileAdd__btn">
-        {this.displayButtonForFriendsOrLists()}
+        {this.displayButtonForAddFriendsOrCreateLists()}
       </div>
         <Tab panes={this.panes}
           onTabChange={this.handleTabChange}
