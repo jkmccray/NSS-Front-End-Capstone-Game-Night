@@ -6,15 +6,14 @@ import GamesSavedToList from '../../modules/GameSavedToListManager'
 
 import './GameList.css'
 
-class GameNightList extends Component {
+class GameList extends Component {
   state = {
     gamesInList: [],
     editingStatus: false,
-    gamesInEditedList: [],
     editedListName: "",
-    editedListId: 0
   }
 
+  activeUser = sessionStorage.getItem("activeUser")
   listId = this.props.gameList.id
 
   componentDidMount() {
@@ -23,20 +22,13 @@ class GameNightList extends Component {
 
   getAllGamesInList = () => {
     GamesSavedToList.getAllGamesSavedToSingleList(this.listId)
-      .then(results => {
-        this.setState({ gamesInList: results.map(result => result.game) })
+      .then(gameAndListObjs => {
+        this.setState({ gamesInList: gameAndListObjs })
       })
   }
 
   handleEditListOnClick = (event) => {
-    const nodeType = event.target.nodeName
-    let listId
-    if (nodeType === "DIV") {
-      listId = parseInt(event.target.id.split("--")[1])
-    } else if (nodeType === "SPAN") {
-      listId = parseInt(event.target.parentNode.id.split("--")[1])
-    }
-    UserGameListManager.getSingleUserList(listId)
+    UserGameListManager.getSingleUserList(this.listId)
       .then(listObj => {
         this.setState({
           editingStatus: true,
@@ -49,6 +41,25 @@ class GameNightList extends Component {
     this.setState({ [event.target.id]: event.target.value })
   }
 
+  handleDeleteGameFromListBtnOnClick = (event) => {
+    const nodeType = event.target.nodeName
+    let id
+    if (nodeType === "BUTTON") {
+      id = parseInt(event.target.id.split("--")[1])
+    } else if (nodeType === "I") {
+      id = parseInt(event.target.parentNode.id.split("--")[1])
+    }
+    // GamesSavedToList.deleteGameFromUserList(id)
+    //   .then(() => {
+
+    //   })
+  }
+
+  handleSaveEditChangesBtnOnClick = (event) => {
+    // save name changes to db
+    this.setState({ editingStatus: false })
+  }
+
   handleDeleteListOnClick = () => {
 
   }
@@ -58,7 +69,9 @@ class GameNightList extends Component {
       <div className="gameList__div">
         {
           this.state.editingStatus
-            ? <><Button className={`saveListChanges--${this.props.gameList.id}`}>save</Button>
+            ? <><Button
+              onClick={this.handleSaveEditChangesBtnOnClick}
+              className={`saveListChanges--${this.props.gameList.id}`}>save</Button>
               <Input
                 id="editedListName"
                 onChange={this.handleOnChange}
@@ -88,8 +101,9 @@ class GameNightList extends Component {
           {this.state.gamesInList.map(game =>
             <GameNightCard
               key={game.id}
-              game={game}
+              gameAndListObj={game}
               editingStatus={this.state.editingStatus}
+              handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
             />
           )}
         </ul>
@@ -98,4 +112,4 @@ class GameNightList extends Component {
   }
 }
 
-export default GameNightList
+export default GameList

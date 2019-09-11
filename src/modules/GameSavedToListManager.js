@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   getSingleGameSavedToUserList(gameId, userListId) {
-    return fetch(`${remoteURL}/gamesSavedByUsersToLists?game=${gameId}&userList=${userListId}`)
+    return fetch(`${remoteURL}/gamesSavedByUsersToLists?gameId=${gameId}&userListId=${userListId}`)
       .then(result => result.json())
   },
   getAllGamesSavedToSingleList(userListId) {
