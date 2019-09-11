@@ -14,11 +14,17 @@ class UserGameLists extends Component {
   componentDidMount() {
     this.getAllUserLists()
   }
+  
   getAllUserLists = () => {
     UserGameListManager.getAllUserLists(this.activeUser)
     .then(gameLists => {
       this.setState({gameLists: gameLists})
     })
+  }
+
+  handleDeleteListOnClick = (listId) => {
+    UserGameListManager.deleteList(listId)
+    .then(this.getAllUserLists)
   }
 
   render() {
@@ -28,6 +34,7 @@ class UserGameLists extends Component {
           <GameList
           key={gameList.id}
           gameList={gameList}
+          handleDeleteListOnClick={this.handleDeleteListOnClick}
           />
         )}
       </div>

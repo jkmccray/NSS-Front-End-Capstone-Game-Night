@@ -108,7 +108,7 @@ class SearchResultList extends Component {
   handleSaveGameToListBtnOnClick = (event) => {
     if (this.state.selectedGameList > 0) {
       const saveGameToListObj = {
-        gameId: this.state.selectedGameId,
+        apiGameId: this.state.selectedGameId,
         userListId: this.state.selectedGameList
       }
       GamesSavedToLists.addGametoUserList(saveGameToListObj)

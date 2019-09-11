@@ -7,8 +7,8 @@ class GameNightCard extends Component {
     return (
       <li className="gameList__card">
         <div className="gameListCard__info">
-        <Image className="gameListCard__img" src={this.props.gameAndListObj.game.thumb_url}/>
-        <h4>{this.props.gameAndListObj.game.name}</h4>
+        <Image className="gameListCard__img" src={this.props.gameAndListObj.apiGame.thumb_url}/>
+        <h4>{this.props.gameAndListObj.apiGame.name}</h4>
         </div>
         {
           this.props.editingStatus

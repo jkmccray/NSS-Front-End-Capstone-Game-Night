@@ -11,6 +11,7 @@ class GameList extends Component {
     gamesInList: [],
     editingStatus: false,
     editedListName: "",
+    showModal: false
   }
 
   activeUser = sessionStorage.getItem("activeUser")
@@ -49,19 +50,18 @@ class GameList extends Component {
     } else if (nodeType === "I") {
       id = parseInt(event.target.parentNode.id.split("--")[1])
     }
-    // GamesSavedToList.deleteGameFromUserList(id)
-    //   .then(() => {
-
-    //   })
+    GamesSavedToList.deleteGameFromUserList(id)
+      .then(this.getAllGamesInList)
   }
 
   handleSaveEditChangesBtnOnClick = (event) => {
-    // save name changes to db
-    this.setState({ editingStatus: false })
-  }
-
-  handleDeleteListOnClick = () => {
-
+    const listObj = {
+      id: this.listId,
+      userId: this.activeUser,
+      name: this.state.editedListName
+    }
+    UserGameListManager.saveEditedListName(listObj)
+      .then(() => this.setState({ editingStatus: false }))
   }
 
   render() {
@@ -71,7 +71,7 @@ class GameList extends Component {
           this.state.editingStatus
             ? <><Button
               onClick={this.handleSaveEditChangesBtnOnClick}
-              className={`saveListChanges--${this.props.gameList.id}`}>save</Button>
+              id={`saveListChanges--${this.props.gameList.id}`}>save</Button>
               <Input
                 id="editedListName"
                 onChange={this.handleOnChange}
@@ -91,7 +91,7 @@ class GameList extends Component {
                   id={`editList--${this.props.gameList.id}`} />
                 <Dropdown.Divider />
                 <Dropdown.Item text="delete"
-                  onClick={this.handleDeleteListOnClick}
+                  onClick={() => this.props.handleDeleteListOnClick(this.listId)}
                   id={`deleteList--${this.props.gameList.id}`} />
               </Dropdown.Menu>
             </Dropdown>
