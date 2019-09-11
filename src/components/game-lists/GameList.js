@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Button } from "semantic-ui-react"
+import { Icon, Button, Dropdown } from "semantic-ui-react"
 import GameNightCard from './GameListCard'
 import GameManager from '../../modules/GameManager'
 import GamesSavedToList from '../../modules/GameSavedToListManager'
@@ -9,7 +9,7 @@ import './GameList.css'
 class GameNightList extends Component {
   state = {
     gamesInList: [],
-    editingList: false
+    editingStatus: false
   }
 
   userListId = this.props.gameList.id
@@ -22,33 +22,29 @@ class GameNightList extends Component {
     GamesSavedToList.getAllGamesSavedToSingleList(this.userListId)
       .then(results => {
         this.setState({ gamesInList: results.map(result => result.game) })
-        console.log(this.state)
       })
   }
-
-  // deleteGame = id => {
-  //   GameManager.delete(id)
-  //     .then(() => {
-  //       AnimalManager.getAll()
-  //         .then((newAnimals) => {
-  //           this.setState({
-  //             animals: newAnimals
-  //           })
-  //         })
-  //     })
-  // }
 
   render() {
     return (
       <div className="gameList__div">
-        <Button>
-        <Icon
-          name="ellipsis vertical"
-          size="large"
-          className="editGameList__icon"
-        />
-        </Button>
-        <h3>{this.props.gameList.name}</h3>
+        <Dropdown
+        pointing="right"
+        className="editGameList__dropdown"
+        icon={<Icon
+            name="ellipsis vertical"
+            size="large"
+            className="editGameList__icon"
+          />}>
+          <Dropdown.Menu>
+            <Dropdown.Item text="edit"
+            id={`editList--${this.props.gameList.id}`}/>
+            <Dropdown.Divider />
+            <Dropdown.Item text="delete"
+            id={`deleteList--${this.props.gameList.id}`}/>
+          </Dropdown.Menu>
+        </Dropdown>
+        <h3 className="gameList__header">{this.props.gameList.name}</h3>
         <ul className="gameList">
           {this.state.gamesInList.map(game =>
             <GameNightCard

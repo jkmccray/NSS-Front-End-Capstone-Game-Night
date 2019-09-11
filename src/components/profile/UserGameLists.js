@@ -28,7 +28,6 @@ class UserGameLists extends Component {
           <GameList
           key={gameList.id}
           gameList={gameList}
-          // deleteGameList={this.deleteGameList}
           />
         )}
       </div>
