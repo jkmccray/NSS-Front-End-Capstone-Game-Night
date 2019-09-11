@@ -1,16 +1,20 @@
 const remoteURL = "http://localhost:5002"
 
 const UserData = {
-  get(id) {
+  getSingleUser(id) {
     return fetch(`${remoteURL}/users/${id}`)
       .then(result => result.json())
-    },
-    getBasedOnSearch(property, string) {
-      return fetch(`${remoteURL}/users?${property}=${string}`)
+  },
+  getUserFromSearch(userObjProperty, string) {
+    return fetch(`${remoteURL}/users?${userObjProperty}=${string}`)
       .then(result => result.json())
   },
   getAll() {
     return fetch(`${remoteURL}/users`)
+      .then(result => result.json())
+  },
+  getAllExcludingActiveUser(activeUserId) {
+    return fetch(`${remoteURL}/users?id_ne=${activeUserId}`)
       .then(result => result.json())
   },
   post(user) {
@@ -21,7 +25,7 @@ const UserData = {
       },
       body: JSON.stringify(user)
     })
-    .then(result => result.json())
+      .then(result => result.json())
   }
 }
 

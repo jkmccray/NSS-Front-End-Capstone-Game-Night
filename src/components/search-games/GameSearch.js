@@ -22,16 +22,30 @@ class SearchGames extends Component {
   }
 
   handleMultiSelectChange = (multiSelect, event) => {
+    const nodeName = event.target.nodeName
     const arr = this.state[multiSelect]
-    // if event target id exists, the category is being added to the search
-    if (event.target.id){
+    let name
+    let id
+    if (nodeName === "DIV") {
+      name = event.target.textContent
+      id = event.target.id
+    } else if (nodeName === "SPAN") {
+      name = event.target.parentNode.textContent
+      id = event.target.parentNode.id
+    }
+    this.addOrRemoveSelectionFromState(name, id, event, multiSelect, arr)
+  }
+
+  addOrRemoveSelectionFromState = (name, id, event, multiSelect, arr) => {
+    // if id exists, the category/mechanic is being added to the search
+    if (id){
       const newObj = {
-        name: event.target.textContent,
-        id: event.target.id
+        name: name,
+        id: id
       }
       arr.push(newObj)
       this.setState({[multiSelect]: arr})
-      // if event target id does not exist, the category is being removed from the search
+      // if id does not exist, the category/mechanic is being removed from the search
     } else {
       const name = event.target.parentNode.textContent
       // use the text content of the parent node to identify which tag is being removed and remove the corresponding element in the array in state
@@ -42,7 +56,13 @@ class SearchGames extends Component {
   }
 
   handleSingleSelectChange = (selection, event) => {
-    const num = parseInt(event.target.textContent)
+    const nodeName = event.target.nodeName
+    let num
+    if (nodeName === "DIV") {
+      num = parseInt(event.target.textContent)
+    } else if (nodeName === "SPAN") {
+      num = parseInt(event.target.parentNode.textContent)
+    }
     this.setState({[selection]: num})
   }
 

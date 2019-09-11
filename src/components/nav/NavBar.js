@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, NavLink } from "react-router-dom"
+import { Button } from "semantic-ui-react"
 import './NavBar.css'
 
 class NavBar extends Component {
@@ -16,7 +17,7 @@ class NavBar extends Component {
       <>
         {
           this.userIsLoggedIn()
-            ? <> <button className="logout-btn" onClick={this.logOut}>logout</button>
+            ? <> <Button className="logout-btn" onClick={this.logOut}>logout</Button>
               <nav>
                 <ul className="container">
                   <li>
