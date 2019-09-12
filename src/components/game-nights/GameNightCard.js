@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
@@ -11,7 +10,8 @@ import './GameNightCard.css'
 class GameNightCard extends Component {
   state = {
     attendees: [],
-    activeUserInviteStatus: "not attending"
+    activeUserInviteStatus: "not attending",
+    userAndGameNight: {}
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -24,7 +24,10 @@ class GameNightCard extends Component {
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
       .then(userAndGameNight => {
         if (userAndGameNight.length > 0) {
-          this.setState({ activeUserInviteStatus: userAndGameNight[0].inviteStatus })
+          this.setState({
+            activeUserInviteStatus: userAndGameNight[0].inviteStatus,
+            userAndGameNight: userAndGameNight[0]
+          })
         }
       })
   }
@@ -44,10 +47,31 @@ class GameNightCard extends Component {
     </Modal>
   }
 
+  handleAcceptInviteBtnOnClick = () => {
+    const userAndGameNightObj = this.state.userAndGameNight
+    userAndGameNightObj.inviteStatus = "attending"
+    FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
+    .then(userAndGameNightObj => this.setState({activeUserInviteStatus: userAndGameNightObj.inviteStatus}))
+  }
+
+  handleDeclineInviteBtnOnClick = () => {
+    const userAndGameNightObj = this.state.userAndGameNight
+    userAndGameNightObj.inviteStatus = "not attending"
+    FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
+    .then(userAndGameNightObj => this.setState({activeUserInviteStatus: userAndGameNightObj.inviteStatus}))
+  }
+
   showInviteFriendsBtnOrModal = () => {
     switch (this.state.activeUserInviteStatus) {
       case "invited":
-        return <Button className="gameNightCard__btn">accept invite</Button>
+        return <div> <Button
+        className="gameNightCard__btn"
+        onClick={this.handleAcceptInviteBtnOnClick}
+        >accept</Button>
+        <Button
+        className="gameNightCard__btn"
+        onClick={this.handleDeclineInviteBtnOnClick}
+        >decline</Button> </div>
       case "attending":
         return <Modal
           closeIcon
@@ -61,7 +85,7 @@ class GameNightCard extends Component {
             />
           </Modal.Content>
         </Modal>
-        default:
+      default:
         return <Button className="gameNightCard__btn">attend</Button>
     }
   }
@@ -80,7 +104,6 @@ class GameNightCard extends Component {
             />
           })
         }
-
       </Modal.Content>
     </Modal>
   }
@@ -94,7 +117,7 @@ class GameNightCard extends Component {
           icon={<Icon
             name="ellipsis vertical"
             size="large"
-            className="editGameList__icon"
+            className="editGameNight__icon"
           />}>
           <Dropdown.Menu>
             <Dropdown.Item text="edit"

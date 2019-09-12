@@ -28,5 +28,15 @@ export default {
       body: JSON.stringify(userAndGameNightObj)
     })
       .then(result => result.json())
+  },
+  updateInviteStatus(userAndGameNightObj) {
+    return fetch(`${remoteURL}/usersInvitedToGameNights/${userAndGameNightObj.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userAndGameNightObj)
+    })
+      .then(result => result.json())
   }
 }
