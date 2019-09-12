@@ -1,28 +1,38 @@
-// const remoteURL = "http://localhost:5002"
+const remoteURL = "http://localhost:5002"
 
-// export default {
-//   getSingleGameSavedToUserList(gameId, userListId) {
-//     return fetch(`${remoteURL}/gamesSavedByUsersToLists?game=${gameId}&userList=${userListId}`)
-//       .then(result => result.json())
-//   },
-//   getAllGamesSavedToUserLists() {
-//     return fetch(`${remoteURL}/gamesSavedByUsersToLists`)
-//       .then(result => result.json())
-//   },
-//   deleteGameFromUserList(id) {
-//     return fetch(`http://localhost:5002/gamesSavedByUsersToLists/${id}`, {
-//       method: "DELETE"
-//     })
-//       .then(result => result.json())
-//   },
-//   addGametoUserList(gameAndUserObj) {
-//     return fetch(`${remoteURL}/gamesSavedByUsersToLists?_expand=userList&_expand=game`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(gameAndUserObj)
-//     })
-//       .then(result => result.json())
-//   }
-// }
+export default {
+  getSingleGameNight(id) {
+    return fetch(`${remoteURL}/gameNights/${id}}`)
+      .then(result => result.json())
+  },
+  getAllGameNights() {
+    return fetch(`${remoteURL}/gameNights?_expand=user`)
+      .then(result => result.json())
+  },
+  deleteGameNight(id) {
+    return fetch(`${remoteURL}/gameNights/${id}`, {
+      method: "DELETE"
+    })
+      .then(result => result.json())
+  },
+  addGameNight(gameNightObj) {
+    return fetch(`${remoteURL}/gameNights`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(gameNightObj)
+    })
+      .then(result => result.json())
+  },
+  saveEditedGameNight(gameNightObj) {
+    return fetch(`${remoteURL}/gameNights/${gameNightObj.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(gameNightObj)
+    })
+      .then(result => result.json())
+  }
+}

@@ -36,30 +36,32 @@ class UserProfileData extends Component {
       </Button>;
       case 2:
         return <Modal size="fullscreen"
-        closeIcon
-        trigger={<Button>add a friend</Button>}
+          closeIcon
+          trigger={<Button>add a friend</Button>}
         >
           <Modal.Content>
-          <UserFriendSearch
-            friendData={this.props.friendData}
-            getAllFriendData={this.props.getAllFriendData}
-          />
+            <UserFriendSearch
+              friendData={this.props.friendData}
+              getAllFriendData={this.props.getAllFriendData}
+            />
           </Modal.Content>
         </Modal>
+      default:
+        return null
     }
   }
 
   displayFriendSearchModal = () => {
-      return <Modal
-      >
-        <UserFriendSearch
-          friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-        />
-      </Modal>
-    }
+    return <Modal
+    >
+      <UserFriendSearch
+        friendData={this.props.friendData}
+        getAllFriendData={this.props.getAllFriendData}
+      />
+    </Modal>
+  }
 
-    
+
 
   render() {
     return (

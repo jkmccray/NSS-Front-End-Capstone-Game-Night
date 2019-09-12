@@ -1,0 +1,24 @@
+.gameNight__card {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.editGameNight__dropdown {
+  text-align: right;
+  align-self: flex-end;
+  color: #F89D13;
+}
+
+.gameNightLocation__icon {
+  color: #8F1D14;
+}
+
+.gameNightCardBtn__div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.gameNightCard__btn {
+  width: 45%;
+}
