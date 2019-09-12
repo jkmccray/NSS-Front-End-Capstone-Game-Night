@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
-import GameList from "../game-lists/GameList"
+import GameNightGameList from "./GameNightGameList"
 import './GameNightCard.css'
 
 class GameNightCard extends Component {
@@ -12,7 +12,7 @@ class GameNightCard extends Component {
       trigger={<Button className="gameNightCard__btn">view game list</Button>}
     >
       <Modal.Content>
-        <GameList
+        <GameNightGameList
           friendData={this.props.friendData}
           getAllFriendData={this.props.getAllFriendData}
           gameList={this.props.gameNight.userList}
@@ -44,7 +44,7 @@ class GameNightCard extends Component {
         </Dropdown>
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
         <h3>{this.props.gameNight.name}</h3>
-        <p>{this.props.gameNight.user.username}</p>
+        <p>created by: {this.props.gameNight.user.username}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
         <p>see all attendees</p>
