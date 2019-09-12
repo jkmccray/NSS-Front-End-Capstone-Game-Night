@@ -10,14 +10,23 @@ import './GameNightCard.css'
 
 class GameNightCard extends Component {
   state = {
-    attendees: []
+    attendees: [],
+    activeUserInviteStatus: "not attending"
   }
 
+  activeUser = parseInt(sessionStorage.getItem("activeUser"))
   gameListId = this.props.gameNight.userListId
+
 
   componentDidMount() {
     FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
       .then(attendees => this.setState({ attendees: attendees }))
+    FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
+      .then(userAndGameNight => {
+        if (userAndGameNight.length > 0) {
+          this.setState({ activeUserInviteStatus: userAndGameNight[0].inviteStatus })
+        }
+      })
   }
 
   showGameListBtnOrModal = () => {
@@ -36,18 +45,25 @@ class GameNightCard extends Component {
   }
 
   showInviteFriendsBtnOrModal = () => {
-    return <Modal
-      closeIcon
-      trigger={<Button className="gameNightCard__btn">invite friends</Button>}
-    >
-      <Modal.Content>
-        <InviteFriends
-          friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-          gameNightId={this.props.gameNight.id}
-        />
-      </Modal.Content>
-    </Modal>
+    switch (this.state.activeUserInviteStatus) {
+      case "invited":
+        return <Button className="gameNightCard__btn">accept invite</Button>
+      case "attending":
+        return <Modal
+          closeIcon
+          trigger={<Button className="gameNightCard__btn">invite friends</Button>}
+        >
+          <Modal.Content>
+            <InviteFriends
+              friendData={this.props.friendData}
+              getAllFriendData={this.props.getAllFriendData}
+              gameNightId={this.props.gameNight.id}
+            />
+          </Modal.Content>
+        </Modal>
+        default:
+        return <Button className="gameNightCard__btn">attend</Button>
+    }
   }
 
   showAttendeesLinkOrModal = () => {
