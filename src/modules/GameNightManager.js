@@ -6,7 +6,7 @@ export default {
       .then(result => result.json())
   },
   getAllGameNights() {
-    return fetch(`${remoteURL}/gameNights?_expand=user`)
+    return fetch(`${remoteURL}/gameNights?_expand=user&_expand=userList`)
       .then(result => result.json())
   },
   deleteGameNight(id) {

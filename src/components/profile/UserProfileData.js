@@ -34,6 +34,10 @@ class UserProfileData extends Component {
         return <Button>
           create new list
       </Button>;
+      case 1:
+        return <Button>
+          create game night
+        </Button>
       case 2:
         return <Modal size="fullscreen"
           closeIcon
@@ -50,18 +54,6 @@ class UserProfileData extends Component {
         return null
     }
   }
-
-  displayFriendSearchModal = () => {
-    return <Modal
-    >
-      <UserFriendSearch
-        friendData={this.props.friendData}
-        getAllFriendData={this.props.getAllFriendData}
-      />
-    </Modal>
-  }
-
-
 
   render() {
     return (
