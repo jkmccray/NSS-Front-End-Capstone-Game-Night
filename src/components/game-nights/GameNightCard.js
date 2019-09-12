@@ -17,7 +17,7 @@ class GameNightCard extends Component {
 
   componentDidMount() {
     FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
-    .then(attendees => this.setState({attendees: attendees}))
+      .then(attendees => this.setState({ attendees: attendees }))
   }
 
   showGameListBtnOrModal = () => {
@@ -59,8 +59,8 @@ class GameNightCard extends Component {
         {
           this.state.attendees.map(attendee => {
             return < AttendeeCard
-            key={attendee.id}
-            attendee={attendee.user}
+              key={attendee.id}
+              attendee={attendee.user}
             />
           })
         }
@@ -95,7 +95,11 @@ class GameNightCard extends Component {
         <p>created by: {this.props.gameNight.user.username}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
-        {this.showAttendeesLinkOrModal()}
+        {
+          this.state.attendees.length > 0
+            ? this.showAttendeesLinkOrModal()
+            : null
+        }
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}

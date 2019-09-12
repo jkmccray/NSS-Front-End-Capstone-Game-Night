@@ -10,11 +10,11 @@ export default class InviteFriendCard extends Component {
 
   componentDidMount() {
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.props.user.id, this.props.gameNightId)
-    .then(friendInvitedAndGameNightObj => {
-      if (friendInvitedAndGameNightObj.length > 0) {
-        this.setState({inviteStatus: friendInvitedAndGameNightObj[0].inviteStatus})
-      }
-    })
+      .then(friendInvitedAndGameNightObj => {
+        if (friendInvitedAndGameNightObj.length > 0) {
+          this.setState({ inviteStatus: friendInvitedAndGameNightObj[0].inviteStatus })
+        }
+      })
   }
 
   handleInviteFriendButton = () => {
@@ -23,11 +23,15 @@ export default class InviteFriendCard extends Component {
   }
 
   displayInviteFriendBtn = () => {
-    return (this.state.friendInvited || this.state.inviteStatus === "invited")
-      ? <Button disabled>invited!</Button>
-      : <Button onClick={this.handleInviteFriendButton} className="addFriend__button">
+    if (this.state.friendInvited || this.state.inviteStatus === "invited") {
+      return <Button disabled>invited!</Button>
+    } else if (this.state.inviteStatus === "attending") {
+      return <Button disabled>attending!</Button>
+    } else {
+      return <Button onClick={this.handleInviteFriendButton} className="addFriend__button">
         invite
-        </Button>
+      </Button>
+    }
   }
 
   render() {
