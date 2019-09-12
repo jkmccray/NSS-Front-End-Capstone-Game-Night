@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom'
 import { Input } from "semantic-ui-react"
 import FriendsManager from "../../modules/FriendshipManager";
 import FriendSearchCard from './UserFriendSearchCard';
@@ -60,8 +59,7 @@ class FriendsSearch extends Component {
             return <FriendSearchCard
               key={user.id}
               user={user}
-              addFriendship={this.addFriendship}
-              {...this.props} />
+              addFriendship={this.addFriendship} />
           })
         }
       </section>
@@ -69,4 +67,4 @@ class FriendsSearch extends Component {
   }
 }
 
-export default withRouter(FriendsSearch)
+export default FriendsSearch

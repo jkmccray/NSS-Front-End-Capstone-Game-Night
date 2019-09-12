@@ -82,7 +82,10 @@ class ApplicationViews extends Component {
         }} />
         <Route path="/home" render={(props) => {
           return this.isAuthenticated()
-          ? <GameNights />
+          ? <GameNights
+          friendData={this.state}
+          getAllFriendData={this.getAllFriendData}
+          />
           : <Redirect to="/" />
         }} />
         <Route path="/explore" render={(props) => {

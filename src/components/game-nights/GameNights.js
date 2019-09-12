@@ -71,6 +71,8 @@ class GameNights extends Component {
             <GameNightCard
               key={gameNight.id}
               gameNight={gameNight}
+              friendData={this.props.friendData}
+              getAllFriendData={this.props.getAllFriendData}
               // editingStatus={this.state.editingStatus}
               // handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
             />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
+import InviteFriends from "./InviteFriends"
 import './GameNightCard.css'
 
 class GameNightCard extends Component {
@@ -19,6 +20,22 @@ class GameNightCard extends Component {
         />
       </Modal.Content>
     </Modal>
+  }
+
+  showInviteFriendsBtnOrModal = () => {
+    return <Modal
+      closeIcon
+      trigger={<Button className="gameNightCard__btn">invite friends</Button>}
+    >
+      <Modal.Content>
+        <InviteFriends
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+          gameNightId={this.props.gameNight.id}
+        />
+      </Modal.Content>
+    </Modal>
+
   }
 
   render() {
@@ -50,7 +67,7 @@ class GameNightCard extends Component {
         <p>see all attendees</p>
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
-          <Button className="gameNightCard__btn">invite friends</Button>
+          {this.showInviteFriendsBtnOrModal()}
         </div>
       </div>
     );
