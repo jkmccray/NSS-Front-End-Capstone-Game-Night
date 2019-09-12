@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
+import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
+import AttendeeCard from './AttendeeCard';
+
 import './GameNightCard.css'
 
 class GameNightCard extends Component {
+  state = {
+    attendees: []
+  }
+
   gameListId = this.props.gameNight.userListId
+
+  componentDidMount() {
+    FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
+    .then(attendees => this.setState({attendees: attendees}))
+  }
 
   showGameListBtnOrModal = () => {
     return <Modal
@@ -35,7 +48,25 @@ class GameNightCard extends Component {
         />
       </Modal.Content>
     </Modal>
+  }
 
+  showAttendeesLinkOrModal = () => {
+    return <Modal
+      closeIcon
+      trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}
+    >
+      <Modal.Content>
+        {
+          this.state.attendees.map(attendee => {
+            return < AttendeeCard
+            key={attendee.id}
+            attendee={attendee.user}
+            />
+          })
+        }
+
+      </Modal.Content>
+    </Modal>
   }
 
   render() {
@@ -64,7 +95,7 @@ class GameNightCard extends Component {
         <p>created by: {this.props.gameNight.user.username}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
-        <p>see all attendees</p>
+        {this.showAttendeesLinkOrModal()}
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}
