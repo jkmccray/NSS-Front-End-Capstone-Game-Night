@@ -5,27 +5,14 @@ import InviteFriendCard from './InviteFriendCard';
 
 class InviteFriends extends Component {
   state = {
-    allFriends: [],
     friendSearchMatches: []
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
   gameNightId = this.props.gameNightId
 
-  componentDidMount() {
-    this.getAllFriendsAndSetState()
-  }
-
-  getAllFriendsAndSetState = () => {
-    // Get all current friends as an array of user objects and store in a variable
-    const allFriends = this.props.friendData.users.filter(user => {
-      return this.props.friendData.friendships.find(friendship => user.id === friendship.userId || user.id === friendship.otherUser)
-    })
-    this.setState({allFriends: allFriends})
-  }
-
   handleChange = (event) => {
-    const friendSearchMatches = this.state.allFriends.filter(user => {
+    const friendSearchMatches = this.props.friendData.acceptedFriends.filter(user => {
       return user.username.toLowerCase().includes(event.target.value.toLowerCase())
     })
     this.setState({ friendSearchMatches: friendSearchMatches })
@@ -35,25 +22,23 @@ class InviteFriends extends Component {
     const userAndGameNightObj = {
       gameNightId: this.gameNightId,
       userId: friendUserId,
-      isAttending: false
+      inviteStatus: "invited"
     }
-    FriendsInvitedToGameNight.inviteFriendToGameNight(userAndGameNightObj)
-      .then(() => {
-        this.getAllFriendsAndSetState()
-      })
+    return FriendsInvitedToGameNight.inviteFriendToGameNight(userAndGameNightObj)
   }
 
   render() {
     return (
       <section className="friendsSearch__section">
-        <Input placeholder="Search for new friends" className="friendsSearch__input" id="friendsSearch_input" type="text"
+        <Input placeholder="Search for friends to invite" className="friendsSearch__input" id="friendsSearch_input" type="text"
           onKeyUp={this.handleChange} />
         {
           this.state.friendSearchMatches.map(user => {
             return <InviteFriendCard
               key={user.id}
               user={user}
-              inviteFriendToGameNight={this.inviteFriendToGameNight}/>
+              inviteFriendToGameNight={this.inviteFriendToGameNight}
+              gameNightId={this.gameNightId}/>
           })
         }
       </section>

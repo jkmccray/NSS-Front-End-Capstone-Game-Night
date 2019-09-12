@@ -1,8 +1,8 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  getSingleUserInvitedAndGameNight(id) {
-    return fetch(`${remoteURL}/usersInvitedToGameNights/${id}}`)
+  getSingleUserInvitedAndGameNight(userId, gameNightId) {
+    return fetch(`${remoteURL}/usersInvitedToGameNights?userId=${userId}&gameNightId=${gameNightId}`)
       .then(result => result.json())
   },
   getAllUsersInvitedToAGameNight(gameNightId) {
