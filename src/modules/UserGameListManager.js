@@ -16,7 +16,7 @@ export default {
     })
       .then(result => result.json())
   },
-  addGametoUserList(UserListObj) {
+  addGameList(UserListObj) {
     return fetch(`${remoteURL}/userLists`, {
       method: "POST",
       headers: {

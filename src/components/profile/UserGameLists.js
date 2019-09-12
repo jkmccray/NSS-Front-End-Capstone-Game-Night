@@ -14,7 +14,7 @@ class UserGameLists extends Component {
   componentDidMount() {
     this.getAllUserLists()
   }
-  
+
   getAllUserLists = () => {
     UserGameListManager.getAllUserLists(this.activeUser)
     .then(gameLists => {
