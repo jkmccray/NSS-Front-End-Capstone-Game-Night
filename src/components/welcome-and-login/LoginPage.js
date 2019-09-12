@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input, Button } from 'semantic-ui-react'
 import UserData from '../../modules/UserManager'
 
 // import './NavBar.css'
@@ -38,9 +39,9 @@ class LoginPage extends Component {
     return (
       <div>
         <h1>Log In</h1>
-        <input placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange} />
-        <input type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} />
-        <input type="submit" disabled={this.state.loadingStatus} value="Login" onClick={this.handleSubmit} />
+        <Input placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange} />
+        <Input type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} />
+        <Button disabled={this.state.loadingStatus} onClick={this.handleSubmit}>login</Button>
       </div>
     )
   }

@@ -48,7 +48,6 @@ class SearchResultList extends Component {
   checkIfGameInDbAndSetState = (gameObjFromApi) => {
     GameManager.getGameByGameId(gameObjFromApi.id)
       .then(gameObjFromDb => {
-        console.log('gameObjFromDb: ', gameObjFromDb);
         // If the game does not exist in the database, add gameObjFromApi to the database
         // If it does exist, use id of the game in the db
         if (gameObjFromDb.length === 0) {
@@ -113,8 +112,6 @@ class SearchResultList extends Component {
       }
       GamesSavedToLists.addGametoUserList(saveGameToListObj)
         .then(gameAndListObj => {
-          console.log('gameAndListObj: ', gameAndListObj);
-
           this.setState({
             showModal: false,
             hideSuccessMessage: false,

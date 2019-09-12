@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Icon, Button, Dropdown, Input } from "semantic-ui-react"
-import GameNightCard from './GameListCard'
+import GameNightCard from '../game-lists/GameListCard'
 import UserGameListManager from "../../modules/UserGameListManager"
 import GamesSavedToList from '../../modules/GameSavedToListManager'
 
-import './GameList.css'
+import '../game-lists/GameList.css'
 
-class GameList extends Component {
+class GameNightGameList extends Component {
   state = {
     gamesInList: [],
     gameListName: "",
@@ -74,36 +74,7 @@ class GameList extends Component {
   render() {
     return (
       <div className="gameList__div">
-        {
-          this.state.editingStatus
-            ? <><Button
-              onClick={this.handleSaveEditChangesBtnOnClick}
-              id={`saveListChanges--${this.props.gameList.id}`}>save</Button>
-              <Input
-                id="editedListName"
-                onChange={this.handleOnChange}
-                defaultValue={this.state.editedListName} /> </>
-            : <> <Dropdown
-              id={`dropdownList--${this.props.gameList.id}`}
-              pointing="right"
-              className="editGameList__dropdown"
-              icon={<Icon
-                name="ellipsis vertical"
-                size="large"
-                className="editGameList__icon"
-              />}>
-              <Dropdown.Menu>
-                <Dropdown.Item text="edit"
-                  onClick={this.handleEditListOnClick}
-                  id={`editList--${this.props.gameList.id}`} />
-                <Dropdown.Divider />
-                <Dropdown.Item text="delete"
-                  onClick={() => this.props.handleDeleteListOnClick(this.listId)}
-                  id={`deleteList--${this.props.gameList.id}`} />
-              </Dropdown.Menu>
-            </Dropdown>
-              <h3 className="gameList__header">{this.state.gameListName}</h3> </>
-        }
+        <h3 className="gameList__header">{this.state.gameListName}</h3>
         <ul className="gameList">
           {this.state.gamesInList.map(game =>
             <GameNightCard
@@ -119,4 +90,4 @@ class GameList extends Component {
   }
 }
 
-export default GameList
+export default GameNightGameList

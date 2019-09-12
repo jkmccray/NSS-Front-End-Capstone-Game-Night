@@ -11,17 +11,19 @@ export default class FriendSearchCard extends Component {
       this.setState({friendRequestSent: true})
     }
 
+    displayAddFriendOrRequestSentBtn = () => {
+        return this.state.friendRequestSent
+        ? <Button disabled>friend request sent!</Button>
+        : <Button onClick={this.handleAddFriendButton} className="addFriend__button">
+        add friend
+        </Button>
+    }
+
     render() {
         return (
             <div className="friendCard__div">
                 <h3 className="friendName__h3">{this.props.user.username}</h3>
-                {
-                  this.state.friendRequestSent
-                  ? <Button disabled>friend request sent!</Button>
-                  : <Button onClick={this.handleAddFriendButton} className="addFriend__button">
-                  add friend
-                  </Button>
-                }
+                {this.displayAddFriendOrRequestSentBtn()}
             </div>
         )
     }
