@@ -11,7 +11,7 @@ class UserProfileData extends Component {
     activeIndex: 0,
     searchingForFriends: false,
     gameListName: "",
-    showCreatListModal: false
+    showCreateListModal: false
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -44,15 +44,15 @@ class UserProfileData extends Component {
       name: this.state.gameListName
     }
     GameLists.addGameList(gameListObj)
-      .then(() => this.setState({showCreatListModal: false}))
+      .then(() => this.setState({ showCreateListModal: false }))
   }
 
   displayButtonForAddFriendsOrCreateLists = () => {
     switch (this.state.activeIndex) {
       case 0:
         return <Modal
-        trigger={<Button onClick={() => this.setState({showCreatListModal: true})}>create new list</Button>}
-        open={this.state.showCreatListModal}>
+          trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
+          open={this.state.showCreateListModal}>
           <Modal.Content>
             <CreateGameListForm
               handleOnChange={this.handleOnChange}
