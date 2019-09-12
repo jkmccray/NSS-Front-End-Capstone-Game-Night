@@ -51,10 +51,8 @@ class UserProfileData extends Component {
     switch (this.state.activeIndex) {
       case 0:
         return <Modal
-        trigger={<Button onClick={() => this.setState({showCreatListModal: true})}
-        >create new list</Button>}
-        open={this.state.showCreatListModal}
-        >
+        trigger={<Button onClick={() => this.setState({showCreatListModal: true})}>create new list</Button>}
+        open={this.state.showCreatListModal}>
           <Modal.Content>
             <CreateGameListForm
               handleOnChange={this.handleOnChange}
