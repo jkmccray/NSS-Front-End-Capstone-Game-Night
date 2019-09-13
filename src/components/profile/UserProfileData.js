@@ -4,7 +4,9 @@ import UserFriends from "./UserFriends"
 import UserGameLists from "./UserGameLists"
 import UserFriendSearch from "./UserFriendSearch"
 import CreateGameListForm from './CreateGameListForm';
-import GameLists from "../../modules/UserGameListManager"
+import CreateGameNightForm from './CreateGameNightForm';
+import GameListManager from "../../modules/UserGameListManager"
+import GameNightManager from "../../modules/GameNightManager"
 
 
 class UserProfileData extends Component {
@@ -12,21 +14,29 @@ class UserProfileData extends Component {
     activeIndex: 0,
     searchingForFriends: false,
     showCreateListModal: false,
-    gameLists: []
+    gameListName: "",
+    gameLists: [],
+    showCreateGameNightModal: false,
+    gameNightName: "",
+    gameNightDate: "",
+    gameNightTime: "",
+    gameNightLocation: "",
+    userGameListId: 0
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
+  // ========== Array of Tab Panes ==========
   panes = [
     {
-      menuItem: 'lists', render: () => <Tab.Pane><UserGameLists
+      menuItem: 'my game lists', render: () => <Tab.Pane><UserGameLists
         gameLists={this.state.gameLists}
         getAllUserLists={this.getAllUserLists}
       /></Tab.Pane>
     },
-    { menuItem: 'game nights', render: () => <Tab.Pane></Tab.Pane> },
+    { menuItem: 'my game nights', render: () => <Tab.Pane></Tab.Pane> },
     {
-      menuItem: 'friends', render: () => <Tab.Pane><UserFriends
+      menuItem: 'my friends', render: () => <Tab.Pane><UserFriends
         friendData={this.props.friendData}
         getAllFriendData={this.props.getAllFriendData}
         searchingForFriends={this.state.searchingForFriends}
@@ -36,6 +46,7 @@ class UserProfileData extends Component {
     { menuItem: 'played games', render: () => <Tab.Pane></Tab.Pane> },
   ]
 
+  // ========== Handler Functions ==========
   handleTabChange = (e, activeIndex) => {
     this.setState({ activeIndex: activeIndex.activeIndex })
   }
@@ -44,8 +55,9 @@ class UserProfileData extends Component {
     this.setState({ [event.target.id]: event.target.value })
   }
 
+  // ========== Functions for Game Lists Section ==========
   getAllUserLists = () => {
-    GameLists.getAllUserLists(this.activeUser)
+    GameListManager.getAllUserLists(this.activeUser)
       .then(gameLists => {
         this.setState({
           gameLists: gameLists,
@@ -59,47 +71,110 @@ class UserProfileData extends Component {
       userId: this.activeUser,
       name: this.state.gameListName
     }
-    GameLists.addGameList(gameListObj)
+    GameListManager.addGameList(gameListObj)
       .then(this.getAllUserLists)
   }
 
-  displayButtonForAddFriendsOrCreateLists = () => {
+  // ========== Functions for Game Nights Section ==========
+  getAllUserGameNights = () => {
+    GameNightManager.getAllUserGameNights(this.activeUser)
+      .then(gameNights => {
+        this.setState({
+          gameNights: gameNights,
+          showCreateGameNightModal: false
+        })
+      })
+  }
+
+  handleGameListSelectOnChange = (event) => {
+    const nodeName = event.target.nodeName
+    let userGameListId
+    if (nodeName === "DIV") {
+      userGameListId = parseInt(event.target.id)
+    } else if (nodeName === "SPAN") {
+      userGameListId = parseInt(event.target.parentNode.id)
+    }
+    if (userGameListId) {
+      this.setState({ userGameListId: userGameListId })
+    } else {
+      this.setState({ userGameListId: 0 })
+    }
+  }
+
+  handleSaveNewGameNightBtnOnClick = () => {
+    const gameNightObj = {
+      userId: this.activeUser,
+      name: this.state.gameNightName,
+      date: this.state.gameNightDate,
+      time: this.state.gameNightTime,
+      location: this.state.gameNightLocation,
+      userListId: this.state.userGameListId
+    }
+    GameNightManager.addGameNight(gameNightObj)
+      .then(this.getAllUserGameNights)
+  }
+
+  // ========== Functions for Conditional Rendering ==========
+  displayAddBtnBasedOnActiveTab = () => {
     switch (this.state.activeIndex) {
       case 0:
-        return <Modal
-          closeIcon
-          trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
-          open={this.state.showCreateListModal}>
-          <Modal.Content>
-            <CreateGameListForm
-              handleOnChange={this.handleOnChange}
-              handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick} />
-          </Modal.Content>
-        </Modal>
+        return this.displayAddGameListBtnAndModal()
       case 1:
-        return <Button>create game night</Button>
+        return this.displayAddGameNightBtnAndModal()
       case 2:
-        return <Modal size="fullscreen"
-          closeIcon
-          trigger={<Button>add a friend</Button>}
-        >
-          <Modal.Content>
-            <UserFriendSearch
-              friendData={this.props.friendData}
-              getAllFriendData={this.props.getAllFriendData}
-            />
-          </Modal.Content>
-        </Modal>
+        return this.displayAddAFriendBtnAndModal()
       default:
         return null
     }
+  }
+
+  displayAddGameListBtnAndModal = () => {
+    return <Modal
+      closeIcon
+      trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
+      open={this.state.showCreateListModal}>
+      <Modal.Content>
+        <CreateGameListForm
+          handleOnChange={this.handleOnChange}
+          handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick} />
+      </Modal.Content>
+    </Modal>
+  }
+
+  displayAddGameNightBtnAndModal = () => {
+    return <Modal
+      closeIcon
+      trigger={<Button onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
+      open={this.state.showCreateGameNightModal}>
+      <Modal.Content>
+        <CreateGameNightForm
+          handleOnChange={this.handleOnChange}
+          handleGameListSelectOnChange={this.handleGameListSelectOnChange}
+          handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameNightBtnOnClick}
+          gameLists={this.state.gameLists}
+        />
+      </Modal.Content>
+    </Modal>
+  }
+
+  displayAddAFriendBtnAndModal = () => {
+    return <Modal size="fullscreen"
+      closeIcon
+      trigger={<Button>add a friend</Button>}>
+      <Modal.Content>
+        <UserFriendSearch
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+        />
+      </Modal.Content>
+    </Modal>
   }
 
   render() {
     return (
       <>
         <div className="userProfileAdd__btn">
-          {this.displayButtonForAddFriendsOrCreateLists()}
+          {this.displayAddBtnBasedOnActiveTab()}
         </div>
         <Tab panes={this.panes}
           onTabChange={this.handleTabChange}
