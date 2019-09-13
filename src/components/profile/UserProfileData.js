@@ -19,12 +19,14 @@ class UserProfileData extends Component {
     showCreateGameNightModal: false,
     gameNightName: "",
     gameNightDate: "",
+    gameNightTime: "",
     gameNightLocation: "",
     userGameListId: 0
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
+  // ========== Array of Tab Panes ==========
   panes = [
     {
       menuItem: 'my game lists', render: () => <Tab.Pane><UserGameLists
@@ -44,6 +46,7 @@ class UserProfileData extends Component {
     { menuItem: 'played games', render: () => <Tab.Pane></Tab.Pane> },
   ]
 
+  // ========== Handler Functions ==========
   handleTabChange = (e, activeIndex) => {
     this.setState({ activeIndex: activeIndex.activeIndex })
   }
@@ -83,18 +86,19 @@ class UserProfileData extends Component {
       })
   }
 
-  handleGameListSelectOnChange = (selection, event) => {
+  handleGameListSelectOnChange = (event) => {
+    console.log('event: ', event.target.id);
     const nodeName = event.target.nodeName
-    let num
+    let userGameListId
     if (nodeName === "DIV") {
-      num = parseInt(event.target.textContent)
+      userGameListId = parseInt(event.target.id)
     } else if (nodeName === "SPAN") {
-      num = parseInt(event.target.parentNode.textContent)
+      userGameListId = parseInt(event.target.parentNode.id)
     }
-    if (num) {
-      this.setState({ [selection]: num })
+    if (userGameListId) {
+      this.setState({ userGameListId: userGameListId })
     } else {
-      this.setState({ [selection]: 0 })
+      this.setState({ userGameListId: 0 })
     }
   }
 
@@ -103,10 +107,12 @@ class UserProfileData extends Component {
       userId: this.activeUser,
       name: this.state.gameNightName,
       date: this.state.gameNightDate,
+      time: this.state.gameNightTime,
       location: this.state.gameNightLocation,
       userListId: this.state.userGameListId
     }
     GameNightManager.addGameNight(gameNightObj)
+    .then(data => console.log(data))
       .then(this.getAllUserGameNights)
   }
 
@@ -141,11 +147,12 @@ class UserProfileData extends Component {
     return <Modal
       closeIcon
       trigger={<Button onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
-    >
+      open={this.state.showCreateGameNightModal}>
       <Modal.Content>
         <CreateGameNightForm
           handleOnChange={this.handleOnChange}
-          handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameListBtnOnClick}
+          handleGameListSelectOnChange={this.handleGameListSelectOnChange}
+          handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameNightBtnOnClick}
           gameLists={this.state.gameLists}
         />
       </Modal.Content>
@@ -155,8 +162,7 @@ class UserProfileData extends Component {
   displayAddAFriendBtnAndModal = () => {
     return <Modal size="fullscreen"
       closeIcon
-      trigger={<Button>add a friend</Button>}
-    >
+      trigger={<Button>add a friend</Button>}>
       <Modal.Content>
         <UserFriendSearch
           friendData={this.props.friendData}

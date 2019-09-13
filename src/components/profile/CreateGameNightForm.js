@@ -9,9 +9,10 @@ class CreateGameNightForm extends Component {
         <Header>create new game night</Header>
         <Input placeholder="Enter game night name" id="gameNightName" onChange={this.props.handleOnChange}/>
         <Input type="date" placeholder="Choose date" id="gameNightDate" onChange={this.props.handleOnChange}/>
+        <Input type="time" placeholder="Choose time" id="gameNightTime" onChange={this.props.handleOnChange}/>
         <Input type="address" placeholder="Enter game night location address" id="gameNightLocation" onChange={this.props.handleOnChange}/>
         <Dropdown
-        // onChange={(e) => this.props.handleSingleSelectChange("", e)}
+        onChange={this.props.handleGameListSelectOnChange}
         placeholder='Select game list'
         className="search-field"
         id="selectedGameList"
@@ -24,9 +25,10 @@ class CreateGameNightForm extends Component {
             key: list.id,
             text: list.name,
             value: list.id,
+            id: list.id,
           }))
         }></Dropdown>
-        <Button onClick={this.props.handleSaveNewGameListBtnOnClick}>save</Button>
+        <Button onClick={this.props.handleSaveNewGameNightBtnOnClick}>save</Button>
         </>
     )
   }
