@@ -87,7 +87,6 @@ class UserProfileData extends Component {
   }
 
   handleGameListSelectOnChange = (event) => {
-    console.log('event: ', event.target.id);
     const nodeName = event.target.nodeName
     let userGameListId
     if (nodeName === "DIV") {
@@ -112,7 +111,6 @@ class UserProfileData extends Component {
       userListId: this.state.userGameListId
     }
     GameNightManager.addGameNight(gameNightObj)
-    .then(data => console.log(data))
       .then(this.getAllUserGameNights)
   }
 
