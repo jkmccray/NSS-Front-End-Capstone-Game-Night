@@ -7,7 +7,7 @@ import CreateGameListForm from './CreateGameListForm';
 import CreateGameNightForm from './CreateGameNightForm';
 import GameListManager from "../../modules/UserGameListManager"
 import GameNightManager from "../../modules/GameNightManager"
-
+import UserGameNights from "./UserGameNights"
 
 class UserProfileData extends Component {
   state = {
@@ -21,7 +21,8 @@ class UserProfileData extends Component {
     gameNightDate: "",
     gameNightTime: "",
     gameNightLocation: "",
-    userGameListId: 0
+    userGameListId: 0,
+    gameNights: []
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -34,7 +35,12 @@ class UserProfileData extends Component {
         getAllUserLists={this.getAllUserLists}
       /></Tab.Pane>
     },
-    { menuItem: 'my game nights', render: () => <Tab.Pane></Tab.Pane> },
+    {
+      menuItem: 'my game nights', render: () => <Tab.Pane><UserGameNights
+        gameNights={this.state.gameNights}
+        getAllUserGameNights={this.getAllUserGameNights}
+      /></Tab.Pane>
+    },
     {
       menuItem: 'my friends', render: () => <Tab.Pane><UserFriends
         friendData={this.props.friendData}

@@ -16,7 +16,7 @@ class GameNightCard extends Component {
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
   gameListId = this.props.gameNight.userListId
-
+  creatorId = this.props.gameNight.userId
 
   componentDidMount() {
     FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
@@ -51,27 +51,27 @@ class GameNightCard extends Component {
     const userAndGameNightObj = this.state.userAndGameNight
     userAndGameNightObj.inviteStatus = "attending"
     FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
-    .then(userAndGameNightObj => this.setState({activeUserInviteStatus: userAndGameNightObj.inviteStatus}))
+      .then(userAndGameNightObj => this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus }))
   }
 
   handleDeclineInviteBtnOnClick = () => {
     const userAndGameNightObj = this.state.userAndGameNight
     userAndGameNightObj.inviteStatus = "not attending"
     FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
-    .then(userAndGameNightObj => this.setState({activeUserInviteStatus: userAndGameNightObj.inviteStatus}))
+      .then(userAndGameNightObj => this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus }))
   }
 
   showInviteFriendsBtnOrModal = () => {
     switch (this.state.activeUserInviteStatus) {
       case "invited":
         return <div> <Button
-        className="gameNightCard__btn"
-        onClick={this.handleAcceptInviteBtnOnClick}
+          className="gameNightCard__btn"
+          onClick={this.handleAcceptInviteBtnOnClick}
         >accept</Button>
-        <Button
-        className="gameNightCard__btn"
-        onClick={this.handleDeclineInviteBtnOnClick}
-        >decline</Button> </div>
+          <Button
+            className="gameNightCard__btn"
+            onClick={this.handleDeclineInviteBtnOnClick}
+          >decline</Button> </div>
       case "attending":
         return <Modal
           closeIcon
@@ -108,27 +108,33 @@ class GameNightCard extends Component {
     </Modal>
   }
 
+  displayEditAndDeleteMenuForActiveUser = () => {
+    if (this.activeUser === this.creatorId) {
+      return <Dropdown
+        pointing="right"
+        className="editGameNight__dropdown"
+        icon={<Icon
+          name="ellipsis vertical"
+          size="large"
+          className="editGameNight__icon"
+        />}>
+        <Dropdown.Menu>
+          <Dropdown.Item text="edit"
+          // onClick={this.handleEditListOnClick}
+          />
+          <Dropdown.Divider />
+          <Dropdown.Item text="delete"
+          // onClick={() => this.props.handleDeleteListOnClick(this.listId)}
+          />
+        </Dropdown.Menu>
+      </Dropdown>
+    }
+  }
+
   render() {
     return (
       <div className="gameNight__card">
-        <Dropdown
-          pointing="right"
-          className="editGameNight__dropdown"
-          icon={<Icon
-            name="ellipsis vertical"
-            size="large"
-            className="editGameNight__icon"
-          />}>
-          <Dropdown.Menu>
-            <Dropdown.Item text="edit"
-            // onClick={this.handleEditListOnClick}
-            />
-            <Dropdown.Divider />
-            <Dropdown.Item text="delete"
-            // onClick={() => this.props.handleDeleteListOnClick(this.listId)}
-            />
-          </Dropdown.Menu>
-        </Dropdown>
+        {this.displayEditAndDeleteMenuForActiveUser()}
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
         <h3>{this.props.gameNight.name}</h3>
         <p>created by: {this.props.gameNight.user.username}</p>
