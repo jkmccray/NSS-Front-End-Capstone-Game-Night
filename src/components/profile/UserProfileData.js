@@ -8,6 +8,7 @@ import CreateGameNightForm from './CreateGameNightForm';
 import GameListManager from "../../modules/UserGameListManager"
 import GameNightManager from "../../modules/GameNightManager"
 import UserGameNights from "./UserGameNights"
+import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
 
 class UserProfileData extends Component {
   state = {
@@ -117,7 +118,15 @@ class UserProfileData extends Component {
       userListId: this.state.userGameListId
     }
     GameNightManager.addGameNight(gameNightObj)
-      .then(this.getAllUserGameNights)
+      .then(gameNightObj => {
+        const activeUserAndGameNightObj = {
+          gameNightId: gameNightObj.id,
+          userId: this.activeUser,
+          inviteStatus: "attending"
+        }
+        FriendsInvitedToGameNight.inviteFriendToGameNight(activeUserAndGameNightObj)
+        this.getAllUserGameNights()
+      })
   }
 
   // ========== Functions for Conditional Rendering ==========
