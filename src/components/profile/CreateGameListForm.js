@@ -6,8 +6,8 @@ class CreateGameListForm extends Component {
   render() {
     return (
       <>
-        <Header>game list name</Header>
-        <Input id="gameListName" onChange={this.props.handleOnChange}/>
+        <Header>create new game list</Header>
+        <Input placeholder="Enter list name" id="gameListName" onChange={this.props.handleOnChange}/>
         <Button onClick={this.props.handleSaveNewGameListBtnOnClick}>save</Button>
       </>
     );

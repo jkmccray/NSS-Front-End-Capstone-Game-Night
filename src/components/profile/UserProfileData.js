@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import { Tab, Button, Modal, ModalContent } from "semantic-ui-react"
+import { Tab, Button, Modal } from "semantic-ui-react"
 import UserFriends from "./UserFriends"
 import UserGameLists from "./UserGameLists"
 import UserFriendSearch from "./UserFriendSearch"
 import CreateGameListForm from './CreateGameListForm';
 import GameLists from "../../modules/UserGameListManager"
 
+
 class UserProfileData extends Component {
   state = {
     activeIndex: 0,
     searchingForFriends: false,
-    gameListName: "",
-    showCreateListModal: false
+    showCreateListModal: false,
+    gameLists: []
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
   panes = [
-    { menuItem: 'lists', render: () => <Tab.Pane><UserGameLists /></Tab.Pane> },
+    {
+      menuItem: 'lists', render: () => <Tab.Pane><UserGameLists
+        gameLists={this.state.gameLists}
+        getAllUserLists={this.getAllUserLists}
+      /></Tab.Pane>
+    },
     { menuItem: 'game nights', render: () => <Tab.Pane></Tab.Pane> },
     {
       menuItem: 'friends', render: () => <Tab.Pane><UserFriends
@@ -38,19 +44,30 @@ class UserProfileData extends Component {
     this.setState({ [event.target.id]: event.target.value })
   }
 
+  getAllUserLists = () => {
+    GameLists.getAllUserLists(this.activeUser)
+      .then(gameLists => {
+        this.setState({
+          gameLists: gameLists,
+          showCreateListModal: false
+        })
+      })
+  }
+
   handleSaveNewGameListBtnOnClick = () => {
     const gameListObj = {
       userId: this.activeUser,
       name: this.state.gameListName
     }
     GameLists.addGameList(gameListObj)
-      .then(() => this.setState({ showCreateListModal: false }))
+      .then(this.getAllUserLists)
   }
 
   displayButtonForAddFriendsOrCreateLists = () => {
     switch (this.state.activeIndex) {
       case 0:
         return <Modal
+          closeIcon
           trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
           open={this.state.showCreateListModal}>
           <Modal.Content>
