@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Header } from "semantic-ui-react"
 import GameNightCard from "../game-nights/GameNightCard"
+import UserGameNightManager from "../../modules/GameNightManager"
+
 
 import "./UserGameNights.css"
 
@@ -11,10 +13,10 @@ class UserGameNights extends Component {
     this.props.getAllUserGameNights()
   }
 
-  // handleDeleteGameNightOnClick = (gameNightId) => {
-  //   UserGameNightManager.deleteGameNight(ligameNightIdstId)
-  //   .then(this.props.getAllUserGameNights)
-  // }
+  handleDeleteGameNightOnClick = (gameNightId) => {
+    UserGameNightManager.deleteGameNight(gameNightId)
+    .then(this.props.getAllUserGameNights)
+  }
 
   render() {
     return (
@@ -26,6 +28,8 @@ class UserGameNights extends Component {
           key={gameNight.id}
           gameNight={gameNight}
           handleDeleteGameNightOnClick={this.handleDeleteGameNightOnClick}
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
           />)
         : <Header>Select the "create new game night" button to add game nights!</Header>
       }

@@ -38,6 +38,8 @@ class UserProfileData extends Component {
     },
     {
       menuItem: 'my game nights', render: () => <Tab.Pane><UserGameNights
+        friendData={this.props.friendData}
+        getAllFriendData={this.props.getAllFriendData}
         gameNights={this.state.gameNights}
         getAllUserGameNights={this.getAllUserGameNights}
       /></Tab.Pane>

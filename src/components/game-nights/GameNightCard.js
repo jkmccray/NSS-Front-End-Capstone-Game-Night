@@ -17,6 +17,7 @@ class GameNightCard extends Component {
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
   gameListId = this.props.gameNight.userListId
   creatorId = this.props.gameNight.userId
+  gameNightId = this.props.gameNight.id
 
   componentDidMount() {
     this.getAttendeesAndSetState()
@@ -36,28 +37,13 @@ class GameNightCard extends Component {
       .then(attendees => this.setState({ attendees: attendees }))
   }
 
-  showGameListBtnOrModal = () => {
-    return <Modal
-      closeIcon
-      trigger={<Button className="gameNightCard__btn">view game list</Button>}
-    >
-      <Modal.Content>
-        <GameNightGameList
-          friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-          gameList={this.props.gameNight.userList}
-        />
-      </Modal.Content>
-    </Modal>
-  }
-
+  // ========== Button Handler Functions ==========
   handleAttendBtnOnClick = () => {
     const userAndGameNightObj = {
       userId: this.activeUser,
       gameNightId: this.props.gameNight.id,
       inviteStatus: "attending"
     }
-    console.log('userAndGameNightObj: ', userAndGameNightObj);
     FriendsInvitedToGameNight.inviteFriendToGameNight(userAndGameNightObj)
       .then(this.getAttendeesAndSetState)
   }
@@ -74,6 +60,23 @@ class GameNightCard extends Component {
     userAndGameNightObj.inviteStatus = "not attending"
     FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
       .then(userAndGameNightObj => this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus }))
+  }
+
+  // ========== Functions for Rendering ==========
+
+  showGameListBtnOrModal = () => {
+    return <Modal
+      closeIcon
+      trigger={<Button className="gameNightCard__btn">view game list</Button>}
+    >
+      <Modal.Content>
+        <GameNightGameList
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+          gameList={this.props.gameNight.userList}
+        />
+      </Modal.Content>
+    </Modal>
   }
 
   showInviteFriendsBtnOrModal = () => {
@@ -105,7 +108,7 @@ class GameNightCard extends Component {
     }
   }
 
-  showAttendeesLinkOrModal = () => {
+  showAttendeesBtnOrModal = () => {
     return <Modal
       closeIcon
       trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}
@@ -135,11 +138,11 @@ class GameNightCard extends Component {
         />}>
         <Dropdown.Menu>
           <Dropdown.Item text="edit"
-          // onClick={this.handleEditListOnClick}
+          // onClick={this.handleEditGameNightOnClick}
           />
           <Dropdown.Divider />
           <Dropdown.Item text="delete"
-          // onClick={() => this.props.handleDeleteListOnClick(this.listId)}
+          onClick={() => this.props.handleDeleteGameNightOnClick(this.gameNightId)}
           />
         </Dropdown.Menu>
       </Dropdown>
@@ -157,7 +160,7 @@ class GameNightCard extends Component {
         <div className="gameNight__attendees"></div>
         {
           this.state.attendees.length > 0
-            ? this.showAttendeesLinkOrModal()
+            ? this.showAttendeesBtnOrModal()
             : null
         }
         <div className="gameNightCardBtn__div">
