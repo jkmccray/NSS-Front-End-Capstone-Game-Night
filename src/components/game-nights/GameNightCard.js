@@ -19,8 +19,7 @@ class GameNightCard extends Component {
   creatorId = this.props.gameNight.userId
 
   componentDidMount() {
-    FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
-      .then(attendees => this.setState({ attendees: attendees }))
+    this.getAttendeesAndSetState()
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
       .then(userAndGameNight => {
         if (userAndGameNight.length > 0) {
@@ -30,6 +29,11 @@ class GameNightCard extends Component {
           })
         }
       })
+  }
+
+  getAttendeesAndSetState = () => {
+    FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
+      .then(attendees => this.setState({ attendees: attendees }))
   }
 
   showGameListBtnOrModal = () => {
@@ -45,6 +49,17 @@ class GameNightCard extends Component {
         />
       </Modal.Content>
     </Modal>
+  }
+
+  handleAttendBtnOnClick = () => {
+    const userAndGameNightObj = {
+      userId: this.activeUser,
+      gameNightId: this.props.gameNight.id,
+      inviteStatus: "attending"
+    }
+    console.log('userAndGameNightObj: ', userAndGameNightObj);
+    FriendsInvitedToGameNight.inviteFriendToGameNight(userAndGameNightObj)
+      .then(this.getAttendeesAndSetState)
   }
 
   handleAcceptInviteBtnOnClick = () => {
@@ -86,7 +101,7 @@ class GameNightCard extends Component {
           </Modal.Content>
         </Modal>
       default:
-        return <Button className="gameNightCard__btn">attend</Button>
+        return <Button onClick={this.handleAttendBtnOnClick} className="gameNightCard__btn">attend</Button>
     }
   }
 
