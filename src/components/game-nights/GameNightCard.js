@@ -92,14 +92,16 @@ class GameNightCard extends Component {
   showInviteFriendsBtnOrModal = () => {
     switch (this.state.activeUserInviteStatus) {
       case "invited":
-        return <div> <Button
-          className="gameNightCard__btn"
-          onClick={this.handleAcceptInviteBtnOnClick}
-        >accept</Button>
+        return <div>
+          <Button
+            className="gameNightCard__btn"
+            onClick={this.handleAcceptInviteBtnOnClick}
+          >accept</Button>
           <Button
             className="gameNightCard__btn"
             onClick={this.handleDeclineInviteBtnOnClick}
-          >decline</Button> </div>
+          >decline</Button>
+          </div>
       case "attending":
         return <Modal
           closeIcon
@@ -119,10 +121,8 @@ class GameNightCard extends Component {
   }
 
   showAttendeesBtnOrModal = () => {
-    return <Modal
-      closeIcon
-      trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}
-    >
+    return <Modal closeIcon
+      trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}>
       <Modal.Content>
         {
           this.state.attendees.map(attendee => {
@@ -144,20 +144,21 @@ class GameNightCard extends Component {
         icon={<Icon
           name="ellipsis vertical"
           size="large"
-          className="editGameNight__icon"
-        />}>
+          className="editGameNight__icon"/>
+          }>
         <Dropdown.Menu>
           <Modal
-          closeIcon
-          trigger={<Dropdown.Item text="edit"/>}>
-            <EditGameNightForm
-            gameNight={this.props.gameNight}
-
-             />
+            closeIcon
+            trigger={<Dropdown.Item text="edit" />}>
+            <Modal.Content>
+              <EditGameNightForm
+                gameNight={this.props.gameNight}
+                handleOnChange={this.handleOnChange}/>
+            </Modal.Content>
           </Modal>
           <Dropdown.Divider />
           <Dropdown.Item text="delete"
-          onClick={() => this.props.handleDeleteGameNightOnClick(this.gameNightId)}
+            onClick={() => this.props.handleDeleteGameNightOnClick(this.gameNightId)}
           />
         </Dropdown.Menu>
       </Dropdown>

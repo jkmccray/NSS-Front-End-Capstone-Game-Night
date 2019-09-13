@@ -35,7 +35,7 @@ class SearchResultList extends Component {
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
   handleAddGameToListBtnOnClick = (event) => {
-    this.setState({hideSuccessMessage: true})
+    this.setState({ hideSuccessMessage: true })
     const gameId = event.target.id.split("--")[1]
     APIGameManager.getGamesByIds(gameId)
       .then(resultObj => {
@@ -96,12 +96,27 @@ class SearchResultList extends Component {
 
   // ============================== Handler function for modals ==============================
   handleGameListSelectChange = (event) => {
-    const userListId = parseInt(event.target.id)
-    const userListName = event.target.textContent
-    this.setState({
-      selectedGameList: userListId,
-      selectedGameListName: userListName
-    })
+    const nodeName = event.target.nodeName
+    let userListId
+    let userListName
+    if (nodeName === "DIV") {
+      userListId = parseInt(event.target.id)
+      userListName = event.target.textContent
+    } else if (nodeName === "SPAN") {
+      userListId = parseInt(event.target.parentNode.id)
+      userListName = event.target.parentNode.textContent
+    }
+    if (userListId && userListName) {
+      this.setState({
+        selectedGameList: userListId,
+        selectedGameListName: userListName
+      })
+    } else {
+      this.setState({
+        selectedGameList: 0,
+        selectedGameListName: ""
+      })
+    }
   }
 
   handleSaveGameToListBtnOnClick = (event) => {
@@ -139,7 +154,7 @@ class SearchResultList extends Component {
       <div id="searchResultContainer">
         <h2>search results:</h2>
         <Message
-        hidden={this.state.hideSuccessMessage}
+          hidden={this.state.hideSuccessMessage}
           success
           content={this.state.successMessage}
         />
