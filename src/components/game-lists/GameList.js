@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom"
 import { Icon, Button, Dropdown, Input } from "semantic-ui-react"
 import GameNightCard from './GameListCard'
 import UserGameListManager from "../../modules/UserGameListManager"
@@ -71,6 +72,29 @@ class GameList extends Component {
       }))
   }
 
+  displayEditAndDeleteMenu = () => {
+    return <> <Dropdown
+      id={`dropdownList--${this.props.gameList.id}`}
+      pointing="right"
+      className="editGameList__dropdown"
+      icon={<Icon
+        name="ellipsis vertical"
+        size="large"
+        className="editGameList__icon"
+      />}>
+      <Dropdown.Menu>
+        <Dropdown.Item text="edit"
+          onClick={this.handleEditListOnClick}
+          id={`editList--${this.props.gameList.id}`} />
+        <Dropdown.Divider />
+        <Dropdown.Item text="delete"
+          onClick={() => this.props.handleDeleteListOnClick(this.listId)}
+          id={`deleteList--${this.props.gameList.id}`} />
+      </Dropdown.Menu>
+    </Dropdown>
+      <h3 className="gameList__header">{this.state.gameListName}</h3> </>
+  }
+
   render() {
     return (
       <div className="gameList__div">
@@ -83,37 +107,22 @@ class GameList extends Component {
                 id="editedListName"
                 onChange={this.handleOnChange}
                 defaultValue={this.state.editedListName} /> </>
-            : <> <Dropdown
-              id={`dropdownList--${this.props.gameList.id}`}
-              pointing="right"
-              className="editGameList__dropdown"
-              icon={<Icon
-                name="ellipsis vertical"
-                size="large"
-                className="editGameList__icon"
-              />}>
-              <Dropdown.Menu>
-                <Dropdown.Item text="edit"
-                  onClick={this.handleEditListOnClick}
-                  id={`editList--${this.props.gameList.id}`} />
-                <Dropdown.Divider />
-                <Dropdown.Item text="delete"
-                  onClick={() => this.props.handleDeleteListOnClick(this.listId)}
-                  id={`deleteList--${this.props.gameList.id}`} />
-              </Dropdown.Menu>
-            </Dropdown>
-              <h3 className="gameList__header">{this.state.gameListName}</h3> </>
+            : this.displayEditAndDeleteMenu()
         }
-        <ul className="gameList">
-          {this.state.gamesInList.map(game =>
-            <GameNightCard
-              key={game.id}
-              gameAndListObj={game}
-              editingStatus={this.state.editingStatus}
-              handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
-            />
-          )}
-        </ul>
+        {
+          this.state.gamesInList.length > 0
+            ? <ul className="gameList">
+              {this.state.gamesInList.map(game =>
+                <GameNightCard
+                  key={game.id}
+                  gameAndListObj={game}
+                  editingStatus={this.state.editingStatus}
+                  handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
+                />)}
+            </ul>
+            : <h3><Link to="/search" className="searchForGames__">search</Link> for games to add to this list!</h3>
+        }
+
       </div>
     )
   }
