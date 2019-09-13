@@ -63,7 +63,11 @@ class SearchGames extends Component {
     } else if (nodeName === "SPAN") {
       num = parseInt(event.target.parentNode.textContent)
     }
-    this.setState({[selection]: num})
+    if (num) {
+      this.setState({[selection]: num})
+    } else {
+      this.setState({[selection]: 0})
+    }
   }
 
   handleSearchButton = (event) => {
