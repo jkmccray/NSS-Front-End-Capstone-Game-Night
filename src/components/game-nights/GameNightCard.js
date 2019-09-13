@@ -1,17 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
-import AttendeeCard from './AttendeeCard';
+import GameNightManager from "../../modules/GameNightManager"
+import AttendeeCard from "./AttendeeCard";
+import EditGameNightForm from "./EditGameNightForm"
 
-import './GameNightCard.css'
+import "./GameNightCard.css"
 
 class GameNightCard extends Component {
   state = {
     attendees: [],
     activeUserInviteStatus: "not attending",
-    userAndGameNight: {}
+    userAndGameNight: {},
+    editedGameNightName: "",
+    editedGameNightDate: "",
+    editedGameNightTime: "",
+    editedGameNightLocation: ""
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -37,7 +43,7 @@ class GameNightCard extends Component {
       .then(attendees => this.setState({ attendees: attendees }))
   }
 
-  // ========== Button Handler Functions ==========
+  // ========== Handler Functions ==========
   handleAttendBtnOnClick = () => {
     const userAndGameNightObj = {
       userId: this.activeUser,
@@ -60,6 +66,10 @@ class GameNightCard extends Component {
     userAndGameNightObj.inviteStatus = "not attending"
     FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
       .then(userAndGameNightObj => this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus }))
+  }
+
+  handleOnChange = (event) => {
+    this.setState({ [event.target.id]: event.target.value })
   }
 
   // ========== Functions for Rendering ==========
@@ -137,9 +147,14 @@ class GameNightCard extends Component {
           className="editGameNight__icon"
         />}>
         <Dropdown.Menu>
-          <Dropdown.Item text="edit"
-          // onClick={this.handleEditGameNightOnClick}
-          />
+          <Modal
+          closeIcon
+          trigger={<Dropdown.Item text="edit"/>}>
+            <EditGameNightForm
+            gameNight={this.props.gameNight}
+
+             />
+          </Modal>
           <Dropdown.Divider />
           <Dropdown.Item text="delete"
           onClick={() => this.props.handleDeleteGameNightOnClick(this.gameNightId)}
