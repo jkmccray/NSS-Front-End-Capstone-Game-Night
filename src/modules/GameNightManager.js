@@ -9,6 +9,10 @@ export default {
     return fetch(`${remoteURL}/gameNights?_expand=user&_expand=userList`)
       .then(result => result.json())
   },
+  getAllUserGameNights(userId) {
+    return fetch(`${remoteURL}/gameNights?userId=${userId}&_expand=user&_expand=userList`)
+      .then(result => result.json())
+  },
   deleteGameNight(id) {
     return fetch(`${remoteURL}/gameNights/${id}`, {
       method: "DELETE"
