@@ -29,7 +29,6 @@ class GameNightCard extends Component {
   gameNightId = this.props.gameNight.id
 
   componentDidMount() {
-    console.log('this.props.gameNight: ', this.props.gameNight);
     this.getAttendeesAndSetState()
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
       .then(userAndGameNight => {
@@ -201,7 +200,7 @@ class GameNightCard extends Component {
           className="editGameNight__icon" />
         }>
         <Dropdown.Menu>
-          <Modal closeIcon
+          <Modal
             open={this.state.showEditGameNightModal}
             trigger={<Dropdown.Item text="edit" onClick={() => this.setState({ showEditGameNightModal: true })} />}>
             <Modal.Content>

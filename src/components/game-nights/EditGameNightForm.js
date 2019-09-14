@@ -10,7 +10,6 @@ class EditGameNightForm extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.gameNight)
     this.getAllUserLists()
   }
 
