@@ -110,8 +110,9 @@ class GameList extends Component {
             : this.displayEditAndDeleteMenu()
         }
         {
-          this.state.gamesInList.length > 0
-            ? <ul className="gameList">
+          this.state.gamesInList.length === 0 && !this.state.editingStatus
+            ? <h3><Link to="/search" className="searchForGames__">search</Link> for games to add to this list!</h3>
+            : <ul className="gameList">
               {this.state.gamesInList.map(game =>
                 <GameNightCard
                   key={game.id}
@@ -120,7 +121,6 @@ class GameList extends Component {
                   handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
                 />)}
             </ul>
-            : <h3><Link to="/search" className="searchForGames__">search</Link> for games to add to this list!</h3>
         }
 
       </div>

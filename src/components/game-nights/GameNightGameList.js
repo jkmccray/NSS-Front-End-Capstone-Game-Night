@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Button, Dropdown, Input } from "semantic-ui-react"
-import GameNightCard from '../game-lists/GameListCard'
+import GameListCard from '../game-lists/GameListCard'
 import UserGameListManager from "../../modules/UserGameListManager"
 import GamesSavedToList from '../../modules/GameSavedToListManager'
 
@@ -77,7 +76,7 @@ class GameNightGameList extends Component {
         <h3 className="gameList__header">{this.state.gameListName}</h3>
         <ul className="gameList">
           {this.state.gamesInList.map(game =>
-            <GameNightCard
+            <GameListCard
               key={game.id}
               gameAndListObj={game}
               editingStatus={this.state.editingStatus}
