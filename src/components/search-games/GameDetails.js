@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Header, Rating, Button, Icon } from "semantic-ui-react";
+import { Image, Header, Rating } from "semantic-ui-react";
 import APIGameManager from "../../modules/APIGameManager"
 
 import './GameDetails.css'
