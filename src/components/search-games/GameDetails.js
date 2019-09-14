@@ -13,7 +13,6 @@ class GameDetails extends Component {
   componentDidMount() {
     this.getGameCategories()
     this.getGameMechanics()
-    console.log(this.props.searchResult)
   }
 
   // get all categories from the board game api and set state
