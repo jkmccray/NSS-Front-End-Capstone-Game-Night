@@ -35,7 +35,7 @@ class EditGameNightForm extends Component {
         <Input defaultValue={this.props.gameNight.time} type="time" id="editedGameNightTime" onChange={this.props.handleOnChange} />
         <Input defaultValue={this.props.gameNight.location} type="address" id="editedGameNightLocation" onChange={this.props.handleOnChange} />
         <Dropdown
-        defaultValue={this.props.gameNight.userList.id}
+        defaultValue={this.props.editedGameNight.updatedGameListId}
           onChange={this.props.handleGameListSelectOnChange}
           placeholder='Select game list'
           className="search-field"
@@ -53,6 +53,7 @@ class EditGameNightForm extends Component {
             }))
           }></Dropdown>
         <Button onClick={this.props.handleSaveEditedGameNightBtnOnClick}>save changes</Button>
+        <Button onClick={this.props.handleCancelChangesBtnOnClick}>cancel</Button>
       </>
     )
   }

@@ -84,6 +84,10 @@ class UserProfileData extends Component {
       .then(this.getAllUserLists)
   }
 
+  handleCancelAddListBtnOnClick = () => {
+    this.setState({showCreateListModal: false})
+  }
+
   // ========== Functions for Game Nights Section ==========
   getAllUserGameNights = () => {
     GameNightManager.getAllUserGameNights(this.activeUser)
@@ -131,6 +135,10 @@ class UserProfileData extends Component {
       })
   }
 
+  handleCancelAddGameNightBtnOnClick = () => {
+    this.setState({showCreateGameNightModal: false})
+  }
+
   // ========== Functions for Conditional Rendering ==========
   displayAddBtnBasedOnActiveTab = () => {
     switch (this.state.activeIndex) {
@@ -147,20 +155,20 @@ class UserProfileData extends Component {
 
   displayAddGameListBtnAndModal = () => {
     return <Modal
-      closeIcon
       trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
       open={this.state.showCreateListModal}>
       <Modal.Content>
         <CreateGameListForm
           handleOnChange={this.handleOnChange}
-          handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick} />
+          handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick}
+          handleCancelAddListBtnOnClick={this.handleCancelAddListBtnOnClick}
+          />
       </Modal.Content>
     </Modal>
   }
 
   displayAddGameNightBtnAndModal = () => {
     return <Modal
-      closeIcon
       trigger={<Button onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
       open={this.state.showCreateGameNightModal}>
       <Modal.Content>
@@ -168,6 +176,7 @@ class UserProfileData extends Component {
           handleOnChange={this.handleOnChange}
           handleGameListSelectOnChange={this.handleGameListSelectOnChange}
           handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameNightBtnOnClick}
+          handleCancelAddGameNightBtnOnClick={this.handleCancelAddGameNightBtnOnClick}
           gameLists={this.state.gameLists}
         />
       </Modal.Content>

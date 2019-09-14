@@ -52,6 +52,7 @@ class GameNights extends Component {
               gameNight={gameNight}
               friendData={this.props.friendData}
               getAllFriendData={this.props.getAllFriendData}
+              getAllGameNights={this.getAllGameNights}
               handleDeleteGameNightOnClick={this.handleDeleteGameNightOnClick}/>)
           : null
         }

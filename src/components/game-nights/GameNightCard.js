@@ -18,8 +18,8 @@ class GameNightCard extends Component {
     editedGameNightDate: this.props.gameNight.date,
     editedGameNightTime: this.props.gameNight.time,
     editedGameNightLocation: this.props.gameNight.location,
-    updatedGameListId: this.props.gameNight.userListId,
-    updatedGameListName: this.props.gameNight.userList.name,
+    updatedGameListId: this.props.gameNight.userListId || 0,
+    updatedGameListName: this.props.gameNight.userListId > 0 ? this.props.gameNight.userList.name : null,
     showEditGameNightModal: false
   }
 
@@ -111,26 +111,33 @@ class GameNightCard extends Component {
       id: this.gameNightId
     }
     GameNightManager.saveEditedGameNight(updatedGameNightObj)
-    .then(() => {
-      this.setState({showEditGameNightModal: false})
-    })
+      .then(() => {
+        this.props.getAllGameNights()
+        this.setState({ showEditGameNightModal: false })
+      })
+  }
+
+  handleCancelChangesBtnOnClick = () => {
+    this.setState({ showEditGameNightModal: false })
   }
 
   // ========== Functions for Rendering ==========
 
   showGameListBtnOrModal = () => {
-    return <Modal
-      closeIcon
-      trigger={<Button className="gameNightCard__btn">view game list</Button>}
-    >
-      <Modal.Content>
-        <GameNightGameList
-          friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-          gameList={this.props.gameNight.userList}
-        />
-      </Modal.Content>
-    </Modal>
+    return this.gameListId > 0
+      ? <Modal
+        closeIcon
+        trigger={<Button className="gameNightCard__btn">view game list</Button>}
+      >
+        <Modal.Content>
+          <GameNightGameList
+            friendData={this.props.friendData}
+            getAllFriendData={this.props.getAllFriendData}
+            gameList={this.props.gameNight.userList}
+          />
+        </Modal.Content>
+      </Modal>
+      : null
   }
 
   showInviteFriendsBtnOrModal = () => {
@@ -145,7 +152,7 @@ class GameNightCard extends Component {
             className="gameNightCard__btn"
             onClick={this.handleDeclineInviteBtnOnClick}
           >decline</Button>
-          </div>
+        </div>
       case "attending":
         return <Modal
           closeIcon
@@ -165,41 +172,46 @@ class GameNightCard extends Component {
   }
 
   showAttendeesBtnOrModal = () => {
-    return <Modal closeIcon
-      trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}>
-      <Modal.Content>
-        {
-          this.state.attendees.map(attendee => {
-            return < AttendeeCard
-              key={attendee.id}
-              attendee={attendee.user}
-            />
-          })
-        }
-      </Modal.Content>
-    </Modal>
+    return this.state.attendees.length > 0
+      ? <Modal closeIcon
+        trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}>
+        <Modal.Content>
+          {
+            this.state.attendees.map(attendee => {
+              return < AttendeeCard
+                key={attendee.id}
+                attendee={attendee.user}
+              />
+            })
+          }
+        </Modal.Content>
+      </Modal>
+      : null
   }
 
   displayEditAndDeleteMenuForActiveUser = () => {
     if (this.activeUser === this.creatorId) {
       return <Dropdown
+        closeOnChange
         pointing="right"
         className="editGameNight__dropdown"
         icon={<Icon
           name="ellipsis vertical"
           size="large"
-          className="editGameNight__icon"/>
-          }>
+          className="editGameNight__icon" />
+        }>
         <Dropdown.Menu>
           <Modal closeIcon
             open={this.state.showEditGameNightModal}
-            trigger={<Dropdown.Item text="edit" onClick={() => this.setState({showEditGameNightModal: true})} />}>
+            trigger={<Dropdown.Item text="edit" onClick={() => this.setState({ showEditGameNightModal: true })} />}>
             <Modal.Content>
               <EditGameNightForm
+                editedGameNight={this.state}
                 gameNight={this.props.gameNight}
                 handleOnChange={this.handleOnChange}
                 handleGameListSelectOnChange={this.handleGameListSelectOnChange}
-                handleSaveEditedGameNightBtnOnClick={this.handleSaveEditedGameNightBtnOnClick}/>
+                handleSaveEditedGameNightBtnOnClick={this.handleSaveEditedGameNightBtnOnClick}
+                handleCancelChangesBtnOnClick={this.handleCancelChangesBtnOnClick} />
             </Modal.Content>
           </Modal>
           <Dropdown.Divider />
@@ -220,11 +232,7 @@ class GameNightCard extends Component {
         <p>created by: {this.props.gameNight.user.username}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
-        {
-          this.state.attendees.length > 0
-            ? this.showAttendeesBtnOrModal()
-            : null
-        }
+        {this.showAttendeesBtnOrModal()}
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}

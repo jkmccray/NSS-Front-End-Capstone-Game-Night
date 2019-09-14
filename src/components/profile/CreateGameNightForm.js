@@ -29,6 +29,7 @@ class CreateGameNightForm extends Component {
           }))
         }></Dropdown>
         <Button onClick={this.props.handleSaveNewGameNightBtnOnClick}>save</Button>
+        <Button onClick={this.props.handleCancelAddGameNightBtnOnClick}>cancel</Button>
         </>
     )
   }
