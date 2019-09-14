@@ -14,10 +14,13 @@ class GameNightCard extends Component {
     attendees: [],
     activeUserInviteStatus: "not attending",
     userAndGameNight: {},
-    editedGameNightName: "",
-    editedGameNightDate: "",
-    editedGameNightTime: "",
-    editedGameNightLocation: ""
+    editedGameNightName: this.props.gameNight.name,
+    editedGameNightDate: this.props.gameNight.date,
+    editedGameNightTime: this.props.gameNight.time,
+    editedGameNightLocation: this.props.gameNight.location,
+    updatedGameListId: this.props.gameNight.userListId,
+    updatedGameListName: this.props.gameNight.userList.name,
+    showEditGameNightModal: false
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -26,6 +29,7 @@ class GameNightCard extends Component {
   gameNightId = this.props.gameNight.id
 
   componentDidMount() {
+    console.log('this.props.gameNight: ', this.props.gameNight);
     this.getAttendeesAndSetState()
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
       .then(userAndGameNight => {
@@ -70,6 +74,46 @@ class GameNightCard extends Component {
 
   handleOnChange = (event) => {
     this.setState({ [event.target.id]: event.target.value })
+  }
+
+  handleGameListSelectOnChange = (event) => {
+    const nodeName = event.target.nodeName
+    let userListId
+    let userListName
+    if (nodeName === "DIV") {
+      userListId = parseInt(event.target.id)
+      userListName = event.target.textContent
+    } else if (nodeName === "SPAN") {
+      userListId = parseInt(event.target.parentNode.id)
+      userListName = event.target.parentNode.textContent
+    }
+    if (userListId && userListName) {
+      this.setState({
+        updatedGameListId: userListId,
+        updatedGameListName: userListName
+      })
+    } else {
+      this.setState({
+        updatedGameListId: this.props.gameNight.userListId,
+        updatedGameListName: this.props.gameNight.userList.name
+      })
+    }
+  }
+
+  handleSaveEditedGameNightBtnOnClick = () => {
+    const updatedGameNightObj = {
+      userId: this.activeUser,
+      name: this.state.editedGameNightName,
+      date: this.state.editedGameNightDate,
+      time: this.state.editedGameNightTime,
+      location: this.state.editedGameNightLocation,
+      userListId: this.state.updatedGameListId,
+      id: this.gameNightId
+    }
+    GameNightManager.saveEditedGameNight(updatedGameNightObj)
+    .then(() => {
+      this.setState({showEditGameNightModal: false})
+    })
   }
 
   // ========== Functions for Rendering ==========
@@ -147,13 +191,15 @@ class GameNightCard extends Component {
           className="editGameNight__icon"/>
           }>
         <Dropdown.Menu>
-          <Modal
-            closeIcon
-            trigger={<Dropdown.Item text="edit" />}>
+          <Modal closeIcon
+            open={this.state.showEditGameNightModal}
+            trigger={<Dropdown.Item text="edit" onClick={() => this.setState({showEditGameNightModal: true})} />}>
             <Modal.Content>
               <EditGameNightForm
                 gameNight={this.props.gameNight}
-                handleOnChange={this.handleOnChange}/>
+                handleOnChange={this.handleOnChange}
+                handleGameListSelectOnChange={this.handleGameListSelectOnChange}
+                handleSaveEditedGameNightBtnOnClick={this.handleSaveEditedGameNightBtnOnClick}/>
             </Modal.Content>
           </Modal>
           <Dropdown.Divider />

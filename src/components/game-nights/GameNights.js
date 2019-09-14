@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from "react-router-dom"
 import GameNightCard from './GameNightCard'
 import GameNightManager from "../../modules/GameNightManager"
 
@@ -12,6 +13,7 @@ class GameNights extends Component {
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
   componentDidMount() {
+    console.log({...this.props})
     this.getAllGameNights()
   }
 
@@ -46,4 +48,4 @@ class GameNights extends Component {
   }
 }
 
-export default GameNights
+export default withRouter(GameNights)

@@ -7,7 +7,7 @@ import CreateGameListForm from './CreateGameListForm';
 import CreateGameNightForm from './CreateGameNightForm';
 import GameListManager from "../../modules/UserGameListManager"
 import GameNightManager from "../../modules/GameNightManager"
-import UserGameNights from "./UserGameNights"
+import GameNights from "../game-nights/GameNights"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
 
 class UserProfileData extends Component {
@@ -37,7 +37,7 @@ class UserProfileData extends Component {
       /></Tab.Pane>
     },
     {
-      menuItem: 'my game nights', render: () => <Tab.Pane><UserGameNights
+      menuItem: 'my game nights', render: () => <Tab.Pane><GameNights
         friendData={this.props.friendData}
         getAllFriendData={this.props.getAllFriendData}
         gameNights={this.state.gameNights}

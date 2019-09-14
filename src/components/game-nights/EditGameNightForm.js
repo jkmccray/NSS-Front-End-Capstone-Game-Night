@@ -52,7 +52,7 @@ class EditGameNightForm extends Component {
               id: list.id,
             }))
           }></Dropdown>
-        <Button onClick={this.props.handleSaveNewGameNightBtnOnClick}>save</Button>
+        <Button onClick={this.props.handleSaveEditedGameNightBtnOnClick}>save changes</Button>
       </>
     )
   }
