@@ -1,0 +1,30 @@
+.gameDetails__div {
+  margin: 1em;
+}
+
+.gameDetails__imgAndDesc {
+  display: flex;
+}
+
+.gameDetails__img {
+  height: 20em;
+}
+
+.gameNameAndDesc__div {
+  margin: 0 1em
+}
+
+.gameDescription__p {
+  overflow-y: auto;
+  height: 15em;
+}
+
+.moreGameInfo__div {
+  display: flex;
+  margin: 1em 0;
+}
+
+.gameDetails__list {
+  list-style-type: none;
+  margin-right: 10em;
+}

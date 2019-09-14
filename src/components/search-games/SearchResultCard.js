@@ -14,7 +14,9 @@ class SearchResultCard extends Component {
         trigger={<h4>{this.props.searchResult.name}</h4>}
         >
           <Modal.Content>
-            <GameDetails />
+            <GameDetails
+            searchResult={this.props.searchResult}
+            />
           </Modal.Content>
         </Modal>
         <Modal
