@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Modal, Image, Button, Dropdown } from "semantic-ui-react"
+import GameDetails from "./GameDetails"
 
 import "./SearchResultCard.css"
 
@@ -8,7 +9,16 @@ class SearchResultCard extends Component {
     return (
       <li className="searchResultCard">
         <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
-        <h4>{this.props.searchResult.name}</h4>
+        <Modal
+        closeIcon
+        trigger={<h4>{this.props.searchResult.name}</h4>}
+        >
+          <Modal.Content>
+            <GameDetails
+            searchResult={this.props.searchResult}
+            />
+          </Modal.Content>
+        </Modal>
         <Modal
           closeIcon
           onClose={this.props.handleModalOnClose}
