@@ -10,6 +10,8 @@ import GameNightManager from "../../modules/GameNightManager"
 import GameNights from "../game-nights/GameNights"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
 
+import "./UserProfileData.css"
+
 class UserProfileData extends Component {
   state = {
     activeIndex: 0,
@@ -155,7 +157,7 @@ class UserProfileData extends Component {
 
   displayAddGameListBtnAndModal = () => {
     return <Modal
-      trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
+      trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
       open={this.state.showCreateListModal}>
       <Modal.Content>
         <CreateGameListForm
@@ -169,7 +171,7 @@ class UserProfileData extends Component {
 
   displayAddGameNightBtnAndModal = () => {
     return <Modal
-      trigger={<Button onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
+      trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
       open={this.state.showCreateGameNightModal}>
       <Modal.Content>
         <CreateGameNightForm
@@ -186,7 +188,7 @@ class UserProfileData extends Component {
   displayAddAFriendBtnAndModal = () => {
     return <Modal size="fullscreen"
       closeIcon
-      trigger={<Button>add a friend</Button>}>
+      trigger={<Button className="profileAdd__btn">add a friend</Button>}>
       <Modal.Content>
         <UserFriendSearch
           friendData={this.props.friendData}
@@ -198,14 +200,14 @@ class UserProfileData extends Component {
 
   render() {
     return (
-      <>
-        <div className="userProfileAdd__btn">
+      <div className="userProfileData__div">
+        <div className="userProfileAddBtn__div">
           {this.displayAddBtnBasedOnActiveTab()}
         </div>
         <Tab panes={this.panes}
           onTabChange={this.handleTabChange}
         />
-      </>
+      </div>
     )
   }
 }

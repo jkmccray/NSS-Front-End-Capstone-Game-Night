@@ -1,0 +1,25 @@
+.userInfoCard__div {
+  width: 30%;
+  background-color: #707070;
+  margin: 0 2em 0 0;
+  padding: 2em;
+}
+
+.profile__img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile__name {
+  text-align: center;
+}
+
+.profileGameNight__div {
+  background-color: white;
+  margin: 0 0 1em 0;
+}
+
+.profileUserStats__div {
+  background-color: white;
+  text-align: center;
+}

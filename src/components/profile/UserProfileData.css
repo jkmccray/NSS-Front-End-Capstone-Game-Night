@@ -1,0 +1,14 @@
+.userProfileData__div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.userProfileAddBtn__div {
+  display: flex;
+  width: 90%;
+}
+
+.profileAdd__btn {
+  justify-self: flex-end;
+}
