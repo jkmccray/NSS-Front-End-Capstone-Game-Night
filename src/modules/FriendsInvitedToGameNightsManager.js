@@ -13,6 +13,10 @@ export default {
     return fetch(`${remoteURL}/usersInvitedToGameNights?gameNightId=${gameNightId}&inviteStatus=attending&_expand=user`)
       .then(result => result.json())
   },
+  getAllGameNightsForSingleUser(userId) {
+    return fetch(`${remoteURL}/usersInvitedToGameNights?inviteStatus=attending&userId=${userId}&_expand=gameNight`)
+      .then(result => result.json())
+  },
   removeUserFromGameNight(id) {
     return fetch(`${remoteURL}/usersInvitedToGameNights/${id}`, {
       method: "DELETE"

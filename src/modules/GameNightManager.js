@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   getSingleGameNight(id) {
-    return fetch(`${remoteURL}/gameNights/${id}}`)
+    return fetch(`${remoteURL}/gameNights/${id}?_expand=user`)
       .then(result => result.json())
   },
   getAllGameNights() {

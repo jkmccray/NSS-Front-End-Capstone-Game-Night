@@ -11,11 +11,12 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="profilePage">
-        <UserInfoCard />
+        <UserInfoCard
+        friendData={this.props.friendData}
+        getAllFriendData={this.props.getAllFriendData}/>
         <UserProfileData
           friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-        />
+          getAllFriendData={this.props.getAllFriendData}/>
       </div>
     )
   }

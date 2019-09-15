@@ -23,6 +23,7 @@ class UserProfileData extends Component {
     gameNightName: "",
     gameNightDate: "",
     gameNightTime: "",
+    gameNightDateAndTime: {},
     gameNightLocation: "",
     userGameListId: 0,
     gameNights: []
@@ -87,7 +88,7 @@ class UserProfileData extends Component {
   }
 
   handleCancelAddListBtnOnClick = () => {
-    this.setState({showCreateListModal: false})
+    this.setState({ showCreateListModal: false })
   }
 
   // ========== Functions for Game Nights Section ==========
@@ -116,12 +117,24 @@ class UserProfileData extends Component {
     }
   }
 
+  createDateAndTimeObj = () => {
+    const date = this.state.gameNightDate.split("-")
+    const time = this.state.gameNightTime.split(":")
+    const dateAndTimeArr = date.concat(time).map(num => parseInt(num))
+    const adjustedMonth = dateAndTimeArr[1] -1
+    dateAndTimeArr.splice(1,1,adjustedMonth)
+    const gameNightDateAndTime = new Date(...dateAndTimeArr)
+    return gameNightDateAndTime
+  }
+
   handleSaveNewGameNightBtnOnClick = () => {
+    const gameNightDateAndTime = this.createDateAndTimeObj()
     const gameNightObj = {
       userId: this.activeUser,
       name: this.state.gameNightName,
       date: this.state.gameNightDate,
       time: this.state.gameNightTime,
+      date_and_time: gameNightDateAndTime,
       location: this.state.gameNightLocation,
       userListId: this.state.userGameListId
     }
@@ -138,7 +151,7 @@ class UserProfileData extends Component {
   }
 
   handleCancelAddGameNightBtnOnClick = () => {
-    this.setState({showCreateGameNightModal: false})
+    this.setState({ showCreateGameNightModal: false })
   }
 
   // ========== Functions for Conditional Rendering ==========
@@ -164,7 +177,7 @@ class UserProfileData extends Component {
           handleOnChange={this.handleOnChange}
           handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick}
           handleCancelAddListBtnOnClick={this.handleCancelAddListBtnOnClick}
-          />
+        />
       </Modal.Content>
     </Modal>
   }
@@ -176,6 +189,7 @@ class UserProfileData extends Component {
       <Modal.Content>
         <CreateGameNightForm
           handleOnChange={this.handleOnChange}
+          handleDatePicker={this.handleDatePicker}
           handleGameListSelectOnChange={this.handleGameListSelectOnChange}
           handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameNightBtnOnClick}
           handleCancelAddGameNightBtnOnClick={this.handleCancelAddGameNightBtnOnClick}

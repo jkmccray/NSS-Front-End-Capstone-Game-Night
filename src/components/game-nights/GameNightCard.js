@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom"
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
@@ -30,20 +31,24 @@ class GameNightCard extends Component {
 
   componentDidMount() {
     this.getAttendeesAndSetState()
-    FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
-      .then(userAndGameNight => {
-        if (userAndGameNight.length > 0) {
-          this.setState({
-            activeUserInviteStatus: userAndGameNight[0].inviteStatus,
-            userAndGameNight: userAndGameNight[0]
-          })
-        }
-      })
+    this.getUserAndGameNightAndSetState()
   }
 
   getAttendeesAndSetState = () => {
     FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
       .then(attendees => this.setState({ attendees: attendees }))
+  }
+
+  getUserAndGameNightAndSetState = () => {
+    FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
+    .then(userAndGameNight => {
+      if (userAndGameNight.length > 0) {
+        this.setState({
+          activeUserInviteStatus: userAndGameNight[0].inviteStatus,
+          userAndGameNight: userAndGameNight[0]
+        })
+        }
+      })
   }
 
   // ========== Handler Functions ==========
@@ -225,10 +230,12 @@ class GameNightCard extends Component {
   render() {
     return (
       <div className="gameNight__card">
-        {this.displayEditAndDeleteMenuForActiveUser()}
+        {this.displayEditAndDeleteMenuForActiveUser()
+
+        }
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
         <h3>{this.props.gameNight.name}</h3>
-        <p>created by: {this.props.gameNight.user.username}</p>
+        <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
         {this.showAttendeesBtnOrModal()}
@@ -241,4 +248,4 @@ class GameNightCard extends Component {
   }
 }
 
-export default GameNightCard
+export default withRouter(GameNightCard)
