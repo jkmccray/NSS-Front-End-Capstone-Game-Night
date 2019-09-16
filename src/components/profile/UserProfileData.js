@@ -92,9 +92,12 @@ class UserProfileData extends Component {
   }
 
   // ========== Functions for Game Nights Section ==========
+  today = new Date()
+
   getAllUserGameNights = () => {
     GameNightManager.getAllUserGameNights(this.activeUser)
-      .then(gameNights => {
+      .then(unfilteredGameNights => {
+        const gameNights = unfilteredGameNights.filter(gameNight => new Date(gameNight.date_and_time) > this.today)
         this.setState({
           gameNights: gameNights,
           showCreateGameNightModal: false
@@ -147,6 +150,7 @@ class UserProfileData extends Component {
         }
         FriendsInvitedToGameNight.inviteFriendToGameNight(activeUserAndGameNightObj)
         this.getAllUserGameNights()
+        this.props.getNextGameNight()
       })
   }
 

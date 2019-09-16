@@ -11,6 +11,7 @@ class GameNights extends Component {
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
+  today = new Date()
 
   componentDidMount() {
     this.getAllGameNights()
@@ -20,7 +21,8 @@ class GameNights extends Component {
     this.props.match.path.includes("profile")
       ? this.props.getAllUserGameNights()
       : GameNightManager.getAllGameNights()
-        .then(gameNights => {
+        .then(unfilteredGameNights => {
+          const gameNights = unfilteredGameNights.filter(gameNight => new Date(gameNight.date_and_time) > this.today)
           this.setState({
             gameNights: gameNights,
           })

@@ -230,9 +230,7 @@ class GameNightCard extends Component {
   render() {
     return (
       <div className="gameNight__card">
-        {this.displayEditAndDeleteMenuForActiveUser()
-
-        }
+        {this.displayEditAndDeleteMenuForActiveUser()}
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
         <h3>{this.props.gameNight.name}</h3>
         <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
