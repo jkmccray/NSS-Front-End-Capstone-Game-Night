@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from "react-router-dom"
 import GameNightCard from './GameNightCard'
 import GameNightManager from "../../modules/GameNightManager"
+import FriendsInvitedToGameNights from "../../modules/FriendsInvitedToGameNightsManager"
 
 import './GameNights.css'
 
@@ -41,7 +42,14 @@ class GameNights extends Component {
 
   handleDeleteGameNightOnClick = (gameNightId) => {
     GameNightManager.deleteGameNight(gameNightId)
-      .then(this.getAllGameNights)
+    FriendsInvitedToGameNights.getAllUsersAttendingAGameNight(gameNightId)
+      .then( gameNightAndUsers => {
+        gameNightAndUsers.forEach(gameNightAndUser => {
+          FriendsInvitedToGameNights.removeUserFromGameNight(gameNightAndUser.id)
+        })
+        this.getAllGameNights()
+
+      })
   }
 
   render() {
