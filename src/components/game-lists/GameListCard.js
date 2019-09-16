@@ -13,7 +13,7 @@ class GameNightCard extends Component {
         {
           this.props.editingStatus
           ? <Button
-          onClick={this.props.handleDeleteGameFromListBtnOnClick}
+          onClick={(evt) => this.props.handleDeleteGameFromListBtnOnClick(evt, this.props.gameAndListObj.id)}
           className="deleteGameFromList__btn"
           id={`deleteGameFromListBtn--${this.props.gameAndListObj.id}`}><Icon name="minus circle"/></Button>
           : null

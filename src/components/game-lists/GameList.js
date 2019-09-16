@@ -47,29 +47,26 @@ class GameList extends Component {
     this.setState({ [event.target.id]: event.target.value })
   }
 
-  handleDeleteGameFromListBtnOnClick = (event) => {
-    const nodeType = event.target.nodeName
-    let id
-    if (nodeType === "BUTTON") {
-      id = parseInt(event.target.id.split("--")[1])
-    } else if (nodeType === "I") {
-      id = parseInt(event.target.parentNode.id.split("--")[1])
-    }
+  handleDeleteGameFromListBtnOnClick = (event, id) => {
     GamesSavedToList.deleteGameFromUserList(id)
       .then(this.getAllGamesInList)
   }
 
   handleSaveEditChangesBtnOnClick = (event) => {
-    const listObj = {
-      id: this.listId,
-      userId: this.activeUser,
-      name: this.state.editedListName
+    if (this.state.editedListName) {
+      const listObj = {
+        id: this.listId,
+        userId: this.activeUser,
+        name: this.state.editedListName
+      }
+      UserGameListManager.saveEditedListName(listObj)
+        .then(() => this.setState({
+          editingStatus: false,
+          gameListName: this.state.editedListName
+        }))
+    } else {
+      alert("please enter game list name")
     }
-    UserGameListManager.saveEditedListName(listObj)
-      .then(() => this.setState({
-        editingStatus: false,
-        gameListName: this.state.editedListName
-      }))
   }
 
   displayEditAndDeleteMenu = () => {
@@ -80,8 +77,7 @@ class GameList extends Component {
       icon={<Icon
         name="ellipsis vertical"
         size="large"
-        className="editGameList__icon"
-      />}>
+        className="editGameList__icon"/>}>
       <Dropdown.Menu>
         <Dropdown.Item text="edit"
           onClick={this.handleEditListOnClick}

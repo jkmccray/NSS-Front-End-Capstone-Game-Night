@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Header } from "semantic-ui-react"
 import FriendshipManager from "../../modules/FriendshipManager";
 import FriendCard from './FriendCard';
 
@@ -24,8 +25,8 @@ export default class FriendList extends Component {
     render() {
         return (
             <section className="friendList__section">
-                {
-                    this.props.friendData.friendsWithUserInfo.map(user => {
+                {this.props.friendData.friendsWithUserInfo.length > 0
+                ? this.props.friendData.friendsWithUserInfo.map(user => {
                         return <FriendCard
                             key={user.id}
                             user={user}
@@ -34,6 +35,7 @@ export default class FriendList extends Component {
                             friendship={this.props.friendData.friendships.find(friendship => user.id === friendship.userId || user.id === friendship.otherUser)}
                             {...this.props} />
                     })
+                    : <Header>Select the "add a friend" button to add friends!</Header>
                 }
             </section>
         )
