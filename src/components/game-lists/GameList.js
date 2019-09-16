@@ -53,16 +53,20 @@ class GameList extends Component {
   }
 
   handleSaveEditChangesBtnOnClick = (event) => {
-    const listObj = {
-      id: this.listId,
-      userId: this.activeUser,
-      name: this.state.editedListName
+    if (this.state.editedListName) {
+      const listObj = {
+        id: this.listId,
+        userId: this.activeUser,
+        name: this.state.editedListName
+      }
+      UserGameListManager.saveEditedListName(listObj)
+        .then(() => this.setState({
+          editingStatus: false,
+          gameListName: this.state.editedListName
+        }))
+    } else {
+      alert("please enter game list name")
     }
-    UserGameListManager.saveEditedListName(listObj)
-      .then(() => this.setState({
-        editingStatus: false,
-        gameListName: this.state.editedListName
-      }))
   }
 
   displayEditAndDeleteMenu = () => {

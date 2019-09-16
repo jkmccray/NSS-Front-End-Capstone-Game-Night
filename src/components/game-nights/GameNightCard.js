@@ -192,7 +192,7 @@ class GameNightCard extends Component {
   }
 
   showAttendeesBtnOrModal = () => {
-    return this.state.attendees.length > 0
+    return this.state.attendees.length > 1
       ? <Modal closeIcon
         trigger={<Button basic className="gameNightCardAttendees__btn">see all attendees</Button>}>
         <Modal.Content>
