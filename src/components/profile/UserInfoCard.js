@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import { Image, Header } from "semantic-ui-react"
-import GameNightCard from "../game-nights/GameNightCard"
+import { Image, Header, Icon } from "semantic-ui-react"
 
 
 import "./UserInfoCard.css"
@@ -21,11 +20,10 @@ class UserInfoCard extends Component {
         <Header inverted className="profile__name">{this.props.username}</Header>
         <Header inverted>next game night:</Header>
         <div className="profileGameNight__div">
-          <GameNightCard
-          gameNight={this.props.gameNight}
-          friendData={this.props.friendData}
-          getAllFriendData={this.props.getAllFriendData}
-          />
+          <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
+          <h3>{this.props.gameNight.name}</h3>
+          <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
+          <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         </div>
         <div className="profileUserStats__div">
           <Header >you own __ games!</Header>
