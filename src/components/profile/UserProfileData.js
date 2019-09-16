@@ -132,7 +132,7 @@ class UserProfileData extends Component {
   }
 
   handleSaveNewGameNightBtnOnClick = () => {
-    if (this.state.gameNightName && this.state.gameNightDate && this.state.gameNightTime && this.state.gameNightLocation){
+    if (this.state.gameNightName && this.state.gameNightDate && this.state.gameNightTime && this.state.gameNightLocation && this.state.userGameListId){
       const gameNightDateAndTime = this.createDateAndTimeObj()
       const gameNightObj = {
         userId: this.activeUser,

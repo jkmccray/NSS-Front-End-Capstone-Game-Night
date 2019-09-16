@@ -115,22 +115,26 @@ class GameNightCard extends Component {
   }
 
   handleSaveEditedGameNightBtnOnClick = () => {
-    const editedGameNightDateAndTime = this.createDateAndTimeObj()
-    const updatedGameNightObj = {
-      userId: this.activeUser,
-      name: this.state.editedGameNightName,
-      date: this.state.editedGameNightDate,
-      time: this.state.editedGameNightTime,
-      date_and_time: editedGameNightDateAndTime,
-      location: this.state.editedGameNightLocation,
-      userListId: this.state.updatedGameListId,
-      id: this.gameNightId
+    if (this.state.editedGameNightName && this.state.editedGameNightDate && this.state.editedGameNightTime && this.state.editedGameNightLocation && this.state.updatedGameListId) {
+      const editedGameNightDateAndTime = this.createDateAndTimeObj()
+      const updatedGameNightObj = {
+        userId: this.activeUser,
+        name: this.state.editedGameNightName,
+        date: this.state.editedGameNightDate,
+        time: this.state.editedGameNightTime,
+        date_and_time: editedGameNightDateAndTime,
+        location: this.state.editedGameNightLocation,
+        userListId: this.state.updatedGameListId,
+        id: this.gameNightId
+      }
+      GameNightManager.saveEditedGameNight(updatedGameNightObj)
+        .then(() => {
+          this.setState({ showEditGameNightModal: false })
+          this.props.getAllGameNights()
+        })
+    } else {
+      alert("please fill out all fields")
     }
-    GameNightManager.saveEditedGameNight(updatedGameNightObj)
-      .then(() => {
-        this.setState({ showEditGameNightModal: false })
-        this.props.getAllGameNights()
-      })
   }
 
   handleCancelChangesBtnOnClick = () => {
