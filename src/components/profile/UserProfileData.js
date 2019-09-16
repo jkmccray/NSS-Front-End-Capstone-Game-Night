@@ -132,26 +132,30 @@ class UserProfileData extends Component {
   }
 
   handleSaveNewGameNightBtnOnClick = () => {
-    const gameNightDateAndTime = this.createDateAndTimeObj()
-    const gameNightObj = {
-      userId: this.activeUser,
-      name: this.state.gameNightName,
-      date: this.state.gameNightDate,
-      time: this.state.gameNightTime,
-      date_and_time: gameNightDateAndTime,
-      location: this.state.gameNightLocation,
-      userListId: this.state.userGameListId
+    if (this.state.gameNightName && this.state.gameNightDate && this.state.gameNightTime && this.state.gameNightLocation){
+      const gameNightDateAndTime = this.createDateAndTimeObj()
+      const gameNightObj = {
+        userId: this.activeUser,
+        name: this.state.gameNightName,
+        date: this.state.gameNightDate,
+        time: this.state.gameNightTime,
+        date_and_time: gameNightDateAndTime,
+        location: this.state.gameNightLocation,
+        userListId: this.state.userGameListId
+      }
+      GameNightManager.addGameNight(gameNightObj)
+        .then(gameNightObj => {
+          const activeUserAndGameNightObj = {
+            gameNightId: gameNightObj.id,
+            userId: this.activeUser,
+            inviteStatus: "attending"
+          }
+          FriendsInvitedToGameNight.inviteFriendToGameNight(activeUserAndGameNightObj)
+          this.getAllUserGameNights()
+        })
+    } else {
+      alert ("please fill out all fields")
     }
-    GameNightManager.addGameNight(gameNightObj)
-      .then(gameNightObj => {
-        const activeUserAndGameNightObj = {
-          gameNightId: gameNightObj.id,
-          userId: this.activeUser,
-          inviteStatus: "attending"
-        }
-        FriendsInvitedToGameNight.inviteFriendToGameNight(activeUserAndGameNightObj)
-        this.getAllUserGameNights()
-      })
   }
 
   handleCancelAddGameNightBtnOnClick = () => {

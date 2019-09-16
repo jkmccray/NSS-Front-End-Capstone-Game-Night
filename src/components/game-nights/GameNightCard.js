@@ -128,8 +128,8 @@ class GameNightCard extends Component {
     }
     GameNightManager.saveEditedGameNight(updatedGameNightObj)
       .then(() => {
-        this.props.getAllGameNights()
         this.setState({ showEditGameNightModal: false })
+        this.props.getAllGameNights()
       })
   }
 
