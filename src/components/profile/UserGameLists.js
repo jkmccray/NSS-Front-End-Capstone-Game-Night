@@ -2,10 +2,15 @@ import React, { Component } from "react"
 import { Header } from "semantic-ui-react"
 import GameList from "../game-lists/GameList"
 import UserGameListManager from "../../modules/UserGameListManager"
+import UsersAndGameNights from "../../modules/FriendsInvitedToGameNightsManager"
+import GameNights from "../../modules/GameNightManager"
 
 import "./UserGameLists.css"
 
 class UserGameLists extends Component {
+  state = {
+    gameNights: []
+  }
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
   componentDidMount() {
@@ -13,8 +18,15 @@ class UserGameLists extends Component {
   }
 
   handleDeleteListOnClick = (listId) => {
-    UserGameListManager.deleteList(listId)
-    .then(this.props.getAllUserLists)
+    GameNights.getAllGameNightsWithSameList(listId)
+    .then(gameNights => {
+      if (gameNights.length > 0) {
+        alert("this list is associated with a game night")
+      } else {
+        UserGameListManager.deleteList(listId)
+        .then(this.props.getAllUserLists)
+      }
+    })
   }
 
   render() {

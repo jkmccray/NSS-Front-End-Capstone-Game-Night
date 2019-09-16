@@ -79,12 +79,16 @@ class UserProfileData extends Component {
   }
 
   handleSaveNewGameListBtnOnClick = () => {
-    const gameListObj = {
-      userId: this.activeUser,
-      name: this.state.gameListName
+    if (this.state.gameListName) {
+      const gameListObj = {
+        userId: this.activeUser,
+        name: this.state.gameListName
+      }
+      GameListManager.addGameList(gameListObj)
+        .then(this.getAllUserLists)
+    } else {
+      alert("please fill out name field")
     }
-    GameListManager.addGameList(gameListObj)
-      .then(this.getAllUserLists)
   }
 
   handleCancelAddListBtnOnClick = () => {
