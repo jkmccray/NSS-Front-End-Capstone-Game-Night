@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { withRouter } from "react-router-dom"
+import { withRouter, Link } from "react-router-dom"
+import { Header } from "semantic-ui-react"
 import GameNightCard from './GameNightCard'
 import GameNightManager from "../../modules/GameNightManager"
 import FriendsInvitedToGameNights from "../../modules/FriendsInvitedToGameNightsManager"
@@ -15,6 +16,7 @@ class GameNights extends Component {
   today = new Date()
 
   componentDidMount() {
+    console.log({...this.props})
     this.getAllGameNights()
   }
 
@@ -22,7 +24,7 @@ class GameNights extends Component {
     this.props.match.path.includes("profile")
       ? this.props.getAllUserGameNights()
       : GameNightManager.getAllGameNights()
-        .then(unfilteredGameNights => {
+      .then(unfilteredGameNights => {
           const gameNights = unfilteredGameNights.filter(gameNight => new Date(gameNight.date_and_time) > this.today)
           this.setState({
             gameNights: gameNights,
@@ -37,17 +39,20 @@ class GameNights extends Component {
     } else {
       gameNightsArr = this.props.gameNights
     }
+    console.log('gameNightsArr: ', gameNightsArr);
     return gameNightsArr
   }
 
   handleDeleteGameNightOnClick = (gameNightId) => {
     GameNightManager.deleteGameNight(gameNightId)
     FriendsInvitedToGameNights.getAllUsersAttendingAGameNight(gameNightId)
-      .then( gameNightAndUsers => {
+      .then(gameNightAndUsers => {
         gameNightAndUsers.forEach(gameNightAndUser => {
           FriendsInvitedToGameNights.removeUserFromGameNight(gameNightAndUser.id)
         })
-        this.getAllGameNights()
+        this.props.match.path.includes("profile")
+          ? this.props.getAllUserGameNights()
+          : this.getAllGameNights()
 
       })
   }
@@ -55,7 +60,7 @@ class GameNights extends Component {
   render() {
     return (
       <div className="gameNights__div">
-        {this.determineGameNightsArr()
+        {this.determineGameNightsArr() && this.determineGameNightsArr().length > 0
           ? this.determineGameNightsArr().map(gameNight =>
             <GameNightCard
               key={gameNight.id}
@@ -63,8 +68,10 @@ class GameNights extends Component {
               friendData={this.props.friendData}
               getAllFriendData={this.props.getAllFriendData}
               getAllGameNights={this.getAllGameNights}
-              handleDeleteGameNightOnClick={this.handleDeleteGameNightOnClick}/>)
-          : null
+              handleDeleteGameNightOnClick={this.handleDeleteGameNightOnClick} />)
+          : this.props.match.path.includes("profile")
+            ? <Header>Select the "create game night" button to add game night!</Header>
+            : <Header>Go to your <Link to="/profile">profile</Link> to create a game night!</Header>
         }
       </div>
     )
