@@ -102,6 +102,7 @@ class UserProfileData extends Component {
           gameNights: gameNights,
           showCreateGameNightModal: false
         })
+        this.props.getNextGameNight()
       })
   }
 
@@ -150,7 +151,6 @@ class UserProfileData extends Component {
         }
         FriendsInvitedToGameNight.inviteFriendToGameNight(activeUserAndGameNightObj)
         this.getAllUserGameNights()
-        this.props.getNextGameNight()
       })
   }
 

@@ -7,8 +7,6 @@ import "./UserInfoCard.css"
 
 class UserInfoCard extends Component {
 
-
-
   componentDidMount() {
     this.props.getActiveUserName()
     this.props.getNextGameNight()
