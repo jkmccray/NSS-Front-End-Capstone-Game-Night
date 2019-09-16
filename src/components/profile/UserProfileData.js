@@ -10,6 +10,8 @@ import GameNightManager from "../../modules/GameNightManager"
 import GameNights from "../game-nights/GameNights"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
 
+import "./UserProfileData.css"
+
 class UserProfileData extends Component {
   state = {
     activeIndex: 0,
@@ -21,6 +23,7 @@ class UserProfileData extends Component {
     gameNightName: "",
     gameNightDate: "",
     gameNightTime: "",
+    gameNightDateAndTime: {},
     gameNightLocation: "",
     userGameListId: 0,
     gameNights: []
@@ -85,17 +88,21 @@ class UserProfileData extends Component {
   }
 
   handleCancelAddListBtnOnClick = () => {
-    this.setState({showCreateListModal: false})
+    this.setState({ showCreateListModal: false })
   }
 
   // ========== Functions for Game Nights Section ==========
+  today = new Date()
+
   getAllUserGameNights = () => {
     GameNightManager.getAllUserGameNights(this.activeUser)
-      .then(gameNights => {
+      .then(unfilteredGameNights => {
+        const gameNights = unfilteredGameNights.filter(gameNight => new Date(gameNight.date_and_time) > this.today)
         this.setState({
           gameNights: gameNights,
           showCreateGameNightModal: false
         })
+        this.props.getNextGameNight()
       })
   }
 
@@ -114,12 +121,24 @@ class UserProfileData extends Component {
     }
   }
 
+  createDateAndTimeObj = () => {
+    const date = this.state.gameNightDate.split("-")
+    const time = this.state.gameNightTime.split(":")
+    const dateAndTimeArr = date.concat(time).map(num => parseInt(num))
+    const adjustedMonth = dateAndTimeArr[1] -1
+    dateAndTimeArr.splice(1,1,adjustedMonth)
+    const gameNightDateAndTime = new Date(...dateAndTimeArr)
+    return gameNightDateAndTime
+  }
+
   handleSaveNewGameNightBtnOnClick = () => {
+    const gameNightDateAndTime = this.createDateAndTimeObj()
     const gameNightObj = {
       userId: this.activeUser,
       name: this.state.gameNightName,
       date: this.state.gameNightDate,
       time: this.state.gameNightTime,
+      date_and_time: gameNightDateAndTime,
       location: this.state.gameNightLocation,
       userListId: this.state.userGameListId
     }
@@ -136,7 +155,7 @@ class UserProfileData extends Component {
   }
 
   handleCancelAddGameNightBtnOnClick = () => {
-    this.setState({showCreateGameNightModal: false})
+    this.setState({ showCreateGameNightModal: false })
   }
 
   // ========== Functions for Conditional Rendering ==========
@@ -155,25 +174,26 @@ class UserProfileData extends Component {
 
   displayAddGameListBtnAndModal = () => {
     return <Modal
-      trigger={<Button onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
+      trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
       open={this.state.showCreateListModal}>
       <Modal.Content>
         <CreateGameListForm
           handleOnChange={this.handleOnChange}
           handleSaveNewGameListBtnOnClick={this.handleSaveNewGameListBtnOnClick}
           handleCancelAddListBtnOnClick={this.handleCancelAddListBtnOnClick}
-          />
+        />
       </Modal.Content>
     </Modal>
   }
 
   displayAddGameNightBtnAndModal = () => {
     return <Modal
-      trigger={<Button onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
+      trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
       open={this.state.showCreateGameNightModal}>
       <Modal.Content>
         <CreateGameNightForm
           handleOnChange={this.handleOnChange}
+          handleDatePicker={this.handleDatePicker}
           handleGameListSelectOnChange={this.handleGameListSelectOnChange}
           handleSaveNewGameNightBtnOnClick={this.handleSaveNewGameNightBtnOnClick}
           handleCancelAddGameNightBtnOnClick={this.handleCancelAddGameNightBtnOnClick}
@@ -186,7 +206,7 @@ class UserProfileData extends Component {
   displayAddAFriendBtnAndModal = () => {
     return <Modal size="fullscreen"
       closeIcon
-      trigger={<Button>add a friend</Button>}>
+      trigger={<Button className="profileAdd__btn">add a friend</Button>}>
       <Modal.Content>
         <UserFriendSearch
           friendData={this.props.friendData}
@@ -198,14 +218,14 @@ class UserProfileData extends Component {
 
   render() {
     return (
-      <>
-        <div className="userProfileAdd__btn">
+      <div className="userProfileData__div">
+        <div className="userProfileAddBtn__div">
           {this.displayAddBtnBasedOnActiveTab()}
         </div>
         <Tab panes={this.panes}
           onTabChange={this.handleTabChange}
         />
-      </>
+      </div>
     )
   }
 }

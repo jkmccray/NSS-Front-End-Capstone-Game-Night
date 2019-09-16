@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom"
 import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
@@ -30,20 +31,24 @@ class GameNightCard extends Component {
 
   componentDidMount() {
     this.getAttendeesAndSetState()
-    FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
-      .then(userAndGameNight => {
-        if (userAndGameNight.length > 0) {
-          this.setState({
-            activeUserInviteStatus: userAndGameNight[0].inviteStatus,
-            userAndGameNight: userAndGameNight[0]
-          })
-        }
-      })
+    this.getUserAndGameNightAndSetState()
   }
 
   getAttendeesAndSetState = () => {
     FriendsInvitedToGameNight.getAllUsersAttendingAGameNight(this.props.gameNight.id)
       .then(attendees => this.setState({ attendees: attendees }))
+  }
+
+  getUserAndGameNightAndSetState = () => {
+    FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
+    .then(userAndGameNight => {
+      if (userAndGameNight.length > 0) {
+        this.setState({
+          activeUserInviteStatus: userAndGameNight[0].inviteStatus,
+          userAndGameNight: userAndGameNight[0]
+        })
+        }
+      })
   }
 
   // ========== Handler Functions ==========
@@ -99,12 +104,24 @@ class GameNightCard extends Component {
     }
   }
 
+  createDateAndTimeObj = () => {
+    const date = this.state.editedGameNightDate.split("-")
+    const time = this.state.editedGameNightTime.split(":")
+    const dateAndTimeArr = date.concat(time).map(num => parseInt(num))
+    const adjustedMonth = dateAndTimeArr[1] -1
+    dateAndTimeArr.splice(1,1,adjustedMonth)
+    const gameNightDateAndTime = new Date(...dateAndTimeArr)
+    return gameNightDateAndTime
+  }
+
   handleSaveEditedGameNightBtnOnClick = () => {
+    const editedGameNightDateAndTime = this.createDateAndTimeObj()
     const updatedGameNightObj = {
       userId: this.activeUser,
       name: this.state.editedGameNightName,
       date: this.state.editedGameNightDate,
       time: this.state.editedGameNightTime,
+      date_and_time: editedGameNightDateAndTime,
       location: this.state.editedGameNightLocation,
       userListId: this.state.updatedGameListId,
       id: this.gameNightId
@@ -173,7 +190,7 @@ class GameNightCard extends Component {
   showAttendeesBtnOrModal = () => {
     return this.state.attendees.length > 0
       ? <Modal closeIcon
-        trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}>
+        trigger={<Button basic className="gameNightCardAttendees__btn">see all attendees</Button>}>
         <Modal.Content>
           {
             this.state.attendees.map(attendee => {
@@ -227,8 +244,8 @@ class GameNightCard extends Component {
       <div className="gameNight__card">
         {this.displayEditAndDeleteMenuForActiveUser()}
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
-        <h3>{this.props.gameNight.name}</h3>
-        <p>created by: {this.props.gameNight.user.username}</p>
+        <h3 >{this.props.gameNight.name}</h3>
+        <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>
         {this.showAttendeesBtnOrModal()}
@@ -241,4 +258,4 @@ class GameNightCard extends Component {
   }
 }
 
-export default GameNightCard
+export default withRouter(GameNightCard)

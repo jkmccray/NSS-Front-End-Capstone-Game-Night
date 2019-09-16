@@ -2,15 +2,15 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   getSingleGameNight(id) {
-    return fetch(`${remoteURL}/gameNights/${id}}`)
+    return fetch(`${remoteURL}/gameNights/${id}?_expand=user`)
       .then(result => result.json())
   },
   getAllGameNights() {
-    return fetch(`${remoteURL}/gameNights?_expand=user&_expand=userList`)
+    return fetch(`${remoteURL}/gameNights?_expand=user&_expand=userList&_sort=date_and_time&_order=asc`)
       .then(result => result.json())
   },
   getAllUserGameNights(userId) {
-    return fetch(`${remoteURL}/gameNights?userId=${userId}&_expand=user&_expand=userList`)
+    return fetch(`${remoteURL}/gameNights?userId=${userId}&_expand=user&_expand=userList&_sort=date_and_time&_order=asc`)
       .then(result => result.json())
   },
   deleteGameNight(id) {

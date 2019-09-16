@@ -1,22 +1,59 @@
 import React, { Component } from "react"
 import UserInfoCard from "./UserInfoCard"
-import UserProfileData from "./UserProfileData" // similar to application views
-// import ApplicationViews from "./components/ApplicationViews"
-// import WelcomePage from "./components/welcome-and-login/WelcomePage"
-// import NavBar from "./components/nav/NavBar"
+import UserProfileData from "./UserProfileData"
+import UserManager from "../../modules/UserManager"
+import UsersAndGameNightsManager from "../../modules/FriendsInvitedToGameNightsManager"
+import GameNightManager from "../../modules/GameNightManager"
 
-// import "./Kennel.css"
+import "./UserProfile.css"
 
 class UserProfile extends Component {
+  state = {
+    username: "",
+    gameNight: {}
+  }
+
+  activeUser = parseInt(sessionStorage.getItem("activeUser"))
+  today = new Date()
+
+  getActiveUserName = () => {
+    return UserManager.getSingleUser(this.activeUser)
+      .then(user => this.setState({ username: user.username }))
+  }
+
+  getNextGameNight = () => {
+    UsersAndGameNightsManager.getAllGameNightsForSingleUser(this.activeUser)
+      .then(userAndGameNights => {
+        if (userAndGameNights.length > 0) {
+          const sortedGameNights = userAndGameNights.filter(userAndGameNight => new Date(userAndGameNight.gameNight.date_and_time) > this.today)
+          .map(userAndGameNight => userAndGameNight.gameNight)
+          .sort((a, b) => (a.date_and_time > b.date_and_time) ? 1 : -1)
+          const nextGameNight = sortedGameNights[0]
+          GameNightManager.getSingleGameNight(nextGameNight.id)
+            .then((gameNightObj) => {
+              const creatorName = gameNightObj.user.username
+              nextGameNight.user = {}
+              nextGameNight.user.username = creatorName
+              this.setState({ gameNight: nextGameNight })
+            })
+        }
+      })
+  }
   render() {
     return (
-      <>
-        <UserInfoCard />
+      <div className="profilePage">
+        <UserInfoCard
+          friendData={this.props.friendData}
+          getAllFriendData={this.props.getAllFriendData}
+          getNextGameNight={this.getNextGameNight}
+          getActiveUserName={this.getActiveUserName}
+          username={this.state.username}
+          gameNight={this.state.gameNight}/>
         <UserProfileData
           friendData={this.props.friendData}
           getAllFriendData={this.props.getAllFriendData}
-        />
-      </>
+          getNextGameNight={this.getNextGameNight}/>
+      </div>
     )
   }
 }
