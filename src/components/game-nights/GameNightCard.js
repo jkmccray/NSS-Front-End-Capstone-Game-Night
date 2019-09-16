@@ -104,12 +104,24 @@ class GameNightCard extends Component {
     }
   }
 
+  createDateAndTimeObj = () => {
+    const date = this.state.editedGameNightDate.split("-")
+    const time = this.state.editedGameNightTime.split(":")
+    const dateAndTimeArr = date.concat(time).map(num => parseInt(num))
+    const adjustedMonth = dateAndTimeArr[1] -1
+    dateAndTimeArr.splice(1,1,adjustedMonth)
+    const gameNightDateAndTime = new Date(...dateAndTimeArr)
+    return gameNightDateAndTime
+  }
+
   handleSaveEditedGameNightBtnOnClick = () => {
+    const editedGameNightDateAndTime = this.createDateAndTimeObj()
     const updatedGameNightObj = {
       userId: this.activeUser,
       name: this.state.editedGameNightName,
       date: this.state.editedGameNightDate,
       time: this.state.editedGameNightTime,
+      date_and_time: editedGameNightDateAndTime,
       location: this.state.editedGameNightLocation,
       userListId: this.state.updatedGameListId,
       id: this.gameNightId
