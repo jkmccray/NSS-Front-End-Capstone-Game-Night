@@ -16,7 +16,6 @@ class GameNights extends Component {
   today = new Date()
 
   componentDidMount() {
-    console.log({...this.props})
     this.getAllGameNights()
   }
 
@@ -39,7 +38,6 @@ class GameNights extends Component {
     } else {
       gameNightsArr = this.props.gameNights
     }
-    console.log('gameNightsArr: ', gameNightsArr);
     return gameNightsArr
   }
 
