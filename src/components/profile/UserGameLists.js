@@ -21,7 +21,8 @@ class UserGameLists extends Component {
     GameNights.getAllGameNightsWithSameList(listId)
     .then(gameNights => {
       if (gameNights.length > 0) {
-        alert("this list is associated with a game night")
+        const gameNightNames = gameNights.map(gameNight => gameNight.name).join(", ")
+        alert(`this list is associated with game night(s): ${gameNightNames}`)
       } else {
         UserGameListManager.deleteList(listId)
         .then(this.props.getAllUserLists)
