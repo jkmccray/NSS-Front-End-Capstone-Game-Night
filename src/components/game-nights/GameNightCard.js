@@ -190,7 +190,7 @@ class GameNightCard extends Component {
   showAttendeesBtnOrModal = () => {
     return this.state.attendees.length > 0
       ? <Modal closeIcon
-        trigger={<Button basic className="gameNightCardAttendees__link">see all attendees</Button>}>
+        trigger={<Button basic className="gameNightCardAttendees__btn">see all attendees</Button>}>
         <Modal.Content>
           {
             this.state.attendees.map(attendee => {
@@ -244,7 +244,7 @@ class GameNightCard extends Component {
       <div className="gameNight__card">
         {this.displayEditAndDeleteMenuForActiveUser()}
         <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
-        <h3>{this.props.gameNight.name}</h3>
+        <h3 >{this.props.gameNight.name}</h3>
         <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
         <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
         <div className="gameNight__attendees"></div>

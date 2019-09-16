@@ -4,6 +4,7 @@
   flex-direction: column;
   background-color: white;
   border: 1px solid #E6DEDD;
+  padding: 1em;
 }
 
 .editGameNight__dropdown {
@@ -17,10 +18,13 @@
 }
 
 .gameNightCardBtn__div {
+  margin-top: .5em;
   display: flex;
   justify-content: space-evenly;
 }
+
 .gameNightCard__btn {
-  width: 45%;
+  width: 47%;
   background-color: #F89D13;
+  margin: 0;
 }
