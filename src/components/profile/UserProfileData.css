@@ -6,7 +6,7 @@
 
 .userProfileAddBtn__div {
   display: flex;
-  width: 90%;
+  align-self: flex-end;
 }
 
 .profileAdd__btn {

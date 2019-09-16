@@ -54,17 +54,12 @@
   border-bottom: 2px solid #F89D13
 }
 
-.logout-btn {
-  background-color: #F89D13;
-  color: white;
-  font-size: 1em;
-  box-shadow: none;
-  border: none;
-  font-family: 'Manjari', sans-serif;
-  padding: .5em;
+.logoutBtn__div {
+  display: flex;
+  width: 100%;
 }
 
-.logout-btn:hover {
-  background-color: rgba(248, 157, 19, 0.637);
-  color: white;
+.logout-btn {
+  font-family: 'Manjari', sans-serif;
+  padding: .5em;
 }
