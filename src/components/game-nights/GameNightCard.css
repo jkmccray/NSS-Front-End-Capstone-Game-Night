@@ -11,17 +11,13 @@
 }
 
 .shadow {
-  -moz-box-shadow:    2px 2px 2px 2px #E6DEDD;
-  -webkit-box-shadow: 2px 2px 2px 2px #E6DEDD;
-  box-shadow:         2px 2px 2px 2px #E6DEDD;
+  -moz-box-shadow:    1px 1px 1px 1px #E6DEDD;
+  -webkit-box-shadow: 1px 1px 1px 1px #E6DEDD;
+  box-shadow:         1px 1px 1px 1px #E6DEDD;
 }
 
 .gameNightProfile__card {
   flex-basis: 35%;
-}
-
-.placeholder {
-  height: 21px;
 }
 
 .editGameNight__dropdown {
@@ -37,6 +33,14 @@
 .gameNightCard__date {
   font-weight: bold;
   font-size: 1.1em;
+}
+
+p:first-child.gameNightCardFriend__date {
+  margin-top: 1.3em;
+}
+
+.gameNightCard__name {
+  font-family: 'league_spartanbold';
 }
 
 .gameNightCardLocation__div {
