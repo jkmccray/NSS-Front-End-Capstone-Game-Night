@@ -6,8 +6,18 @@
   display: flex;
 }
 
+.ui.header:first-child.gameDetails__name {
+  font-family: 'league_spartanbold';
+  font-size: 1.7em;
+  margin: .5em 0;
+}
+
 .gameDetails__img {
   height: 20em;
+}
+
+.ui.rating .active.icon {
+  color: #F89D13;
 }
 
 .gameNameAndDesc__div {
@@ -21,10 +31,13 @@
 
 .moreGameInfo__div {
   display: flex;
-  margin: 1em 0;
+  margin: 2em 0;
+  justify-content: space-around
 }
 
 .gameDetails__list {
   list-style-type: none;
-  margin-right: 10em;
+  /* margin-right: 9em; */
+  overflow-y: auto;
+  height: 10em;
 }

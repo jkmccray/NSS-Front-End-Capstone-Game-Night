@@ -34,10 +34,9 @@ class SearchResultList extends Component {
   }
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
-  handleAddGameToListBtnOnClick = (event) => {
+  handleAddGameToListBtnOnClick = (event, id) => {
     this.setState({ hideSuccessMessage: true })
-    const gameId = event.target.id.split("--")[1]
-    APIGameManager.getGamesByIds(gameId)
+    APIGameManager.getGamesByIds(id)
       .then(resultObj => {
         const gameObjFromApi = resultObj.games[0]
         // check if game has already been saved to games resource in database.json
@@ -152,9 +151,8 @@ class SearchResultList extends Component {
   render() {
     return (
       <div id="searchResultContainer">
-        <h2>search results:</h2>
-
-        <Message
+        <Header className="searchResultList__header">search results:</Header>
+        <Message className="searchResultList__message"
           hidden={this.state.hideSuccessMessage}
           success
           content={this.state.successMessage}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Header, Rating } from "semantic-ui-react";
+import { Image, Header, Rating, Divider } from "semantic-ui-react";
 import APIGameManager from "../../modules/APIGameManager"
 
 import './GameDetails.css'
@@ -46,13 +46,14 @@ class GameDetails extends Component {
         <div className="gameDetails__imgAndDesc">
           <Image className="gameDetails__img" src={this.props.searchResult.image_url} />
           <div className="gameNameAndDesc__div">
-            <Header>{this.props.searchResult.name}</Header>
+            <Header className="gameDetails__name">{this.props.searchResult.name}</Header>
             <Rating defaultRating={Math.round(this.props.searchResult.average_user_rating)} maxRating={5} disabled />
             <span>{`(${this.props.searchResult.num_user_ratings} ratings)`}</span>
             <Header>description</Header>
             <p className="gameDescription__p">{this.props.searchResult.description.replace(/(<([^>]+)>)/ig, " ")}</p>
           </div>
         </div>
+        <Divider />
         <div className="moreGameInfo__div">
           <ul className="gameStats gameDetails__list"><Header>details</Header>
             <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>

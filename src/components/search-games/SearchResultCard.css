@@ -1,13 +1,35 @@
 .searchResultCard {
-  border: 1px solid black;
-  width: 100%;
   display: flex;
+  background-color: white;
+  margin: .5em 1em;
+  padding: .5em;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.addGameToList__btn {
-  align-self: right;
+.searchResultCard__imgAndName {
+  display: flex;
+  align-items: center;
+}
+
+i.large.icon.addGameToList__icon {
+  cursor: pointer;
+  color: #F89D13;
 }
 
 .searchResult__image {
-  max-height: 4em;
+  max-height: 3em;
+}
+
+.searchResultCard__name {
+  margin: 0 1.5em;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+
+.searchResultCard__name:hover {
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
 }

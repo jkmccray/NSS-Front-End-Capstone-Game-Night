@@ -1,6 +1,6 @@
 .search-form {
-  margin-top: 2em;
-  max-width: 25%;
+  margin: 2em;
+  flex-basis: 25%;
   min-height: 40em;
 }
 
