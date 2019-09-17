@@ -41,12 +41,12 @@ class GameNightCard extends Component {
 
   getUserAndGameNightAndSetState = () => {
     FriendsInvitedToGameNight.getSingleUserInvitedAndGameNight(this.activeUser, this.props.gameNight.id)
-    .then(userAndGameNight => {
-      if (userAndGameNight.length > 0) {
-        this.setState({
-          activeUserInviteStatus: userAndGameNight[0].inviteStatus,
-          userAndGameNight: userAndGameNight[0]
-        })
+      .then(userAndGameNight => {
+        if (userAndGameNight.length > 0) {
+          this.setState({
+            activeUserInviteStatus: userAndGameNight[0].inviteStatus,
+            userAndGameNight: userAndGameNight[0]
+          })
         }
       })
   }
@@ -59,7 +59,10 @@ class GameNightCard extends Component {
       inviteStatus: "attending"
     }
     FriendsInvitedToGameNight.inviteFriendToGameNight(userAndGameNightObj)
-      .then(this.getAttendeesAndSetState)
+      .then(() => {
+        this.getUserAndGameNightAndSetState()
+        this.getAttendeesAndSetState()
+      })
   }
 
   handleAcceptInviteBtnOnClick = () => {
@@ -108,8 +111,8 @@ class GameNightCard extends Component {
     const date = this.state.editedGameNightDate.split("-")
     const time = this.state.editedGameNightTime.split(":")
     const dateAndTimeArr = date.concat(time).map(num => parseInt(num))
-    const adjustedMonth = dateAndTimeArr[1] -1
-    dateAndTimeArr.splice(1,1,adjustedMonth)
+    const adjustedMonth = dateAndTimeArr[1] - 1
+    dateAndTimeArr.splice(1, 1, adjustedMonth)
     const gameNightDateAndTime = new Date(...dateAndTimeArr)
     return gameNightDateAndTime
   }
@@ -147,7 +150,7 @@ class GameNightCard extends Component {
     return this.gameListId > 0
       ? <Modal
         closeIcon
-        trigger={<Button className="gameNightCard__btn">view game list</Button>}
+        trigger={<Button className="viewGameList__btn">view game list</Button>}
       >
         <Modal.Content>
           <GameNightGameList
@@ -163,21 +166,20 @@ class GameNightCard extends Component {
   showInviteFriendsBtnOrModal = () => {
     switch (this.state.activeUserInviteStatus) {
       case "invited":
-        return <div>
+        return <div className="acceptOrDeclineBtn__div">
           <Button
-            className="gameNightCard__btn"
+            className="acceptOrDecline__btn"
             onClick={this.handleAcceptInviteBtnOnClick}
           >accept</Button>
           <Button
-            className="gameNightCard__btn"
+            className="acceptOrDecline__btn"
             onClick={this.handleDeclineInviteBtnOnClick}
           >decline</Button>
         </div>
       case "attending":
         return <Modal
           closeIcon
-          trigger={<Button className="gameNightCard__btn">invite friends</Button>}
-        >
+          trigger={<Button className="gameNightCard__btn">invite friends</Button>}>
           <Modal.Content>
             <InviteFriends
               friendData={this.props.friendData}
@@ -245,14 +247,26 @@ class GameNightCard extends Component {
 
   render() {
     return (
-      <div className="gameNight__card">
+      <div className={`gameNight__card shadow ${
+        this.props.match.path.includes("profile")
+        ? "gameNightProfile__card"
+        : null
+      }`}>
         {this.displayEditAndDeleteMenuForActiveUser()}
-        <p>{this.props.gameNight.date}, {this.props.gameNight.time}</p>
-        <h3 >{this.props.gameNight.name}</h3>
-        <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
-        <p><Icon name="point" size="large" className="gameNightLocation__icon" />{this.props.gameNight.location}</p>
-        <div className="gameNight__attendees"></div>
+        {
+          this.activeUser !== this.creatorId
+            ? <div className="placeholder"></div>
+            : null
+        }
+        <div className="gameNightInfo__div">
+          <p className="gameNightCard__date">{new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+          <h3 >{this.props.gameNight.name}</h3>
+          <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
+          <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
+        </div>
+        <div className="gameNightCard__attendees">
         {this.showAttendeesBtnOrModal()}
+        </div>
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}

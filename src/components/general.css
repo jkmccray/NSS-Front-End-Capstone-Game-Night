@@ -2,6 +2,7 @@
   background-color: #F89D13;
   color: white;
   margin: 0;
+  border: none;
 }
 
 .ui.button:hover {
