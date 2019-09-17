@@ -55,15 +55,18 @@ class GameDetails extends Component {
         </div>
         <Divider />
         <div className="moreGameInfo__div">
-          <ul className="gameStats gameDetails__list"><Header>details</Header>
-            <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>
-            <li>{`Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`}</li>
-            <li>{`Minimum Age: ${this.props.searchResult.min_age}`}</li>
-            <li>{`Year Published: ${this.props.searchResult.year_published}`}</li>
-          </ul>
+          <div className="gameDetailsList__div">
+            <Header>details</Header>
+            <ul className="gameStats gameDetails__list">
+              <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>
+              <li>{`Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`}</li>
+              <li>{`Minimum Age: ${this.props.searchResult.min_age}`}</li>
+              <li>{`Year Published: ${this.props.searchResult.year_published}`}</li>
+            </ul>
+          </div>
           {
             this.state.categories.length > 0
-              ? <div className="gameDetailsList_div">
+              ? <div className="gameDetailsList__div">
                 <Header>categories</Header>
                 <ul className="gameCategories gameDetails__list">
                   {this.state.categories.map(category => {
@@ -75,7 +78,7 @@ class GameDetails extends Component {
           }
           {
             this.state.mechanics.length > 0
-              ? <div className="gameDetailsList_div">
+              ? <div className="gameDetailsList__div">
                 <Header>mechanics</Header>
                 <ul className="gameMechanics gameDetails__list">
                   {this.state.mechanics.map(mechanic => {

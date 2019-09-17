@@ -8,7 +8,6 @@
 .ui.multiple.search.dropdown.search-field,
 .ui.search.selection.dropdown.search-field {
   margin-bottom: 20px;
-  border-radius: 0;
   font-size: 1.15em;
   padding-right: 0;
 }
@@ -17,6 +16,7 @@
 .ui.icon.input>i.icon {
   background-color: #F89D13;
   color: white;
+  width: 3em;
 }
 
 .ui.button.search-btn {

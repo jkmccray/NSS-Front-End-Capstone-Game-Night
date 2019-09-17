@@ -12,8 +12,9 @@
   margin: .5em 0;
 }
 
-.gameDetails__img {
-  height: 20em;
+.ui.image.gameDetails__img {
+  min-height: 20em;
+  max-width: 20em;
   margin: auto 2em;
 }
 
@@ -32,8 +33,16 @@
 
 .moreGameInfo__div {
   display: flex;
+  padding: 0 3em 0 3em;
   margin: 2em 0;
-  justify-content: space-around
+}
+
+.gameStats {
+  margin-right: 8em;
+}
+
+.gameCategories {
+  margin-right: 10em;
 }
 
 .gameDetails__list {
