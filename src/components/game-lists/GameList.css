@@ -1,9 +1,11 @@
 .gameList__div {
-  width: 45%;
-  min-width: 30em;
+  flex-basis: 30em;
+  height: 30em;
   display: flex;
   flex-direction: column;
   border: 1px solid #E6DEDD;
+  padding: 1em .5em .5em .5em;
+  margin: 1.5em;
 }
 
 .editGameList__dropdown {
@@ -12,7 +14,32 @@
   color: #F89D13;
 }
 
+.saveChangesBtn__div {
+  display: flex;
+  align-items: flex-start;
+  margin-top: .75em;
+}
+
 .gameList__header {
+text-align: center;
+margin: 0 0 1em 0;
+font-size: 1.55em;
+font-family: 'league_spartanbold';
+}
+
+.ui.input.gameList__header>input {
   text-align: center;
-  margin: 0 0 1em 0;
+  font-size: 1.55em;
+  font-family: 'league_spartanbold';
+  padding: .35em;
+  align-self: center;
+  margin-left: .25em;
+}
+
+.ui.button.saveListChanges__btn {
+  height: 3em;
+}
+
+.gameList {
+  overflow-y: auto;
 }

@@ -1,18 +1,35 @@
 .gameList__card {
   list-style-type: none;
   display: flex;
-  border: 1px solid black;
   justify-content: space-between;
+  background-color: #E6DEDD;
+  margin: .5em;
+  padding: .5em;
 }
+
 
 .gameListCard__info {
   display: flex;
+  align-items: center;
+}
+
+.gameListCard__name {
+  font-size: 1.2em;
+  margin: .5em 0 0 1em;
 }
 
 .gameListCard__img {
-  height: 4em;
+  height: 3em;
 }
 
-.deleteGameFromList__btn {
+i.icon.minus.circle.deleteGameFromList__icon {
   align-self: center;
+  color: #8F1D14;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin: .25em 1em 0 0;
 }
+
+i.icon.minus.circle.deleteGameFromList__icon:hover {
+  color: rgb(190, 37, 26);
+  }

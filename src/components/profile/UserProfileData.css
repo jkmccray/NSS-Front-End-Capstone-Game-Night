@@ -6,9 +6,28 @@
 
 .userProfileAddBtn__div {
   display: flex;
-  width: 90%;
+  align-self: flex-end;
 }
 
-.profileAdd__btn {
+.ui.button.profileAdd__btn {
   justify-self: flex-end;
+  font-size: 1.5em;
+  font-family: 'league_spartanbold';
+  margin-bottom: 1em;
+  text-shadow: .5px .5px #707070;
+  padding-top: 1em;
+}
+
+.ui.button.profileAdd__btn:hover {
+  justify-self: flex-end;
+  font-size: 1.5em;
+  font-family: 'league_spartanbold';
+  margin-bottom: 1em;
+  text-shadow: .5px .5px #707070;
+  padding-top: 1em;
+}
+
+.ui.tabular.menu {
+  font-family: 'league_spartanbold';
+  font-size: 1.25em;
 }

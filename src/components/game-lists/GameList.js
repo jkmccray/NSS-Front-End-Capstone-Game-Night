@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { Icon, Button, Dropdown, Input } from "semantic-ui-react"
-import GameNightCard from './GameListCard'
+import GameListCard from './GameListCard'
 import UserGameListManager from "../../modules/UserGameListManager"
 import GamesSavedToList from '../../modules/GameSavedToListManager'
 
@@ -77,7 +77,7 @@ class GameList extends Component {
       icon={<Icon
         name="ellipsis vertical"
         size="large"
-        className="editGameList__icon"/>}>
+        className="editGameList__icon" />}>
       <Dropdown.Menu>
         <Dropdown.Item text="edit"
           onClick={this.handleEditListOnClick}
@@ -93,16 +93,21 @@ class GameList extends Component {
 
   render() {
     return (
-      <div className="gameList__div">
+      <div className="gameList__div shadow">
         {
           this.state.editingStatus
-            ? <><Button
-              onClick={this.handleSaveEditChangesBtnOnClick}
-              id={`saveListChanges--${this.props.gameList.id}`}>save</Button>
+            ? <div className="saveChangesBtn__div">
               <Input
+                focus
                 id="editedListName"
+                className="gameList__header"
                 onChange={this.handleOnChange}
-                defaultValue={this.state.editedListName} /> </>
+                defaultValue={this.state.editedListName} />
+              <Button
+                className="saveListChanges__btn"
+                onClick={this.handleSaveEditChangesBtnOnClick}
+                id={`saveListChanges--${this.props.gameList.id}`}>save</Button>
+            </div>
             : this.displayEditAndDeleteMenu()
         }
         {
@@ -110,7 +115,7 @@ class GameList extends Component {
             ? <h3><Link to="/search" className="searchForGames__">search</Link> for games to add to this list!</h3>
             : <ul className="gameList">
               {this.state.gamesInList.map(game =>
-                <GameNightCard
+                <GameListCard
                   key={game.id}
                   gameAndListObj={game}
                   editingStatus={this.state.editingStatus}
