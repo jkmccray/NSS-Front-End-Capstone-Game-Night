@@ -63,20 +63,26 @@ class GameDetails extends Component {
           </ul>
           {
             this.state.categories.length > 0
-              ? <ul className="gameCategories gameDetails__list"><Header>categories</Header>
-                {this.state.categories.map(category => {
-                  return <li key={category.id}>{category.name}</li>
-                })}
-              </ul>
+              ? <div className="gameDetailsList_div">
+                <Header>categories</Header>
+                <ul className="gameCategories gameDetails__list">
+                  {this.state.categories.map(category => {
+                    return <li key={category.id}>{category.name}</li>
+                  })}
+                </ul>
+              </div>
               : null
           }
           {
             this.state.mechanics.length > 0
-              ? <ul className="gameMechanics gameDetails__list"><Header>mechanics</Header>
-                {this.state.mechanics.map(mechanic => {
-                  return <li key={mechanic.id}>{mechanic.name}</li>
-                })}
-              </ul>
+              ? <div className="gameDetailsList_div">
+                <Header>mechanics</Header>
+                <ul className="gameMechanics gameDetails__list">
+                  {this.state.mechanics.map(mechanic => {
+                    return <li key={mechanic.id}>{mechanic.name}</li>
+                  })}
+                </ul>
+              </div>
               : null
           }
 

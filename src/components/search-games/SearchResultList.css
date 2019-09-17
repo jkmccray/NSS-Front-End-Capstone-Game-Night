@@ -5,12 +5,18 @@
 }
 
 #searchResultList {
+  width: 75%;
   display: flex;
   flex-direction: column;
 }
 
 .ui.header:first-child.searchResultList__header {
   font-family: 'league_spartanbold';
+  font-size: 1.75em;
+  margin: .5em 1em;
+}
+
+.ui.header:last-child.searchResultList__header__small {
   font-size: 1.5em;
   margin: .5em 1em;
 }
@@ -18,4 +24,5 @@
 .ui.success.message.searchResultList__message {
   margin: 0 .8em;
   font-size: 1.1em;
+  width: 73%;
 }

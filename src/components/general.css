@@ -10,3 +10,10 @@
   color: white;
   margin: 0;
 }
+
+.ui.button:active,
+.ui.button:disabled {
+  background-color: #F89D13;
+  color: white;
+  margin: 0;
+}

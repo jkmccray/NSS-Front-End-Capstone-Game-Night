@@ -24,11 +24,21 @@ class SearchResultCard extends Component {
         <Modal
           onClose={this.props.handleModalOnClose}
           open={this.props.showModal}
-          trigger={<Icon className="addGameToList__icon"
-            size="large"
-            onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult.id)}
-            name="plus circle"
-          />}>
+          trigger={
+            <Button animated className="addGameToList__btn"
+              onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult.id)}
+            >
+              <Button.Content visible>
+                <Icon className="addGameToList__icon"
+                  name="plus circle"
+                />
+              </Button.Content>
+              <Button.Content hidden>add to list
+              </Button.Content>
+            </Button>
+          }>
+
+
           <Modal.Header>select game list</Modal.Header>
           < Modal.Content >
             <Dropdown

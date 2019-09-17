@@ -159,7 +159,7 @@ class SearchResultList extends Component {
         />
         {
           this.props.searchResults === "none"
-          ? <Header>No games found. Please try again.</Header>
+          ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
           : <ul id="searchResultList">
           {
             this.props.searchResults.map(searchResult => {

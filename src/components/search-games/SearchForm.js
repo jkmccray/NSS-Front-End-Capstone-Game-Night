@@ -71,6 +71,7 @@ class SearchForm extends Component {
     return (
       <div className="search-form">
         <Input
+        fluid
           onChange={this.props.handleOnChange}
           className="search-field"
           id="gameNameSearch"
@@ -146,14 +147,10 @@ class SearchForm extends Component {
             }))
           }
         />
-        {
-          !this.props.searchParameters.loadingStatus
-            ? <Button
-              onClick={this.props.handleSearchButton}
+        <div className="searchBtn__div">
+          <Button onClick={this.props.handleSearchButton}
               className="search-btn"
-            >search</Button>
-            : <Button loading className="search-btn">Loading</Button>
-        }
+            >search</Button> </div>
       </div>
     )
   }

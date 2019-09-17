@@ -2,7 +2,7 @@
   display: flex;
   background-color: white;
   margin: .5em 1em;
-  padding: .5em;
+  padding: .5em 2em .5em .5em;
   align-items: center;
   justify-content: space-between;
 }
@@ -12,9 +12,34 @@
   align-items: center;
 }
 
-i.large.icon.addGameToList__icon {
+.ui.animated.button.addGameToList__btn {
+  background-color: rgba(248, 157, 19, 0);
+  padding: 0;
+  color: white;
+  width: 6em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.ui.animated.button,
+i.icon.plus.circle.addGameToList__icon {
   cursor: pointer;
   color: #F89D13;
+  font-size: 1.2em;
+  padding: 0;
+  vertical-align: sub;
+}
+
+.visible.content {
+  font-size: 1.35em;
+}
+
+.hidden.content {
+  background-color: #F89D13;
+  border-radius: 5em;
+  height: 1.5em;
+  padding: .2em;
 }
 
 .searchResult__image {
@@ -25,7 +50,7 @@ i.large.icon.addGameToList__icon {
   margin: 0 1.5em;
   cursor: pointer;
   text-decoration: underline;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .searchResultCard__name:hover {

@@ -14,6 +14,7 @@
 
 .gameDetails__img {
   height: 20em;
+  margin: auto 2em;
 }
 
 .ui.rating .active.icon {
@@ -37,7 +38,8 @@
 
 .gameDetails__list {
   list-style-type: none;
-  /* margin-right: 9em; */
+  padding-right: 1em;
   overflow-y: auto;
   height: 10em;
+  font-size: 1.1em;
 }
