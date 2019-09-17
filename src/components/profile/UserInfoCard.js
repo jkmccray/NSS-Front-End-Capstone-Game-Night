@@ -21,7 +21,7 @@ class UserInfoCard extends Component {
         <Header inverted className="profile__name">{this.props.username}</Header>
         {
           this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name
-            ? <><Header inverted>next game night:</Header>
+            ? <><Header className="nextGameNight__header" inverted>next game night:</Header>
               <div className="profileGameNight__div">
                 <p className="gameNightCard__date">{new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
                 <h3>{this.props.gameNight.name}</h3>

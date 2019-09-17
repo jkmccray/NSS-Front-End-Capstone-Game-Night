@@ -10,14 +10,21 @@
   margin: 0 auto;
 }
 
-.profile__name {
+.ui.inverted.header.profile__name {
   text-align: center;
+  font-family: 'league_spartanbold';
+  margin: 2em 0;
+  font-size: 1.5em;
+}
+
+.ui.inverted.header.nextGameNight__header {
+  font-family: 'league_spartanbold';
 }
 
 .profileGameNight__div {
   background-color: white;
   margin: 0 0 1em 0;
-  padding: 1em; 
+  padding: 1em;
 }
 
 .profileUserStats__div {

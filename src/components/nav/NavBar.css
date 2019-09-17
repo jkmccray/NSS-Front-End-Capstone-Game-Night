@@ -13,7 +13,7 @@
   margin-bottom: 0;
   background-color: #1B120F;
   align-items: center;
-  height: 2.5em;
+  height: 3.5em;
   margin: 4em 0;
   padding-top: 5px;
 }
@@ -32,7 +32,7 @@
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .nav-link:hover {
@@ -40,7 +40,7 @@
 }
 
 .logo {
-  width: 9em;
+  width: 11em;
   margin-left: 1em;
 }
 

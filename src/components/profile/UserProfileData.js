@@ -34,13 +34,13 @@ class UserProfileData extends Component {
   // ========== Array of Tab Panes ==========
   panes = [
     {
-      menuItem: 'my game lists', render: () => <Tab.Pane><UserGameLists
+      menuItem: 'my game lists', render: () => <Tab.Pane className="profile__tab"><UserGameLists
         gameLists={this.state.gameLists}
         getAllUserLists={this.getAllUserLists}
       /></Tab.Pane>
     },
     {
-      menuItem: 'my game nights', render: () => <Tab.Pane><GameNights
+      menuItem: 'my game nights', render: () => <Tab.Pane className="profile__tab"><GameNights
         friendData={this.props.friendData}
         getAllFriendData={this.props.getAllFriendData}
         gameNights={this.state.gameNights}
@@ -48,14 +48,14 @@ class UserProfileData extends Component {
       /></Tab.Pane>
     },
     {
-      menuItem: 'my friends', render: () => <Tab.Pane><UserFriends
+      menuItem: 'my friends', render: () => <Tab.Pane className="profile__tab"><UserFriends
         friendData={this.props.friendData}
         getAllFriendData={this.props.getAllFriendData}
         searchingForFriends={this.state.searchingForFriends}
       /></Tab.Pane>
     },
-    { menuItem: 'owned games', render: () => <Tab.Pane></Tab.Pane> },
-    { menuItem: 'played games', render: () => <Tab.Pane></Tab.Pane> },
+    { menuItem: 'owned games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
+    { menuItem: 'played games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
   ]
 
   // ========== Handler Functions ==========
