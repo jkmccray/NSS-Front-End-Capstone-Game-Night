@@ -10,6 +10,7 @@
 .searchResultCard__imgAndName {
   display: flex;
   align-items: center;
+  max-width: 85%;
 }
 
 .searchResultCardImg__div {

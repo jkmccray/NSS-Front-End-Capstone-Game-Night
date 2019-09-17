@@ -24,6 +24,7 @@ class SearchResultCard extends Component {
           </Modal>
         </div>
         <Modal
+          closeIcon
           onClose={this.props.handleModalOnClose}
           open={this.props.showModal}
           trigger={

@@ -163,16 +163,18 @@ class SearchResultList extends Component {
           : <ul id="searchResultList">
           {
             this.props.searchResults.map(searchResult => {
-              return <SearchResultCard
-                key={searchResult.id}
-                searchResult={searchResult}
-                handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
-                handleGameListSelectChange={this.handleGameListSelectChange}
-                handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
-                userGameLists={this.state.userGameLists}
-                showModal={this.state.showModal}
-                handleModalOnClose={this.handleModalOnClose}
-              />
+              if (searchResult.name && searchResult.description && searchResult.thumb_url) {
+                return <SearchResultCard
+                  key={searchResult.id}
+                  searchResult={searchResult}
+                  handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
+                  handleGameListSelectChange={this.handleGameListSelectChange}
+                  handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
+                  userGameLists={this.state.userGameLists}
+                  showModal={this.state.showModal}
+                  handleModalOnClose={this.handleModalOnClose}
+                />
+              }
             })
           }
         </ul>
