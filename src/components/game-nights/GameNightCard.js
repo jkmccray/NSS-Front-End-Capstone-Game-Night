@@ -263,7 +263,7 @@ class GameNightCard extends Component {
           this.activeUser !== this.creatorId
           ? "gameNightCardFriend__date"
           : null}`}>
-          {new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+          {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
           <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
           <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
           <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
