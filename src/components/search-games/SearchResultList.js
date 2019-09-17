@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Message } from "semantic-ui-react"
+import { Message, Header } from "semantic-ui-react"
 import SearchResultCard from "./SearchResultCard"
 import APIGameManager from "../../modules/APIGameManager"
 import GameManager from "../../modules/GameManager"
@@ -153,12 +153,16 @@ class SearchResultList extends Component {
     return (
       <div id="searchResultContainer">
         <h2>search results:</h2>
+
         <Message
           hidden={this.state.hideSuccessMessage}
           success
           content={this.state.successMessage}
         />
-        <ul id="searchResultList">
+        {
+          this.props.searchResults === "none"
+          ? <Header>No games found. Please try again.</Header>
+          : <ul id="searchResultList">
           {
             this.props.searchResults.map(searchResult => {
               return <SearchResultCard
@@ -174,6 +178,7 @@ class SearchResultList extends Component {
             })
           }
         </ul>
+        }
       </div>
     )
   }

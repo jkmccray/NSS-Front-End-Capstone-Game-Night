@@ -84,7 +84,11 @@ class SearchGames extends Component {
       const searchString = this.generateGameSearchString(searchParameters)
       APIGameManager.getGamesFromSearch(searchString)
       .then(searchResults => {
-        this.setState({searchResults: searchResults.games})
+        if (searchResults.games.length > 0) {
+          this.setState({searchResults: searchResults.games})
+        } else {
+          this.setState({searchResults: "none"})
+        }
       })
     }
   }
@@ -127,9 +131,13 @@ class SearchGames extends Component {
       handleSingleSelectChange={this.handleSingleSelectChange}
       handleSearchButton={this.handleSearchButton}
       />
-      <SearchResultList
+      {
+        this.state.searchResults.length === 0
+        ? null
+        : <SearchResultList
       searchResults={this.state.searchResults}
       />
+      }
       </div>
     )
   }

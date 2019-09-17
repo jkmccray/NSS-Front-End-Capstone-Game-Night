@@ -150,10 +150,9 @@ class SearchForm extends Component {
           !this.props.searchParameters.loadingStatus
             ? <Button
               onClick={this.props.handleSearchButton}
-              primary
               className="search-btn"
             >search</Button>
-            : <Button loading primary className="search-btn">Loading</Button>
+            : <Button loading className="search-btn">Loading</Button>
         }
       </div>
     )
