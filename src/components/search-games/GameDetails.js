@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Header, Rating } from "semantic-ui-react";
+import { Image, Header, Rating, Divider } from "semantic-ui-react";
 import APIGameManager from "../../modules/APIGameManager"
 
 import './GameDetails.css'
@@ -46,36 +46,46 @@ class GameDetails extends Component {
         <div className="gameDetails__imgAndDesc">
           <Image className="gameDetails__img" src={this.props.searchResult.image_url} />
           <div className="gameNameAndDesc__div">
-            <Header>{this.props.searchResult.name}</Header>
+            <Header className="gameDetails__name">{this.props.searchResult.name}</Header>
             <Rating defaultRating={Math.round(this.props.searchResult.average_user_rating)} maxRating={5} disabled />
             <span>{`(${this.props.searchResult.num_user_ratings} ratings)`}</span>
             <Header>description</Header>
             <p className="gameDescription__p">{this.props.searchResult.description.replace(/(<([^>]+)>)/ig, " ")}</p>
           </div>
         </div>
+        <Divider />
         <div className="moreGameInfo__div">
-          <ul className="gameStats gameDetails__list"><Header>details</Header>
-            <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>
-            <li>{`Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`}</li>
-            <li>{`Minimum Age: ${this.props.searchResult.min_age}`}</li>
-            <li>{`Year Published: ${this.props.searchResult.year_published}`}</li>
-          </ul>
+          <div className="gameDetailsList__div">
+            <Header>details</Header>
+            <ul className="gameStats gameDetails__list">
+              <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>
+              <li>{`Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`}</li>
+              <li>{`Minimum Age: ${this.props.searchResult.min_age}`}</li>
+              <li>{`Year Published: ${this.props.searchResult.year_published}`}</li>
+            </ul>
+          </div>
           {
             this.state.categories.length > 0
-              ? <ul className="gameCategories gameDetails__list"><Header>categories</Header>
-                {this.state.categories.map(category => {
-                  return <li key={category.id}>{category.name}</li>
-                })}
-              </ul>
+              ? <div className="gameDetailsList__div">
+                <Header>categories</Header>
+                <ul className="gameCategories gameDetails__list">
+                  {this.state.categories.map(category => {
+                    return <li key={category.id}>{category.name}</li>
+                  })}
+                </ul>
+              </div>
               : null
           }
           {
             this.state.mechanics.length > 0
-              ? <ul className="gameMechanics gameDetails__list"><Header>mechanics</Header>
-                {this.state.mechanics.map(mechanic => {
-                  return <li key={mechanic.id}>{mechanic.name}</li>
-                })}
-              </ul>
+              ? <div className="gameDetailsList__div">
+                <Header>mechanics</Header>
+                <ul className="gameMechanics gameDetails__list">
+                  {this.state.mechanics.map(mechanic => {
+                    return <li key={mechanic.id}>{mechanic.name}</li>
+                  })}
+                </ul>
+              </div>
               : null
           }
 

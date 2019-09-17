@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Modal, Image, Button, Dropdown } from "semantic-ui-react"
+import { Modal, Image, Button, Dropdown, Icon } from "semantic-ui-react"
 import GameDetails from "./GameDetails"
 
 import "./SearchResultCard.css"
@@ -8,26 +8,39 @@ class SearchResultCard extends Component {
   render() {
     return (
       <li className="searchResultCard">
-        <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
+        <div className="searchResultCard__imgAndName">
+          <div className="searchResultCardImg__div">
+            <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
+          </div>
+          <Modal
+            closeIcon
+            trigger={<h4 className="searchResultCard__name">{this.props.searchResult.name}</h4>}
+          >
+            <Modal.Content>
+              <GameDetails
+                searchResult={this.props.searchResult}
+              />
+            </Modal.Content>
+          </Modal>
+        </div>
         <Modal
-        closeIcon
-        trigger={<h4>{this.props.searchResult.name}</h4>}
-        >
-          <Modal.Content>
-            <GameDetails
-            searchResult={this.props.searchResult}
-            />
-          </Modal.Content>
-        </Modal>
-        <Modal
-          closeIcon
           onClose={this.props.handleModalOnClose}
           open={this.props.showModal}
-          trigger={<Button
-            onClick={this.props.handleAddGameToListBtnOnClick}
-            className="addGameToList__btn"
-            id={`addGameToListBtn--${this.props.searchResult.id}`}
-          >+</Button>}>
+          trigger={
+            <Button animated className="addGameToList__btn"
+              onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult.id)}
+            >
+              <Button.Content visible>
+                <Icon className="addGameToList__icon"
+                  name="plus circle"
+                />
+              </Button.Content>
+              <Button.Content hidden>add to list
+              </Button.Content>
+            </Button>
+          }>
+
+
           <Modal.Header>select game list</Modal.Header>
           < Modal.Content >
             <Dropdown

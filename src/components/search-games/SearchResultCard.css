@@ -1,13 +1,65 @@
 .searchResultCard {
-  border: 1px solid black;
-  width: 100%;
   display: flex;
+  background-color: white;
+  margin: .5em 1em;
+  padding: .5em 2em .5em .5em;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.addGameToList__btn {
-  align-self: right;
+.searchResultCard__imgAndName {
+  display: flex;
+  align-items: center;
+}
+
+.searchResultCardImg__div {
+  min-width: 4em;
 }
 
 .searchResult__image {
-  max-height: 4em;
+  max-height: 3em;
+  margin: 0 auto;
+}
+
+.searchResultCard__name {
+  margin: 0 1em;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.3em;
+}
+
+.searchResultCard__name:hover {
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ui.animated.button.addGameToList__btn {
+  background-color: rgba(248, 157, 19, 0);
+  padding: 0;
+  color: white;
+  width: 6em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.ui.animated.button,
+i.icon.plus.circle.addGameToList__icon:before {
+  cursor: pointer;
+  color: #F89D13;
+  font-size: 1.2em;
+  padding: 0;
+  vertical-align: sub;
+}
+
+.visible.content {
+  font-size: 1.35em;
+}
+
+.hidden.content {
+  background-color: #F89D13;
+  border-radius: 5em;
+  height: 1.5em;
+  padding: .2em;
 }

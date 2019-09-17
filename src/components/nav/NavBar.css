@@ -55,7 +55,19 @@
 }
 
 .logoutBtn__div {
-  margin: .5em .5em 0 0;
-  height: .5em;
-  width: 100%;
+  margin: 0 auto;
+  height: 1.75em;
+  width: 95%;
+}
+
+.ui.button.logout__btn {
+  font-family: 'league_spartanbold';
+  padding-top: 1.2em;
+  margin: 1em 0;
+}
+
+.ui.button.logout__btn:hover {
+  font-family: 'league_spartanbold';
+  padding-top: 1.2em;
+  margin: 1em 0;
 }

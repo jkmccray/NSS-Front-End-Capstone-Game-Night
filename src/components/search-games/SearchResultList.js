@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Message } from "semantic-ui-react"
+import { Message, Header } from "semantic-ui-react"
 import SearchResultCard from "./SearchResultCard"
 import APIGameManager from "../../modules/APIGameManager"
 import GameManager from "../../modules/GameManager"
@@ -34,10 +34,9 @@ class SearchResultList extends Component {
   }
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
-  handleAddGameToListBtnOnClick = (event) => {
+  handleAddGameToListBtnOnClick = (event, id) => {
     this.setState({ hideSuccessMessage: true })
-    const gameId = event.target.id.split("--")[1]
-    APIGameManager.getGamesByIds(gameId)
+    APIGameManager.getGamesByIds(id)
       .then(resultObj => {
         const gameObjFromApi = resultObj.games[0]
         // check if game has already been saved to games resource in database.json
@@ -152,13 +151,16 @@ class SearchResultList extends Component {
   render() {
     return (
       <div id="searchResultContainer">
-        <h2>search results:</h2>
-        <Message
+        <Header className="searchResultList__header">search results:</Header>
+        <Message className="searchResultList__message"
           hidden={this.state.hideSuccessMessage}
           success
           content={this.state.successMessage}
         />
-        <ul id="searchResultList">
+        {
+          this.props.searchResults === "none"
+          ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
+          : <ul id="searchResultList">
           {
             this.props.searchResults.map(searchResult => {
               return <SearchResultCard
@@ -174,6 +176,7 @@ class SearchResultList extends Component {
             })
           }
         </ul>
+        }
       </div>
     )
   }

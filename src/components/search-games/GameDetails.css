@@ -6,8 +6,20 @@
   display: flex;
 }
 
-.gameDetails__img {
-  height: 20em;
+.ui.header:first-child.gameDetails__name {
+  font-family: 'league_spartanbold';
+  font-size: 1.7em;
+  margin: .5em 0;
+}
+
+.ui.image.gameDetails__img {
+  min-height: 20em;
+  max-width: 20em;
+  margin: auto 2em;
+}
+
+.ui.rating .active.icon {
+  color: #F89D13;
 }
 
 .gameNameAndDesc__div {
@@ -21,10 +33,22 @@
 
 .moreGameInfo__div {
   display: flex;
-  margin: 1em 0;
+  padding: 0 3em 0 3em;
+  margin: 2em 0;
+}
+
+.gameStats {
+  margin-right: 8em;
+}
+
+.gameCategories {
+  margin-right: 10em;
 }
 
 .gameDetails__list {
   list-style-type: none;
-  margin-right: 10em;
+  padding-right: 1em;
+  overflow-y: auto;
+  height: 10em;
+  font-size: 1.1em;
 }
