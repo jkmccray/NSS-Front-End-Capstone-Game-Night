@@ -174,6 +174,8 @@ class SearchResultList extends Component {
                   showModal={this.state.showModal}
                   handleModalOnClose={this.handleModalOnClose}
                 />
+              } else {
+                return null
               }
             })
           }

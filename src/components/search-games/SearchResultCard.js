@@ -6,20 +6,6 @@ import "./SearchResultCard.css"
 
 class SearchResultCard extends Component {
 
-  checkImage = (url) => {
-    console.log("1");
-    var s = document.createElement("IMG");
-    s.src = url
-    s.onerror = function () {
-      console.log("file with " + url + " invalid");
-      alert("file with " + url + " invalid")
-    }
-    s.onload = function () {
-      console.log("file with " + url + " valid");
-      alert("file with " + url + " valid")
-    }
-  }
-
   displaySearchResultName = () => {
     return <Modal
       closeIcon
@@ -82,7 +68,8 @@ class SearchResultCard extends Component {
       <li className="searchResultCard">
         <div className="searchResultCard__imgAndName">
           <div className="searchResultCardImg__div">
-            <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
+            <Image src={this.props.searchResult.thumb_url}
+             className="searchResult__image" />
           </div>
           {this.displaySearchResultName()}
         </div>
