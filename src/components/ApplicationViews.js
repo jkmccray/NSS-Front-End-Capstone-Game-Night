@@ -20,7 +20,7 @@ class ApplicationViews extends Component {
 
   // Get users, frienships, and pending/accepted friends (as user objects) and set state with these arrays
   getAllFriendData = () => {
-    const activeUserId = sessionStorage.getItem("activeUser")
+    const activeUserId = parseInt(sessionStorage.getItem("activeUser"))
     UserManager.getAllExcludingActiveUser(activeUserId)
       .then(users => { this.setState({ users: users }) })
     return FriendshipManager.getAllFriendships("userId", activeUserId)
