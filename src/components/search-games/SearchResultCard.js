@@ -9,7 +9,9 @@ class SearchResultCard extends Component {
     return (
       <li className="searchResultCard">
         <div className="searchResultCard__imgAndName">
-          <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
+          <div className="searchResultCardImg__div">
+            <Image src={this.props.searchResult.thumb_url} className="searchResult__image" />
+          </div>
           <Modal
             closeIcon
             trigger={<h4 className="searchResultCard__name">{this.props.searchResult.name}</h4>}
