@@ -17,7 +17,7 @@
 }
 
 .gameNightProfile__card {
-  flex-basis: 35%;
+  flex-basis: 25%;
 }
 
 .editGameNight__dropdown {
@@ -75,17 +75,17 @@ i.large.icon.gameNightCardLocation__icon {
 }
 
 .gameNightCard__btn {
-  width: 53%;
+  width: 55%;
   align-self: flex-end
 }
 
 .viewGameList__btn {
-  width: 45%;
+  width: 43%;
   align-self: flex-end
 }
 
 .acceptOrDeclineBtn__div {
-  width: 53%;
+  width: 55%;
   display: flex;
   justify-content: space-between;
   align-self: flex-end;

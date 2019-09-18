@@ -10,14 +10,16 @@
 .searchResultCard__imgAndName {
   display: flex;
   align-items: center;
+  max-width: 85%;
 }
 
 .searchResultCardImg__div {
   min-width: 4em;
 }
 
-.searchResult__image {
+img.ui.image.searchResult__image {
   max-height: 3em;
+  max-width: 4em;
   margin: 0 auto;
 }
 
@@ -26,6 +28,8 @@
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.3em;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .searchResultCard__name:hover {
@@ -42,6 +46,8 @@
   height: 2em;
   margin: 0;
   padding: 0;
+  text-shadow: none;
+  font-family: 'Lato', sans-serif;
 }
 
 .ui.animated.button,

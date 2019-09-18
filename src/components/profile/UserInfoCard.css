@@ -1,30 +1,42 @@
 .userInfoCard__div {
-  width: 30%;
-  background-color: #707070;
-  margin: 0 2em 0 0;
+  width: 25%;
+  background-color: rgba(53, 47, 47, 0.2);
+  margin: 8.7em 2em 0 0;
   padding: 2em;
+  height: 32em;
 }
 
 .profile__img {
   width: 100%;
-  margin: 0 auto;
+  margin: -10.5em auto 0 auto;
+  border: .5em solid #E6DEDD;
 }
 
-.ui.inverted.header.profile__name {
+.ui.header.profile__name {
   text-align: center;
   font-family: 'league_spartanbold';
-  margin: 2em 0;
+  margin: 1.25em 0;
   font-size: 1.5em;
 }
 
-.ui.inverted.header.nextGameNight__header {
+.ui.header.nextGameNight__header {
   font-family: 'league_spartanbold';
+  background-color: rgba(53, 47, 47, 0.75);
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+  padding: .75em .5em .5em .5em;
+  text-shadow: .5px .5px #707070;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .profileGameNight__div {
   background-color: white;
   margin: 0 0 1em 0;
   padding: 1em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .profileUserStats__div {

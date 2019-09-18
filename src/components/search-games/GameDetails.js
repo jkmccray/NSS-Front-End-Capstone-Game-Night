@@ -55,15 +55,32 @@ class GameDetails extends Component {
         </div>
         <Divider />
         <div className="moreGameInfo__div">
-          <div className="gameDetailsList__div">
-            <Header>details</Header>
-            <ul className="gameStats gameDetails__list">
-              <li>{`Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`}</li>
-              <li>{`Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`}</li>
-              <li>{`Minimum Age: ${this.props.searchResult.min_age}`}</li>
-              <li>{`Year Published: ${this.props.searchResult.year_published}`}</li>
-            </ul>
-          </div>
+          {
+            this.props.searchResult.min_players || this.props.searchResult.min_playtime || this.props.searchResult.min_age || this.props.searchResult.year_published
+              ? <div className="gameDetailsList__div">
+                <Header>details</Header>
+
+                <ul className="gameStats gameDetails__list">
+                  <li>{
+                    this.props.searchResult.min_players === this.props.searchResult.max_players && this.props.searchResult.min_players
+                      ? `Players: ${this.props.searchResult.min_players}`
+                      : this.props.searchResult.min_players && this.props.searchResult.max_players
+                        ? `Players: ${this.props.searchResult.min_players} - ${this.props.searchResult.max_players}`
+                        : null
+                  }</li>
+                  <li>{
+                    this.props.searchResult.min_playtime === this.props.searchResult.max_playtime && this.props.searchResult.min_playtime
+                      ? `Playtime: ${this.props.searchResult.min_playtime} minutes`
+                      : this.props.searchResult.min_playtime && this.props.searchResult.max_playtime
+                        ? `Playtime: ${this.props.searchResult.min_playtime} - ${this.props.searchResult.max_playtime} minutes`
+                        : null
+                  }</li>
+                  <li>{this.props.searchResult.min_age ? `Minimum Age: ${this.props.searchResult.min_age}` : null}</li>
+                  <li>{this.props.searchResult.year_published ? `Year Published: ${this.props.searchResult.year_published}` : null}</li>
+                </ul>
+              </div>
+              : null
+          }
           {
             this.state.categories.length > 0
               ? <div className="gameDetailsList__div">
@@ -88,7 +105,6 @@ class GameDetails extends Component {
               </div>
               : null
           }
-
         </div>
       </div>
     )

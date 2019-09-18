@@ -150,7 +150,7 @@ class GameNightCard extends Component {
     return this.gameListId > 0
       ? <Modal
         closeIcon
-        trigger={<Button className="viewGameList__btn">view game list</Button>}
+        trigger={<Button className="viewGameList__btn">game list</Button>}
       >
         <Modal.Content>
           <GameNightGameList
@@ -223,7 +223,7 @@ class GameNightCard extends Component {
           className="editGameNight__icon" />
         }>
         <Dropdown.Menu>
-          <Modal
+          <Modal className="createGameNight__modal"
             open={this.state.showEditGameNightModal}
             trigger={<Dropdown.Item text="edit" onClick={() => this.setState({ showEditGameNightModal: true })} />}>
             <Modal.Content>
@@ -263,7 +263,7 @@ class GameNightCard extends Component {
           this.activeUser !== this.creatorId
           ? "gameNightCardFriend__date"
           : null}`}>
-          {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+          <Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
           <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
           <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
           <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>

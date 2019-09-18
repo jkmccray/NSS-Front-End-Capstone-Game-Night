@@ -31,3 +31,19 @@
   font-family: 'league_spartanbold';
   font-size: 1.25em;
 }
+
+.ui.tab.active {
+  height: 32em;
+  align-self: flex-end;
+  overflow-y: auto;
+}
+
+.ui.modal.createGameList__modal {
+  width: 33%;
+  padding: 1.5em 1.5em 0 1.5em;
+}
+
+.ui.modal.createGameNight__modal {
+  width: 36%;
+  padding: 1.5em 1.5em 0 1.5em;
+}
