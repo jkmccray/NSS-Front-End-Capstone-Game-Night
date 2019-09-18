@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Modal, Header } from "semantic-ui-react"
+// import { Modal, Header } from "semantic-ui-react"
 import SearchForm from "./SearchForm"
 import SearchResultList from "./SearchResultList"
 import APIGameManager from "../../modules/APIGameManager"
@@ -85,27 +85,12 @@ class SearchGames extends Component {
       APIGameManager.getGamesFromSearch(searchString)
       .then(searchResults => {
         if (searchResults.games.length > 0) {
-          this.checkImageUrls(searchResults.games)
+          this.setState({searchResults: searchResults.games})
         } else {
           this.setState({searchResults: "none"})
         }
       })
     }
-  }
-
-  checkImageUrls = (searchResults) => {
-    const updatedSearchResults = []
-    searchResults.forEach( searchResult => {
-      const img = document.createElement("IMG")
-      img.src = searchResult.thumb_url
-      img.onerror = () => {
-        console.log("onerror function worked", searchResult)
-        searchResult.thumb_url = "https://react.semantic-ui.com/images/wireframe/image.png"
-        searchResult.image_url = "https://react.semantic-ui.com/images/wireframe/image.png"
-      }
-      updatedSearchResults.push(searchResult)
-    })
-    this.setState({searchResults: updatedSearchResults})
   }
 
   generateGameSearchString = (searchParameters) => {

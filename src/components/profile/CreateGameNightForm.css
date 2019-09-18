@@ -1,0 +1,23 @@
+.ui.fluid.input.createGameNightForm__input,
+.ui.input.createGameNightForm__input,
+.ui.search.selection.dropdown.createGameNightForm__input>input.search {
+  margin-bottom: 1em;
+}
+
+.dateAndTimeInput__div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.createGameNightBtn__div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 3em;
+}
+
+.createGameNight__btn {
+  flex-basis: 8em;
+  font-size: 1.1em;
+}

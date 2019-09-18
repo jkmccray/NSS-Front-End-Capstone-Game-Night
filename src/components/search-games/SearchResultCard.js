@@ -5,6 +5,23 @@ import GameDetails from "./GameDetails"
 import "./SearchResultCard.css"
 
 class SearchResultCard extends Component {
+  state = {
+    errored: false
+  }
+
+  componentDidMount() {
+    this.checkImageUrl()
+  }
+
+  checkImageUrl = () => {
+    const img = document.createElement("IMG")
+    img.src = this.props.searchResult.thumb_url
+    img.onerror = () => {
+      this.props.searchResult.thumb_url = "https://react.semantic-ui.com/images/wireframe/image.png"
+      this.props.searchResult.image_url = "https://react.semantic-ui.com/images/wireframe/image.png"
+      this.setState({ errored: true })
+    }
+  }
 
   displaySearchResultName = () => {
     return <Modal
@@ -69,7 +86,7 @@ class SearchResultCard extends Component {
         <div className="searchResultCard__imgAndName">
           <div className="searchResultCardImg__div">
             <Image src={this.props.searchResult.thumb_url}
-             className="searchResult__image" />
+              className="searchResult__image" />
           </div>
           {this.displaySearchResultName()}
         </div>

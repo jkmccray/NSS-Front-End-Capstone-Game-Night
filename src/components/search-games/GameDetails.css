@@ -14,7 +14,7 @@
 }
 
 .ui.image.gameDetails__img {
-  min-height: 20em;
+  max-height: 20em;
   max-width: 20em;
   margin: auto 2em;
 }

@@ -150,7 +150,7 @@ class GameNightCard extends Component {
     return this.gameListId > 0
       ? <Modal
         closeIcon
-        trigger={<Button className="viewGameList__btn">view game list</Button>}
+        trigger={<Button className="viewGameList__btn">game list</Button>}
       >
         <Modal.Content>
           <GameNightGameList

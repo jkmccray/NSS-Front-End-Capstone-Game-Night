@@ -181,7 +181,7 @@ class UserProfileData extends Component {
   }
 
   displayAddGameListBtnAndModal = () => {
-    return <Modal
+    return <Modal className="createGameList__modal"
       trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateListModal: true })}>create new list</Button>}
       open={this.state.showCreateListModal}>
       <Modal.Content>
@@ -195,7 +195,7 @@ class UserProfileData extends Component {
   }
 
   displayAddGameNightBtnAndModal = () => {
-    return <Modal
+    return <Modal className="createGameNight__modal"
       trigger={<Button className="profileAdd__btn" onClick={() => this.setState({ showCreateGameNightModal: true })}>create game night</Button>}
       open={this.state.showCreateGameNightModal}>
       <Modal.Content>

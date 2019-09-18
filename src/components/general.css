@@ -3,6 +3,10 @@
   color: white;
   margin: 0;
   border: none;
+  text-shadow: .5px .5px #707070;
+  padding-top: 1.2em;
+  font-family: 'league_spartanbold';
+
 }
 
 .ui.button:hover {
@@ -12,8 +16,14 @@
 }
 
 .ui.button:active,
-.ui.button:disabled {
+.ui.button:disabled,
+.ui.button:focus {
   background-color: #F89D13;
   color: white;
   margin: 0;
+}
+
+.ui.large.header {
+  font-family: 'league_spartanbold';
+  text-align: center;
 }

@@ -1,0 +1,15 @@
+.ui.large.header.createGameListForm__header {
+  text-align: center;
+}
+
+.createGameListFormBtn__div {
+  margin: 2em auto 0 auto;
+  display: flex;
+  width: 85%;
+  justify-content: space-evenly
+}
+
+.ui.button.createGameListForm__btn {
+  flex-basis: 8em;
+  font-size: 1.1em;
+}

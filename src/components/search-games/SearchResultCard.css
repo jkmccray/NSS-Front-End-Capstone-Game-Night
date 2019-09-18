@@ -17,8 +17,9 @@
   min-width: 4em;
 }
 
-.searchResult__image {
+img.ui.image.searchResult__image {
   max-height: 3em;
+  max-width: 4em;
   margin: 0 auto;
 }
 
