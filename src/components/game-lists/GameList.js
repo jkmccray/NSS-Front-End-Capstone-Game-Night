@@ -112,12 +112,12 @@ class GameList extends Component {
         }
         {
           this.state.gamesInList.length === 0 && !this.state.editingStatus
-            ? <h3><Link to="/search" className="searchForGames__">search</Link> for games to add to this list!</h3>
+            ? <h3><Link to="/search" className="searchForGames__header">search</Link> for games to add to this list!</h3>
             : <ul className="gameList">
               {this.state.gamesInList.map(game =>
                 <GameListCard
                   key={game.id}
-                  gameAndListObj={game}
+                  obj={game}
                   editingStatus={this.state.editingStatus}
                   handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
                 />)}

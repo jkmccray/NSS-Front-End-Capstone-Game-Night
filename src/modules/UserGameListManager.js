@@ -1,5 +1,5 @@
 const remoteURL = "http://localhost:5002"
-const activeUser = sessionStorage.getItem("activeUser")
+const activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
 export default {
   getSingleUserList(id) {
@@ -11,7 +11,7 @@ export default {
       .then(result => result.json())
   },
   deleteList(id) {
-    return fetch(`http://localhost:5002/userLists/${id}`, {
+    return fetch(`${remoteURL}/userLists/${id}`, {
       method: "DELETE"
     })
       .then(result => result.json())

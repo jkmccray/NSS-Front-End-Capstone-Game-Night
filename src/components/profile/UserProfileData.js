@@ -9,6 +9,7 @@ import GameListManager from "../../modules/UserGameListManager"
 import GameNightManager from "../../modules/GameNightManager"
 import GameNights from "../game-nights/GameNights"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
+import OwnedPlayedList from "./OwnedPlayedList"
 
 import "./UserProfileData.css"
 
@@ -26,7 +27,7 @@ class UserProfileData extends Component {
     gameNightDateAndTime: {},
     gameNightLocation: "",
     userGameListId: 0,
-    gameNights: []
+    gameNights: [],
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -54,8 +55,12 @@ class UserProfileData extends Component {
         searchingForFriends={this.state.searchingForFriends}
       /></Tab.Pane>
     },
-    { menuItem: 'owned games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
-    { menuItem: 'played games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
+    { menuItem: 'owned games', render: () => <Tab.Pane className="profile__tab"><OwnedPlayedList
+    activeIndex={this.state.activeIndex}
+    /></Tab.Pane> },
+    { menuItem: 'played games', render: () => <Tab.Pane className="profile__tab"><OwnedPlayedList
+    activeIndex={this.state.activeIndex}
+    /></Tab.Pane> },
   ]
 
   // ========== Handler Functions ==========
