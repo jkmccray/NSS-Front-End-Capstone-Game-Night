@@ -21,7 +21,8 @@
 
 .ui.header.nextGameNight__header {
   font-family: 'league_spartanbold';
-  background-color: rgba(53, 47, 47, 0.55);
+  background-color: rgba(53, 47, 47, 0.75);
+  font-size: 1.2em;
   color: white;
   margin: 0;
   padding: .75em .5em .5em .5em;
