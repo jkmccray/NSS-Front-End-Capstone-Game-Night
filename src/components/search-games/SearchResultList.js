@@ -5,7 +5,6 @@ import APIGameManager from "../../modules/APIGameManager"
 import GameManager from "../../modules/GameManager"
 import UserGameLists from "../../modules/UserGameListManager"
 import GamesSavedToLists from "../../modules/GameSavedToListManager"
-import GamesOwnedAndPlayed from "../../modules/GamesOwnedAndPlayedManager"
 
 import "./SearchResultList.css"
 
@@ -56,31 +55,13 @@ class SearchResultList extends Component {
           this.createGameObjAndSaveToDb(gameObjFromApi, searchResult)
             // Function above returns the game object
             // Set state for selectedGameId to be the integer id of the game saved to db
-            .then(gameObjAddedToDb => {
+            .then(gameObjInDb => {
               this.setState({
-                selectedGameId: gameObjAddedToDb.id,
-                selectedGameName: gameObjAddedToDb.name,
+                selectedGameId: gameObjInDb.id,
+                selectedGameName: gameObjInDb.name,
                 showModal: true
               })
             })
-        } else {
-          this.checkGameIsPlayedOrOwnedAndSetState(gameObjFromDb[0])
-        }
-      })
-  }
-
-  checkGameIsPlayedOrOwnedAndSetState = (gameObjFromDb) => {
-    GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(gameObjFromDb)
-      .then(results => {
-        if (results.length > 0) {
-          const gameAndUserObj = results[0]
-          this.setState({
-            selectedGameId: gameObjFromDb.id,
-            selectedGameName: gameObjFromDb.name,
-            ownedGameCheckbox: gameAndUserObj.owned,
-            playedGameCheckbox: gameAndUserObj.played,
-            showModal: true
-          })
         } else {
           this.setState({
             selectedGameId: gameObjFromDb[0].id,
@@ -184,28 +165,28 @@ class SearchResultList extends Component {
         />
         {
           this.props.searchResults === "none"
-            ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
-            : <ul id="searchResultList">
-              {
-                this.props.searchResults.map(searchResult => {
-                  if (searchResult.name && searchResult.description && searchResult.thumb_url) {
-                    return <SearchResultCard
-                      key={searchResult.id}
-                      searchResult={searchResult}
-                      handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
-                      handleGameListSelectChange={this.handleGameListSelectChange}
-                      handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
-                      userGameLists={this.state.userGameLists}
-                      showModal={this.state.showModal}
-                      handleModalOnClose={this.handleModalOnClose}
-                      handleCheckboxOnChange={this.handleCheckboxOnChange}
-                    />
-                  } else {
-                    return null
-                  }
-                })
+          ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
+          : <ul id="searchResultList">
+          {
+            this.props.searchResults.map(searchResult => {
+              if (searchResult.name && searchResult.description && searchResult.thumb_url) {
+                return <SearchResultCard
+                  key={searchResult.id}
+                  searchResult={searchResult}
+                  handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
+                  handleGameListSelectChange={this.handleGameListSelectChange}
+                  handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
+                  userGameLists={this.state.userGameLists}
+                  showModal={this.state.showModal}
+                  handleModalOnClose={this.handleModalOnClose}
+                  handleCheckboxOnChange={this.handleCheckboxOnChange}
+                />
+              } else {
+                return null
               }
-            </ul>
+            })
+          }
+        </ul>
         }
       </div>
     )

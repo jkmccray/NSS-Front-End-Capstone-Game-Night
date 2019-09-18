@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import GameListCard from '../game-lists/GameListCard'
+import GameNightGameListCard from './GameNightGameListCard'
 import UserGameListManager from "../../modules/UserGameListManager"
 import GamesSavedToList from '../../modules/GameSavedToListManager'
 
@@ -76,9 +76,9 @@ class GameNightGameList extends Component {
         <h3 className="gameList__header">{this.state.gameListName}</h3>
         <ul className="gameList">
           {this.state.gamesInList.map(game =>
-            <GameListCard
+            <GameNightGameListCard
               key={game.id}
-              gameAndListObj={game}
+              game={game}
               editingStatus={this.state.editingStatus}
               handleDeleteGameFromListBtnOnClick={this.handleDeleteGameFromListBtnOnClick}
             />

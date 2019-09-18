@@ -1,16 +1,21 @@
 import React, { Component } from "react"
 import { Modal, Image, Button, Dropdown, Icon, Header, Checkbox } from "semantic-ui-react"
 import GameDetails from "./GameDetails"
+import GamesOwnedAndPlayed from "../../modules/GamesOwnedAndPlayedManager"
+import GameManager from "../../modules/GameManager"
 
 import "./SearchResultCard.css"
 
 class SearchResultCard extends Component {
   state = {
     errored: false,
+    playedGameCheckbox: false,
+    ownedGameCheckbox: false,
   }
 
   componentDidMount() {
     this.checkImageUrl()
+    this.checkGameIsPlayedOrOwnedAndSetState()
   }
 
   checkImageUrl = () => {
@@ -23,27 +28,47 @@ class SearchResultCard extends Component {
     }
   }
 
+  checkGameIsPlayedOrOwnedAndSetState = () => {
+    GameManager.getGameByGameId(this.props.searchResult.id)
+    .then(gameObjFromDb => {
+      if (gameObjFromDb.length > 0) {
+        GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(gameObjFromDb[0])
+        .then(results => {
+            if (results.length > 0) {
+              const gameAndUserObj = results[0]
+              this.setState({
+                ownedGameCheckbox: gameAndUserObj.owned,
+                playedGameCheckbox: gameAndUserObj.played,
+              })
+            }
+          })
+      }
+    })
+  }
+
   displaySearchResultName = () => {
     return <Modal
       closeIcon
-      trigger={<h4 className="searchResultCard__name">{this.props.searchResult.name}</h4>}
-    >
+      trigger={<h4 className="searchResultCard__name">{this.props.searchResult.name}</h4>}>
       <Modal.Content>
         <GameDetails
-          searchResult={this.props.searchResult}
-        />
+          searchResult={this.props.searchResult}/>
       </Modal.Content>
     </Modal>
   }
 
   displayAddToListBtn = () => {
+    console.log(this.state)
     return <Modal className="searchResultCard__modal"
       closeIcon
       onClose={this.props.handleModalOnClose}
       open={this.props.showModal}
-      trigger={
-        <Button animated className="addGameToList__btn"
-          onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult)}>
+      trigger={<Button animated className="addGameToList__btn"
+          onClick={(e) => {
+            this.checkGameIsPlayedOrOwnedAndSetState()
+            this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult)
+          }
+        }>
           <Button.Content visible>
             <Icon className="addGameToList__icon"
               name="plus circle"
@@ -51,8 +76,7 @@ class SearchResultCard extends Component {
           </Button.Content>
           <Button.Content hidden>add to list
           </Button.Content>
-        </Button>
-      }>
+        </Button>}>
       < Modal.Content >
         <Header size="large">select game list</Header>
         <Dropdown
@@ -68,21 +92,18 @@ class SearchResultCard extends Component {
               value: gameList.id,
               id: gameList.id
             }))
-          }
-        />
+          }/>
         <div className="checkbox__div">
           <div className="ui checkbox">
-            <input id="playedGameCheckbox" type="checkbox" defaultChecked={this.props.playedGameCheckbox} onChange={this.props.handleCheckboxOnChange}/>
+            <input id="playedGameCheckbox" type="checkbox" defaultChecked={this.state.playedGameCheckbox} onChange={this.props.handleCheckboxOnChange}/>
             <label htmlFor="playedGameCheckbox">I've played this game</label>
           </div>
           <div className="ui checkbox">
-            <input id="ownedGameCheckbox" defaultChecked={this.props.ownedGameCheckbox} type="checkbox" onChange={this.props.handleCheckboxOnChange}/>
+            <input id="ownedGameCheckbox" defaultChecked={this.state.ownedGameCheckbox} type="checkbox" onChange={this.props.handleCheckboxOnChange}/>
             <label htmlFor="ownedGameCheckbox">I own this game</label>
           </div>
         </div>
-        <Button
-          onClick={this.props.handleSaveGameToListBtnOnClick}
-        >save</Button>
+        <Button onClick={this.props.handleSaveGameToListBtnOnClick}>save</Button>
       </Modal.Content >
     </Modal>
   }
