@@ -43,7 +43,7 @@ class SearchResultCard extends Component {
       open={this.props.showModal}
       trigger={
         <Button animated className="addGameToList__btn"
-          onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult.id)}
+          onClick={(e) => this.props.handleAddGameToListBtnOnClick(e, this.props.searchResult)}
         >
           <Button.Content visible>
             <Icon className="addGameToList__icon"

@@ -34,23 +34,23 @@ class SearchResultList extends Component {
   }
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
-  handleAddGameToListBtnOnClick = (event, id) => {
+  handleAddGameToListBtnOnClick = (event, searchResult) => {
     this.setState({ hideSuccessMessage: true })
-    APIGameManager.getGamesByIds(id)
+    APIGameManager.getGamesByIds(searchResult.id)
       .then(resultObj => {
         const gameObjFromApi = resultObj.games[0]
         // check if game has already been saved to games resource in database.json
-        this.checkIfGameInDbAndSetState(gameObjFromApi)
+        this.checkIfGameInDbAndSetState(gameObjFromApi, searchResult)
       })
   }
 
-  checkIfGameInDbAndSetState = (gameObjFromApi) => {
+  checkIfGameInDbAndSetState = (gameObjFromApi, searchResult) => {
     GameManager.getGameByGameId(gameObjFromApi.id)
       .then(gameObjFromDb => {
         // If the game does not exist in the database, add gameObjFromApi to the database
         // If it does exist, use id of the game in the db
         if (gameObjFromDb.length === 0) {
-          this.createGameObjAndSaveToDb(gameObjFromApi)
+          this.createGameObjAndSaveToDb(gameObjFromApi, searchResult)
             // Function above returns the game object
             // Set state for selectedGameId to be the integer id of the game saved to db
             .then(gameObjInDb => {
@@ -70,7 +70,7 @@ class SearchResultList extends Component {
       })
   }
 
-  createGameObjAndSaveToDb = (gameObjFromApi) => {
+  createGameObjAndSaveToDb = (gameObjFromApi, searchResult) => {
     const gameObjToSave = {
       gameId: gameObjFromApi.id,
       name: gameObjFromApi.name,
@@ -80,8 +80,8 @@ class SearchResultList extends Component {
       mechanics: gameObjFromApi.mechanics,
       avg_rating: gameObjFromApi.average_user_rating,
       num_user_ratings: gameObjFromApi.num_user_ratings,
-      image_url: gameObjFromApi.image_url,
-      thumb_url: gameObjFromApi.thumb_url,
+      image_url: searchResult.image_url,
+      thumb_url: searchResult.thumb_url,
       min_players: gameObjFromApi.min_players,
       max_players: gameObjFromApi.max_players,
       min_playtime: gameObjFromApi.min_playtime,
@@ -93,7 +93,7 @@ class SearchResultList extends Component {
     return GameManager.addGametoDb(gameObjToSave)
   }
 
-  // ============================== Handler function for modals ==============================
+  // ============================== Handler functions for modals ==============================
   handleGameListSelectChange = (event) => {
     const nodeName = event.target.nodeName
     let userListId
