@@ -20,7 +20,7 @@ export default class FriendCard extends Component {
 
                 {
                     this.props.friendship.isFriend
-                    ? <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button btn btn-sm btn-danger card-link">Delete</Button>
+                    ? <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button btn btn-sm btn-danger card-link">delete</Button>
                     :
                     this.props.friendship.userId === this.activeUser
                     ? <Button className="pendingFriends__btn"disabled>Pending</Button>

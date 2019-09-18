@@ -69,3 +69,23 @@ i.icon.plus.circle.addGameToList__icon:before {
   height: 1.5em;
   padding: .2em;
 }
+
+.ui.modal.searchResultCard__modal {
+  width: 33%;
+  text-align: center;
+  padding: 1em;
+}
+
+.checkbox__div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 1em auto;
+  text-align: left;
+}
+
+.ui.checkbox {
+  margin: .5em 0;
+  font-size: 1.3em;
+  color: #F89D13;
+}

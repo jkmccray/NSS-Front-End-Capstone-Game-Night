@@ -6,6 +6,10 @@ export default {
     return fetch(`${remoteURL}/ownedAndPlayedGames/${id}`)
       .then(result => result.json())
   },
+  getGamePlayedOrOwnedByActiveUser(gameObj) {
+    return fetch(`${remoteURL}/ownedAndPlayedGames?userId=${activeUser}&apiGameId=${gameObj.id}`)
+      .then(result => result.json())
+  },
   getAllPlayedGames() {
     return fetch(`${remoteURL}/ownedAndPlayedGames?userId=${activeUser}&played=true&_expand=apiGame`)
       .then(result => result.json())
