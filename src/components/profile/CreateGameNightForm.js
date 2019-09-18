@@ -7,12 +7,12 @@ class CreateGameNightForm extends Component {
     return (
       <>
         <Header size="large">create new game night</Header>
-        <Input className="createGameNightForm__input" fluid placeholder="Enter game night name" id="gameNightName" onChange={this.props.handleOnChange} />
+        <Input label="name" className="createGameNightForm__input" fluid placeholder="Enter game night name" id="gameNightName" onChange={this.props.handleOnChange} />
         <div className="dateAndTimeInput__div">
-          <Input className="createGameNightForm__input" type="date" placeholder="Choose date" id="gameNightDate" onChange={this.props.handleOnChange} />
-          <Input className="createGameNightForm__input" type="time" placeholder="Choose time" id="gameNightTime" onChange={this.props.handleOnChange} />
+          <Input label="date" className="createGameNightForm__input" type="date" placeholder="Choose date" id="gameNightDate" onChange={this.props.handleOnChange} />
+          <Input label="time" className="createGameNightForm__input" type="time" placeholder="Choose time" id="gameNightTime" onChange={this.props.handleOnChange} />
         </div>
-        <Input className="createGameNightForm__input" fluid type="address" placeholder="Enter game night location address" id="gameNightLocation" onChange={this.props.handleOnChange} />
+        <Input label="location" className="createGameNightForm__input" fluid type="address" placeholder="Enter game night location address" id="gameNightLocation" onChange={this.props.handleOnChange} />
         <Dropdown
           onChange={this.props.handleGameListSelectOnChange}
           placeholder='Select game list'

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header, Input, Button, Dropdown } from "semantic-ui-react";
 import GameListManager from "../../modules/UserGameListManager"
 
-// import './EditGameNightForm.css'
+import '../profile/CreateGameNightForm.css'
 
 class EditGameNightForm extends Component {
   state = {
@@ -13,7 +13,7 @@ class EditGameNightForm extends Component {
     this.getAllUserLists()
   }
 
-  activeUser=parseInt(sessionStorage.getItem("activeUser"))
+  activeUser = parseInt(sessionStorage.getItem("activeUser"))
 
   getAllUserLists = () => {
     GameListManager.getAllUserLists(this.activeUser)
@@ -28,13 +28,16 @@ class EditGameNightForm extends Component {
 
     return (
       <>
-        <Header>edit game night</Header>
-        <Input defaultValue={this.props.gameNight.name} id="editedGameNightName" onChange={this.props.handleOnChange} />
-        <Input defaultValue={this.props.gameNight.date} type="date" id="editedGameNightDate" onChange={this.props.handleOnChange} />
-        <Input defaultValue={this.props.gameNight.time} type="time" id="editedGameNightTime" onChange={this.props.handleOnChange} />
-        <Input defaultValue={this.props.gameNight.location} type="address" id="editedGameNightLocation" onChange={this.props.handleOnChange} />
+        <Header size="large">edit game night</Header>
+        <Input label="name" className="createGameNightForm__input" fluid defaultValue={this.props.gameNight.name} id="editedGameNightName" onChange={this.props.handleOnChange} />
+        <div className="dateAndTimeInput__div">
+
+          <Input label="date" className="createGameNightForm__input" defaultValue={this.props.gameNight.date} type="date" id="editedGameNightDate" onChange={this.props.handleOnChange} />
+          <Input label="time" className="createGameNightForm__input" defaultValue={this.props.gameNight.time} type="time" id="editedGameNightTime" onChange={this.props.handleOnChange} />
+        </div>
+        <Input label="location" className="createGameNightForm__input" fluid defaultValue={this.props.gameNight.location} type="address" id="editedGameNightLocation" onChange={this.props.handleOnChange} />
         <Dropdown
-        defaultValue={this.props.editedGameNight.updatedGameListId}
+          defaultValue={this.props.editedGameNight.updatedGameListId}
           onChange={this.props.handleGameListSelectOnChange}
           placeholder='Select game list'
           className="search-field"
@@ -51,8 +54,10 @@ class EditGameNightForm extends Component {
               id: list.id,
             }))
           }></Dropdown>
-        <Button onClick={this.props.handleSaveEditedGameNightBtnOnClick}>save changes</Button>
-        <Button onClick={this.props.handleCancelChangesBtnOnClick}>cancel</Button>
+        <div className="createGameNightBtn__div">
+          <Button className="editGameNight__btn" onClick={this.props.handleSaveEditedGameNightBtnOnClick}>save changes</Button>
+          <Button className="createGameNight__btn" onClick={this.props.handleCancelChangesBtnOnClick}>cancel</Button>
+        </div>
       </>
     )
   }

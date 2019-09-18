@@ -223,7 +223,7 @@ class GameNightCard extends Component {
           className="editGameNight__icon" />
         }>
         <Dropdown.Menu>
-          <Modal
+          <Modal className="createGameNight__modal"
             open={this.state.showEditGameNightModal}
             trigger={<Dropdown.Item text="edit" onClick={() => this.setState({ showEditGameNightModal: true })} />}>
             <Modal.Content>

@@ -27,3 +27,19 @@
   font-family: 'league_spartanbold';
   text-align: center;
 }
+
+.ui.labeled.input,
+.ui.label {
+  color: white;
+  background-color: #F89D13;
+  border-radius: 4px;
+  font-family: 'league_spartanbold';
+  height: 3em;
+  min-width: 6em;
+  text-align: center;
+}
+
+.ui.labeled.input>.label:not(.corner) {
+  padding-top: 1.2em;
+  text-shadow: .5px .5px #707070;
+}
