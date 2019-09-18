@@ -28,6 +28,8 @@ img.ui.image.searchResult__image {
   cursor: pointer;
   text-decoration: underline;
   font-size: 1.3em;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .searchResultCard__name:hover {
@@ -44,6 +46,8 @@ img.ui.image.searchResult__image {
   height: 2em;
   margin: 0;
   padding: 0;
+  text-shadow: none;
+  font-family: 'Lato', sans-serif;
 }
 
 .ui.animated.button,

@@ -30,6 +30,7 @@
 .gameDescription__p {
   overflow-y: auto;
   height: 15em;
+  padding-right: 1em;
 }
 
 .moreGameInfo__div {
