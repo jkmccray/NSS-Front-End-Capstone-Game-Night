@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Image, Header, Icon, Modal, Button, Label } from "semantic-ui-react"
+import { Image, Header, Icon, Modal, Button, Dropdown, Label } from "semantic-ui-react"
 import ProfilePlaceholder from "../../images/profile_placeholder.png"
 import UserManager from "../../modules/UserManager"
 import * as firebase from "firebase/app";
@@ -54,24 +54,22 @@ class UserInfoCard extends Component {
   render() {
     return (
       <div className="userInfoCard__div">
-          {
-            this.props.profilePicture
-              ? <Image className="uploadedProfile__img" src={this.props.profilePicture} />
-
-              : <><Image className="profile__img" src={ProfilePlaceholder} />
-                <Modal open={this.state.showModal} trigger={
-                  <label onClick={() => this.setState({ showModal: true })} htmlFor="embedpollfileinput" className="ui button inputFile__label">
-                    add profile picture</label>}>
-                  <Modal.Content>
-                    <input type="file" className="inputfile" id="embedpollfileinput" hidden onChange={this.onChange} />
-                    {
-                      this.state.uploading
-                        ? <><p>Selected file: {this.state.photo.name}</p><Button onClick={this.handleSaveProfilePicBtnOnClick}>save</Button></>
-                        : null
-                    }
-                  </Modal.Content>
-                </Modal> </>
-          }
+        {
+          this.props.profilePicture
+            ? <Image className="uploadedProfile__img" src={this.props.profilePicture} />
+            : <><Image className="profile__img" src={ProfilePlaceholder} />
+              <Modal open={this.state.showModal} trigger={
+                <label onClick={() => this.setState({ showModal: true })} htmlFor="embedpollfileinput" className="ui button inputFile__label">
+                  add profile picture</label>}>
+                <Modal.Content>
+                  <input type="file" className="inputfile" id="embedpollfileinput" hidden onChange={this.onChange} />
+                  {
+                    this.state.uploading
+                    && <><p>Selected file: {this.state.photo.name}</p><Button onClick={this.handleSaveProfilePicBtnOnClick}>save</Button></>
+                  }
+                </Modal.Content>
+              </Modal> </>
+        }
         <Header className="profile__name">{this.props.username}</Header>
         {
           this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name

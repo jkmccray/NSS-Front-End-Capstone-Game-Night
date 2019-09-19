@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+.ui.dropdown.editProfilePic__dropdown {
+  position: fixed;
+  margin: -9em 0 0 8em;
+  color: rgba(66, 64, 64, 0.384)
+}
+
 .ui.image.profile__img,
 .ui.image.uploadedProfile__img {
   width: 100%;
