@@ -10,7 +10,8 @@ import "./UserProfile.css"
 class UserProfile extends Component {
   state = {
     username: "",
-    gameNight: {}
+    gameNight: {},
+    profilePicture: ""
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
@@ -18,7 +19,10 @@ class UserProfile extends Component {
 
   getActiveUserName = () => {
     return UserManager.getSingleUser(this.activeUser)
-      .then(user => this.setState({ username: user.username }))
+      .then(user => this.setState({
+        username: user.username,
+        profilePicture: user.photoUrl
+       }))
   }
 
   getNextGameNight = () => {
@@ -39,7 +43,7 @@ class UserProfile extends Component {
         }
       })
   }
-  
+
   render() {
     return (
       <div className="profilePage">
@@ -49,6 +53,7 @@ class UserProfile extends Component {
           getNextGameNight={this.getNextGameNight}
           getActiveUserName={this.getActiveUserName}
           username={this.state.username}
+          profilePicture={this.state.profilePicture}
           gameNight={this.state.gameNight}/>
         <UserProfileData
           friendData={this.props.friendData}

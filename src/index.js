@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom"
+import * as firebase from "firebase/app";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import APIKeys from "./APIKeys"
+
+// Initialize Firebase
+firebase.initializeApp(APIKeys.firebaseConfig);
 
 ReactDOM.render(
   <Router>

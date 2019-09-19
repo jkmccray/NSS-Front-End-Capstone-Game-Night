@@ -3,13 +3,23 @@
   background-color: rgba(53, 47, 47, 0.2);
   margin: 8.7em 2em 0 0;
   padding: 2em;
-  height: 32em;
+  height: 34em;
+  text-align: center;
 }
 
-.profile__img {
+.ui.image.profile__img,
+.ui.image.uploadedProfile__img {
   width: 100%;
+  height: 17.5em;
   margin: -10.5em auto 0 auto;
   border: .5em solid #E6DEDD;
+  object-fit: cover;
+  border-radius: 10em;
+}
+
+.ui.button.inputFile__label {
+  margin: 1em auto 0 auto;
+  padding: .75em;
 }
 
 .ui.header.profile__name {
@@ -29,9 +39,11 @@
   text-shadow: .5px .5px #707070;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  text-align: left;
 }
 
 .profileGameNight__div {
+  text-align: left;
   background-color: white;
   margin: 0 0 1em 0;
   padding: 1em;

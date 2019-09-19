@@ -12,7 +12,6 @@
 .ui.button:hover {
   background-color: rgb(172, 108, 13);
   color: white;
-  margin: 0;
 }
 
 .ui.button:active,
@@ -20,7 +19,6 @@
 .ui.button:focus {
   background-color: #F89D13;
   color: white;
-  margin: 0;
 }
 
 .ui.large.header {
