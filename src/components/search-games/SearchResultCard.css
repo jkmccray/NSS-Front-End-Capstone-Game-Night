@@ -69,3 +69,9 @@ i.icon.plus.circle.addGameToList__icon:before {
   height: 1.5em;
   padding: .2em;
 }
+
+.ui.modal.searchResultCard__modal {
+  width: 33%;
+  text-align: center;
+  padding: 1em;
+}

@@ -94,3 +94,7 @@ i.large.icon.gameNightCardLocation__icon {
 .acceptOrDecline__btn {
   width: 48%;
 }
+
+.ui.modal.gameNightGameList__modal {
+  width: 40%;
+}
