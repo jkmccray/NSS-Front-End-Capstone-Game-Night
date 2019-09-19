@@ -21,7 +21,7 @@ export default {
     .then(result => result.json())
   },
   getGamesFromSearch(searchString) {
-    return fetch(`${remoteURL}/search?client_id=${clientID}&${searchString}`)
+    return fetch(`${remoteURL}/search?client_id=${clientID}&${searchString}&limit=15`)
     .then(result => result.json())
   }
 }

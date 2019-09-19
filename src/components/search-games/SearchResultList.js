@@ -38,6 +38,7 @@ class SearchResultList extends Component {
 
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
   handleAddGameToListBtnOnClick = (event, searchResult) => {
+    console.log(searchResult.image_url)
     this.setState({ hideSuccessMessage: true })
     // check if game has already been saved to games resource in database.json
     this.checkIfGameInDbAndSetState(searchResult)
@@ -60,33 +61,38 @@ class SearchResultList extends Component {
               })
             })
         } else {
-          this.checkGameIsPlayedOrOwnedAndSetState(gameObjFromDb[0])
+          // this.checkGameIsPlayedOrOwnedAndSetState(gameObjFromDb[0])
+          this.setState({
+            selectedGameId: gameObjFromDb[0].id,
+            selectedGameName: gameObjFromDb[0].name,
+            showModal: true
+          })
         }
       })
   }
 
-  checkGameIsPlayedOrOwnedAndSetState = (gameObj) => {
-    GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(gameObj)
-      .then(results => {
-        if (results.length > 0) {
-          const gameAndUserObj = results[0]
-          this.setState({
-            ownedGameCheckbox: gameAndUserObj.owned,
-            playedGameCheckbox: gameAndUserObj.played,
-            selectedGameId: gameObj.id,
-            selectedGameName: gameObj.name,
-            showModal: true
-          })
-        } else {
-          this.setState({
-            selectedGameId: gameObj.id,
-            selectedGameName: gameObj.name,
-            showModal: true
+  // checkGameIsPlayedOrOwnedAndSetState = (gameObj) => {
+  //   GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(gameObj)
+  //     .then(results => {
+  //       if (results.length > 0) {
+  //         const gameAndUserObj = results[0]
+  //         this.setState({
+  //           ownedGameCheckbox: gameAndUserObj.owned,
+  //           playedGameCheckbox: gameAndUserObj.played,
+  //           selectedGameId: gameObj.id,
+  //           selectedGameName: gameObj.name,
+  //           showModal: true
+  //         })
+  //       } else {
+  //         this.setState({
+  //           selectedGameId: gameObj.id,
+  //           selectedGameName: gameObj.name,
+  //           showModal: true
 
-          })
-        }
-      })
-  }
+  //         })
+  //       }
+  //     })
+  // }
 
   createGameObjAndSaveToDb = (gameObjFromApi, searchResult) => {
     const gameObjToSave = {
@@ -141,7 +147,12 @@ class SearchResultList extends Component {
   }
 
 
-  handleSaveGameToListBtnOnClick = (event) => {
+  handleSaveGameToListBtnOnClick = (event, id) => {
+    // verify game list or checkbox was selected
+    if (this.state.selectedGameList === 0 && !this.state.ownedGameCheckbox && !this.state.playedGameCheckbox) {
+      alert("make a selection")
+    }
+    // if game list selected, save game to list in db, close modal, and show success message
     if (this.state.selectedGameList > 0) {
       const saveGameToListObj = {
         apiGameId: this.state.selectedGameId,
@@ -155,8 +166,30 @@ class SearchResultList extends Component {
             successMessage: `You added ${this.state.selectedGameName} to "${this.state.selectedGameListName}"!`
           })
         })
-    } else {
-      alert("select list")
+    }
+    // if game checked as owned or played and already exists in join table for owned/played games, update the object in the join table
+    if ((this.state.ownedGameCheckbox || this.state.playedGameCheckbox) && id > 0) {
+      console.log("it worked")
+      const saveGameAsOwnedOrPlayedObj = {
+        owned: this.state.ownedGameCheckbox,
+        played: this.state.playedGameCheckbox,
+        id: id,
+        userId: this.activeUser,
+        apiGameId: this.state.selectedGameId
+      }
+      GamesOwnedAndPlayed.saveEditedOwnedorPlayed(saveGameAsOwnedOrPlayedObj)
+      .then(() => this.setState({ showModal: false }))
+    }
+    // if game checked as owned or played and not in join table, add it to the join table and hide modal
+    if ((this.state.ownedGameCheckbox || this.state.playedGameCheckbox) && id === 0) {
+      const saveGameAsOwnedOrPlayedObj = {
+        owned: this.state.ownedGameCheckbox,
+        played: this.state.playedGameCheckbox,
+        userId: this.activeUser,
+        apiGameId: this.state.selectedGameId
+      }
+      GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(saveGameAsOwnedOrPlayedObj)
+      .then(() => this.setState({ showModal: false }))
     }
   }
 
