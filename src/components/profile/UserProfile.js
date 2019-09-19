@@ -9,21 +9,12 @@ import "./UserProfile.css"
 
 class UserProfile extends Component {
   state = {
-    username: "",
     gameNight: {},
-    profilePicture: ""
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
   today = new Date()
 
-  getActiveUserName = () => {
-    return UserManager.getSingleUser(this.activeUser)
-      .then(user => this.setState({
-        username: user.username,
-        profilePicture: user.photoUrl
-       }))
-  }
 
   getNextGameNight = () => {
     UsersAndGameNightsManager.getAllGameNightsForSingleUser(this.activeUser)
@@ -51,9 +42,6 @@ class UserProfile extends Component {
           friendData={this.props.friendData}
           getAllFriendData={this.props.getAllFriendData}
           getNextGameNight={this.getNextGameNight}
-          getActiveUserName={this.getActiveUserName}
-          username={this.state.username}
-          profilePicture={this.state.profilePicture}
           gameNight={this.state.gameNight}/>
         <UserProfileData
           friendData={this.props.friendData}

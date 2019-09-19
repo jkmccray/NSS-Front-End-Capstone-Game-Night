@@ -11,15 +11,25 @@ import "../game-nights/GameNightCard.css"
 class UserInfoCard extends Component {
   state = {
     photo: null,
-    uploading: false
+    uploading: false,
+    username: "",
+    profilePicture: ""
   }
 
   componentDidMount() {
-    this.props.getActiveUserName()
+    this.getActiveUser()
     this.props.getNextGameNight()
   }
 
   activeUser = parseInt(sessionStorage.getItem("activeUser"))
+
+  getActiveUser = () => {
+    return UserManager.getSingleUser(this.activeUser)
+      .then(user => this.setState({
+        username: user.username,
+        profilePicture: user.photoUrl
+       }))
+  }
 
   onChange = (event) => {
     this.setState({
@@ -43,10 +53,13 @@ class UserInfoCard extends Component {
           id: this.activeUser,
           photoUrl: url
         })
-          .then(() => this.setState({
-            uploading: false,
-            showModal: false
-          }))
+          .then(() => {
+            this.getActiveUser()
+            this.setState({
+              uploading: false,
+              showModal: false
+            })
+          })
       })
     // Step 3: save everything to json-server
   }
@@ -55,8 +68,8 @@ class UserInfoCard extends Component {
     return (
       <div className="userInfoCard__div">
         {
-          this.props.profilePicture
-            ? <Image className="uploadedProfile__img" src={this.props.profilePicture} />
+          this.state.profilePicture
+            ? <Image className="uploadedProfile__img" src={this.state.profilePicture} />
             : <><Image className="profile__img" src={ProfilePlaceholder} />
               <Modal open={this.state.showModal} trigger={
                 <label onClick={() => this.setState({ showModal: true })} htmlFor="embedpollfileinput" className="ui button inputFile__label">
@@ -70,7 +83,7 @@ class UserInfoCard extends Component {
                 </Modal.Content>
               </Modal> </>
         }
-        <Header className="profile__name">{this.props.username}</Header>
+        <Header className="profile__name">{this.state.username}</Header>
         {
           this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name
             ? <><Header className="nextGameNight__header">next game night:</Header>

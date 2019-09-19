@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Button, Image } from 'semantic-ui-react'
 import ProfilePlaceholder from "../../images/profile_placeholder.png"
 
+import "./FriendCard.css"
+
 export default class FriendCard extends Component {
     state = {
         friendshipId: 0
@@ -17,18 +19,22 @@ export default class FriendCard extends Component {
         return (
             <div className="friendCard__div">
                 <div className="friendCard__body">
-                    <Image size="small" circular src={ProfilePlaceholder} />
-                    
+                    <Image className="friendCard__img" size="small" circular src={
+                        this.props.user.photoUrl
+                        ? this.props.user.photoUrl
+                        : ProfilePlaceholder
+                        } />
+
                     <h3 className="friendName__h3">{this.props.user.username}</h3>
 
                     {
                         this.props.friendship.isFriend
-                            ? <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button btn btn-sm btn-danger card-link">delete</Button>
+                            ? <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="deleteFriend__button">delete</Button>
                             :
                             this.props.friendship.userId === this.activeUser
-                                ? <Button className="pendingFriends__btn" disabled>Pending</Button>
-                                : <> <Button onClick={() => this.props.acceptFriendship(this.props.friendship)} className="acceptFriend__btn">Accept Request</Button>
-                                    <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="denyFriend__btn">Deny Request</Button> </>
+                                ? <Button className="pendingFriends__btn" disabled>pending</Button>
+                                : <> <Button onClick={() => this.props.acceptFriendship(this.props.friendship)} className="acceptFriend__btn friend__btn">accept</Button>
+                                    <Button onClick={() => this.props.deleteFriendship(this.props.friendship.id)} className="denyFriend__btn friend__btn">deny</Button> </>
                     }
                 </div>
             </div>
