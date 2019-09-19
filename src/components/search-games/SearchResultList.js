@@ -4,6 +4,7 @@ import SearchResultCard from "./SearchResultCard"
 import APIGameManager from "../../modules/APIGameManager"
 import GameManager from "../../modules/GameManager"
 import UserGameLists from "../../modules/UserGameListManager"
+import GamesOwnedAndPlayed from "../../modules/GamesOwnedAndPlayedManager"
 import GamesSavedToLists from "../../modules/GameSavedToListManager"
 
 import "./SearchResultList.css"
@@ -38,35 +39,50 @@ class SearchResultList extends Component {
   // =============== Functions: Add Game Btn Handler, Check if Game in Db, Create Game Obj and Save to Db ===============
   handleAddGameToListBtnOnClick = (event, searchResult) => {
     this.setState({ hideSuccessMessage: true })
-    APIGameManager.getGamesByIds(searchResult.id)
-      .then(resultObj => {
-        const gameObjFromApi = resultObj.games[0]
-        // check if game has already been saved to games resource in database.json
-        this.checkIfGameInDbAndSetState(gameObjFromApi, searchResult)
-      })
+    // check if game has already been saved to games resource in database.json
+    this.checkIfGameInDbAndSetState(searchResult)
   }
 
-  checkIfGameInDbAndSetState = (gameObjFromApi, searchResult) => {
-    GameManager.getGameByGameId(gameObjFromApi.id)
+  checkIfGameInDbAndSetState = (searchResult) => {
+    GameManager.getGameByGameId(searchResult.id)
       .then(gameObjFromDb => {
         // If the game does not exist in the database, add gameObjFromApi to the database
         // If it does exist, use id of the game in the db
         if (gameObjFromDb.length === 0) {
-          this.createGameObjAndSaveToDb(gameObjFromApi, searchResult)
+          this.createGameObjAndSaveToDb(searchResult)
             // Function above returns the game object
             // Set state for selectedGameId to be the integer id of the game saved to db
-            .then(gameObjInDb => {
+            .then(gameObjAddedToDb => {
               this.setState({
-                selectedGameId: gameObjInDb.id,
-                selectedGameName: gameObjInDb.name,
+                selectedGameId: gameObjAddedToDb.id,
+                selectedGameName: gameObjAddedToDb.name,
                 showModal: true
               })
             })
         } else {
+          this.checkGameIsPlayedOrOwnedAndSetState(gameObjFromDb[0])
+        }
+      })
+  }
+
+  checkGameIsPlayedOrOwnedAndSetState = (gameObj) => {
+    GamesOwnedAndPlayed.getGamePlayedOrOwnedByActiveUser(gameObj)
+      .then(results => {
+        if (results.length > 0) {
+          const gameAndUserObj = results[0]
           this.setState({
-            selectedGameId: gameObjFromDb[0].id,
-            selectedGameName: gameObjFromDb[0].name,
+            ownedGameCheckbox: gameAndUserObj.owned,
+            playedGameCheckbox: gameAndUserObj.played,
+            selectedGameId: gameObj.id,
+            selectedGameName: gameObj.name,
             showModal: true
+          })
+        } else {
+          this.setState({
+            selectedGameId: gameObj.id,
+            selectedGameName: gameObj.name,
+            showModal: true
+
           })
         }
       })
@@ -124,6 +140,7 @@ class SearchResultList extends Component {
     this.setState({ [event.target.id]: event.target.checked })
   }
 
+
   handleSaveGameToListBtnOnClick = (event) => {
     if (this.state.selectedGameList > 0) {
       const saveGameToListObj = {
@@ -165,28 +182,28 @@ class SearchResultList extends Component {
         />
         {
           this.props.searchResults === "none"
-          ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
-          : <ul id="searchResultList">
-          {
-            this.props.searchResults.map(searchResult => {
-              if (searchResult.name && searchResult.description && searchResult.thumb_url) {
-                return <SearchResultCard
-                  key={searchResult.id}
-                  searchResult={searchResult}
-                  handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
-                  handleGameListSelectChange={this.handleGameListSelectChange}
-                  handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
-                  userGameLists={this.state.userGameLists}
-                  showModal={this.state.showModal}
-                  handleModalOnClose={this.handleModalOnClose}
-                  handleCheckboxOnChange={this.handleCheckboxOnChange}
-                />
-              } else {
-                return null
+            ? <Header className="searchResultList__header__small">No games found. Please try again.</Header>
+            : <ul id="searchResultList">
+              {
+                this.props.searchResults.map(searchResult => {
+                  if (searchResult.name && searchResult.description && searchResult.thumb_url) {
+                    return <SearchResultCard
+                      key={searchResult.id}
+                      searchResult={searchResult}
+                      handleAddGameToListBtnOnClick={this.handleAddGameToListBtnOnClick}
+                      handleGameListSelectChange={this.handleGameListSelectChange}
+                      handleSaveGameToListBtnOnClick={this.handleSaveGameToListBtnOnClick}
+                      userGameLists={this.state.userGameLists}
+                      showModal={this.state.showModal}
+                      handleModalOnClose={this.handleModalOnClose}
+                      handleCheckboxOnChange={this.handleCheckboxOnChange}
+                    />
+                  } else {
+                    return null
+                  }
+                })
               }
-            })
-          }
-        </ul>
+            </ul>
         }
       </div>
     )
