@@ -22,6 +22,14 @@
   padding: 1em .75em .75em .75em;
 }
 
+.ui.modal.profileImg__modal {
+  text-align: center;
+}
+
+.ui.button.cancelProfilePic__btn {
+  margin-left: 1em;
+}
+
 .ui.header.profile__name {
   text-align: center;
   font-family: 'league_spartanbold';

@@ -73,9 +73,9 @@ class UserInfoCard extends Component {
             : ProfilePlaceholder
         } />
         <Header className="profile__name">{this.state.username}</Header>
-        <Modal open={this.state.showModal} trigger={
+        <Modal className="profileImg__modal" size="mini" open={this.state.showModal} trigger={
           <label onClick={() => this.setState({ showModal: true })}
-            htmlFor="embedpollfileinput"
+            htmlFor="embedfileinput"
             className="ui button inputFile__label">
             {
               this.state.profilePicture
@@ -85,11 +85,12 @@ class UserInfoCard extends Component {
             </label>
         }>
           <Modal.Content>
-            <input type="file" className="inputfile" id="embedpollfileinput" hidden onChange={this.onChange} />
+            <input type="file" className="inputfile" id="embedfileinput" hidden onChange={this.onChange} />
             {
               this.state.uploading
               && <><p>Selected file: {this.state.photo.name}</p><Button onClick={this.handleSaveProfilePicBtnOnClick}>save</Button></>
             }
+            <Button className="cancelProfilePic__btn" onClick={() => this.setState({ showModal: false })}>cancel</Button>
           </Modal.Content>
         </Modal>
 {
