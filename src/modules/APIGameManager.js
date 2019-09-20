@@ -8,6 +8,10 @@ export default {
     return fetch(`${remoteURL}/search?client_id=${clientID}&ids=${idsArr}`)
     .then(result => result.json())
   },
+  getRandomGame() {
+    return fetch(`${remoteURL}/search?client_id=${clientID}&random=true`)
+    .then(result => result.json())
+  },
   getAllGames() {
     return fetch(`${remoteURL}/search?client_id=${clientID}`)
     .then(result => result.json())
