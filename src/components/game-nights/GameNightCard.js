@@ -172,11 +172,11 @@ class GameNightCard extends Component {
       case "invited":
         return <div className="acceptOrDeclineBtn__div">
           <Button
-            className="acceptOrDecline__btn"
+            className="acceptOrDecline__btn acceptInvite__btn"
             onClick={this.handleAcceptInviteBtnOnClick}
           >accept</Button>
           <Button
-            className="acceptOrDecline__btn"
+            className="acceptOrDecline__btn declineInvite__btn"
             onClick={this.handleDeclineInviteBtnOnClick}
           >decline</Button>
         </div>
