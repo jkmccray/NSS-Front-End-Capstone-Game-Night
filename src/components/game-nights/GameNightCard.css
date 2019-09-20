@@ -81,7 +81,6 @@ i.large.icon.gameNightCardLocation__icon {
   grid-template-columns: 43% 55%;
   grid-row-gap: .5em;
   grid-column-gap: .5em;
-  /* grid-row-gap: 2em; */
 }
 
 .gameNightCardAttendees__div {
@@ -97,12 +96,6 @@ i.large.icon.gameNightCardLocation__icon {
   height: 3em;
   object-fit: cover;
   margin-right: -1em;
-}
-
-.ui.basic.button.gameNightCardAttendees__btn {
-  /* align-self: flex-end;
-  justify-self: flex-end;
-  width: 55%; */
 }
 
 .viewGameList__btn {

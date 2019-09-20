@@ -273,14 +273,13 @@ class GameNightCard extends Component {
         <div className="gameNightCardAttendeesAndBtns__div">
           <div className="gameNightCardAttendees__div">
             {
-              this.state.attendees.length > 5
-                ? this.state.attendees.slice(4).map(attendee =>
-                  < Image circular className="gameNightAttendee__img" src={
+              this.state.attendees.length > 4
+                ? this.state.attendees.slice(0,4).map(attendee =>
+                  < Image key={attendee.id} circular className="gameNightAttendee__img" src={
                     attendee.user.photoUrl
                       ? attendee.user.photoUrl
                       : ProfilePlaceholder
-                  } />
-                )
+                  } />)
                 : this.state.attendees.map(attendee =>
                   < Image key={attendee.id} circular className="gameNightAttendee__img" src={
                     attendee.user.photoUrl
@@ -290,10 +289,8 @@ class GameNightCard extends Component {
             }
           </div>
           {this.showAttendeesBtnOrModal()}
-          {/* <div className="gameNightCardBtn__div"> */}
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}
-          {/* </div> */}
         </div>
       </div>
     );
