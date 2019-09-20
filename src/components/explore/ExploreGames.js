@@ -26,7 +26,7 @@ class ExploreGames extends Component {
   render() {
     return (
       <div className="exploreGames__div">
-      <Modal trigger={<Button onClick={this.handleRandomGameBtnOnClick}
+      <Modal closeIcon trigger={<Button onClick={this.handleRandomGameBtnOnClick}
       className="getRandomGame__btn">get random game</Button>}>
         <GameDetails searchResult={this.state.searchResult}/>
       </Modal>

@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import UserInfoCard from "./UserInfoCard"
 import UserProfileData from "./UserProfileData"
-import UserManager from "../../modules/UserManager"
 import UsersAndGameNightsManager from "../../modules/FriendsInvitedToGameNightsManager"
 import GameNightManager from "../../modules/GameNightManager"
 
