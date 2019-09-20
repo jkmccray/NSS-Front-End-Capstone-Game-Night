@@ -1,0 +1,36 @@
+.friendCard__div {
+  padding: 1em;
+  text-align: center;
+}
+
+.ui.image.friendCard__img {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.ui.button.friend__btn {
+  padding: 1em .75em .75em .75em;
+  margin: .2em;
+}
+
+.ui.button.acceptFriend__btn {
+  background-color: rgb(34, 66, 34);
+}
+
+.ui.button.acceptFriend__btn:hover,
+.ui.button.acceptFriend__btn:focus,
+.ui.button.acceptFriend__btn:active {
+  background-color: rgba(34, 66, 34, 0.5);
+}
+
+.ui.button.denyFriend__btn {
+  background-color: #8F1D14
+}
+
+.ui.button.denyFriend__btn:hover,
+.ui.button.denyFriend__btn:focus,
+.ui.button.denyFriend__btn:active {
+  background-color: rgba(143, 28, 20, 0.5)
+}

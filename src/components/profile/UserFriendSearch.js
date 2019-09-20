@@ -3,6 +3,8 @@ import { Input } from "semantic-ui-react"
 import FriendsManager from "../../modules/FriendshipManager";
 import FriendSearchCard from './UserFriendSearchCard';
 
+import "./UserFriendSearch.css"
+
 class FriendsSearch extends Component {
   state = {
     potentialFriends: [],
@@ -30,10 +32,12 @@ class FriendsSearch extends Component {
       .then(() => this.setState({ potentialFriends: this.searchPotentialFriendsToDisplay() }))
   }
   handleChange = (event) => {
-    const filteredPotentialFriends = this.state.potentialFriends.filter(user => {
-      return user.username.toLowerCase().includes(event.target.value.toLowerCase())
-    })
-    this.setState({ friendSearchMatches: filteredPotentialFriends })
+    if (event.target.value.length > 0) {
+      const filteredPotentialFriends = this.state.potentialFriends.filter(user => {
+        return user.username.toLowerCase().includes(event.target.value.toLowerCase())
+      })
+      this.setState({ friendSearchMatches: filteredPotentialFriends })
+    }
   }
 
   addFriendship = (otherUserId) => {
@@ -52,16 +56,18 @@ class FriendsSearch extends Component {
   render() {
     return (
       <section className="friendsSearch__section">
-        <Input placeholder="Search for new friends" className="friendsSearch__input" id="friendsSearch_input" type="text"
+        <Input label="search" placeholder="Search for new friends" className="friendsSearch__input" id="friendsSearch_input" type="text"
           onKeyUp={this.handleChange} />
-        {
-          this.state.friendSearchMatches.map(user => {
-            return <FriendSearchCard
-              key={user.id}
-              user={user}
-              addFriendship={this.addFriendship} />
-          })
-        }
+        <div className="friendsSearch__div">
+          {
+            this.state.friendSearchMatches.map(user => {
+              return <FriendSearchCard
+                key={user.id}
+                user={user}
+                addFriendship={this.addFriendship} />
+            })
+          }
+        </div>
       </section>
     )
   }

@@ -212,7 +212,7 @@ class UserProfileData extends Component {
   }
 
   displayAddAFriendBtnAndModal = () => {
-    return <Modal size="fullscreen"
+    return <Modal size="small"
       closeIcon
       trigger={<Button className="profileAdd__btn">add a friend</Button>}>
       <Modal.Content>

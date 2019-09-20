@@ -26,6 +26,16 @@ const UserData = {
       body: JSON.stringify(user)
     })
       .then(result => result.json())
+  },
+  addUserProfilePicture(pictureObj) {
+    return fetch(`${remoteURL}/users/${pictureObj.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(pictureObj)
+    })
+      .then(result => result.json())
   }
 }
 

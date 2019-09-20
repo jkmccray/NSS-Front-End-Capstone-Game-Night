@@ -12,7 +12,6 @@
 .ui.button:hover {
   background-color: rgb(172, 108, 13);
   color: white;
-  margin: 0;
 }
 
 .ui.button:active,
@@ -20,7 +19,6 @@
 .ui.button:focus {
   background-color: #F89D13;
   color: white;
-  margin: 0;
 }
 
 .ui.large.header {
@@ -28,18 +26,17 @@
   text-align: center;
 }
 
-.ui.labeled.input,
-.ui.label {
-  color: white;
-  background-color: #F89D13;
+.ui.labeled.input {
   border-radius: 4px;
-  font-family: 'league_spartanbold';
   height: 3em;
-  min-width: 6em;
   text-align: center;
 }
 
 .ui.labeled.input>.label:not(.corner) {
+  min-width: 6em;
+  font-family: 'league_spartanbold';
+  color: white;
+  background-color: #F89D13;
   padding-top: 1.2em;
   text-shadow: .5px .5px #707070;
 }

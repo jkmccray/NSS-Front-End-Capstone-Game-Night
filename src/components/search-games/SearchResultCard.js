@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Modal, Image, Button, Dropdown, Icon } from "semantic-ui-react"
+import { Modal, Image, Button, Dropdown, Icon, Header } from "semantic-ui-react"
 import GameDetails from "./GameDetails"
 
 import "./SearchResultCard.css"
@@ -37,7 +37,7 @@ class SearchResultCard extends Component {
   }
 
   displayAddToListBtn = () => {
-    return <Modal
+    return <Modal className="searchResultCard__modal"
       closeIcon
       onClose={this.props.handleModalOnClose}
       open={this.props.showModal}
@@ -56,7 +56,7 @@ class SearchResultCard extends Component {
       }>
 
 
-      <Modal.Header>select game list</Modal.Header>
+      <Header  size="large">select game list</Header>
       < Modal.Content >
         <Dropdown
           onChange={this.props.handleGameListSelectChange}
