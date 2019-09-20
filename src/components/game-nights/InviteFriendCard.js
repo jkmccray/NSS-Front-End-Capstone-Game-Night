@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import { Button } from 'semantic-ui-react'
+import { Button, Image } from 'semantic-ui-react'
+import ProfilePlaceholder from "../../images/profile_placeholder.png"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
+
+import "../profile/UserFriendSearchCard.css"
 
 export default class InviteFriendCard extends Component {
   state = {
@@ -37,6 +40,11 @@ export default class InviteFriendCard extends Component {
   render() {
     return (
       <div className="friendCard__div">
+        <Image circular className="friendSearchCard__img" src={
+          this.props.user.photoUrl
+            ? this.props.user.photoUrl
+            : ProfilePlaceholder
+        } />
         <h3 className="friendName__h3">{this.props.user.username}</h3>
         {this.displayInviteFriendBtn()}
       </div>

@@ -28,7 +28,8 @@ export default class FriendList extends Component {
         return (
             <section className="friendList__section">
                 {this.props.friendData.friendsWithUserInfo.length > 0
-                ? <div className="friendList__div">{this.props.friendData.friendsWithUserInfo.map(user => {
+                ? <div className="friendList__div">
+                {this.props.friendData.friendsWithUserInfo.map(user => {
                         return <FriendCard
                             key={user.id}
                             user={user}

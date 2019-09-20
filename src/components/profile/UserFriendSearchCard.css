@@ -1,0 +1,6 @@
+.ui.image.friendSearchCard__img {
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  margin: 0 auto;
+}

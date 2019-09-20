@@ -1,0 +1,9 @@
+.ui.input.friendsSearch__input {
+  margin: 1em 1em 2em 1em;
+}
+
+.friendsSearch__div {
+  display: grid;
+  grid-template-columns: repeat(2, .5fr);
+  grid-row-gap: 2em;
+}

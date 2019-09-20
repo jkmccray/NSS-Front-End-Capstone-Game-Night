@@ -69,6 +69,13 @@ i.large.icon.gameNightCardLocation__icon {
   display: flex;
 }
 
+.attendees__div {
+  display: grid;
+  grid-template-columns: repeat(2, .5fr);
+  grid-row-gap: 2em;
+  text-align: center;
+}
+
 .gameNightCardAttendees__btn {
   flex-grow: 1;
   align-self: flex-end

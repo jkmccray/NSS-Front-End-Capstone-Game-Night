@@ -177,7 +177,7 @@ class GameNightCard extends Component {
           >decline</Button>
         </div>
       case "attending":
-        return <Modal
+        return <Modal size="small"
           closeIcon
           trigger={<Button className="gameNightCard__btn">invite friends</Button>}>
           <Modal.Content>
@@ -195,17 +195,19 @@ class GameNightCard extends Component {
 
   showAttendeesBtnOrModal = () => {
     return this.state.attendees.length > 1
-      ? <Modal closeIcon
+      ? <Modal closeIcon size="small"
         trigger={<Button basic className="gameNightCardAttendees__btn">see all attendees</Button>}>
         <Modal.Content>
-          {
-            this.state.attendees.map(attendee => {
-              return < AttendeeCard
-                key={attendee.id}
-                attendee={attendee.user}
-              />
-            })
-          }
+          <div className="attendees__div">
+            {
+              this.state.attendees.map(attendee => {
+                return < AttendeeCard
+                  key={attendee.id}
+                  attendee={attendee.user}
+                />
+              })
+            }
+          </div>
         </Modal.Content>
       </Modal>
       : null
@@ -249,9 +251,9 @@ class GameNightCard extends Component {
     return (
       <div className={`gameNight__card shadow ${
         this.props.match.path.includes("profile")
-        ? "gameNightProfile__card"
-        : null
-      }`}>
+          ? "gameNightProfile__card"
+          : null
+        }`}>
         {this.displayEditAndDeleteMenuForActiveUser()}
         {
           this.activeUser !== this.creatorId
@@ -260,16 +262,16 @@ class GameNightCard extends Component {
         }
         <div className="gameNightInfo__div">
           <p className={`gameNightCard__date ${
-          this.activeUser !== this.creatorId
-          ? "gameNightCardFriend__date"
-          : null}`}>
-          <Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+            this.activeUser !== this.creatorId
+              ? "gameNightCardFriend__date"
+              : null}`}>
+            <Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
           <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
           <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
           <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
         </div>
         <div className="gameNightCard__attendees">
-        {this.showAttendeesBtnOrModal()}
+          {this.showAttendeesBtnOrModal()}
         </div>
         <div className="gameNightCardBtn__div">
           {this.showGameListBtnOrModal()}
