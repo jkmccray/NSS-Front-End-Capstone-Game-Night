@@ -1,0 +1,9 @@
+.exploreGames__div {
+  width: 100%;
+  display: flex;
+}
+
+.ui.button.getRandomGame__btn {
+  font-size: 1.5em;
+  margin: 0 auto;
+}

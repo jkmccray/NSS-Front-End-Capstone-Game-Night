@@ -3,7 +3,7 @@ import { Button, Modal } from "semantic-ui-react"
 import APIGameManager from "../../modules/APIGameManager"
 import GameDetails from "../search-games/GameDetails"
 
-// import "./Kennel.css"
+import "./ExploreGames.css"
 
 class ExploreGames extends Component {
   state = {
@@ -25,12 +25,12 @@ class ExploreGames extends Component {
 
   render() {
     return (
-      <>
+      <div className="exploreGames__div">
       <Modal trigger={<Button onClick={this.handleRandomGameBtnOnClick}
       className="getRandomGame__btn">get random game</Button>}>
         <GameDetails searchResult={this.state.searchResult}/>
       </Modal>
-      </>
+      </div>
     )
   }
 }
