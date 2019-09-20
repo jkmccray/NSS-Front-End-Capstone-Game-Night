@@ -35,8 +35,8 @@
   font-size: 1.1em;
 }
 
-p:first-child.gameNightCardFriend__date {
-  margin-top: 1.3em;
+.gameNightCardFriend__div {
+  margin-top: 1.57em;
 }
 
 .gameNightCard__name {
@@ -76,30 +76,54 @@ i.large.icon.gameNightCardLocation__icon {
   text-align: center;
 }
 
-.gameNightCardAttendees__btn {
-  flex-grow: 1;
-  align-self: flex-end
+.gameNightCardAttendeesAndBtns__div {
+  display: grid;
+  grid-template-columns: 43% 55%;
+  grid-row-gap: .5em;
+  grid-column-gap: .5em;
+  /* grid-row-gap: 2em; */
 }
 
-.gameNightCard__btn {
-  width: 55%;
-  align-self: flex-end
+.gameNightCardAttendees__div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.ui.circular.image.gameNightAttendee__img {
+  border: 2px solid white;
+  width: 3em;
+  height: 3em;
+  object-fit: cover;
+  margin-right: -1em;
+}
+
+.ui.basic.button.gameNightCardAttendees__btn {
+  /* align-self: flex-end;
+  justify-self: flex-end;
+  width: 55%; */
 }
 
 .viewGameList__btn {
-  width: 43%;
-  align-self: flex-end
+  grid-row-start: 2;
+}
+
+.gameNightCardInviteFriends__btn,
+.gameNightCardAttend__btn {
+  grid-row-end: 3;
 }
 
 .acceptOrDeclineBtn__div {
-  width: 55%;
+  grid-row-end: 3;
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
 }
 
-.acceptOrDecline__btn {
+.ui.button.acceptOrDecline__btn {
   width: 48%;
+  padding: .37em 0 0 0;
+  text-align: center;
 }
 
 .ui.modal.gameNightGameList__modal {

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom"
-import { Dropdown, Button, Icon, Modal } from "semantic-ui-react";
+import { Dropdown, Button, Icon, Modal, Image } from "semantic-ui-react";
 import GameNightGameList from "./GameNightGameList"
 import InviteFriends from "./InviteFriends"
 import FriendsInvitedToGameNight from "../../modules/FriendsInvitedToGameNightsManager";
 import GameNightManager from "../../modules/GameNightManager"
 import AttendeeCard from "./AttendeeCard";
 import EditGameNightForm from "./EditGameNightForm"
+import ProfilePlaceholder from "../../images/profile_placeholder.png"
 
 import "./GameNightCard.css"
 
@@ -69,7 +70,10 @@ class GameNightCard extends Component {
     const userAndGameNightObj = this.state.userAndGameNight
     userAndGameNightObj.inviteStatus = "attending"
     FriendsInvitedToGameNight.updateInviteStatus(userAndGameNightObj)
-      .then(userAndGameNightObj => this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus }))
+      .then(userAndGameNightObj => {
+        this.getAttendeesAndSetState()
+        this.setState({ activeUserInviteStatus: userAndGameNightObj.inviteStatus })
+      })
   }
 
   handleDeclineInviteBtnOnClick = () => {
@@ -179,7 +183,7 @@ class GameNightCard extends Component {
       case "attending":
         return <Modal size="small"
           closeIcon
-          trigger={<Button className="gameNightCard__btn">invite friends</Button>}>
+          trigger={<Button className="gameNightCardInviteFriends__btn">invite friends</Button>}>
           <Modal.Content>
             <InviteFriends
               friendData={this.props.friendData}
@@ -189,7 +193,7 @@ class GameNightCard extends Component {
           </Modal.Content>
         </Modal>
       default:
-        return <Button onClick={this.handleAttendBtnOnClick} className="gameNightCard__btn">attend</Button>
+        return <Button onClick={this.handleAttendBtnOnClick} className="gameNightCardAttend__btn">attend</Button>
     }
   }
 
@@ -255,27 +259,41 @@ class GameNightCard extends Component {
           : null
         }`}>
         {this.displayEditAndDeleteMenuForActiveUser()}
-        {
-          this.activeUser !== this.creatorId
-            ? <div className="placeholder"></div>
+        <div className={`gameNightInfo__div
+        ${this.activeUser !== this.creatorId
+            ? "gameNightCardFriend__div"
             : null
-        }
-        <div className="gameNightInfo__div">
-          <p className={`gameNightCard__date ${
-            this.activeUser !== this.creatorId
-              ? "gameNightCardFriend__date"
-              : null}`}>
+          }`}>
+          <p className="gameNightCard__date">
             <Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
           <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
           <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
           <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
         </div>
-        <div className="gameNightCard__attendees">
+        <div className="gameNightCardAttendeesAndBtns__div">
+          <div className="gameNightCardAttendees__div">
+            {
+              this.state.attendees.length > 5
+                ? this.state.attendees.slice(4).map(attendee =>
+                  < Image circular className="gameNightAttendee__img" src={
+                    attendee.user.photoUrl
+                      ? attendee.user.photoUrl
+                      : ProfilePlaceholder
+                  } />
+                )
+                : this.state.attendees.map(attendee =>
+                  < Image key={attendee.id} circular className="gameNightAttendee__img" src={
+                    attendee.user.photoUrl
+                      ? attendee.user.photoUrl
+                      : ProfilePlaceholder
+                  } />)
+            }
+          </div>
           {this.showAttendeesBtnOrModal()}
-        </div>
-        <div className="gameNightCardBtn__div">
+          {/* <div className="gameNightCardBtn__div"> */}
           {this.showGameListBtnOrModal()}
           {this.showInviteFriendsBtnOrModal()}
+          {/* </div> */}
         </div>
       </div>
     );

@@ -28,7 +28,7 @@ class UserInfoCard extends Component {
       .then(user => this.setState({
         username: user.username,
         profilePicture: user.photoUrl
-       }))
+      }))
   }
 
   onChange = (event) => {
@@ -67,34 +67,42 @@ class UserInfoCard extends Component {
   render() {
     return (
       <div className="userInfoCard__div">
-        {
+        <Image className="uploadedProfile__img" src={
           this.state.profilePicture
-            ? <Image className="uploadedProfile__img" src={this.state.profilePicture} />
-            : <><Image className="profile__img" src={ProfilePlaceholder} />
-              <Modal open={this.state.showModal} trigger={
-                <label onClick={() => this.setState({ showModal: true })} htmlFor="embedpollfileinput" className="ui button inputFile__label">
-                  add profile picture</label>}>
-                <Modal.Content>
-                  <input type="file" className="inputfile" id="embedpollfileinput" hidden onChange={this.onChange} />
-                  {
-                    this.state.uploading
-                    && <><p>Selected file: {this.state.photo.name}</p><Button onClick={this.handleSaveProfilePicBtnOnClick}>save</Button></>
-                  }
-                </Modal.Content>
-              </Modal> </>
-        }
+            ? this.state.profilePicture
+            : ProfilePlaceholder
+        } />
         <Header className="profile__name">{this.state.username}</Header>
-        {
-          this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name
-            ? <><Header className="nextGameNight__header">next game night:</Header>
-              <div className="profileGameNight__div">
-                <p className="gameNightCard__date"><Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
-                <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
-                <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
-                <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
-              </div></>
-            : null
-        }
+        <Modal open={this.state.showModal} trigger={
+          <label onClick={() => this.setState({ showModal: true })}
+            htmlFor="embedpollfileinput"
+            className="ui button inputFile__label">
+            {
+              this.state.profilePicture
+              ? "change profile picture"
+              : "add profile picture"
+            }
+            </label>
+        }>
+          <Modal.Content>
+            <input type="file" className="inputfile" id="embedpollfileinput" hidden onChange={this.onChange} />
+            {
+              this.state.uploading
+              && <><p>Selected file: {this.state.photo.name}</p><Button onClick={this.handleSaveProfilePicBtnOnClick}>save</Button></>
+            }
+          </Modal.Content>
+        </Modal>
+{
+  this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name
+    ? <><Header className="nextGameNight__header">next game night:</Header>
+      <div className="profileGameNight__div">
+        <p className="gameNightCard__date"><Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+        <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
+        <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
+        <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
+      </div></>
+    : null
+}
       </div >
     )
   }

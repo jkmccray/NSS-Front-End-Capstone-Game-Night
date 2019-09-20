@@ -3,7 +3,7 @@
   background-color: rgba(53, 47, 47, 0.2);
   margin: 8.7em 2em 0 0;
   padding: 2em;
-  height: 34em;
+  /* height: 34em; */
   text-align: center;
 }
 
@@ -18,14 +18,14 @@
 }
 
 .ui.button.inputFile__label {
-  margin: 1em auto 0 auto;
+  margin: 0 auto 1em auto;
   padding: 1em .75em .75em .75em;
 }
 
 .ui.header.profile__name {
   text-align: center;
   font-family: 'league_spartanbold';
-  margin: 1.25em 0;
+  margin: 1em 0;
   font-size: 1.5em;
 }
 
@@ -45,7 +45,7 @@
 .profileGameNight__div {
   text-align: left;
   background-color: white;
-  margin: 0 0 1em 0;
+  margin: 0;
   padding: 1em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
