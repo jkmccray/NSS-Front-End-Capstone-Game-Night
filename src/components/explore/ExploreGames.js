@@ -1,18 +1,36 @@
 import React, { Component } from "react"
-// import NavBar from "./components/nav/NavBar"
-// import ApplicationViews from "./components/ApplicationViews"
-// import WelcomePage from "./components/welcome-and-login/WelcomePage"
-// import NavBar from "./components/nav/NavBar"
+import { Button, Modal } from "semantic-ui-react"
+import APIGameManager from "../../modules/APIGameManager"
+import GameDetails from "../search-games/GameDetails"
 
-// import "./Kennel.css"
+import "./ExploreGames.css"
 
 class ExploreGames extends Component {
+  state = {
+    searchResult: {}
+  }
+
+  componentDidMount() {
+    this.getRandomGame()
+  }
+
+  getRandomGame = () => {
+    APIGameManager.getRandomGame()
+   .then(randomGame => this.setState({searchResult: randomGame.game}))
+  }
+
+  handleRandomGameBtnOnClick = () => {
+    this.getRandomGame()
+  }
+
   render() {
     return (
-      <>
-        {/* <NavBar {...props} />
-        <ApplicationViews /> */}
-      </>
+      <div className="exploreGames__div">
+      <Modal closeIcon trigger={<Button onClick={this.handleRandomGameBtnOnClick}
+      className="getRandomGame__btn">get random game</Button>}>
+        <GameDetails searchResult={this.state.searchResult}/>
+      </Modal>
+      </div>
     )
   }
 }

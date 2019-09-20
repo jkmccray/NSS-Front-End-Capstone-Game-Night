@@ -7,21 +7,23 @@ class GameNightCard extends Component {
     return (
       <li className="gameList__card">
         <div className="gameListCard__info">
-        <Image className="gameListCard__img" src={this.props.gameAndListObj.apiGame.thumb_url}/>
-        <h4 className="gameListCard__name">{this.props.gameAndListObj.apiGame.name}</h4>
+          <div className="gameListCardImg__div">
+            <Image className="gameListCard__img" src={this.props.gameAndListObj.apiGame.thumb_url} />
+          </div>
+          <h4 className="gameListCard__name">{this.props.gameAndListObj.apiGame.name}</h4>
         </div>
         {
           this.props.editingStatus
-          ?
-          // <Button
-          // circular
-          // className="deleteGameFromList__btn">
+            ?
+            // <Button
+            // circular
+            // className="deleteGameFromList__btn">
             <Icon className="deleteGameFromList__icon"
-          onClick={(evt) => this.props.handleDeleteGameFromListBtnOnClick(evt, this.props.gameAndListObj.id)}
-            name="minus circle"
+              onClick={(evt) => this.props.handleDeleteGameFromListBtnOnClick(evt, this.props.gameAndListObj.id)}
+              name="minus circle"
             />
             // </Button>
-          : null
+            : null
         }
       </li>
     );

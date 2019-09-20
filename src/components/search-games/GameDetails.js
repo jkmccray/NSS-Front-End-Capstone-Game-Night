@@ -49,8 +49,14 @@ class GameDetails extends Component {
             <Header className="gameDetails__name">{this.props.searchResult.name}</Header>
             <Rating defaultRating={Math.round(this.props.searchResult.average_user_rating)} maxRating={5} disabled />
             <span>{`(${this.props.searchResult.num_user_ratings} ratings)`}</span>
-            <Header>description</Header>
-            <p className="gameDescription__p">{this.props.searchResult.description.replace(/(<([^>]+)>)/ig, " ")}</p>
+            {
+              this.props.searchResult.description
+              ? <>
+              <Header>description</Header>
+              <p className="gameDescription__p">{this.props.searchResult.description.replace(/(<([^>]+)>)/ig, " ")}</p>
+              </>
+              : null
+            }
           </div>
         </div>
         <Divider />

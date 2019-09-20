@@ -113,6 +113,26 @@ i.large.icon.gameNightCardLocation__icon {
   justify-content: space-between;
 }
 
+.ui.button.acceptInvite__btn {
+  background-color: rgb(55, 105, 55);
+}
+
+.ui.button.acceptInvite__btn:hover,
+.ui.button.acceptInvite__btn:focus,
+.ui.button.acceptInvite__btn:active {
+  background-color: rgba(34, 66, 34, 0.5);
+}
+
+.ui.button.declineInvite__btn {
+  background-color: rgb(175, 50, 41)
+}
+
+.ui.button.declineInvite__btn:hover,
+.ui.button.declineInvite__btn:focus,
+.ui.button.declineInvite__btn:active {
+  background-color: rgba(143, 28, 20, 0.5)
+}
+
 .ui.button.acceptOrDecline__btn {
   width: 48%;
   padding: .37em 0 0 0;

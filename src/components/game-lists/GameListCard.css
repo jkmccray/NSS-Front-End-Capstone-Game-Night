@@ -18,8 +18,13 @@
   margin: .5em 0 0 1em;
 }
 
+.gameListCardImg__div {
+  min-width: 4em;
+}
+
 .gameListCard__img {
   height: 3em;
+  margin: 0 auto;
 }
 
 i.icon.minus.circle.deleteGameFromList__icon {

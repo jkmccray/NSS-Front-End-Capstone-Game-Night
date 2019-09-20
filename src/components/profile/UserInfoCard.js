@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Image, Header, Icon, Modal, Button, Dropdown, Label } from "semantic-ui-react"
+import { Image, Header, Icon, Modal, Button } from "semantic-ui-react"
 import ProfilePlaceholder from "../../images/profile_placeholder.png"
 import UserManager from "../../modules/UserManager"
 import * as firebase from "firebase/app";
@@ -48,7 +48,6 @@ class UserInfoCard extends Component {
     childRef.put(this.state.photo)
       .then(response => response.ref.getDownloadURL())
       .then(url => {
-        console.log('url: ', url);
         return UserManager.addUserProfilePicture({
           id: this.activeUser,
           photoUrl: url

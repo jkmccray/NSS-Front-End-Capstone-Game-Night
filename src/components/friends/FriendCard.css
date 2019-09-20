@@ -16,7 +16,7 @@
 }
 
 .ui.button.acceptFriend__btn {
-  background-color: rgb(34, 66, 34);
+  background-color: rgb(55, 105, 55);
 }
 
 .ui.button.acceptFriend__btn:hover,
@@ -26,7 +26,7 @@
 }
 
 .ui.button.denyFriend__btn {
-  background-color: #8F1D14
+  background-color: rgb(175, 50, 41)
 }
 
 .ui.button.denyFriend__btn:hover,
