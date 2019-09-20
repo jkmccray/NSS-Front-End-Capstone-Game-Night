@@ -33,7 +33,7 @@
 }
 
 .ui.tab.active {
-  height: 32em;
+  height: 36em;
   align-self: flex-end;
   overflow-y: auto;
 }
