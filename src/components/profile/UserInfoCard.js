@@ -96,7 +96,7 @@ class UserInfoCard extends Component {
   this.props.gameNight.date && this.props.gameNight.time && this.props.gameNight.name
     ? <><Header className="nextGameNight__header">next game night:</Header>
       <div className="profileGameNight__div">
-        <p className="gameNightCard__date"><Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
+        <p className="gameNightCard__date"><Icon name="calendar outline"></Icon> {new Date(this.props.gameNight.date_and_time).toDateString().toUpperCase()}, {new Date(this.props.gameNight.date_and_time).toLocaleTimeString(undefined, { timeStyle: "short" })}</p>
         <h3 className="gameNightCard__name">{this.props.gameNight.name}</h3>
         <p>created by: {this.props.gameNight.user ? this.props.gameNight.user.username : null}</p>
         <div className="gameNightCardLocation__div"><Icon name="point" size="large" className="gameNightCardLocation__icon" /><p className="gameNightCardLocation__text">{this.props.gameNight.location}</p></div>
