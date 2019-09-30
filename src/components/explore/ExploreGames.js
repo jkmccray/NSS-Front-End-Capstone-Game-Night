@@ -3,6 +3,7 @@ import { Button, Modal } from "semantic-ui-react"
 import APIGameManager from "../../modules/APIGameManager"
 import GameDetails from "../search-games/GameDetails"
 import PopularGames from "./PopularGames"
+import GamesPublishedThisYear from "./GamesPublishedThisYear"
 
 import "./ExploreGames.css"
 
@@ -32,6 +33,7 @@ class ExploreGames extends Component {
         <GameDetails searchResult={this.state.searchResult}/>
       </Modal>
       <PopularGames />
+      <GamesPublishedThisYear />
       </div>
     )
   }

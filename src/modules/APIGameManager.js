@@ -12,6 +12,10 @@ export default {
     return fetch(`${remoteURL}/search?client_id=${clientID}&order_by=popularity&limit=10`)
     .then(result => result.json())
   },
+  getGamesPublishedThisYear() {
+    return fetch(`${remoteURL}/search?client_id=${clientID}&year_published=2019&limit=10&order_by=popularity`)
+    .then(result => result.json())
+  },
   getRandomGame() {
     return fetch(`${remoteURL}/search?client_id=${clientID}&random=true`)
     .then(result => result.json())

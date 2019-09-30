@@ -1,11 +1,16 @@
 .popularGameCard__div {
-  margin: 1.5em;
+  margin: 1.5em 0;
   display: flex;
   flex-direction: column;
   flex-basis: 20em;
   flex-shrink: 0;
   justify-content: space-between;
   align-items: center;
+  border-right: 1px solid #E6DEDD;
+}
+
+.popularGameCard__div:last-of-type {
+  border-right: none;
 }
 
 .popularGameCardImg__div {
@@ -15,11 +20,6 @@
   height: 15em;
   width: 15em;
 }
-
-.popularGameCardImg__div:not(:last-of-type) {
-  margin-right: 1em;
-}
-
 
 .popularGameCard__img {
   max-height: 15em;
