@@ -1,6 +1,7 @@
 .exploreGames__div {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .ui.button.getRandomGame__btn {
