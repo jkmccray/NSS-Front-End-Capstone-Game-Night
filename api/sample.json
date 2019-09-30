@@ -2882,18 +2882,6 @@
       "otherUser": 4,
       "isFriend": true,
       "id": 66
-    },
-    {
-      "userId": 1,
-      "otherUser": 15,
-      "isFriend": false,
-      "id": 67
-    },
-    {
-      "userId": 1,
-      "otherUser": 16,
-      "isFriend": false,
-      "id": 68
     }
   ]
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Header, Image, Modal } from "semantic-ui-react"
+import { Header, Image, Modal, Rating } from "semantic-ui-react"
 import GameDetails from "../search-games/GameDetails"
 
 import "./PopularGamesCard.css"
@@ -26,6 +26,7 @@ class PopularGamesCard extends Component {
       <Image className="popularGameCard__img" src={this.props.popularGame.image_url}/>
       </div>
       <Header className="popularGameCard__name">{this.displayPopularGameName()}</Header>
+      <span><Rating defaultRating={Math.round(this.props.popularGame.average_user_rating)} maxRating={5} disabled /> {`(${this.props.popularGame.num_user_ratings} ratings)`}</span>
     </div>
   }
 
