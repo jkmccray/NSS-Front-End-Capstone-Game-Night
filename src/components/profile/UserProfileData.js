@@ -53,9 +53,7 @@ class UserProfileData extends Component {
         getAllFriendData={this.props.getAllFriendData}
         searchingForFriends={this.state.searchingForFriends}
       /></Tab.Pane>
-    },
-    { menuItem: 'owned games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
-    { menuItem: 'played games', render: () => <Tab.Pane className="profile__tab"></Tab.Pane> },
+    }
   ]
 
   // ========== Handler Functions ==========

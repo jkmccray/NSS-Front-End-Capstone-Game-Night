@@ -1,0 +1,3866 @@
+{
+  "apiGames": [
+    {
+      "gameId": "Ad9NDUFxmt",
+      "name": "UNO Card Game",
+      "names": [
+        "UNO"
+      ],
+      "description": "Now the classic card game of matching colors and numbers comes with customizable Wild Cards for added excitement! Players take turns racing to get rid of all their cards by matching a card in their hand with the current card shown on top of the deck either by color or number. Special Action cards deliver game-changing moments and help defeat opponents! Use the Swap Hands card to change hands with any other opponent and write your own rules using the 3 customizable (and erasable) Wild Cards! You'll find 19 of each color (red, green, blue, and yellow), plus 8 Draw Two, Reverse and Skip cards in every color, along with 4 Wild Cards, 4 Wild Draw Four cards, 1 Wild Swap Hands Card and 3 Wild Customizable cards. If you can't make a match, you must draw from the central pile! Don't forget to shout &quot;UNO&quot; when you only have one card remaining! The first player to reach 500 points wins. Includes 112 cards and instructions.",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "n1GtBt35Rd"
+        }
+      ],
+      "avg_rating": 2.0666666666666664,
+      "num_user_ratings": 45,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254981377-51-R2BbwdcBL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254981377-51-R2BbwdcBL.jpg",
+      "min_players": 2,
+      "max_players": 10,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": 7,
+      "year_published": 1971,
+      "rules_url": null,
+      "id": 1
+    },
+    {
+      "gameId": "RLlDWHh7hR",
+      "name": "Gloomhaven",
+      "names": [],
+      "description": "Gloomhaven is a game of Euro-inspired tactical combat in a persistent world of shifting motives. Players will take on the role of a wandering adventurer with their own special set of skills and their own reasons for traveling to this dark corner of the world.<br />\r\n<br />\r\nPlayers must work together out of necessity to clear out menacing dungeons and forgotten ruins. In the process they will enhance their abilities with experience and loot, discover new locations to explore and plunder, and expand an ever-branching story fueled by the decisions they make.<br />\r\n<br />\r\nThis is a legacy game with a persistent and changing world that is ideally played over many game sessions. After a scenario, players will make decisions on what to do, which will determine how the story continues, kind of like a &quot;Choose Your Own Adventure&quot; book. Playing through a scenario is a cooperative affair where players will fight against automated monsters using an innovative card system to determine the order of play and what a player does on their turn.",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "xuphiSlrxI"
+        },
+        {
+          "id": "9mNukNBxfZ"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "DwmsVEvNVd"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        },
+        {
+          "id": "EVeAdboGUA"
+        },
+        {
+          "id": "za4PP1LH00"
+        },
+        {
+          "id": "GUoWg3Mfh5"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 4.1485148514851495,
+      "num_user_ratings": 101,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254920151-51ulRXlJ7LL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254920151-51ulRXlJ7LL.jpg",
+      "min_players": 1,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 150,
+      "min_age": 12,
+      "year_published": 2017,
+      "rules_url": "https://online.flippingbook.com/view/598058/",
+      "id": 2
+    },
+    {
+      "gameId": "4rn2FX1Eon",
+      "name": "Forbidden Island",
+      "names": [
+        "Forbidden Island"
+      ],
+      "description": "<i>Nominated for the 2011 Spiel des Jahres (Game of the Year) Award.</i><br /><br />\r\nDare to discover Forbidden Island! Join a team of fearless adventurers on a do-or-die mission to capture four sacred treasures from the ruins of this perilous paradise. Your team will have to work together and make some pulse-pounding maneuvers, as the island will sink beneath every step! Race to collect the treasures and make a triumphant escape before you are swallowed into the watery abyss!",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.057971014492755,
+      "num_user_ratings": 138,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1539384798707",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1539384798707",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 30,
+      "max_playtime": 45,
+      "min_age": 10,
+      "year_published": 2010,
+      "rules_url": "https://www.fgbradleys.com/rules/rules2/ForbiddenIsland-rules.pdf",
+      "id": 3
+    },
+    {
+      "gameId": "Zd3nGqEu4q",
+      "name": "Arkham Horror Board Game",
+      "names": [
+        "Arkham Horror"
+      ],
+      "description": "The town of Arkham, Massachusetts is in a panic. Horrific and bizarre events have begun to occur with increasing frequency -- all seeming to point towards some cataclysmic event in the near future that may spell disaster for everyone. Only one small band of investigators can save Arkham from the Great Old Ones and destruction!<br />\r\n<br />\r\nArkham Horror was originally published by Chaosium, Inc. almost two decades ago. This new, updated edition features stunning new artwork and graphical design as well as revised and expanded rules! No fan of the Cthulhu Mythos will want to miss this opportunity to acquire this classic Call of Cthulhu boardgame!",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 2.78,
+      "num_user_ratings": 50,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254926767-61X8MN6SuwL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254926767-61X8MN6SuwL.jpg",
+      "min_players": 1,
+      "max_players": 8,
+      "min_playtime": 120,
+      "max_playtime": 180,
+      "min_age": 12,
+      "year_published": 2016,
+      "rules_url": "https://images-cdn.fantasyflightgames.com/filer_public/e8/17/e817095d-ac80-482b-867b-41b2e41a57f1/arkham_horror_core_rulebook.pdf",
+      "id": 4
+    },
+    {
+      "gameId": "bSFxESny3q",
+      "name": "The Quest for El Dorado",
+      "names": [],
+      "description": "Will you dare to search for the golden city? Assemble your expedition and lead it through the jungles of South America in this deck-building board game. You need to have a good plan, expert explorers, and the right equipment. Will you choose the scout, the photographer, or the prop plane? It is up to you to find the best route through the wilderness with your team and to win the race to El Dorado! Every route is a new challenge. Every game needs a new strategy!",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "tQGLgwdbYH"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "vZsDDAdOoe"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        }
+      ],
+      "avg_rating": 3.4158674803836098,
+      "num_user_ratings": 37,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254179056-61OSSZNQxmL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254179056-61OSSZNQxmL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 30,
+      "max_playtime": 60,
+      "min_age": 10,
+      "year_published": 2017,
+      "rules_url": null,
+      "id": 5
+    },
+    {
+      "gameId": "3RVcHxhPEZ",
+      "name": "Betrayal at House on the Hill",
+      "names": [
+        "Betrayal at House on the Hill - 2nd edition",
+        "Betrayl at House on the Hill"
+      ],
+      "description": "<b>Second Edition</b><br />\r\nThe creak of footsteps on the stairs, the smell of something foul and dead, the feel of something crawling down your back - this and more can be found in the exciting refresh of the Avalon Hill favorite Betrayal at House on the Hill. This fun and suspenseful game is a new experience almost every time you play - you and your friends explore ''that creepy old place on the hill'' until enough mystic misadventures happen that one of the players turns on all of the others! Hours of fun for all your friends and family.<br />\r\n<br />\r\nDesigned for 3-6 players aged 12 and up, this boardgame features multiple scenarios, a different lay-out with every game, and enough chills to freeze the heart of any horror fan.<br />",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "v4SfYtS2Lr"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "BGrhzIN69D"
+        }
+      ],
+      "avg_rating": 3.0265486725663697,
+      "num_user_ratings": 113,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254204252-51B5pW2B2aRL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254204252-51B5pW2B2aRL.jpg",
+      "min_players": 3,
+      "max_players": 6,
+      "min_playtime": 60,
+      "max_playtime": 72,
+      "min_age": 12,
+      "year_published": 2004,
+      "rules_url": "https://media.wizards.com/2018/downloads/rules/betrayal_rules.pdf",
+      "id": 6
+    },
+    {
+      "gameId": "T5lx9elSDt",
+      "name": "Love Letter",
+      "names": [
+        "Love Letter (Clamshell)",
+        "Love Letter - Clamshell Edition"
+      ],
+      "description": "All of the eligible young men (and many of the not-so-young) seek to woo the princess of Tempest. Unfortunately, she has locked herself in the Palace, and you must rely on others to bring your romantic letters to her. Will yours reach her first? love letter is a game of risk, deduction, and luck for 2 to 4 players. Your goal is to get your love letter into princess Annette's hands while deflecting the letters from competing suitors. From a deck with only sixteen cards, each player starts with only one card in hand; one card is removed from play. On a turn, you draw one card, and play one card, trying to expose others and knock them from the game. Powerful cards lead to early gains, but make you a target. Rely on weaker cards for too long, however, and your letter may be tossed in the fire.",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "BGrhzIN69D"
+        }
+      ],
+      "avg_rating": 3.1553102247546665,
+      "num_user_ratings": 162,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1539298538869",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1539298538869",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 20,
+      "max_playtime": 20,
+      "min_age": 10,
+      "year_published": 2012,
+      "rules_url": null,
+      "id": 7
+    },
+    {
+      "gameId": "dFC1lnGINr",
+      "name": "Cards Against Humanity",
+      "names": [],
+      "description": "<b>Cards Against Humanity is a party game for horrible people.</b> Unlike most of the party games you've played before, Cards Against Humanity is as despicable and awkward as you and your friends.\r\n<br /><br />\r\nThe game is simple. Each round, one player asks a question from a Black Card, and everyone else answers with their funniest White Card.\r\n<br /><br />\r\n<b>Reviews of Cards Against Humanity:</b>\r\n<br /><br />\r\n&quot;Pretty amazing.&quot; - <em>The Onion AV Club</em>\r\n<br />\r\n&quot;An incredible game.&quot; - <em>Mike &quot;Gabe&quot; Krahulik, Penny Arcade</em>\r\n<br />\r\n&quot;Uncontrollable laughter.&quot; - <em>Kill Screen Magazine</em>\r\n<br />\r\n&quot;The game your party deserves.&quot; - <em>Thrillist</em>\r\n<br />\r\n&quot;A game.&quot; - <em>The Daily Beast</em>",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "DEvPj5twid"
+        }
+      ],
+      "avg_rating": 2.0000000000000004,
+      "num_user_ratings": 65,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257709006-41mECnRToeL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257709006-41mECnRToeL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "rules_url": "",
+      "id": 8
+    },
+    {
+      "gameId": "GP7Y2xOUzj",
+      "name": "Codenames",
+      "names": [
+        "שם-קוד "
+      ],
+      "description": "The two rival spymasters know the secret identities of 25 agents. Their teammates know the agents only by their CODENAMES.<br />\r\n<br />\r\nThe teams compete to see who can make contact with all of their agents first. Spymasters give one-word clues that can point to multiple words on the board. Their teammates try to guess words of the right color while avoiding those that belong to the opposing team. And everyone wants to avoid the assassin.<br />\r\n<br />\r\nCodenames: win or lose, it's fun to figure out the clues.",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "r6yIFvyXDD"
+        }
+      ],
+      "avg_rating": 3.4811320754717014,
+      "num_user_ratings": 212,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254183526-51f6ysXCMmL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254183526-51f6ysXCMmL.jpg",
+      "min_players": 2,
+      "max_players": 8,
+      "min_playtime": 15,
+      "max_playtime": 20,
+      "min_age": 14,
+      "year_published": 2015,
+      "rules_url": "https://czechgames.com/files/rules/codenames-rules-en.pdf",
+      "id": 9
+    },
+    {
+      "gameId": "19C9ka2hEx",
+      "name": "Coup",
+      "names": [],
+      "description": "<p><div></div><div></div><div></div><div></div><div><div></div></div><div></div></p><div><div><div><div><p>In the not too distant future, the government is run for profit by a new &quot;royal class&quot; of multi-national CEOs. Their greed and absolute control of the economy has reduced all but a privileged few to lives of poverty and desperation. Out of the oppressed masses rose The Resistance, an underground organization focused on overthrowing these powerful rulers. The valiant efforts of The Resistance have created discord, intrigue and weakness in the political courts of the novena royal, bringing the government to brink of collapse. But for you, a powerful government official, this is your opportunity to manipulate, bribe and bluff your way into absolute power.</p></div></div></div></div>",
+      "categories": [
+        {
+          "id": "PinhJrhnxU"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "TKQncFVX74"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "BGrhzIN69D"
+        },
+        {
+          "id": "T8JEFYwoqy"
+        }
+      ],
+      "avg_rating": 3.1014492753623197,
+      "num_user_ratings": 138,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254971843-51cnlYAh-6L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254971843-51cnlYAh-6L.jpg",
+      "min_players": 2,
+      "max_players": 6,
+      "min_playtime": 15,
+      "max_playtime": 30,
+      "min_age": 10,
+      "year_published": 2012,
+      "rules_url": "http://indieboardsandcards.com/wp-content/uploads/2017/06/COUP-REVISED-RB-PROOF.pdf",
+      "id": 10
+    },
+    {
+      "gameId": "61SwzHG7fB",
+      "name": "Sushi Go!",
+      "names": [
+        "sushi go"
+      ],
+      "description": "Pass the sushi!<br />\r\n<br />\r\nIn this fast-playing card game, the goal is to grab the best combination of sushi dishes as they whiz by. Score points for making the most maki rolls or for collecting a full set of sashimi. Dip your favorite nigiri in wasabi to triple its value! But be sure to leave room for dessert or else you'll eat into your score! Gather the most points and consider yourself the sushi master!",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.1181081081081086,
+      "num_user_ratings": 111,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254990668-51CIdEFrKKL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254990668-51CIdEFrKKL.jpg",
+      "min_players": 2,
+      "max_players": 5,
+      "min_playtime": 15,
+      "max_playtime": 30,
+      "min_age": 8,
+      "year_published": 2013,
+      "rules_url": "https://www.gamewright.com/gamewright/pdfs/Rules/SushiGoTM-RULES.pdf",
+      "id": 11
+    },
+    {
+      "gameId": "j8LdPFmePE",
+      "name": "7 Wonders Duel",
+      "names": [],
+      "description": "Create the greatest civilization the Ancient World has ever known! In 7 Wonders, you lead an ancient civilization as it rises from its barbaric roots to become a world power. Build an architectural wonder that will fascinate for eons to come, and rule the most powerful civilization on Earth! 7 Wonders: Duel is a fast-paced, two-player edition of Antoine Bauza's award-winning civilization-building game.",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "329DxyFL9D"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.5864880893545528,
+      "num_user_ratings": 151,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255812092-51S3zQnsPBL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255812092-51S3zQnsPBL.jpg",
+      "min_players": 2,
+      "max_players": 2,
+      "min_playtime": 30,
+      "max_playtime": 45,
+      "min_age": 10,
+      "year_published": 2015,
+      "rules_url": "http://www.7wondersduel.com/files/rules/7-Wonders-Duel-Rules-US.pdf",
+      "id": 12
+    },
+    {
+      "gameId": "i5Oqu5VZgP",
+      "name": "Azul",
+      "names": [],
+      "description": "Azul was designed by the world famous, award winning game author Michael Riesling. Azul captures the beautiful aesthetics of Moorish art in a contemporary board game. Players compete as artisans decorating the walls of the royal Palace of Dvora. By carefully drafting the correct Quantity and style of tiles, the most clever of artisans plan ahead to maximize the beauty of their work (not to mention their scores!) while ensuring they wasted no supplies in the process. Introduced by the moors, &quot;azulejos&quot; (originally white and blue ceramic tiles) were fully embraced by the Portuguese, when their King Manuel I, on a visit to the Alhambra Palace in Southern Spain, was mesmerized by the stunning beauty of the Moorish decorative tiles. The King, awestruck by the interior beauty of the Alhambra, immediately ordered that his own Palace in Portugal be decorated with similar wall tiles. As a tile-laying artist, you have been challenged to embellish the walls of the royal Palace of Dvora.",
+      "categories": [
+        {
+          "id": "hBqZ3Ar4RJ"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "8PN2HE86wg"
+        }
+      ],
+      "avg_rating": 3.657534246575341,
+      "num_user_ratings": 146,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254200327-61EFZADvURL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254200327-61EFZADvURL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 30,
+      "max_playtime": 60,
+      "min_age": 8,
+      "year_published": 2017,
+      "rules_url": "https://www.nextmovegames.com/en/index.php?controller=attachment&id_attachment=9",
+      "id": 13
+    },
+    {
+      "gameId": "6FmFeux5xH",
+      "name": "Pandemic",
+      "names": [
+        "Pandemic Board Game",
+        "Pandemic"
+      ],
+      "description": "After five years of Pandemic, hundreds of thousands of players have contracted the virus! To celebrate this milestone, Pandemic has been completely re-designed. With new artwork by Chris Quilliams (Clash of Cultures, Merchants &amp; Marauders), Pandemic will now have a more modern look, inside and outside the box. With two new characters (the Contingency Planner and the Quarantine Specialist) face the game in ways you never thought possible as brand-new, virulent challenges await you!",
+      "categories": [
+        {
+          "id": "AeWXMxbm91"
+        },
+        {
+          "id": "2Gu62aKdma"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "oeg6wN9Eoc"
+        },
+        {
+          "id": "9mNukNBxfZ"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "MEAoOygZsA"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        },
+        {
+          "id": "AVY6EvSQTP"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.343859649122809,
+      "num_user_ratings": 219,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254186140-51iNoyxoamL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254186140-51iNoyxoamL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 45,
+      "max_playtime": 60,
+      "min_age": 8,
+      "year_published": 2008,
+      "rules_url": "https://images-cdn.zmangames.com/us-east-1/filer_public/25/12/251252dd-1338-4f78-b90d-afe073c72363/zm7101_pandemic_rules.pdf",
+      "id": 14
+    },
+    {
+      "gameId": "fDn9rQjH9O",
+      "name": "Terraforming Mars",
+      "names": [
+        "Terraforming Mars",
+        "Terraforming Mars"
+      ],
+      "description": "In the 2400s, mankind begins to terraform the planet Mars. Giant corporations, sponsored by the World Government on Earth, initiate huge projects to raise the temperature, the oxygen level and the ocean coverage until the environment is habitable. In Terraforming Mars you play one of those corporations and work together in the terraforming process, but compete in doing the best work, with victory points awarded not only for your contribution to the terraforming, but also for advancing human infrastructure throughout the solar systems and other commendable achievements. The players acquire unique project cards, which represent anything from introducing plant life or animals, hurling asteroids at the surface, building cities, and establishing greenhouse gas industries to heat up the atmosphere. You compete for the best places for your city tiles, ocean tiles and greenery tiles. When the terraforming process is complete, the player corporation with the most victory points wins.",
+      "categories": [
+        {
+          "id": "3B3QpKvXD3"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "33UT4gTFqy"
+        }
+      ],
+      "avg_rating": 3.684520085095732,
+      "num_user_ratings": 131,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254934477-61ys4u7ejfL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254934477-61ys4u7ejfL.jpg",
+      "min_players": 1,
+      "max_players": 5,
+      "min_playtime": 90,
+      "max_playtime": 120,
+      "min_age": 12,
+      "year_published": 2016,
+      "rules_url": "http://www.fryxgames.se/TerraformingMars/TMRULESFINAL.pdf",
+      "id": 15
+    },
+    {
+      "gameId": "kSqMntBWP0",
+      "name": "Pandemic: Fall of Rome",
+      "names": [],
+      "description": "<p>At the height of its power, the Roman Empire held more than two million square miles of territory containing over a hundred million people. Throughout the centuries of its existence, the Empire brought major advancements in engineering, architecture, science, art, and literature. By the beginning of the 5th Century, decades of political corruption, economic crisis, and an overburdened military had exacted a severe toll on the stability of the Empire. This paved the way for severe incursions from aggressive barbarian tribes, leading to a decline from which Rome would not recover. Now citizens, soldiers, and allies of Rome must unite to protect the Empire.</p>",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "oeg6wN9Eoc"
+        },
+        {
+          "id": "9mNukNBxfZ"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "MEAoOygZsA"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.833333333333333,
+      "num_user_ratings": 6,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540833958677",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540833958677",
+      "min_players": 1,
+      "max_players": 5,
+      "min_playtime": 45,
+      "max_playtime": 60,
+      "min_age": 8,
+      "year_published": 2018,
+      "rules_url": null,
+      "id": 16
+    },
+    {
+      "gameId": "AaRXSVtjLn",
+      "name": "BANG!",
+      "names": [
+        "Bang 4th Edition"
+      ],
+      "description": "<p>When a man with a pistol meets a man with a Winchester, you might say that the one with the pistol is a dead man, unless his pistol is a Volcanic, In the wild west, the Outlaws hunt the Sheriff, the Sheriff hunts the Outlaws, and the Renegade plots in secret, ready to join one side or the other. Before long, bullets start to fly, Which gunmen are Deputies, ready to sacrifice themselves for the Sheriff? And which are the merciless Outlaws, looking to gun him down? </p>",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "GNtouC8NLm"
+        },
+        {
+          "id": "BGrhzIN69D"
+        },
+        {
+          "id": "T8JEFYwoqy"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 2.6111111111111116,
+      "num_user_ratings": 54,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254843431-51VlLwibKZL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254843431-51VlLwibKZL.jpg",
+      "min_players": 4,
+      "max_players": 7,
+      "min_playtime": 20,
+      "max_playtime": 40,
+      "min_age": 10,
+      "year_published": null,
+      "rules_url": "",
+      "id": 17
+    },
+    {
+      "gameId": "IuTbDm4I90",
+      "name": "Exploding Kittens: NSFW Edition",
+      "names": [
+        "Exploding Kittens: NSFW Deck"
+      ],
+      "description": "Exploding Kittens is a card game for people who are into kittens and explosions and laser beams and sometimes goats. In this highly-strategic, kitty-powered version of Russian Roulette, players draw cards until someone draws an Exploding Kitten, at which point they explode, they are dead, and they are out of the game -- unless that player has a defuse card, which can defuse the Kitten using things like laser pointers, belly rubs, and catnip sandwiches. All of the other cards in the deck are used to move, mitigate, or avoid the Exploding Kittens. This NSFW version of the game contains the full version of Exploding Kittens, but the artwork on each card has been replaced with content too horrible/amazing to be used in the original Exploding Kittens game. The NSFW Edition can be played with 2 to 5 players or combined with another deck to play with up to 9 players.",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 2.2758620689655173,
+      "num_user_ratings": 29,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254817080-514Ul8b8K-L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254817080-514Ul8b8K-L.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "id": 18
+    },
+    {
+      "gameId": "74f9mzbw9Y",
+      "name": "Exploding Kittens Card Game",
+      "names": [
+        "Exploding Kittens",
+        "Exploding Kittens: Original Edition ",
+        "Exploding Kittens: First Edition"
+      ],
+      "description": "Exploding kittens is a card game for people who are into kittens and explosions and laser beams and sometimes goats. In this highly-strategic, kitty-powered version of Russian roulette, players draw cards until someone draws an exploding kitten, at which point they explode, they are Dead, and they are out of the game -- unless that player has a defuse card, which can defuse the kitten using things like laser pointers, belly rubs, and catnip sandwiches. All of the other cards in the deck are used to move, mitigate, or avoid the exploding kittens. Exploding kittens is the most-backed crowd funded project ever, the most-funded game in the history of Kickstarter, and has paved the way for peace and tranquility in the modern world.",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 2.199415451167433,
+      "num_user_ratings": 76,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257206847-51osODpsNIL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257206847-51osODpsNIL.jpg",
+      "min_players": 2,
+      "max_players": 5,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "rules_url": null,
+      "id": 19
+    },
+    {
+      "gameId": "Y2WacykMm5",
+      "name": "King of Tokyo",
+      "names": [
+        "King of Tokyo 2nd Edition"
+      ],
+      "description": "This new edition of the best-seller boasts new artwork, clearer rules, and revamped card abilities. Monsters have a new look, and the coveted space penguin character takes his place in Tokyo! King of Tokyo is a game for 2 to 6 players where you play as Mutant monsters, rampaging robots, or even abominable aliens battling in a fun, chaotic atmosphere.  Roll dice and choose your strategy: will you attack your enemies? Heal your wounds? improve your monster? Stomp your path to victory.",
+      "categories": [
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "3B3QpKvXD3"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "BGrhzIN69D"
+        }
+      ],
+      "avg_rating": 3.055333133396033,
+      "num_user_ratings": 163,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257600208-61doPBeJTjL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257600208-61doPBeJTjL.jpg",
+      "min_players": 2,
+      "max_players": 6,
+      "min_playtime": 30,
+      "max_playtime": 36,
+      "min_age": 8,
+      "year_published": 2011,
+      "rules_url": "http://www.iellogames.com/downloads/KOT2-rulebook_EN.pdf",
+      "id": 20
+    },
+    {
+      "gameId": "J1ffKnm5q9",
+      "name": "Red Dragon Inn",
+      "names": [
+        "Red Dragon Inn",
+        "The Red Dragon Inn"
+      ],
+      "description": "You and your adventuring companions have spent all day slogging through the Dungeon, killing monsters and taking their stuff. Now you're back in town, healed up, cleaned up, and ready to party at the Red Dragon Inn.<br />\r\n<br />\r\nDrink, gamble, and roughhouse with your friends. But don't forget to keep an eye on your Gold. If you run out, you'll have to spend the night in the stables. Oh... and try not to get too beaten up or too drunk. If you black out, your friends will continue the party without you... after they loot your body for Gold of course!<br />\r\nThe last conscious adventurer with Gold wins the game!<br />\r\n<br />\r\nTake on the role of one of four heroic fantasy adventurers -- Dierdre, Fiona, Gerki, or Zot -- and enjoy an evening at the Red Dragon Inn!",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "TYnxiuiI3X"
+        },
+        {
+          "id": "QAYkTHK1Dd"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "3tuJiW3pps"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "BGrhzIN69D"
+        },
+        {
+          "id": "T8JEFYwoqy"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 2.2608695652173916,
+      "num_user_ratings": 23,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255029509-61lLUwph3hL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255029509-61lLUwph3hL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 45,
+      "max_playtime": 60,
+      "min_age": 13,
+      "year_published": null,
+      "rules_url": "http://slugfestgames.com/wp-content/uploads/2014/11/RDIRules.pdf",
+      "id": 21
+    },
+    {
+      "gameId": "eCtPB1vL8B",
+      "name": "Parker Brothers Catch Phrase!",
+      "names": [
+        "Catch Phrase!",
+        "Catchphrase"
+      ],
+      "description": "Catch Phrase! is the frenzied game of fast talking and fast passing. Get the word or phrase, and rattle off as many clues as you can until your team guesses it. Then pass the disk before it buzzes or the other team gets the point. Get verbal, get physical, just don't get caught with the buzzing disk! Includes disk player, game board, word/phrase disks, electronic randomized timer, 2 tokens and storage tray. For 4 or more players, ages 18 and up. Requires 2 AAA batteries (not included). Made in USA.",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 2.8571428571428568,
+      "num_user_ratings": 7,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257722789-41MmK2BlFD2L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257722789-41MmK2BlFD2L.jpg",
+      "min_players": 4,
+      "max_players": 16,
+      "min_playtime": 30,
+      "max_playtime": 30,
+      "min_age": 12,
+      "year_published": 1994,
+      "id": 22
+    },
+    {
+      "gameId": "kPDxpJZ8PD",
+      "name": "Spirit Island",
+      "names": [
+        "Spirit Island (5th Edition) (Ding & Dent)"
+      ],
+      "description": "Powerful Spirits have existed on this isolated island for time immemorial. They are both part of the natural world and - at the same time - something beyond nature. Native Islanders, known as the Dahan, have learned how to co-exist with the spirits, but with a healthy dose of fear and reverence. However, now, the island has been &quot;discovered&quot; by invaders from a far-off land. These would-be colonists are taking over the land and upsetting the natural balance, destroying the presence of Spirits as they go. As Spirits, you must grow in power and work together to drive the invaders from your island... before it's too late!",
+      "categories": [
+        {
+          "id": "nWDac9tQzt"
+        },
+        {
+          "id": "gsekjrPJz0"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "MHkqIVxwtx"
+        },
+        {
+          "id": "nuHYRFmMjU"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        },
+        {
+          "id": "buDTYyPw4D"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "PGjmKGi26h"
+        },
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        },
+        {
+          "id": "DEvPj5twid"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.9893617021276597,
+      "num_user_ratings": 94,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254941010-61PJxjjnbfL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254941010-61PJxjjnbfL.jpg",
+      "min_players": 1,
+      "max_players": 4,
+      "min_playtime": 90,
+      "max_playtime": 120,
+      "min_age": 13,
+      "year_published": 2016,
+      "rules_url": "https://drive.google.com/file/d/0B9kp130SgLtdcGxTcTFodlhaWDg/view",
+      "id": 23
+    },
+    {
+      "gameId": "YIBcOZqGkI",
+      "name": "Battlestar Galactica",
+      "names": [
+        "Battlestar Galactica: The Board Game"
+      ],
+      "description": "Battlestar Galactica: The Board Game is an exciting game of mistrust, intrigue, and the struggle for survival. Based on the epic and widely-acclaimed Sci Fi Channel series, Battlestar Galactica: The Board Game puts players in the role of one of ten of their favorite characters from the show. Each playable character has their own abilities and weaknesses, and must all work together in order for humanity to have any hope of survival. However, one or more players in every game secretly side with the Cylons. Players must attempt to expose the traitor while fuel shortages, food contaminations, and political unrest threatens to tear the fleet apart. \r\n<br /> \r\n<br /> After the Cylon attack on the Colonies, the battered remnants of the human race are on the run, constantly searching for the next signpost on the road to Earth. They face the threat of Cylon attack from without, and treachery and crisis from within. Humanity must work together if they are to have any hope of survival...but how can they, when any of them may, in fact, be a Cylon agent? \r\n<br /> \r\n<br /> Battlestar Galactica: The Board Game is a semi-cooperative game for 3-6 players ages 10 and up that can be played in 2-3 hours.",
+      "categories": [
+        {
+          "id": "PinhJrhnxU"
+        },
+        {
+          "id": "bCBXJy9qDw"
+        },
+        {
+          "id": "TKQncFVX74"
+        },
+        {
+          "id": "3B3QpKvXD3"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 3.4754098360655745,
+      "num_user_ratings": 61,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258003590-613F9Ue01nL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258003590-613F9Ue01nL.jpg",
+      "min_players": 3,
+      "max_players": 6,
+      "min_playtime": 120,
+      "max_playtime": 300,
+      "min_age": 10,
+      "year_published": 2008,
+      "rules_url": "https://images-cdn.fantasyflightgames.com/ffg_content/Battlestar_Galactica/bsg-rulebook-web.pdf",
+      "id": 24
+    },
+    {
+      "gameId": "6VQXkkC5ql",
+      "name": "Dominion 2nd Edition",
+      "names": [
+        "Dominion"
+      ],
+      "description": "You are a monarch, like your parents before you, a ruler of a small pleasant kingdom of rivers and evergreens. Unlike your parents, however, you have hopes and dreams! You want a bigger and more pleasant kingdom, with more rivers and a wider variety of trees. You want a Dominion! <br />\r\n<br />\r\nIn all directions lie fiefs, freeholds, and feodums. All are small bits of land, controlled by petty lords and verging on anarchy. You will bring civilization to these people, uniting them under your banner.<br />\r\n<br />\r\nRio Grande Games has updated Dominion in this Second Edition. New cover and replaced a few cards; cleaned up rules and card text. Artwork on the Base cards have been changed to be similar to that found previously in Base Cards.",
+      "categories": [
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "vZsDDAdOoe"
+        },
+        {
+          "id": "yu3eas6v7A"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 3.3997080259796633,
+      "num_user_ratings": 168,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254994298-61H6ZZGTpdL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254994298-61H6ZZGTpdL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 15,
+      "max_playtime": 60,
+      "min_age": 14,
+      "year_published": 2016,
+      "rules_url": "riograndegames.com/getFile.php?id=348",
+      "id": 25
+    },
+    {
+      "gameId": "OIXt3DmJU0",
+      "name": "Catan",
+      "names": [
+        "Settlers of Catan",
+        "Settlers",
+        "trade build settle",
+        "Catan 5th Edition",
+        "Catan: 5th Edition",
+        "Die Siedler von Catan ",
+        "Catan - Das Spiel",
+        "Les Colons de Catane"
+      ],
+      "description": "<p>The women and men of your expedition build the first two settlements. Fortunately, the land is rich in natural resources. You build roads and new settlements that eventually become cities. Will you succeed in gaining supremacy on Catan? Barter trade dominates the scene. Some resources you have in abundance, other resources are scarce. Ore for wool, brick for lumber - you trade according to what is needed for your current building projects. Proceed strategically! If you found your settlements in the right places and skillfully trade your resources, then the odds will be in your favor. But your opponents are smart too.</p>\r\n\r\n<p>To begin the game, we build the game board using hexagonal terrain tiles. Catan is born - a beautiful island with mountains, pastures, hills, fields, and forests, surrounded by the sea.</p>\r\n\r\n<p>Each of us places two small houses on spaces where three terrain hexes meet. They are our starting settlements.</p>\r\n\r\n<p>And so it begins. I roll two dice. An “11”! Each terrain hex is marked with a die roll number. Each player who owns a settlement adjacent to a terrain hex marked with the number rolled receives a resource produced by this hex. Hills produce brick, forests produce lumber, mountains produce ore, fields produce grain, and pastures produce wool.</p>\r\n\r\n<p>We use these resources to expand across Catan: we build roads and new settlements, or we upgrade our existing settlements to cities. For example, a road costs 1 brick and 1 lumber. If we do not have the necessary resources, we can acquire them by trading with our opponents.</p>\r\n\r\n<p>Each settlement is worth 1 victory point and each city is worth 2 victory points. If you expand cleverly, you may be the first player to reach 10 victory points and thus win the game!</p>",
+      "categories": [
+        {
+          "id": "7rV11PKqME"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "c6gkRM7rSy"
+        },
+        {
+          "id": "AVY6EvSQTP"
+        }
+      ],
+      "avg_rating": 2.921875,
+      "num_user_ratings": 192,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg",
+      "min_players": 3,
+      "max_players": 4,
+      "min_playtime": 45,
+      "max_playtime": 90,
+      "min_age": 10,
+      "year_published": 1995,
+      "rules_url": "https://www.catan.com/game/catan#prof-easy",
+      "id": 26
+    },
+    {
+      "gameId": "iSVnYdrsZQ",
+      "name": "Rivals for Catan",
+      "names": [
+        "Catan: Rivals for Catan Card Game",
+        "The Rivals for Catan"
+      ],
+      "description": "Build your domain to best your Rivals.<br /><br />The Rivals for Catan puts you in charge of one of the two factions developing newly-settled Catan. Use your under card mix to create your own principality. Explore and settle new lands, acquiring resources through card play and the luck of the dice. Use gold, response combinations, and trade to develop your domain. <br /><br />Expand your settlements and cities recruit heroes, and defend your lands through politics, invention, and intrigue. Your cunning and a dash of luck decides who will be Prince of Catan.",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 3,
+      "num_user_ratings": 13,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257779718-51eU0IClsEL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257779718-51eU0IClsEL.jpg",
+      "min_players": 2,
+      "max_players": 2,
+      "min_playtime": 30,
+      "max_playtime": 90,
+      "min_age": 11,
+      "year_published": null,
+      "rules_url": null,
+      "id": 27
+    },
+    {
+      "gameId": "TAAifFP590",
+      "name": "Root",
+      "names": [
+        "root ",
+        "Root "
+      ],
+      "description": "Find adventure in this marvelous asymmetric game. Root provides limitless replay value as you and your friends explore the unique factions all wanting to rule a fantastic forest kingdom. Play as the Marquise de Cat and dominate the woods, extracting its riches and policing its inhabitants, as the Woodland Alliance, gathering supporters and coordinate revolts against the ruling regime, the Eyrie Dynasties, regaining control of the woods while keeping your squabbling court at bay, or as the Vagabond, seeking fame and fortune as you forge alliances and rivalries with the other players. Each faction has its own play style and paths to victory, providing an immersive game experience you will want to play again and again.",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ssZjU3HETz"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "PGjmKGi26h"
+        },
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "amcImLdOmD"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "yu3eas6v7A"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "MEAoOygZsA"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.8823529411764715,
+      "num_user_ratings": 68,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540147295104",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540147295104",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 90,
+      "min_age": 10,
+      "year_published": 2018,
+      "rules_url": "https://drive.google.com/drive/folders/1i9-iCUDzfGMs7HjFHhahwMS6efvvfX5w",
+      "id": 28
+    },
+    {
+      "gameId": "E4ELA8cG85",
+      "name": "Race for the Galaxy",
+      "names": [],
+      "description": "In Race for the Galaxy from Rio Grande Games, players build galactic civilizations using game cards that represent worlds or technical and social developments. Each round consists of one or more of five possible phases. In each round, each player secretly and simultaneously chooses one of seven different action cards and then reveals it. Only the selected phases occur. For these phases, every player performs the phasea€s action, while the selecting player(s) also get a bonus for that phase. For example, if at least one player chooses the Develop action, then the Develop phase will occur, otherwise it is skipped. In it, each player may simultaneously select a development from his hand of cards to build. After revealing the cards, each player adds his development to his tableau of cards on the table and then discards cards from his hand equal to its cost. Each player who chose Develop discards one card fewer as his bonus. Explore allows a player to draw cards and select which of them to add to his hand. Settle allows a player to place a world in his tableau. Some worlds produce goods, represented by face down cards, when Produce is selected. These goods can be discarded for victory points or sold to add cards to the player's hand by selecting Consume. With cards, players can settle new worlds and build more developments, gaining both victory points and card powers that provide advantages in certain phases. The player who best manages his cards, phase and bonus selections, and card powers to build the greatest space empire, wins. The winner is the player with the most victory points.",
+      "categories": [
+        {
+          "id": "v4SfYtS2Lr"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "DEvPj5twid"
+        }
+      ],
+      "avg_rating": 3.507475083056479,
+      "num_user_ratings": 96,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254200326-516WSoozIAL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254200326-516WSoozIAL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 30,
+      "max_playtime": 60,
+      "min_age": 14,
+      "year_published": 2007,
+      "rules_url": "http://riograndegames.com/getFile.php?id=273",
+      "id": 29
+    },
+    {
+      "gameId": "AuBvbISHR6",
+      "name": "Ticket To Ride",
+      "names": [],
+      "description": "Ticket to Ride is a cross-country train adventure game. Players collect train cards that enable them to claim railway routes connecting cities throughout North America. The longer the routes, the more points they earn. Additional points come to those who can fulfill their Destination Tickets by connecting two distant cities, and to the player who builds the longest continuous railway. So climb aboard for some railroading fun and adventure. You've got a Ticket to Ride!<br />\r\n<br />\r\nOctober 2, 1900 -- it's 28 years to the day that noted London eccentric, Phileas Fogg accepted and then won a 20,000 bet that he could travel Around the World in 80 Days. Now at the dawn of the century some old friends have gathered to celebrate Fogg's impetuous and lucrative gamble -- and to propose a new wager of their own. The stakes: $1 million in a winner-takes-all competition. The objective: to see the most cities in North America -- in just 7 days. <br />\r\n<br />\r\n-Spiel Des Jahres 2004(German game of the year)<br />\r\n-As d'Or Cannes 2004 (French game of the year)<br />\r\n-Game of the year 2004 - Japan<br />\r\n-Game of the year 2004 - Sweden<br />\r\n-Game of the year 2004 - Finland<br />\r\n-Diana Jones Excellence in Gaming Award 2004<br />\r\n-Origins Award Winner - Best Board Game 2005<br />\r\n-Game of the year 2004 - Spain<br />\r\n-Parent's Choice Foundation Silver Medal 2004",
+      "categories": [
+        {
+          "id": "h8wfZG0j3I"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "c6gkRM7rSy"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.2717579611366827,
+      "num_user_ratings": 169,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254202421-61wLscAHHSL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254202421-61wLscAHHSL.jpg",
+      "min_players": 2,
+      "max_players": 5,
+      "min_playtime": 30,
+      "max_playtime": 90,
+      "min_age": 8,
+      "year_published": 2004,
+      "rules_url": "https://ncdn0.daysofwonder.com/tickettoride/en/img/tt_rules_2015_en.pdf",
+      "id": 30
+    },
+    {
+      "gameId": "pPZnlKC4G3",
+      "name": "Inis",
+      "names": [],
+      "description": "<div><p>The game's elegant mechanics combine card drafting and area control to produce a system rich in strategic options and interpersonal interactions.<br />At the same time, brilliantly crafted tiles give every game a unique, gradually unfolding geography. The gorgeous original art brings Ireland's ancient epics and audacious heroes to life.<br /></p><p><br />There are three different types of cards in <i>Inis</i>:<br />Action Cards - These are drafted each round and provide the base actions to deploy troops, move troops, attack, and play new regions.<br />Advantage Cards - These are acquired as a result of controlling certain regions. Each region has its own Advantage Card you receive as a result of having the most troops in it.<br />Epic Tales Cards - These unique and powerful cards evoke the Celtic gods and heroes to inspire the clans to accomplish legendary feats.</p></div>",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "MHkqIVxwtx"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "r6yIFvyXDD"
+        },
+        {
+          "id": "8PN2HE86wg"
+        }
+      ],
+      "avg_rating": 3.8229895104895104,
+      "num_user_ratings": 52,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255828707-61nsxy2BledL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255828707-61nsxy2BledL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 90,
+      "min_age": 14,
+      "year_published": 2016,
+      "rules_url": "http://www.matagot.com/data/atasamente/INIS_RULES_EN.pdf",
+      "id": 31
+    },
+    {
+      "gameId": "EPRL83Yy4x",
+      "name": "Bang!: The Dice Game",
+      "names": [],
+      "description": "In the Wild West, the eternal battle between the Law and the Outlaws keeps heating up. Suddenly, a rain of arrows darken the sky: it's an Indian attack! Are you bold enough to keep up with the Indians? Do you have the courage to challenge your fate? Can you expose and defeat the ruthless gunmen around you?<br />\r\n<br />\r\nExperience all the excitement of BANG! - now with dice! In BANG! The Dice Game,  players take turns rolling the dice up to three times. The dice determine which actions that player can take on his turn. You must manage your dice rolls carefully to attack your enemies and avoid dangers and threats.",
+      "categories": [
+        {
+          "id": "4mOtRRwSoj"
+        },
+        {
+          "id": "PinhJrhnxU"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        },
+        {
+          "id": "bCBXJy9qDw"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "BGrhzIN69D"
+        }
+      ],
+      "avg_rating": 3.0655737704918047,
+      "num_user_ratings": 61,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559253933920-51fYbR-50QL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559253933920-51fYbR-50QL.jpg",
+      "min_players": 3,
+      "max_players": 8,
+      "min_playtime": 15,
+      "max_playtime": 30,
+      "min_age": 8,
+      "year_published": 2013,
+      "rules_url": "http://www.dvgiochi.net/bang_the_dice_game/BANG!_dice_game-rules.pdf",
+      "id": 32
+    },
+    {
+      "gameId": "jvj31CHwLp",
+      "name": "Bananagrams",
+      "names": [],
+      "description": "Bananagrams",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "8PN2HE86wg"
+        }
+      ],
+      "avg_rating": 2.7272727272727275,
+      "num_user_ratings": 33,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257788549-4190ktYkAjL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257788549-4190ktYkAjL.jpg",
+      "min_players": 1,
+      "max_players": 8,
+      "min_playtime": 5,
+      "max_playtime": 30,
+      "min_age": 7,
+      "year_published": 2006,
+      "rules_url": "https://bananagrams.com/games/bananagrams",
+      "id": 33
+    },
+    {
+      "gameId": "sOC4PMWhs0",
+      "name": "Apples to Apples",
+      "names": [
+        "Apples to Apples"
+      ],
+      "description": "Matching games and word games are popular games for kids on game night. Apples to Apples is the ideal card game when you're looking for a family game that everyone can play. It's the challenging and enjoyable party game that has everyone comparing red apple cards and green apple cards. You'll get creative and a little silly, too, trying to convince the judge your card is the best match. For fun games, Apples to Apples will keep you thinking, guessing and laughing for hours.",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "DEvPj5twid"
+        }
+      ],
+      "avg_rating": 2.03125,
+      "num_user_ratings": 64,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541651529181",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541651529181",
+      "min_players": 4,
+      "max_players": 10,
+      "min_playtime": 30,
+      "max_playtime": 30,
+      "min_age": 12,
+      "year_published": 1999,
+      "rules_url": "",
+      "id": 34
+    },
+    {
+      "gameId": "UI0oxncplG",
+      "name": "Scrabble",
+      "names": [
+        "Scrabble"
+      ],
+      "description": "Put letters together, build words, add up your points and win! This classic game features the classic Scrabble equipment for a big-time word-on-word showdown. Do you see a word your opponent hasn't seen. A double or triple letter or word space that will let you earn big points. Could the luck of the draw win you the game. Use your letters to score points and challenge your family and friends. It’s your word against theirs! Scrabble and all related characters are trademarks of Hasbro.",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "8PN2HE86wg"
+        }
+      ],
+      "avg_rating": 2.5740740740740744,
+      "num_user_ratings": 54,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258047497-41XOmG7egFL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258047497-41XOmG7egFL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "rules_url": "",
+      "id": 35
+    },
+    {
+      "gameId": "vsPfh5dgCd",
+      "name": "Trouble Game",
+      "names": [
+        "Trouble"
+      ],
+      "description": "Pop into the racing, chasing game where everyone's in Trouble! Set up your pegs and then hit the Pop-O-Matic die roller. Depending on what you roll, you can move your pegs to the Start space, move your pegs forward – or watch other players move while you can't! Each of your pegs has to go all the way around the board to the Finish space, but watch out – if another player's peg lands on the same space as yours, your peg has to start over. The player who gets all 4 pegs into the Finish space wins! Pop all around the board for the win when you play Trouble! Trouble, Pop-O-Matic and all related characters are trademarks of Hasbro.",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 1.3846153846153846,
+      "num_user_ratings": 13,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254851976-61GM2BsKTpWL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254851976-61GM2BsKTpWL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "id": 36
+    },
+    {
+      "gameId": "WVgc4bUL8N",
+      "name": "Clue Game",
+      "names": [
+        "Clue",
+        "Clue (2-6 players)",
+        "Clue Board Game - The Classic Mystery"
+      ],
+      "description": "One murder…6 suspects. In this suspenseful Clue game, players have to find out who's responsible for murdering Mr. Boddy of Tudor Mansion in his own home. Get the scoop on the mansion's rooms, weapons and guests and start detecting! Was it Plum with the wrench in the library? Or Green with the candlestick in the study? Eliminate information throughout the game in this classic whodunit. The player who correctly accuses Who, What, and Where wins!",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 2.458333333333333,
+      "num_user_ratings": 48,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254847936-611WyTryCvL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254847936-611WyTryCvL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "id": 37
+    },
+    {
+      "gameId": "fG5Ax8PA7n",
+      "name": "Monopoly",
+      "names": [
+        "Monopoly board game",
+        "Monopoly: 80th Anniversary Edition "
+      ],
+      "description": "<p>The thrill of bankrupting an opponent, the possibility of playing a 9 hour game, and the absolution between winning and losing, could change with the roll of the dice. Experience the ups and downs by collecting property color’s sets to build houses, and hopefully upgrading to a hotel. But don’t play just for certain colors, or else your opponent may change their strategy. </p><p>The more properties each player owns, the more rent can be charged, but trading is where the game can help you, or hurt you. So, be wise!</p><p>Chance cards could be worth money, like $10 for winning second place in a beauty pageant or sending you to “Go” for an extra $200; but you might just get the one that says, “Go To Jail”.</p><p>Buy, Sell, Dream and Scheme to Win it All!</p><p>Turn a debt into an ultimate victory!</p>",
+      "categories": [
+        {
+          "id": "N0TkEGfEsF"
+        },
+        {
+          "id": "jZEDOpx07e"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "AZxlPpi5oq"
+        },
+        {
+          "id": "BGrhzIN69D"
+        },
+        {
+          "id": "mGBzR68m8Z"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        },
+        {
+          "id": "AVY6EvSQTP"
+        }
+      ],
+      "avg_rating": 1.5789473684210529,
+      "num_user_ratings": 57,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1543278754636",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1543278754636",
+      "min_players": 2,
+      "max_players": 8,
+      "min_playtime": 40,
+      "max_playtime": 300,
+      "min_age": 8,
+      "year_published": 1933,
+      "rules_url": "",
+      "id": 38
+    },
+    {
+      "gameId": "mYU7jvN7TE",
+      "name": "The Game of Life: Star Wars - Jedi's Path",
+      "names": [
+        "The Game of Life: A Jedi's Path"
+      ],
+      "description": "Jedi Knight or Sith Lord? Awesome warrior or mystical thinker? These are the  choices players face in Game of Life: A Jedi's Path. As players move their aspiring Jedi  around the board (passing tests, doing battle, learning lessons, going on missions, and  building their lightsabers), they build their connection to the Force in four ways--logic,  intuition, fighting, and energy. Along the way, players can choose the Jedi path or the  riskier/quicker \"Dark Path.\" But be careful, once you go down the dark side, there may  not be redemption for you. At the end of the game, the mightiest Jedi and the darkest Sith  square off to determine the most powerful Force-user in the galaxy.",
+      "categories": [],
+      "mechanics": [],
+      "avg_rating": 3,
+      "num_user_ratings": 2,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257831764-61ZZ68Z4XCL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257831764-61ZZ68Z4XCL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "id": 39
+    },
+    {
+      "gameId": "DtYnFstrYm",
+      "name": "Harry Potter: Hogwarts Battle",
+      "names": [
+        "Harry Potter: Hogwarts Battle (Deal of the Day)",
+        "Harry Potter: Hogwarts Battle"
+      ],
+      "description": "The forces of evil are threatening to overrun Hogwarts castle in this new cooperative game! It is up to four students to ensure the safety of the school by defeating villains and consolidating their defenses. Players take on the role of a Hogwarts student: Harry, Ron, Hermione or Neville, each with his or her own personal deck of cards. <br /><br />\r\nTo secure the castle from the forces of evil the students must work together to build more powerful decks using iconic Wizarding World characters, spells, and items. Defeat all the villains including He-Who-Must-Not-Be-Named and win the game!",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "Sod2YBWMKi"
+        },
+        {
+          "id": "dO9HVl2TW7"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "vZsDDAdOoe"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.2162162162162153,
+      "num_user_ratings": 37,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255013017-61U2BZcGv7pL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255013017-61U2BZcGv7pL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 30,
+      "max_playtime": 60,
+      "min_age": 11,
+      "year_published": 2016,
+      "id": 40
+    },
+    {
+      "gameId": "OF145SrX44",
+      "name": "7 Wonders",
+      "names": [],
+      "description": "<i>Winner of the 2011 Kennerspiel des Jahres (Enthusiasts Game of the Year) Award.</i><br /><br />\r\nYou are the leader of one of the 7 great cities of the Ancient World. Gather resources, develop commercial routes and affirm your military supremacy. Build your city and erect an architectural wonder which will transcend future times!<br /><br />\r\n7 wonders is a simple and addictive game for the whole family. In 30 minutes you can raise a complete civilization and build the greatest Wonders of the World.",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ODWOjWAJj3"
+        },
+        {
+          "id": "O0ogzwLUe8"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.433109707971589,
+      "num_user_ratings": 181,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559253945470-61dlm9QcXpL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559253945470-61dlm9QcXpL.jpg",
+      "min_players": 2,
+      "max_players": 7,
+      "min_playtime": 30,
+      "max_playtime": 45,
+      "min_age": 10,
+      "year_published": 2010,
+      "rules_url": "http://www.7wonders.net/wp-content/uploads/2017/06/7WONDERS_RULES_US.pdf",
+      "id": 41
+    },
+    {
+      "gameId": "ZdHlXy4uxe",
+      "name": "Dominant Species",
+      "names": [],
+      "description": "<br />\r\n<b>2nd Edition, 3rd Printing</b><br />\r\n<br />\r\n90,000 B.C. - A great Ice Age is fast approaching. Another titanic struggle for global supremacy has unwittingly commenced between the varying animal species.<br />\r\n<br />\r\nDominant Species is a game for 2 to 6 players that abstractly recreates a tiny portion of ancient history: the ponderous encroachment of an Ice Age and what that entails for the living creatures trying to adapt to the slowly-changing Earth.<br />\r\nEach player will assume the role of one of six major Animal groups-Mammal, Reptile, Bird, Amphibian, Arachnid or Insect. Each begins the game in a state of natural balance with regards to one another. But that won't last: It is indeed ''survival of the fittest.''<br />\r\n<br />\r\nThrough wily Action Pawn placement, players will strive to become Dominant on as many different Terrain tiles as possible in order to draw beneficial Dominance Cards. Players will also want to propagate their individual Species in order to earn Victory Points for his particular Animal. Players will be aided in these endeavors via Growth, Migration and Domination actions, among others.<br />\r\n<br />\r\nAll of this eventually leads to the end game - the final ascent of the Ice Age - where the player with the most Victory Points will have his Animal crowned the Dominant Species.<br />\r\n<br />\r\nBut somebody better become dominant quickly, because it's getting mighty cold....",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "8PN2HE86wg"
+        },
+        {
+          "id": "fBOTEBUAmV"
+        }
+      ],
+      "avg_rating": 3.7111111111111117,
+      "num_user_ratings": 45,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255079876-512B4kbGbkGL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255079876-512B4kbGbkGL.jpg",
+      "min_players": 2,
+      "max_players": 6,
+      "min_playtime": 120,
+      "max_playtime": 240,
+      "min_age": 12,
+      "year_published": 2010,
+      "rules_url": "https://www.gmtgames.com/domspecies/DomSpec_Rules_FINAL.pdf",
+      "id": 42
+    },
+    {
+      "gameId": "eQcLOlfHSl",
+      "name": "Cyclades",
+      "names": [
+        "Cyclades"
+      ],
+      "description": "<i>&quot;Excellent game, very very impressed with this one.&quot; - Tom Vasel, The Dice Tower</i><br />\r\n<br />\r\nIn this latest collaboration between Bruno Cathala and Ludovic Maublanc, players must buy the favor of the Gods in their race to be the first player to build two cities in the Ancient Greek island group known as the Cyclades.<br />\r\n<br />\r\nVictory requires respect for all the Gods - players cannot afford to sacrifice to only one God, but must pay homage to each of five Gods in turn. Each turn, the players bid for the favors of the Gods, as only one player can have the favor of each God per turn - and each player is also limited to the favor of a single God per turn.<br />\r\n<br />\r\n-Ares allows the movement of player armies and the building of Fortresses.<br />\r\n-Poseidon allows players to move their navies and build Ports.<br />\r\n-Zeus allows his followers to hire priests and build temples.<br />\r\n-Athena provides her worshipers with philosophers and universities.<br />\r\n-Apollo increases the income of his worshippers.",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        },
+        {
+          "id": "329DxyFL9D"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "MHkqIVxwtx"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "bgGxE0pI2B"
+        },
+        {
+          "id": "AZxlPpi5oq"
+        },
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.263157894736842,
+      "num_user_ratings": 38,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541652513946",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541652513946",
+      "min_players": 2,
+      "max_players": 5,
+      "min_playtime": 60,
+      "max_playtime": 90,
+      "min_age": 13,
+      "year_published": 2009,
+      "rules_url": "http://www.ultraboardgames.com/cyclades/game-rules.php",
+      "id": 43
+    },
+    {
+      "gameId": "7aNZGj840b",
+      "name": "Imhotep",
+      "names": [],
+      "description": "Imhotep. The legendary architect of the Egyptian monuments. His awe-inspiring structures and brutal tactics earned him divine status among ancient Egyptians. Can you match his ruthless determination to build the most revered monuments?<br />\r\n<br />\r\nTo do this, you will need to transport stone blocks on ships from your quarry to different construction sites. But you alone do not choose where the ships go. Your opponents have monumental plans of their own and want to prevent your success. A fierce competition for the precious stone resources plays out. Only with the right strategy and a little luck can you succeed.<br />\r\n<br />\r\nIn Imhotep, the players take on the roles of ancient Egyptian architects. Over six rounds, they try to transport their stone blocks to end up in the most valuable positions at five construction sites: pyramid, obelisk, chamber tomb, temple, and market. But a player can only choose one of three actions in a turn: excavate a new stone block from the quarry, load a block onto a ship, or move a ship to a construction site. From there, the massive stone blocks must be unloaded in order from bow to stern and placed on the sites in preset sequences. Depending on where the blocks end up, players earn different point values either immediately or at the end of the game.<br />\r\n<br />\r\nIn each turn, you must weigh your options for getting your own stones into place and thwarting your opponents' placement plans. You must get your blocks to the right places, in the right order, at the right time to be the greatest architect.",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "05zCZoLvQJ"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.3414634146341466,
+      "num_user_ratings": 41,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254177082-51qAEnd0e-L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254177082-51qAEnd0e-L.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 45,
+      "max_playtime": 60,
+      "min_age": 10,
+      "year_published": 2016,
+      "rules_url": null,
+      "id": 44
+    },
+    {
+      "gameId": "5H5JS0KLzK",
+      "name": "Wingspan",
+      "names": [],
+      "description": "<p><em><strong>Wingspan</strong></em> is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.</p>\r\n\r\n<p>You are bird enthusiasts—researchers, bird watchers, ornithologists, and collectors—seeking to discover and attract the best birds to your aviary. Each bird extends a chain of powerful combinations in one of your habitats (actions). These habitats  focus on several key aspects of growth:</p>\r\n\r\n<ul><li>Gain food tokens via custom dice in a birdfeeder dice tower</li><li>Lay eggs using egg miniatures in a variety of colors</li><li>Draw from hundreds of unique bird cards and play them</li></ul>\r\n\r\n<p>The winner is the player with the most points after 4 rounds.</p>\r\n\r\n<p>If you enjoy Terraforming Mars and Gizmos, we think this game will take flight at your table. The official announcement and pre-orders will be available on January 2, 2019.</p>",
+      "categories": [
+        {
+          "id": "MWoxgHrOJD"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "mavSOM8vjH"
+        },
+        {
+          "id": "N0TkEGfEsF"
+        },
+        {
+          "id": "zyj9ZK3mHB"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "yu3eas6v7A"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.894736842105263,
+      "num_user_ratings": 38,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545152463996",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545152463996",
+      "min_players": 1,
+      "max_players": 5,
+      "min_playtime": 40,
+      "max_playtime": 70,
+      "min_age": 10,
+      "year_published": 2019,
+      "rules_url": "https://stonemaiergames.com/games/wingspan/rules/",
+      "id": 45
+    },
+    {
+      "gameId": "iaIWG98SIG",
+      "name": "Atlas Gloom",
+      "names": [],
+      "description": "<i>Gloom: The Game of Inauspicious Incidents and Grave Consequences</i> <P>The world of <i>Gloom</i> is a sad and benighted place. The sky is gray, the tea is cold, and a new tragedy lies around every corner. Debt, disease, heartache, and packs of rabid flesh-eating mice -- just when it seems like things can't get any worse, they do. But some say that one's reward in the afterlife is based on the misery endured in life. If so, there may yet be hope -- if not in this world, then in the peace that lies beyond. <P>In the <i>Gloom</i> card game, you assume control of the fate of an eccentric family of misfits and misanthropes. The goal of the game is sad, but simple: you want your characters to suffer the greatest tragedies possible before passing on to the well-deserved respite of death. You'll play horrible mishaps like Pursued by Poodles or Mocked by Midgets on your own characters to lower their Self-Worth scores, while trying to cheer your opponents' characters with marriages and other happy occasions that pile on positive points. The player with the lowest total Family Value wins. <P>Printed on transparent plastic cards, <i>Gloom</i> features an innovative design by noted RPG author Keith Baker. Multiple modifier cards can be played on top of the same character card; since the cards are transparent, elements from previously played modifier cards either show through or are obscured by those played above them. You'll immediately and easily know the worth of every character, no matter how many modifiers they have. You've got to see (through) this game to believe it! <P>For 2 to 4 players, ages 8 and up.",
+      "categories": [],
+      "mechanics": [],
+      "num_user_ratings": 0,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257784815-4182LmY1zOL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257784815-4182LmY1zOL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": null,
+      "id": 46
+    },
+    {
+      "gameId": "nHJNyAWsoo",
+      "name": "Mysterium",
+      "names": [],
+      "description": "A horrible crime has been committed on the grounds of Warwick Manor and it's up to the psychic investigators to get to the bottom of it.<br />\r\n<br />\r\nIn Mysterium, one player takes on the role of the ghost and over the course of a week, tries to lead the investigators to their culprit. Each night the team will be met with visions, but what is the ghost trying to tell you? Can the psychics determine the weapon, location and killer or will a violent criminal pull off the perfect murder?",
+      "categories": [
+        {
+          "id": "bCBXJy9qDw"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 3.2597402597402607,
+      "num_user_ratings": 77,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255824772-51iPxTb5g7L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255824772-51iPxTb5g7L.jpg",
+      "min_players": 2,
+      "max_players": 7,
+      "min_playtime": 30,
+      "max_playtime": 60,
+      "min_age": 10,
+      "year_published": 2015,
+      "rules_url": "https://www.fgbradleys.com/rules/rules3/MysteriumRules.pdf",
+      "id": 47
+    },
+    {
+      "gameId": "KpKepc41At",
+      "name": "Sushi Go Party!",
+      "names": [
+        "sushi go party"
+      ],
+      "description": "Sushi Go!, is a party platter of mega maki, super sashimi, and endless edamame. You still earn points by picking winning sushi combos, but now you can customize each game by choosing a la carte from a menu of more than twenty delectable dishes. What's more, up to eight players can join in on the sushi-feast. Let the good times roll!<br />\r\n<br />\r\nThis deluxe edition features lots of opportunities to customize your playing experience. You'll find that while the overall game is basically the same, the variety of cards offers many new opportunities. You'll also notice that the strategy changes from game to game.",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "7rV11PKqME"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        },
+        {
+          "id": "DEvPj5twid"
+        }
+      ],
+      "avg_rating": 3.2529090909090903,
+      "num_user_ratings": 100,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254183526-61DkuJEhUWL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254183526-61DkuJEhUWL.jpg",
+      "min_players": 2,
+      "max_players": 8,
+      "min_playtime": 30,
+      "max_playtime": 45,
+      "min_age": 8,
+      "year_published": 2016,
+      "rules_url": "https://www.gamewright.com/gamewright/pdfs/Rules/SushiGoPartyTM-RULES.pdf",
+      "id": 48
+    },
+    {
+      "gameId": "YL5DYnG28Y",
+      "name": "The Resistance",
+      "names": [
+        "The Resistance (3rd Edition)",
+        "The Resistance 2nd Edition (Ding & Dent)"
+      ],
+      "description": "The Resistance is a very intense game of secret identities deductiona and deception for 5-10 players.",
+      "categories": [
+        {
+          "id": "PinhJrhnxU"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "bCBXJy9qDw"
+        },
+        {
+          "id": "jZEDOpx07e"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        },
+        {
+          "id": "3B3QpKvXD3"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "DEvPj5twid"
+        },
+        {
+          "id": "JYYdBW6UCE"
+        }
+      ],
+      "avg_rating": 3.145676274944567,
+      "num_user_ratings": 110,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254432300-51X5r1nBOnL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254432300-51X5r1nBOnL.jpg",
+      "min_players": 5,
+      "max_players": 10,
+      "min_playtime": 30,
+      "max_playtime": 45,
+      "min_age": 13,
+      "year_published": 2009,
+      "rules_url": "http://www.ultraboardgames.com/the-resistance/game-rules.php",
+      "id": 49
+    },
+    {
+      "gameId": "H3yXWu5No0",
+      "name": "Dixit",
+      "names": [
+        "Dixit"
+      ],
+      "description": "<i>Winner of the 2010 &quot;Spiel des Jahres&quot; German Board Game of the Year Award.</i><br /><br />\r\nEach player at his turn plays the storyteller. <br /><br />\r\nHe is given a single picture, while the other players get a hand of six pictures. <br /><br />\r\nThe storyteller says a sentence or a word connected to his picture, then each player chooses one of his pictures to bet upon. <br /><br />\r\nAll pictures are showed face up, and every player have to bet upon what picture was the storyteller's.<br /><br />",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "TYnxiuiI3X"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "DEvPj5twid"
+        },
+        {
+          "id": "JYYdBW6UCE"
+        }
+      ],
+      "avg_rating": 3.1774305555555564,
+      "num_user_ratings": 108,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258092947-61SvciVJLlL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258092947-61SvciVJLlL.jpg",
+      "min_players": 3,
+      "max_players": 6,
+      "min_playtime": 30,
+      "max_playtime": 42,
+      "min_age": 8,
+      "year_published": 2008,
+      "id": 50
+    },
+    {
+      "gameId": "0z7S887o3b",
+      "name": "Sheriff of Nottingham",
+      "names": [
+        "Sherrif of Nottingham"
+      ],
+      "description": "The Sheriff of Nottingham is a fun and engaging game for all where each player will have the chance to be the Sheriff himself! As peasants, players will declare goods they wish to bring into the city and it will be up to the Sheriff to decide who is telling the truth and who is secretly trying to smuggle in contraband!<br />\r\n<br />\r\nExperience Nottingham in a whole new way! Declare your goods, deal with the Sheriff and secure victory in a fun-filled and exciting adventure!<br />\r\n<br />",
+      "categories": [
+        {
+          "id": "PinhJrhnxU"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "TYnxiuiI3X"
+        },
+        {
+          "id": "QAYkTHK1Dd"
+        },
+        {
+          "id": "jZEDOpx07e"
+        },
+        {
+          "id": "X8J7RM6dxX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "wV5peB05xs"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.155136468275728,
+      "num_user_ratings": 99,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254204253-61te4F7OK2BL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254204253-61te4F7OK2BL.jpg",
+      "min_players": 3,
+      "max_players": 5,
+      "min_playtime": 60,
+      "max_playtime": 90,
+      "min_age": 13,
+      "year_published": 2014,
+      "rules_url": "https://www.arcanewonders.com/wp-content/uploads/2017/06/Sheriff_of_Nottingham_Rulebook.pdf",
+      "id": 51
+    },
+    {
+      "gameId": "4G32qGJZWs",
+      "name": "Arkham Horror: The Card Game",
+      "names": [
+        "Arkham Horror LCG",
+        "Arkham Horror: Das Kartenspiel "
+      ],
+      "description": "&quot;Something evil stirs in Arkham, and only you can stop it. Blurring the traditional lines between roleplaying and card game experiences, Arkham horror: the card game is the living card game of love craft I an mystery, monsters, and madness! you and your friend (or up to three friends with two core sets) become characters within the quiet new England town of Arkham. You have your talents, sure, but you also have your flaws. Perhaps you've dabbled a little too much in the writings of the Necronomicon, and its words continue to haunt you. Perhaps you feel compelled to cover up any signs of otherworldly evils, hampering your own investigations in order to protect the quiet confidence of the greater population. Perhaps you'll be scarred by your encounters with a ghoulish cult. No matter what compels you, no matter what haunts you, you'll find both your strengths and weaknesses reflected in your custom deck of cards, and these cards will be your resources as you work with your friends to unravel the world's most terrifying mysteries. Meanwhile, each of your adventures in Arkham horror LCG carries you deeper into mystery. You'll find cultists and foul rituals. You'll find haunted houses and strange creatures. And you may find signs of the ancient ones straining against the barriers to our world… the basic mode of play in Arkham LCG is not the adventure, but the campaign. You might be scarred by your adventures, your sanity may be strained, and you may alter Arkham's landscape, burning buildings to the ground. All your choices and actions have consequences that reach far beyond the immediate resolution of the scenario at hand. And your actions may earn you valuable experience with which you can better prepare yourself for the adventures that still lie before you&quot;.",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "vZsDDAdOoe"
+        },
+        {
+          "id": "WPytek5P8l"
+        }
+      ],
+      "avg_rating": 3.7692307692307687,
+      "num_user_ratings": 78,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257204681-515mUPxEHZL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257204681-515mUPxEHZL.jpg",
+      "min_players": 1,
+      "max_players": 2,
+      "min_playtime": 60,
+      "max_playtime": 120,
+      "min_age": 14,
+      "year_published": 2016,
+      "rules_url": "https://images-cdn.fantasyflightgames.com/filer_public/88/53/88538d11-5274-4b4a-ac8c-e8d758f71132/ahc01_learn_to_play_web.pdf",
+      "id": 52
+    },
+    {
+      "gameId": "cjyxU3TeXF",
+      "name": "Ghost Stories",
+      "names": [
+        "Ghost Stories"
+      ],
+      "description": "Wu-Feng, the Lord of the Nine Hells has found where the funeral urn containing his ashes is kept. His hordes are already marching upon the small village of the Middle Kingdom hiding them''. Players are taoist priests, who will have to defend the village from the army of shadows preparing to invade it. Each of them has different special powers which will help them in this mission. Ghost Stories is a cooperative game for 1-4 players.",
+      "categories": [
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        },
+        {
+          "id": "MHkqIVxwtx"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.0851063829787226,
+      "num_user_ratings": 47,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254930163-61jcVvb2BZuL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254930163-61jcVvb2BZuL.jpg",
+      "min_players": 1,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 75,
+      "min_age": 12,
+      "year_published": 2008,
+      "rules_url": "http://rprod.com/uploads/GS_RULES_US_ver1_3-web.pdf",
+      "id": 53
+    },
+    {
+      "gameId": "ZwlnfX1J2z",
+      "name": "Eldritch Horror",
+      "names": [],
+      "description": "Across the globe, ancient evil is stirring. Now, you and your trusted circle of colleagues must travel around the world, working against all odds to hold back the approaching horror. Foul monsters, brutal encounters, and obscure mysteries will take you to your limit and beyond. All the while, you and your fellow investigators must unravel the otherworldy mysteries scattered around the globe in order to push back the gathering mayhem that threatens to overwhelm humanity. The end draws near! Do you have the courage to prevent global destruction? <br />\r\n<br />\r\nEldritch Horror is a cooperative game of terror and adventure in which one to eight players take the roles of globetrotting investigators working to solve mysteries, gather clues, and protect the world from an Ancient One - an elder being intent on destroying our world. Each Ancient One comes with its own unique decks of Mystery and Research cards, which draw you deeper into the lore surrounding each loathsome creature.<br />\r\n<br />\r\nDiscover the true name of Azathoth or battle Cthulhu on the high seas. With twelve unique investigators, two hundred-fifty tokens, and over three hundred cards, Eldritch Horror presents an epic, world-spanning adventure with each and every game.",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "33UT4gTFqy"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        }
+      ],
+      "avg_rating": 3.4576271186440684,
+      "num_user_ratings": 59,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254957620-61KqujHT2B4L.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254957620-61KqujHT2B4L.jpg",
+      "min_players": 1,
+      "max_players": 8,
+      "min_playtime": 120,
+      "max_playtime": 240,
+      "min_age": 14,
+      "year_published": 2013,
+      "rules_url": "https://images-cdn.fantasyflightgames.com/filer_public/c7/d6/c7d6cff6-7025-41f9-8538-bb0626feb4f4/eh01_rulebook.pdf",
+      "id": 54
+    },
+    {
+      "gameId": "IaZ7XoAqWt",
+      "name": "Cthulhu Wars",
+      "names": [
+        "Cthulu wars"
+      ],
+      "description": "The Old Ones Have Risen! Monsters Walk the Earth! Humanity is finished, but the struggle continues. Which Great Old One will rule the ruins of Earth? Now, you take charge in Cthulhu Wars, a fast-moving, competitive, tabletop strategy game of Lovecraftian horror in which 2 to 8 players face-off to determine the fate of the planet. In Cthulhu Wars, you can play as Great Cthulhu himself, or take charge of other monstrous factions seeking to dominate the world such as the slithering hordes of the Black Goat, Shub-Niggurath, the aquatic terrors of the Crawling Chaos, or the insane minions of the Yellow Sign. Recruit cultists, summon Shoggoths, cast spells, open interdimensional gates, and awaken your inner Great Old One in Cthulhu Wars!",
+      "categories": [
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "upXZ8vNfNO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "oeg6wN9Eoc"
+        },
+        {
+          "id": "bgGxE0pI2B"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.5384615384615388,
+      "num_user_ratings": 13,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1561155681283",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1561155681283",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 90,
+      "max_playtime": 120,
+      "min_age": 12,
+      "year_published": 2015,
+      "rules_url": "http://cthulhuwars.wikia.com/wiki/General_Rules",
+      "id": 55
+    },
+    {
+      "gameId": "akCvTPO5un",
+      "name": "Lovecraft Letter",
+      "names": [],
+      "description": "A mind-shattering journey into the world of HP Lovecraft and the Cthulhu Mythos warped into the shape of a Love Letter experience.<br />\r\n<br />\r\nYou're not trying to gain affection from the Princess. You are trying to eliminate your rivals for power as you seek to understand the cosmic horror that lurks just beyond what we foolishly call &quot;reality&quot;.<br />\r\n<br />\r\nIn each round only one player will prevail. Use deduction and luck to eliminate other players or watch as their own madness consumes them.<br />\r\n<br />\r\nWill you accept madness as the price that must be paid for Knowledge Man Was Not Meant to Know? Or will you attempt to hold the shreds of your sanity together in the face of eldritch nightmares attempting to enter and destroy our world?",
+      "categories": [
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "bCBXJy9qDw"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "BGrhzIN69D"
+        }
+      ],
+      "avg_rating": 3.3636363636363638,
+      "num_user_ratings": 11,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254177081-51oz2K9HlNL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254177081-51oz2K9HlNL.jpg",
+      "min_players": 2,
+      "max_players": 6,
+      "min_playtime": 10,
+      "max_playtime": 15,
+      "min_age": 14,
+      "year_published": 2017,
+      "rules_url": "https://images-cdn.zmangames.com/us-east-1/filer_public/1f/44/1f441efa-c5c2-4bb5-88c8-be048f2b5918/lovecraftletter_small.pdf",
+      "id": 56
+    },
+    {
+      "gameId": "8ts5fPQ3GI",
+      "name": "Ikusa",
+      "names": [
+        "Wizards of the Coast Ikusa"
+      ],
+      "description": "<p><strong>Shogun</strong> / <strong>Samurai Swords</strong> / <strong>Ikusa</strong> is the last game in the original Milton Bradley Gamemaster series. It focuses on the chaotic feudal society of Japan during the Middle Ages. Players play one of several factions that erupt into a civil war, trying to consolidate their strongholds and then defeat other armies for the right to be called Shogun, the supreme ruler.</p>\r\n\r\n<p>In the game, players command forces on islands of feudal Japan.  Player forces include provincial forces in the provinces and mobile armies commanded by daimyos.  In each turn, players will allocate their koku into bids and purchases for the round.  The round begins with the allocation of turn order, which is determined by bid, and in the case of tied bids, by player agreement or random draw.  Then players other bids and payments are accounted for in purchases of castles and fortresses, drafting of new troops and ronin, and a bid for the lone ninja.  Following the bids phase, players in turn order plan and execute attacks against enemy territories, with attacks resolved through die rolls.  A player wins the game when he or she has captured a certain number of territories, either via straight conquest or by vanquishing the last of an opponent's diamyos and taking over that player's forces.</p>\r\n\r\n<p>The game was originally published as <strong>Shogun</strong> and was later changed to <strong>Samurai Swords</strong> due to a name conflict with James Clavell's Shogun. <strong>Ikusa</strong> is the latest iteration of the game.</p>",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "AZxlPpi5oq"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "DEvPj5twid"
+        }
+      ],
+      "num_user_ratings": 0,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545456393044",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545456393044",
+      "min_players": 2,
+      "max_players": 5,
+      "min_playtime": 240,
+      "max_playtime": 360,
+      "min_age": 12,
+      "year_published": 1986,
+      "rules_url": null,
+      "id": 57
+    },
+    {
+      "gameId": "ULWQvi77f5",
+      "name": "Catan: Junior",
+      "names": [],
+      "description": "Explore the Seas! Catan: Junior? introduces a modified playing style of the classic game giving younger players the opportunity to experience the world of Catan! Designed for players as young as 5 and is a perfect introduction to the Catan series of games for kids and families.<br />\r\n<br />\r\nCatan: Junior? takes place on a ring of islands where 2 to 4 players build hideouts, and the mysterious Spooky Island, where the Ghost Captain lives. Each island generates a specific resource: wood, goats, rum or swords and players can acquire gold. <br />\r\n<br />\r\nEach player starts with two pirate hideouts, then builds ships in order to expand their network. The more hideouts you build, the more resources you may receive. You use your resources to build ships, hideouts or get help from Coco the Parrot. Just watch out for the dreaded Ghost Captain!<br />\r\n<br />\r\nBe the first player to control seven pirate hideouts and you win the game!",
+      "categories": [],
+      "mechanics": [
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "c6gkRM7rSy"
+        }
+      ],
+      "avg_rating": 2.8181818181818175,
+      "num_user_ratings": 11,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255068666-61XXtCq1dcL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255068666-61XXtCq1dcL.jpg",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 66,
+      "min_age": 5,
+      "year_published": null,
+      "rules_url": "",
+      "id": 58
+    },
+    {
+      "gameId": "JdpRadPLi2",
+      "name": "Nemesis",
+      "names": [],
+      "description": "<p><em><strong>Nemesis</strong></em> is a 1-5 player survival sci-fi game where players are woken up from hibernation as a crew of a space ship. The emergency procedure states that there is a critical system failure and the space ship can't continue its cruise. The goal of the crew is to find what is causing this failure and fix the situation to safely return back to Earth. The main problem is that one crew member is dead. Somebody crashed his hibernation chamber and pulled his body out. In addition, if you listen closely, some additional noises and sounds can be heard. New ones, strange ones, ones that were never heard before…</p>\r\n\r\n<p><em><strong>Nemesis</strong></em> is a cooperation game combined with bluffing, backstabbing, and other elements of a science-fiction survival horror adventure.</p>",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        },
+        {
+          "id": "FC6ElKI9tk"
+        },
+        {
+          "id": "3B3QpKvXD3"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "xuphiSlrxI"
+        },
+        {
+          "id": "9mNukNBxfZ"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "U3zhCQH7Et"
+        },
+        {
+          "id": "GNtouC8NLm"
+        },
+        {
+          "id": "BGrhzIN69D"
+        },
+        {
+          "id": "XM2FYZmBHH"
+        }
+      ],
+      "avg_rating": 3.8333333333333335,
+      "num_user_ratings": 6,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559604430553",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559604430553",
+      "min_players": 1,
+      "max_players": 5,
+      "min_playtime": 90,
+      "max_playtime": 180,
+      "min_age": 12,
+      "year_published": 2018,
+      "rules_url": null,
+      "id": 59
+    },
+    {
+      "gameId": "G0oa0arGbg",
+      "name": "Unbroken",
+      "names": [],
+      "description": "<p>Not all adventures end well. Some parties meet their untimely demise at the hands of monsters all too soon and <a href=\"https://boardgamegeek.com/boardgame/225885/unbroken\" target=\"_blank\">Unbroken</a> is a story of one such ill-advised expedition. The player takes on the role of the sole survivor of such failed adventure. Finding themselves in hostile territory, weak and wounded, the players will need to gather their wits and strength, craft weapons from scraps found around them and attempt to tackle progressively more challenging monsters on their way out of this forsaken place.</p><p></p><p><a href=\"https://boardgamegeek.com/boardgame/225885/unbroken\" target=\"_blank\"><b>Unbroken</b></a> is a solo card game that is quick to set up and play but one that will produce a tense challenging experience.</p><ul><li>There are a <b>variety</b> of monsters that produce unique challenging depending on the combination in which you encounter them</li><li>The game throws a real <b>challenge</b> at you, but you will get better with every game you play, learning how to best prepare</li><li>You have several <b>choices</b> in how you overcome your foes including trickery, combat or use of skills</li><li>Unbroken is a game of <b>calculated risk</b> – how much danger will you put yourself in to have a chance of surviving?</li><li>It’s all about the <b>resource management</b>. Unbroken rewards strategy and preparation with only a small element of luck.</li></ul>",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        },
+        {
+          "id": "ov6sEmlkiC"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "hmipYN1R1I"
+        },
+        {
+          "id": "EVeAdboGUA"
+        }
+      ],
+      "avg_rating": 4,
+      "num_user_ratings": 2,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1542734554876",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1542734554876",
+      "min_players": 1,
+      "max_players": 1,
+      "min_playtime": 15,
+      "max_playtime": 30,
+      "min_age": 13,
+      "year_published": 2018,
+      "rules_url": null,
+      "id": 60
+    },
+    {
+      "gameId": "Isz8oWlpj1",
+      "name": "Carpe Diem",
+      "names": [
+        "Carpe Diem - Ding/Dent"
+      ],
+      "description": "<p>The players slip into the role of rich patricians in ancient Rome. Everyone is trying to build a lucrative district to score as many prestige points as possible. The novel way to get to the individual buildings of his district, and the varied display of the many different score cards makes the game to an unusual and very varied strategy game of the successful author Stefan Feld.</p>",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "8PN2HE86wg"
+        }
+      ],
+      "avg_rating": 3.8,
+      "num_user_ratings": 5,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540832173015",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540832173015",
+      "min_players": 2,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 60,
+      "min_age": 10,
+      "year_published": 2018,
+      "rules_url": null,
+      "id": 61
+    },
+    {
+      "gameId": "Bwawckx54U",
+      "name": "Glory To Rome",
+      "names": [],
+      "description": "In 64 A.D. a great fire originating from the slums of Rome quickly spreads to destroy much of the city including the imperial palace. Upon hearing news of the fire Emperor Nero Caesar races back to Rome from his private estate in Antium and sets up shelters for the displaced population. Reporting directly to Nero you are responsible for rebuilding the structures lost in the fire and restoring Glory to Rome. Glory to Rome is a card-based city building and resource management game with a novel mechanism. Each card may act as a building a patron a raw material or a valuable resource frequently forcing players into difficult decisions regarding how each card should be used. In addition much of the game is played from the discard pool giving players some control over what cards are accessible to opponents. Scoring is a combination of completing buildings and storing resources with end-of-game bonuses for storing a diverse assortment. Game length is player-controlled and is triggered in a few different ways. The lighthearted artwork and slim rulebook belie the strong strategic and tactical elements of Glory to Rome.",
+      "categories": [
+        {
+          "id": "a8NM5cugJX"
+        },
+        {
+          "id": "eX8uuNlQkQ"
+        },
+        {
+          "id": "ODWOjWAJj3"
+        },
+        {
+          "id": "N0TkEGfEsF"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "iWODHwRGuU"
+        },
+        {
+          "id": "WPytek5P8l"
+        },
+        {
+          "id": "lA3KUtVFCy"
+        }
+      ],
+      "avg_rating": 3.6818181818181817,
+      "num_user_ratings": 22,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257325268-41pQ1U0GUvL.jpg",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257325268-41pQ1U0GUvL.jpg",
+      "min_players": null,
+      "max_players": null,
+      "min_playtime": null,
+      "max_playtime": null,
+      "min_age": null,
+      "year_published": 2005,
+      "id": 62
+    },
+    {
+      "gameId": "J9W6vjCo0I",
+      "name": "Kingdom Death: Monster",
+      "names": [
+        "kdm",
+        "kingdom death"
+      ],
+      "description": "19 lbs of Nightmare Horror Gaming<div><br /></div><div>235 page hardcover rulebook, 18 hard plastic sprues of miniatures, 1000+ matte game cards, 400+ unique pieces of art, and 86 full page illustrations.</div><div><br /></div><div>Kingdom Death: Monster is a fully cooperative, tabletop, hobby game experience. Unite to survive by hunting monsters and collectively guiding the development of your settlement through a 30 year, self-running campaign.</div><div><br /></div><div>Every decision matters. A space moved during the showdown, every resource spent to craft a piece of gear, what principles your settlement upholds - all can have lasting impact on this highly replayable and challenging game. </div><h3><br />Campaign System</h3><div>Embark alone or with up to 4 friends (6 with game variant) on a 30 lantern year campaign. Each lantern year will cycle through a chaotic hunt, a showdown with a monster, and the development of your settlement. With so much emphasis on player choice, no two campaign runs will be alike.</div><div><br /></div><h3>Monster AI System</h3><div>You will fight 8 monsters, each controlled by their own pair of decks that scale to 3 levels of difficulty. (Except for the final encounter, it has only 1 level and it's HARD!) Every encounter, even with the same monster, is diverse and valuable. No two showdowns will resolve the same way. Players will have to plan their gear and keep their minds sharp to prevail.</div><div><br /></div><h3>Gear System</h3><div>In Monster, survivors will craft gear using resources earned from defeating monsters or found on their hunt. Each survivor has a gear grid, and can slot up to 9 pieces of gear at a time. What gear you will carry and how you arrange it can unlock advantages that may make the difference between life and death.</div><div><br /></div><h3>Story Event System</h3><div>You will encounter 40+ story events that will shape the story of your unique campaign. Your settlement's decisions and discoveries affect how the story events unfold. Story Events cover everything from setting up and fighting a monster to dramatic turning points in your settlements history. </div><div><br /></div><div><br /></div><h3>Kingdom Death: Monster Contents</h3><div><br /></div><div>1 x Hardcover Rule Book - 11&quot; x 8.5&quot; 235 Pages.</div><div>1 x Showdown Board - 2' x 3' ( Heavy 3mm Game Board Matte )</div><div>1 x Hunt / Settlement Board ( Heavy 3mm Game Board Matte )</div><div>2 x Token Sheet - 127 Tokens</div><div>1 x Terrain Token Sheet - 31 Terrain Tiles</div><div>1 x Monster Controller Panel</div><div>4 x Gear Grids</div><div>1 x Character Record Sheet Pad ( 50 Sheets, 6&quot;x6&quot;)</div><div>1 x Settlement Record Sheet Pad ( 50 Sheets, 8.5&quot; x 11&quot;)</div><div>5 x 10 sided black Kingdom Death dice</div><div>1 x 10 sided white Kingdom Death dice</div><div>4 x 6 sided Hit location dice</div><div>1 x 10 sided translucent orange Kingdom Death Death Die</div><div>Kingdom Death: Monster Contents - Miniatures</div><div><br /></div><div>4 x Starting Survivors</div><div>1 x White Lion</div><div>1 x Butcher</div><div>1 x Screaming Antelope</div><div>1 x Kings Man</div><div>1 x The Hand</div><div>1 x Phoenix</div><div>1 x Watcher</div><div>1 x Gold Smoke Knight</div><div>1 x Unarmored Armor Kit (Creates 4 Survivors.)</div><div>1 x Rawhide Armor Kit (Creates 4 Survivors.)</div><div>1 x Leather Armor Kit (Creates 4 Survivors.)</div><div>1 x White Lion Armor Kit (Creates 4 Survivors.)</div><div>1 x Screaming Fur Armor Kit (Creates 4 Survivors.)</div><div>1 x Phoenix Armor Kit (Creates 4 Survivors.)</div><div>1 x Lantern Armor Kit (Creates 4 Survivors.)</div><div>4 x Bonus Mystery Miniatures</div><div>4 x Starting Survivor Heads for Armor Kit customization</div><div>9 x Assorted Survivor Heads for Armor Kit customization</div><div>150+ Gear for Armor Kit customization (Every weapon in the game represented!)</div><div>10+ Masks</div><div>10 x Decorative Stone Face Base Inserts</div><div>36 x Kingdom Death 30mm Base + Insert</div><div>6 x Kingdom Death 50mm Base + Insert</div><div>1 x Kingdom Death 100mm Base + Insert </div>",
+      "categories": [
+        {
+          "id": "KUBCKBkGxV"
+        },
+        {
+          "id": "ZTneo8TaIO"
+        },
+        {
+          "id": "cAIkk5aLdQ"
+        },
+        {
+          "id": "ZhlfIPxYsw"
+        },
+        {
+          "id": "FC6ElKI9tk"
+        },
+        {
+          "id": "MHkqIVxwtx"
+        }
+      ],
+      "mechanics": [
+        {
+          "id": "9mNukNBxfZ"
+        },
+        {
+          "id": "R0bGq4cAl4"
+        },
+        {
+          "id": "qu5BcGjAzk"
+        },
+        {
+          "id": "EVeAdboGUA"
+        },
+        {
+          "id": "GUoWg3Mfh5"
+        }
+      ],
+      "avg_rating": 3.6470588235294117,
+      "num_user_ratings": 17,
+      "image_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540326550888",
+      "thumb_url": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540326550888",
+      "min_players": 1,
+      "max_players": 4,
+      "min_playtime": 60,
+      "max_playtime": 180,
+      "min_age": 17,
+      "year_published": 2015,
+      "rules_url": "http://www.kingdomdeath.com/1-4-updates/",
+      "id": 63
+    }
+  ],
+  "gamesSavedByUsersToLists": [
+    {
+      "apiGameId": 1,
+      "userListId": 1,
+      "id": 1
+    },
+    {
+      "apiGameId": 2,
+      "userListId": 2,
+      "id": 2
+    },
+    {
+      "apiGameId": 3,
+      "userListId": 2,
+      "id": 3
+    },
+    {
+      "apiGameId": 4,
+      "userListId": 2,
+      "id": 4
+    },
+    {
+      "apiGameId": 6,
+      "userListId": 2,
+      "id": 6
+    },
+    {
+      "apiGameId": 9,
+      "userListId": 1,
+      "id": 9
+    },
+    {
+      "apiGameId": 7,
+      "userListId": 1,
+      "id": 10
+    },
+    {
+      "apiGameId": 10,
+      "userListId": 1,
+      "id": 11
+    },
+    {
+      "apiGameId": 11,
+      "userListId": 1,
+      "id": 12
+    },
+    {
+      "apiGameId": 12,
+      "userListId": 5,
+      "id": 13
+    },
+    {
+      "apiGameId": 13,
+      "userListId": 6,
+      "id": 14
+    },
+    {
+      "apiGameId": 14,
+      "userListId": 7,
+      "id": 15
+    },
+    {
+      "apiGameId": 15,
+      "userListId": 9,
+      "id": 16
+    },
+    {
+      "apiGameId": 16,
+      "userListId": 9,
+      "id": 17
+    },
+    {
+      "apiGameId": 18,
+      "userListId": 11,
+      "id": 18
+    },
+    {
+      "apiGameId": 8,
+      "userListId": 11,
+      "id": 19
+    },
+    {
+      "apiGameId": 7,
+      "userListId": 10,
+      "id": 20
+    },
+    {
+      "apiGameId": 19,
+      "userListId": 10,
+      "id": 21
+    },
+    {
+      "apiGameId": 20,
+      "userListId": 6,
+      "id": 22
+    },
+    {
+      "apiGameId": 21,
+      "userListId": 11,
+      "id": 23
+    },
+    {
+      "apiGameId": 22,
+      "userListId": 11,
+      "id": 24
+    },
+    {
+      "apiGameId": 23,
+      "userListId": 7,
+      "id": 25
+    },
+    {
+      "apiGameId": 3,
+      "userListId": 7,
+      "id": 26
+    },
+    {
+      "apiGameId": 24,
+      "userListId": 7,
+      "id": 27
+    },
+    {
+      "apiGameId": 25,
+      "userListId": 6,
+      "id": 28
+    },
+    {
+      "apiGameId": 26,
+      "userListId": 6,
+      "id": 29
+    },
+    {
+      "apiGameId": 27,
+      "userListId": 5,
+      "id": 30
+    },
+    {
+      "apiGameId": 28,
+      "userListId": 5,
+      "id": 31
+    },
+    {
+      "apiGameId": 29,
+      "userListId": 5,
+      "id": 32
+    },
+    {
+      "apiGameId": 30,
+      "userListId": 5,
+      "id": 33
+    },
+    {
+      "apiGameId": 31,
+      "userListId": 5,
+      "id": 34
+    },
+    {
+      "apiGameId": 11,
+      "userListId": 10,
+      "id": 35
+    },
+    {
+      "apiGameId": 32,
+      "userListId": 10,
+      "id": 36
+    },
+    {
+      "apiGameId": 33,
+      "userListId": 10,
+      "id": 37
+    },
+    {
+      "apiGameId": 34,
+      "userListId": 11,
+      "id": 38
+    },
+    {
+      "apiGameId": 35,
+      "userListId": 12,
+      "id": 39
+    },
+    {
+      "apiGameId": 36,
+      "userListId": 12,
+      "id": 40
+    },
+    {
+      "apiGameId": 37,
+      "userListId": 12,
+      "id": 41
+    },
+    {
+      "apiGameId": 38,
+      "userListId": 12,
+      "id": 42
+    },
+    {
+      "apiGameId": 39,
+      "userListId": 9,
+      "id": 43
+    },
+    {
+      "apiGameId": 40,
+      "userListId": 9,
+      "id": 44
+    },
+    {
+      "apiGameId": 18,
+      "userListId": 13,
+      "id": 45
+    },
+    {
+      "apiGameId": 3,
+      "userListId": 6,
+      "id": 46
+    },
+    {
+      "apiGameId": 28,
+      "userListId": 2,
+      "id": 53
+    },
+    {
+      "apiGameId": 47,
+      "userListId": 15,
+      "id": 54
+    },
+    {
+      "apiGameId": 48,
+      "userListId": 15,
+      "id": 55
+    },
+    {
+      "apiGameId": 49,
+      "userListId": 15,
+      "id": 56
+    },
+    {
+      "apiGameId": 50,
+      "userListId": 15,
+      "id": 57
+    },
+    {
+      "apiGameId": 51,
+      "userListId": 15,
+      "id": 58
+    },
+    {
+      "apiGameId": 52,
+      "userListId": 16,
+      "id": 59
+    },
+    {
+      "apiGameId": 6,
+      "userListId": 16,
+      "id": 60
+    },
+    {
+      "apiGameId": 53,
+      "userListId": 16,
+      "id": 61
+    },
+    {
+      "apiGameId": 54,
+      "userListId": 16,
+      "id": 62
+    },
+    {
+      "apiGameId": 55,
+      "userListId": 16,
+      "id": 63
+    },
+    {
+      "apiGameId": 56,
+      "userListId": 16,
+      "id": 64
+    },
+    {
+      "apiGameId": 15,
+      "userListId": 17,
+      "id": 65
+    },
+    {
+      "apiGameId": 25,
+      "userListId": 17,
+      "id": 66
+    },
+    {
+      "apiGameId": 26,
+      "userListId": 17,
+      "id": 67
+    },
+    {
+      "apiGameId": 13,
+      "userListId": 17,
+      "id": 68
+    },
+    {
+      "apiGameId": 33,
+      "userListId": 17,
+      "id": 69
+    },
+    {
+      "apiGameId": 57,
+      "userListId": 17,
+      "id": 70
+    },
+    {
+      "apiGameId": 21,
+      "userListId": 17,
+      "id": 71
+    },
+    {
+      "apiGameId": 41,
+      "userListId": 14,
+      "id": 72
+    },
+    {
+      "apiGameId": 31,
+      "userListId": 14,
+      "id": 73
+    },
+    {
+      "apiGameId": 44,
+      "userListId": 14,
+      "id": 74
+    },
+    {
+      "apiGameId": 43,
+      "userListId": 14,
+      "id": 77
+    },
+    {
+      "apiGameId": 54,
+      "userListId": 18,
+      "id": 78
+    },
+    {
+      "apiGameId": 63,
+      "userListId": 18,
+      "id": 79
+    },
+    {
+      "apiGameId": 53,
+      "userListId": 18,
+      "id": 80
+    }
+  ],
+  "users": [
+    {
+      "first_name": "Jacquelyn",
+      "last_name": "McCray",
+      "email": "jacquelynkmccray@gmail.com",
+      "username": "jacquelyn",
+      "password": "j",
+      "id": 1,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F1-1568998054076?alt=media&token=a0f59a2c-7e1f-4650-acbd-c16a7995f0d9"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Fleming",
+      "email": "sarah@gmail.com",
+      "username": "sarah",
+      "password": "s",
+      "id": 2
+    },
+    {
+      "first_name": "Kiwi",
+      "last_name": "McCray",
+      "email": "kiwi@gmail.com",
+      "username": "kiwi_stubbs",
+      "password": "k",
+      "id": 3,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F3-1568997570722?alt=media&token=82f60351-91f4-4bbd-a045-c7235f5d14eb"
+    },
+    {
+      "first_name": "Andy",
+      "last_name": "Collins",
+      "email": "andy@gmail.com",
+      "username": "andy",
+      "password": "a",
+      "id": 4,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F4-1569011407925?alt=media&token=ab39d887-e01d-4c01-8d91-2fc6ed2975be"
+    },
+    {
+      "first_name": "Bryan",
+      "last_name": "Nilsen",
+      "email": "bryan@gmail.com",
+      "username": "bryan",
+      "password": "b",
+      "id": 5,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F5-1568997408711?alt=media&token=c413c283-613e-43b5-b40b-202a4040bc51"
+    },
+    {
+      "first_name": "Jenna",
+      "last_name": "Solis",
+      "email": "jenna@gmail.com",
+      "username": "jenna",
+      "password": "j",
+      "id": 6,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F6-1568998069243?alt=media&token=e05d7881-454b-4507-92a3-9b21a6b89ba0"
+    },
+    {
+      "first_name": "Dwayne",
+      "last_name": "Johnson",
+      "email": "therock@gmail.com",
+      "username": "the_rock",
+      "password": "r",
+      "id": 7,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F7-1568997541605?alt=media&token=c102f4dd-03b7-4545-810b-dcf2e5abd6b3"
+    },
+    {
+      "first_name": "Tom",
+      "last_name": "Riddle",
+      "email": "voldemort",
+      "username": "it's_me_lord_voldy",
+      "password": "v",
+      "id": 8,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F8-1568998280121?alt=media&token=ac0776fd-af73-4c77-91d4-f6dabdd7071a"
+    },
+    {
+      "first_name": "Ron",
+      "last_name": "Weasley",
+      "email": "ron@gmail.com",
+      "username": "ronald_bilius_weasley",
+      "password": "r",
+      "id": 9,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F9-1568998327266?alt=media&token=02f93af0-051e-458b-8d6c-48c9a0e07ff9"
+    },
+    {
+      "first_name": "Hermione",
+      "last_name": "Granger",
+      "email": "hermione@gmail.com",
+      "username": "hermione",
+      "password": "h",
+      "id": 10,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F10-1568998457663?alt=media&token=399da08d-124b-42c8-8c32-d46b61900eaa"
+    },
+    {
+      "first_name": "Draco",
+      "last_name": "Malfoy",
+      "email": "draco@gmail.com",
+      "username": "draco",
+      "password": "d",
+      "id": 11,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F11-1568998593702?alt=media&token=104f99ef-bfcb-4853-8390-894de204f66b"
+    },
+    {
+      "first_name": "Neville",
+      "last_name": "Longbottom",
+      "email": "neville@gmail.com",
+      "username": "neville",
+      "password": "n",
+      "id": 12,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F12-1568998680836?alt=media&token=42a1ed57-ffc6-4abb-990c-d354472a3be8"
+    },
+    {
+      "first_name": "Steve",
+      "last_name": "Brownlee",
+      "email": "coach@gmail.com",
+      "username": "coach",
+      "password": "c",
+      "id": 13,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F13-1569001403582?alt=media&token=2ec2a078-d4bd-43df-af0e-4868c47c9d9d"
+    },
+    {
+      "first_name": "tekashi",
+      "last_name": "6ix9ine",
+      "email": "tekashi@gmail.com",
+      "username": "tekashi_the_snitch",
+      "password": "t",
+      "id": 14,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F14-1569893602782?alt=media&token=0b890a1d-97aa-4bc6-8860-756e9d707461"
+    },
+    {
+      "first_name": "woman",
+      "last_name": "yelling",
+      "email": "womanyelling@gmail.com",
+      "username": "friend who only wants to play exploding kittens",
+      "password": "w",
+      "id": 15,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F15-1569854848771?alt=media&token=ff003981-256e-41f7-b1b2-25416446d54a"
+    },
+    {
+      "first_name": "cat",
+      "last_name": "cat",
+      "email": "cat@gmail.com",
+      "username": "me, a kitten",
+      "password": "c",
+      "id": 16,
+      "photoUrl": "https://firebasestorage.googleapis.com/v0/b/front-end-capstone-dcec3.appspot.com/o/images%2F16-1569854873127?alt=media&token=555ee4a6-d870-4fa2-bd92-34dc1c91a486"
+    }
+  ],
+  "userLists": [
+    {
+      "userId": 4,
+      "name": "card games",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "adventure games!"
+    },
+    {
+      "userId": 1,
+      "name": "fun two-player games",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "name": "strategy games",
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "name": "cooperative games",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "name": "games I want to play",
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "name": "quick games",
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "name": "fun party games",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "name": "classics",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "name": "super fun party games",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "userId": 14,
+      "name": "old world games"
+    },
+    {
+      "id": 15,
+      "userId": 7,
+      "name": "the best tequila--I mean games"
+    },
+    {
+      "userId": 7,
+      "name": "spooky games",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "name": "games I own",
+      "id": 17
+    },
+    {
+      "userId": 14,
+      "name": "spooky games",
+      "id": 18
+    }
+  ],
+  "gameNights": [
+    {
+      "userId": 1,
+      "name": "Monday Night @ The Game Keep",
+      "date": "2019-12-13",
+      "time": "18:00",
+      "date_and_time": "2019-12-13T23:00:00.000Z",
+      "location": "3952 Lebanon Pike, Hermitage, TN 37076",
+      "userListId": 2,
+      "id": 1
+    },
+    {
+      "userId": 6,
+      "name": "Board Game Lovers Meetup @ McAlisters Deli",
+      "date": "2019-12-14",
+      "time": "18:15",
+      "date_and_time": "2019-12-14T23:15:00.000Z",
+      "location": "330 Franklin Road, Brentwood, TN 37027",
+      "userListId": 10,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "name": "Nashville Game Night South - 4th Thursday",
+      "date": "2019-12-15",
+      "time": "18:00",
+      "date_and_time": "2019-12-15T23:00:00.000Z",
+      "location": "427 Sam Ridley Pkwy W, Smyrna, TN 37167",
+      "userListId": 7,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "name": "Strategy and Tabletop RPG Night",
+      "date": "2019-12-16",
+      "time": "19:00",
+      "date_and_time": "2019-12-16T00:00:00.000Z",
+      "location": "2005 Jones Avenue South, Nashville, TN 37207",
+      "userListId": 6,
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "name": "Board Game Fans Weekly Meetup",
+      "date": "2019-12-17",
+      "time": "18:00",
+      "date_and_time": "2019-12-17T23:00:00.000Z",
+      "location": "330 Franklin Road, Brentwood, TN 37027",
+      "userListId": 13,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "Nashville Game Night South - 1st Thursday",
+      "date": "2019-12-18",
+      "time": "18:00",
+      "date_and_time": "2019-12-18T23:00:00.000Z",
+      "location": "427 Sam Ridley Pkwy West, Smyrna, TN 37167",
+      "userListId": 9,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "name": "NSS Cohort 34 Game Night at Andy's House",
+      "date": "2019-12-19",
+      "time": "15:00",
+      "date_and_time": "2019-12-19T20:00:00.000Z",
+      "location": "107 South 11th Street, Nashville, TN 37206",
+      "userListId": 2,
+      "id": 7
+    },
+    {
+      "userId": 7,
+      "name": "Halloween Party & Board Game Night",
+      "date": "2019-12-20",
+      "time": "18:00",
+      "date_and_time": "2019-12-20T23:00:00.000Z",
+      "location": "107 South 11th Street, Nashville, TN 37206",
+      "userListId": 16,
+      "id": 8
+    }
+  ],
+  "usersInvitedToGameNights": [
+    {
+      "gameNightId": 1,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 1
+    },
+    {
+      "gameNightId": 1,
+      "userId": 2,
+      "inviteStatus": "invited",
+      "id": 2
+    },
+    {
+      "gameNightId": 1,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 3
+    },
+    {
+      "gameNightId": 1,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 4
+    },
+    {
+      "gameNightId": 1,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 5
+    },
+    {
+      "gameNightId": 1,
+      "userId": 11,
+      "inviteStatus": "invited",
+      "id": 6
+    },
+    {
+      "gameNightId": 1,
+      "userId": 4,
+      "inviteStatus": "invited",
+      "id": 7
+    },
+    {
+      "gameNightId": 2,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 8
+    },
+    {
+      "gameNightId": 2,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 9
+    },
+    {
+      "gameNightId": 2,
+      "userId": 2,
+      "inviteStatus": "invited",
+      "id": 10
+    },
+    {
+      "gameNightId": 2,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 11
+    },
+    {
+      "gameNightId": 2,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 12
+    },
+    {
+      "gameNightId": 2,
+      "userId": 11,
+      "inviteStatus": "invited",
+      "id": 13
+    },
+    {
+      "gameNightId": 3,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 14
+    },
+    {
+      "gameNightId": 3,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 15
+    },
+    {
+      "gameNightId": 3,
+      "userId": 2,
+      "inviteStatus": "invited",
+      "id": 16
+    },
+    {
+      "gameNightId": 3,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 17
+    },
+    {
+      "gameNightId": 3,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 18
+    },
+    {
+      "gameNightId": 4,
+      "userId": 4,
+      "inviteStatus": "attending",
+      "id": 19
+    },
+    {
+      "userId": 5,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 20
+    },
+    {
+      "userId": 6,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "gameNightId": 1,
+      "inviteStatus": "attending",
+      "id": 22
+    },
+    {
+      "userId": 7,
+      "gameNightId": 2,
+      "inviteStatus": "attending",
+      "id": 23
+    },
+    {
+      "userId": 7,
+      "gameNightId": 3,
+      "inviteStatus": "attending",
+      "id": 24
+    },
+    {
+      "userId": 7,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 25
+    },
+    {
+      "userId": 9,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 26
+    },
+    {
+      "userId": 10,
+      "gameNightId": 2,
+      "inviteStatus": "attending",
+      "id": 27
+    },
+    {
+      "userId": 10,
+      "gameNightId": 3,
+      "inviteStatus": "attending",
+      "id": 28
+    },
+    {
+      "userId": 10,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 29
+    },
+    {
+      "userId": 10,
+      "gameNightId": 1,
+      "inviteStatus": "attending",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 31
+    },
+    {
+      "userId": 12,
+      "gameNightId": 1,
+      "inviteStatus": "attending",
+      "id": 32
+    },
+    {
+      "userId": 12,
+      "gameNightId": 3,
+      "inviteStatus": "attending",
+      "id": 33
+    },
+    {
+      "userId": 13,
+      "gameNightId": 1,
+      "inviteStatus": "attending",
+      "id": 34
+    },
+    {
+      "userId": 13,
+      "gameNightId": 2,
+      "inviteStatus": "attending",
+      "id": 35
+    },
+    {
+      "userId": 13,
+      "gameNightId": 3,
+      "inviteStatus": "attending",
+      "id": 36
+    },
+    {
+      "userId": 13,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 37
+    },
+    {
+      "gameNightId": 5,
+      "userId": 4,
+      "inviteStatus": "attending",
+      "id": 38
+    },
+    {
+      "gameNightId": 5,
+      "userId": 6,
+      "inviteStatus": "invited",
+      "id": 39
+    },
+    {
+      "gameNightId": 5,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 40
+    },
+    {
+      "gameNightId": 5,
+      "userId": 8,
+      "inviteStatus": "invited",
+      "id": 41
+    },
+    {
+      "gameNightId": 6,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 42
+    },
+    {
+      "gameNightId": 6,
+      "userId": 11,
+      "inviteStatus": "attending",
+      "id": 43
+    },
+    {
+      "gameNightId": 6,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 44
+    },
+    {
+      "gameNightId": 6,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 45
+    },
+    {
+      "gameNightId": 6,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 46
+    },
+    {
+      "gameNightId": 6,
+      "userId": 4,
+      "inviteStatus": "invited",
+      "id": 47
+    },
+    {
+      "gameNightId": 7,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 48
+    },
+    {
+      "gameNightId": 7,
+      "userId": 7,
+      "inviteStatus": "attending",
+      "id": 49
+    },
+    {
+      "gameNightId": 7,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 50
+    },
+    {
+      "gameNightId": 7,
+      "userId": 10,
+      "inviteStatus": "attending",
+      "id": 51
+    },
+    {
+      "gameNightId": 7,
+      "userId": 11,
+      "inviteStatus": "attending",
+      "id": 52
+    },
+    {
+      "gameNightId": 7,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 53
+    },
+    {
+      "gameNightId": 7,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 54
+    },
+    {
+      "gameNightId": 8,
+      "userId": 7,
+      "inviteStatus": "attending",
+      "id": 55
+    },
+    {
+      "gameNightId": 8,
+      "userId": 9,
+      "inviteStatus": "attending",
+      "id": 56
+    },
+    {
+      "gameNightId": 8,
+      "userId": 6,
+      "inviteStatus": "attending",
+      "id": 57
+    },
+    {
+      "gameNightId": 8,
+      "userId": 4,
+      "inviteStatus": "attending",
+      "id": 58
+    },
+    {
+      "gameNightId": 8,
+      "userId": 5,
+      "inviteStatus": "attending",
+      "id": 59
+    },
+    {
+      "gameNightId": 8,
+      "userId": 2,
+      "inviteStatus": "attending",
+      "id": 60
+    },
+    {
+      "gameNightId": 8,
+      "userId": 1,
+      "inviteStatus": "attending",
+      "id": 61
+    },
+    {
+      "userId": 14,
+      "gameNightId": 6,
+      "inviteStatus": "attending",
+      "id": 62
+    },
+    {
+      "userId": 14,
+      "gameNightId": 2,
+      "inviteStatus": "attending",
+      "id": 74
+    },
+    {
+      "gameNightId": 9,
+      "userId": 14,
+      "inviteStatus": "attending",
+      "id": 75
+    },
+    {
+      "gameNightId": 9,
+      "userId": 7,
+      "inviteStatus": "invited",
+      "id": 76
+    },
+    {
+      "gameNightId": 9,
+      "userId": 15,
+      "inviteStatus": "invited",
+      "id": 77
+    },
+    {
+      "gameNightId": 9,
+      "userId": 16,
+      "inviteStatus": "invited",
+      "id": 78
+    },
+    {
+      "userId": 14,
+      "gameNightId": 4,
+      "inviteStatus": "attending",
+      "id": 79
+    }
+  ],
+  "ownedAndPlayedGames": [],
+  "friendships": [
+    {
+      "userId": 1,
+      "otherUser": 5,
+      "isFriend": true,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "otherUser": 7,
+      "isFriend": true,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "otherUser": 6,
+      "isFriend": true,
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "otherUser": 6,
+      "isFriend": true,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "otherUser": 8,
+      "isFriend": true,
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "otherUser": 10,
+      "isFriend": true,
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 17
+    },
+    {
+      "userId": 2,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 18
+    },
+    {
+      "userId": 2,
+      "otherUser": 5,
+      "isFriend": true,
+      "id": 19
+    },
+    {
+      "userId": 3,
+      "otherUser": 2,
+      "isFriend": true,
+      "id": 20
+    },
+    {
+      "userId": 3,
+      "otherUser": 5,
+      "isFriend": true,
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "otherUser": 6,
+      "isFriend": true,
+      "id": 22
+    },
+    {
+      "userId": 3,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 23
+    },
+    {
+      "userId": 3,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 24
+    },
+    {
+      "userId": 5,
+      "otherUser": 6,
+      "isFriend": true,
+      "id": 26
+    },
+    {
+      "userId": 5,
+      "otherUser": 8,
+      "isFriend": true,
+      "id": 27
+    },
+    {
+      "userId": 5,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 28
+    },
+    {
+      "userId": 6,
+      "otherUser": 8,
+      "isFriend": true,
+      "id": 31
+    },
+    {
+      "userId": 6,
+      "otherUser": 10,
+      "isFriend": true,
+      "id": 32
+    },
+    {
+      "userId": 6,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 33
+    },
+    {
+      "userId": 6,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 34
+    },
+    {
+      "userId": 6,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 35
+    },
+    {
+      "userId": 7,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 38
+    },
+    {
+      "userId": 7,
+      "otherUser": 10,
+      "isFriend": true,
+      "id": 39
+    },
+    {
+      "userId": 7,
+      "otherUser": 8,
+      "isFriend": true,
+      "id": 40
+    },
+    {
+      "userId": 7,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 41
+    },
+    {
+      "userId": 8,
+      "otherUser": 3,
+      "isFriend": true,
+      "id": 42
+    },
+    {
+      "userId": 8,
+      "otherUser": 9,
+      "isFriend": true,
+      "id": 43
+    },
+    {
+      "userId": 8,
+      "otherUser": 10,
+      "isFriend": true,
+      "id": 44
+    },
+    {
+      "userId": 8,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 45
+    },
+    {
+      "userId": 8,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 47
+    },
+    {
+      "userId": 9,
+      "otherUser": 10,
+      "isFriend": true,
+      "id": 48
+    },
+    {
+      "userId": 9,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 49
+    },
+    {
+      "userId": 10,
+      "otherUser": 11,
+      "isFriend": true,
+      "id": 50
+    },
+    {
+      "userId": 10,
+      "otherUser": 5,
+      "isFriend": false,
+      "id": 52
+    },
+    {
+      "userId": 10,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 53
+    },
+    {
+      "userId": 10,
+      "otherUser": 3,
+      "isFriend": true,
+      "id": 54
+    },
+    {
+      "userId": 11,
+      "otherUser": 9,
+      "isFriend": false,
+      "id": 55
+    },
+    {
+      "userId": 11,
+      "otherUser": 12,
+      "isFriend": true,
+      "id": 56
+    },
+    {
+      "userId": 11,
+      "otherUser": 5,
+      "isFriend": false,
+      "id": 57
+    },
+    {
+      "userId": 1,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 58
+    },
+    {
+      "userId": 2,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 59
+    },
+    {
+      "userId": 9,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 62
+    },
+    {
+      "userId": 12,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 63
+    },
+    {
+      "userId": 5,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 64
+    },
+    {
+      "userId": 6,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 65
+    },
+    {
+      "userId": 7,
+      "otherUser": 4,
+      "isFriend": true,
+      "id": 66
+    },
+    {
+      "userId": 1,
+      "otherUser": 3,
+      "isFriend": false,
+      "id": 67
+    },
+    {
+      "userId": 14,
+      "otherUser": 15,
+      "isFriend": true,
+      "id": 68
+    },
+    {
+      "userId": 14,
+      "otherUser": 16,
+      "isFriend": true,
+      "id": 69
+    },
+    {
+      "userId": 7,
+      "otherUser": 14,
+      "isFriend": true,
+      "id": 71
+    }
+  ]
+}

@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Button, Modal } from "semantic-ui-react"
 import APIGameManager from "../../modules/APIGameManager"
 import GameDetails from "../search-games/GameDetails"
+import PopularGames from "./PopularGames"
+import GamesPublishedThisYear from "./GamesPublishedThisYear"
 
 import "./ExploreGames.css"
 
@@ -30,6 +32,8 @@ class ExploreGames extends Component {
       className="getRandomGame__btn">get random game</Button>}>
         <GameDetails searchResult={this.state.searchResult}/>
       </Modal>
+      <PopularGames />
+      <GamesPublishedThisYear />
       </div>
     )
   }
