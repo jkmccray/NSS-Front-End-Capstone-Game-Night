@@ -5,16 +5,16 @@ Game Night is a single-page CRUD app built with React and Semantic UI that bring
 
 <img src="./src/images/screenshot1.png"
      alt="screenshot1"
-     style="float: left; margin: 10px;" />
+     style="float: left; margin: 20px;" />
 <img src="./src/images/screenshot2.png"
      alt="screenshot1"
-     style="float: left; margin: 10px;" />
+     style="float: left; margin: 20px;" />
 <img src="./src/images/screenshot3.png"
      alt="screenshot1"
-     style="float: left; margin: 10px;" />
+     style="float: left; margin: 20px;" />
 <img src="./src/images/screenshot4.png"
      alt="screenshot1"
-     style="float: left; margin: 10px;" />
+     style="float: left; margin: 20px;" />
 <img src="./src/images/screenshot5.png"
      alt="screenshot1"
-     style="float: left; margin: 10px;" />
+     style="float: left; margin: 20px;" />
